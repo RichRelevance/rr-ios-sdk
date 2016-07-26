@@ -26,6 +26,22 @@ static NSString *const kRCHRequestPlacementDelimiter = @".";
 
 @implementation RCHRequestPlacement
 
+- (instancetype)initWithListeningPageType:(RCHPlacementPageType)pageType
+{
+    if (pageType == RCHPlacementPageTypeNotSet) {
+        [RCHLog logError:@"Invalid input, you must provide a valid pageType"];
+        return nil;
+    }
+    
+    self = [super init];
+    if (self) {
+        _pageType = pageType;
+        _name = nil;
+    }
+    
+    return self;
+}
+
 - (instancetype)initWithPageType:(RCHPlacementPageType)pageType name:(NSString *)name;
 {
     if (pageType == RCHPlacementPageTypeNotSet || name == nil || name.length == 0) {
@@ -43,6 +59,10 @@ static NSString *const kRCHRequestPlacementDelimiter = @".";
 
 - (NSString *)stringRepresentation
 {
+    if (self.name == nil || self.name.length == 0) {
+        return [RCHEnumMappings stringFromPageType:self.pageType];
+    }
+    
     return [NSString stringWithFormat:@"%@%@%@", [RCHEnumMappings stringFromPageType:self.pageType],
                                       kRCHRequestPlacementDelimiter,
                                       self.name];
@@ -105,12 +125,27 @@ static NSString *const kRCHRequestPlacementDelimiter = @".";
 {
     if (placement != nil) {
         NSString *placementString = [placement stringRepresentation];
+        NSArray *array = [[self valueForKey:kRCHAPIRequestParamRecommendationsPlacements] componentsSeparatedByString:@"|"];
+        NSString *placementPageType = [[placementString componentsSeparatedByString:@"."] firstObject];
+        for (NSString *placementName in array) {
+            if ([placementName isEqualToString:placementString]) {
+                [RCHLog logError:@"Invalid parameter passed to %@. Placement %@ has already been added. This placement call will be ignored", NSStringFromSelector(_cmd), placementName];
+                return self;
+            }
+            
+            NSString *pageType = [[placementName componentsSeparatedByString:@"."] firstObject];
+            if (![placementPageType isEqualToString:pageType]) {
+                [RCHLog logError:@"Invalid parameter passed to %@. You are passing a placement of type %@ on a %@ request. Placement types must be all of the same type. This placement call will be ignored.", NSStringFromSelector(_cmd), placementPageType, pageType];
+                return self;
+            }
+        }
+        
         [self addValue:placementString toArrayForhKey:kRCHAPIRequestParamRecommendationsPlacements];
     }
     else {
         [RCHLog logError:@"Invalid parameter, nil placement passed to %@", NSStringFromSelector(_cmd)];
     }
-
+    
     return self;
 }
 

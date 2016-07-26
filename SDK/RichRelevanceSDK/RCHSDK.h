@@ -145,28 +145,33 @@
 ///-------------------------------
 
 /*!
- *  Produces a builder that represents a request to track a product view for a given placement.
+ *  Produces a builder that represents a request to track a product view.
  *
- *  @param placement  An instance of RCHRequestPlacement representing the desired placement
  *  @param productID The product that was viewed.
  *
  *  @return A pre-populated builder
  */
-+ (RCHPlacementRecsBuilder *)builderForTrackingProductViewWithPlacement:(RCHRequestPlacement *)placement
-                                                              productID:(NSString *)productID;
++ (RCHPlacementRecsBuilder *)builderForTrackingProductViewWithProductID:(NSString *)productID;
 
 /*!
- *  Produces a builder that represents a request to track a product purchase for a given placement.
+ *  Produces a builder that represents a request to track a product purchase.
  *
- *  @param placement  An instance of RCHRequestPlacement representing the desired placement
  *  @param orderID   The order ID for the purchase
  *  @param product   An instance of RCHRequestProduct representing the product info for this purchase
  *
  *  @return A pre-populated builder
  */
-+ (RCHPlacementRecsBuilder *)builderForTrackingPurchaseWithPlacement:(RCHRequestPlacement *)placement
-                                                             orderID:(NSString *)orderID
-                                                             product:(RCHRequestProduct *)product;
++ (RCHPlacementRecsBuilder *)builderForTrackingPurchaseWithOrderID:(NSString *)orderID
+                                                           product:(RCHRequestProduct *)product;
+
+/*!
+ *  Produces a builder that represents a request to track a category view.
+ *
+ *  @param categoryID   The category ID that was viewed.
+ *
+ *  @return A pre-populated builder
+ */
++ (RCHPlacementRecsBuilder *)builderForTrackingCategoryViewWithCategoryID:(NSString *)categoryID;
 
 /*!
  *  Produces a builder that represents a request to track a user preference.
@@ -175,7 +180,7 @@
  *  @param targetType  The target field type, one of the values in RCHUserPrefFieldType
  *  @param actionType  The action type, one of the values in RCHUserPrefActionType
  *
- *  @return <#return value description#>
+ *  @return A pre-populated builder
  */
 + (RCHUserPrefBuilder *)builderForTrackingPreferences:(NSArray *)preferences
                                            targetType:(RCHUserPrefFieldType)targetType

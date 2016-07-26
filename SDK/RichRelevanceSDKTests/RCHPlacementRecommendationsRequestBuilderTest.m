@@ -79,21 +79,41 @@
 
 - (void)testAddPlacement
 {
-    RCHRequestPlacement *p1 = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeCart name:@"horizontal"];
-    RCHRequestPlacement *p2 = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeHome name:@"vertical"];
-    RCHRequestPlacement *p3 = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeHome name:@"full"];
-
-    [self.builder addPlacement:p1];
-    [self.builder addPlacement:p2];
-
-    NSString *expected = @"cart_page.horizontal|home_page.vertical";
-    expect(self.builder.requestParams[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(expected);
-
-    [self.builder addPlacement:p3];
-    expected = @"cart_page.horizontal|home_page.vertical|home_page.full";
-    expect(self.builder.requestParams[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(expected);
+    RCHRequestPlacement *p1 = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeHome name:@"vertical"];
+    RCHRequestPlacement *p2 = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeHome name:@"full"];
+    RCHRequestPlacement *p3 = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeCart name:@"horizontal"];
+    RCHRequestPlacement *p4 = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeHome name:@"hero_full"];
+    
+    RCHPlacementRecsBuilder *builder = [[RCHPlacementRecsBuilder alloc] init];
+    [builder addPlacement:p1];
+    [builder addPlacement:p2];
+    
+    NSString *expected = @"home_page.vertical|home_page.full";
+    expect(builder.requestParams[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(expected);
+    
+    [builder addPlacement:p3];
+    expect(builder.requestParams[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(expected);
+    
+    [builder addPlacement:p4];
+    expected = [expected stringByAppendingString:@"|home_page.hero_full"];
+    expect(builder.requestParams[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(expected);
 }
 
+-(void)testListeningPlacements {
+    RCHRequestPlacement *p1 = [[RCHRequestPlacement alloc] initWithListeningPageType:RCHPlacementPageTypeHome];
+    RCHRequestPlacement *p2 = [[RCHRequestPlacement alloc] initWithListeningPageType:RCHPlacementPageTypeHome];
+    RCHRequestPlacement *p3 = [[RCHRequestPlacement alloc] initWithListeningPageType:RCHPlacementPageTypeCart];
+    
+    RCHPlacementRecsBuilder *builder = [[RCHPlacementRecsBuilder alloc] init];
+    NSString *expected = @"home_page";
+
+    [builder addPlacement:p1];
+    expect(builder.requestParams[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(expected);
+    
+    [builder addPlacement:p2];
+    [builder addPlacement:p3];
+    expect(builder.requestParams[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(expected);
+}
 - (void)testSetAddTimestampEnabled
 {
     NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
