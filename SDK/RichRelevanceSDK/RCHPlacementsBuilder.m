@@ -125,9 +125,9 @@ static NSString *const kRCHRequestPlacementDelimiter = @".";
 {
     if (placement != nil) {
         NSString *placementString = [placement stringRepresentation];
-        NSArray *array = [[self valueForKey:kRCHAPIRequestParamRecommendationsPlacements] componentsSeparatedByString:@"|"];
+        NSArray *currentPlacements = [[self valueForKey:kRCHAPIRequestParamRecommendationsPlacements] componentsSeparatedByString:@"|"];
         NSString *placementPageType = [[placementString componentsSeparatedByString:@"."] firstObject];
-        for (NSString *placementName in array) {
+        for (NSString *placementName in currentPlacements) {
             if ([placementName isEqualToString:placementString]) {
                 [RCHLog logError:@"Invalid parameter passed to %@. Placement %@ has already been added. This placement call will be ignored", NSStringFromSelector(_cmd), placementName];
                 return self;
