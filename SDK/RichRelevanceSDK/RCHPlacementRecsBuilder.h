@@ -117,6 +117,14 @@
 - (instancetype)setProductIDs:(NSArray *)productIDs;
 
 /*!
+ *  A product added to the cart. Compatible with Add To Cart placements.
+ *
+ *  @param product A string with the product ID added to the cart.
+ */
+- (instancetype)setAddedToCartProduct:(RCHRequestProduct *)product;
+- (instancetype)setAddedToCartProductID:(NSString *)productID;
+
+/*!
  *  ID of the category currently being viewed.
  *
  *  @param categoryID The category ID.
