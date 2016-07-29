@@ -121,7 +121,6 @@
  *
  *  @param product A string with the product ID added to the cart.
  */
-- (instancetype)setAddedToCartProduct:(RCHRequestProduct *)product;
 - (instancetype)setAddedToCartProductID:(NSString *)productID;
 
 /*!
