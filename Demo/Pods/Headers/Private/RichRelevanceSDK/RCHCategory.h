@@ -1,0 +1,1 @@
+../../../../../SDK/RichRelevanceSDK/RCHCategory.h

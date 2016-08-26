@@ -1,0 +1,16 @@
+PODS:
+  - RichRelevanceSDK (1.1.0)
+
+DEPENDENCIES:
+  - RichRelevanceSDK (from `../`)
+
+EXTERNAL SOURCES:
+  RichRelevanceSDK:
+    :path: ../
+
+SPEC CHECKSUMS:
+  RichRelevanceSDK: 641709bfb3ecb6dfd144f54dee97d56be0c9a681
+
+PODFILE CHECKSUM: 867592ff604843a4a1a57adefcd867d7c21cdba0
+
+COCOAPODS: 1.0.1

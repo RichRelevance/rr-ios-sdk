@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RCHRecommendedProductViewController">
+            <connections>
+                <outlet property="brandLabel" destination="lSJ-l0-idt" id="NAY-En-b08"/>
+                <outlet property="contentView" destination="H2l-Hu-LDi" id="HEP-MG-qiQ"/>
+                <outlet property="genreLabel" destination="ZS4-pT-KlC" id="vB0-7m-Fca"/>
+                <outlet property="imageView" destination="xIk-oU-9J3" id="Hov-3b-S26"/>
+                <outlet property="scrollView" destination="OVJ-Wh-s5p" id="7Bo-TL-95b"/>
+                <outlet property="titleLabel" destination="j1i-3g-g2u" id="ILl-gE-qkx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVJ-Wh-s5p">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OVJ-Wh-s5p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qo9-fR-fg6"/>
+                <constraint firstItem="OVJ-Wh-s5p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="U1j-Vf-asR"/>
+                <constraint firstAttribute="bottom" secondItem="OVJ-Wh-s5p" secondAttribute="bottom" id="ahk-ws-BNt"/>
+                <constraint firstAttribute="trailing" secondItem="OVJ-Wh-s5p" secondAttribute="trailing" id="s2h-Dm-zvb"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2l-Hu-LDi" userLabel="Content View">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xIk-oU-9J3">
+                    <rect key="frame" x="0.0" y="5" width="320" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="xhk-cJ-9Op"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="250" text="Product Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1i-3g-g2u">
+                    <rect key="frame" x="8" y="239" width="304" height="28"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="900" verticalCompressionResistancePriority="900" text="Genre" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS4-pT-KlC">
+                    <rect key="frame" x="168" y="213" width="144" height="18"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="900" verticalCompressionResistancePriority="900" text="Brand" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSJ-l0-idt">
+                    <rect key="frame" x="8" y="213" width="144" height="18"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lSJ-l0-idt" firstAttribute="leading" secondItem="H2l-Hu-LDi" secondAttribute="leading" constant="8" id="060-W7-7su"/>
+                <constraint firstItem="j1i-3g-g2u" firstAttribute="top" secondItem="lSJ-l0-idt" secondAttribute="bottom" constant="8" id="39I-kA-LSx"/>
+                <constraint firstItem="lSJ-l0-idt" firstAttribute="top" secondItem="xIk-oU-9J3" secondAttribute="bottom" constant="8" id="Bcx-jr-DxM"/>
+                <constraint firstAttribute="trailing" secondItem="ZS4-pT-KlC" secondAttribute="trailing" constant="8" id="DHg-Yv-dSs"/>
+                <constraint firstItem="xIk-oU-9J3" firstAttribute="top" secondItem="H2l-Hu-LDi" secondAttribute="top" constant="5" id="F4r-Qr-jMy"/>
+                <constraint firstAttribute="bottom" secondItem="j1i-3g-g2u" secondAttribute="bottom" constant="11" id="Fky-wt-hzo"/>
+                <constraint firstItem="ZS4-pT-KlC" firstAttribute="top" secondItem="xIk-oU-9J3" secondAttribute="bottom" constant="8" id="LA1-lU-zYN"/>
+                <constraint firstItem="lSJ-l0-idt" firstAttribute="width" secondItem="ZS4-pT-KlC" secondAttribute="width" id="Y8H-0L-9BP"/>
+                <constraint firstAttribute="trailing" secondItem="j1i-3g-g2u" secondAttribute="trailing" constant="8" id="bGf-TN-cDp"/>
+                <constraint firstAttribute="trailing" secondItem="xIk-oU-9J3" secondAttribute="trailing" id="bvb-k8-Os3"/>
+                <constraint firstItem="j1i-3g-g2u" firstAttribute="top" secondItem="ZS4-pT-KlC" secondAttribute="bottom" constant="8" id="jF2-KC-qdj"/>
+                <constraint firstItem="j1i-3g-g2u" firstAttribute="leading" secondItem="H2l-Hu-LDi" secondAttribute="leading" constant="8" id="lVH-M5-wSP"/>
+                <constraint firstItem="ZS4-pT-KlC" firstAttribute="leading" secondItem="lSJ-l0-idt" secondAttribute="trailing" constant="16" id="qoB-Hd-eig"/>
+                <constraint firstItem="xIk-oU-9J3" firstAttribute="leading" secondItem="H2l-Hu-LDi" secondAttribute="leading" id="rpO-ST-jyJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1161" y="587"/>
+        </view>
+    </objects>
+</document>

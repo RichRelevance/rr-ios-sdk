@@ -1,0 +1,13 @@
+PODS:
+  - Expecta (1.0.0)
+  - OHHTTPStubs (4.0.2)
+
+DEPENDENCIES:
+  - Expecta (~> 1.0.0)
+  - OHHTTPStubs
+
+SPEC CHECKSUMS:
+  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
+  OHHTTPStubs: dbd1957d414659783e07b49c961940b7564c23d9
+
+COCOAPODS: 0.37.0
