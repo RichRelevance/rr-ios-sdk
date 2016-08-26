@@ -1,0 +1,27 @@
+{
+    "request": {
+        "apiKey": "showcaseparent",
+        "clientKey": "615389034415e91d",
+        "placements": [
+                       "home_page.omnichannel"
+                       ],
+        "sessionId": "null",
+        "userId": "null"
+    },
+    "placements": [
+                   {
+                   "creatives": [
+                                 {
+                                 "IMAGE": "http://www.tactics.com/a/46k5/9/reef-cushion-sandals-black.jpg",
+                                 "trackingUrl": "http://qa.richrelevance.com/rrserver/emailTracking?a=showcaseparent&vg=808d4f9c-aeb3-4630-938b-2b53be72a86b&cpi=NONE&pgt=9&pa=omnichannel&pt=home_page.omnichannel&pcam=766611&pcre=12367",
+                                 "campaign": "mobile: shoes",
+                                 "ALERT_TEXT": "Shoes"
+                                 }
+                                 ],
+                   "html": "",
+                   "placement": "home_page.omnichannel"
+                   }
+                   ],
+    "message": "",
+    "status": "OK"
+}

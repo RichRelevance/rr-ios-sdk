@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "SDK">
+      <FileRef
+         location = "group:SDK/RichRelevanceSDK.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SDK/Pods/Pods.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Demo">
+      <FileRef
+         location = "group:Demo/RichRelevanceSDKDemo.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Demo/Pods/Pods.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>

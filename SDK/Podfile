@@ -1,0 +1,12 @@
+platform :ios, '8.0'
+inhibit_all_warnings!
+
+target 'RichRelevanceSDK' do
+
+end
+
+target 'RichRelevanceSDKTests', :exclusive => true do
+	pod 'Expecta', 		'~>1.0.0'
+	pod 'OHHTTPStubs'
+end
+
