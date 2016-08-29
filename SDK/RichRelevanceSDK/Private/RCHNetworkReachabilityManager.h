@@ -96,7 +96,10 @@ typedef NS_ENUM(NSInteger, RCHNetworkReachabilityStatus) {
 
  @return An initialized network reachability manager, actively monitoring the specified reachability.
  */
+
 - (instancetype)initWithReachability:(SCNetworkReachabilityRef)reachability NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
 
 ///--------------------------------------------------
 /// @name Starting & Stopping Reachability Monitoring

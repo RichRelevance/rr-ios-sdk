@@ -461,7 +461,7 @@ typedef void (^RCHNetworkReachabilityStatusBlock)(RCHNetworkReachabilityStatus s
     [self.client trackProductViewWithURL:fullURL];
     [self.client trackProductViewWithURL:fullURL];
 
-    expect(doneCount).will.equal(2);
+    expect(doneCount).will.equal(1);
     expect(self.client.failedClickTrackURLs).to.haveCount(2);
     expect(self.client.failedClickTrackURLs).to.contain(fullURL);
 
@@ -470,7 +470,7 @@ typedef void (^RCHNetworkReachabilityStatusBlock)(RCHNetworkReachabilityStatus s
 
     self.client.reachability.networkReachabilityStatusBlock(RCHNetworkReachabilityStatusReachableViaWWAN);
 
-    expect(doneCount).will.equal(2);
+    expect(doneCount).will.equal(1);
     expect(self.client.failedClickTrackURLs).to.haveCount(0);
 }
 

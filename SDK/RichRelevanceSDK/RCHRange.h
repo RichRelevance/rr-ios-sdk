@@ -38,6 +38,9 @@
  *
  *  @return <#return value description#>
  */
+
+- (instancetype)init NS_UNAVAILABLE;
+
 - (instancetype)initWithMin:(NSNumber *)min max:(NSNumber *)max NS_DESIGNATED_INITIALIZER;
 
 /*!
