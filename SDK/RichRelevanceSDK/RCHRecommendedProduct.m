@@ -28,7 +28,7 @@
     key = [[self class] rch_propertyNameForExternalKey:key];
 
     if ([key isEqualToString:NSStringFromSelector(@selector(priceRangeCents))] && [value isKindOfClass:[NSArray class]]) {
-        RCHRange *range = [[RCHRange alloc] init];
+        RCHRange *range = [[RCHRange alloc] initWithMin:0 max:0];
         NSArray *rangeArray = (NSArray *)value;
         if (rangeArray.count > 1) {
             range.min = rangeArray[0];
@@ -43,7 +43,7 @@
         return NO;
     }
     if ([key isEqualToString:NSStringFromSelector(@selector(salePriceRangeCents))] && [value isKindOfClass:[NSArray class]]) {
-        RCHRange *range = [[RCHRange alloc] init];
+        RCHRange *range = [[RCHRange alloc] initWithMin:0 max:0];
         NSArray *rangeArray = (NSArray *)value;
         if (rangeArray.count > 1) {
             range.min = rangeArray[0];

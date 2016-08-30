@@ -6,7 +6,7 @@ The Rich Relevance SDK is a native Objective-C interface to the Rich Relevance A
 The Rich Relevance SDK is available through [CocoaPods](http://cocoapods.org). To install it, add the following line to your Podfile:
 
 ```ruby
-pod 'RichRelevanceSDK', :git => "https://github.com/RichRelevance/rr-ios-sdk.git"
+pod 'RichRelevanceSDK'
 ```
 ## Directory Structure
 
