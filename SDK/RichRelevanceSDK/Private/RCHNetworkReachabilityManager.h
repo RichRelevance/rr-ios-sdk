@@ -67,11 +67,6 @@ typedef NS_ENUM(NSInteger, RCHNetworkReachabilityStatus) {
 ///---------------------
 
 /**
- Returns the shared network reachability manager.
- */
-+ (instancetype)sharedManager;
-
-/**
  Creates and returns a network reachability manager for the specified domain.
 
  @param domain The domain used to evaluate network reachability.
@@ -79,15 +74,6 @@ typedef NS_ENUM(NSInteger, RCHNetworkReachabilityStatus) {
  @return An initialized network reachability manager, actively monitoring the specified domain.
  */
 + (instancetype)managerForDomain:(NSString *)domain;
-
-/**
- Creates and returns a network reachability manager for the socket address.
-
- @param address The socket address (`sockaddr_in`) used to evaluate network reachability.
-
- @return An initialized network reachability manager, actively monitoring the specified socket address.
- */
-+ (instancetype)managerForAddress:(const void *)address;
 
 /**
  Initializes an instance of a network reachability manager from the specified reachability object.

@@ -107,38 +107,12 @@ static void RCHNetworkReachabilityReleaseCallback(const void *info)
 
 @implementation RCHNetworkReachabilityManager
 
-+ (instancetype)sharedManager
-{
-    static RCHNetworkReachabilityManager *_sharedManager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        struct sockaddr_in address;
-        bzero(&address, sizeof(address));
-        address.sin_len = sizeof(address);
-        address.sin_family = AF_INET;
-
-        _sharedManager = [self managerForAddress:&address];
-    });
-
-    return _sharedManager;
-}
-
 + (instancetype)managerForDomain:(NSString *)domain
 {
     SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [domain UTF8String]);
 
     RCHNetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
     manager.networkReachabilityAssociation = RCHNetworkReachabilityForName;
-
-    return manager;
-}
-
-+ (instancetype)managerForAddress:(const void *)address
-{
-    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, (const struct sockaddr *)address);
-
-    RCHNetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
-    manager.networkReachabilityAssociation = RCHNetworkReachabilityForAddress;
 
     return manager;
 }
