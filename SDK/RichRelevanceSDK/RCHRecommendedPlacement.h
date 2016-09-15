@@ -15,9 +15,11 @@
 
 #import "RCHPlacement.h"
 
+@class RCHRecommendedProduct;
+
 @interface RCHRecommendedPlacement : RCHPlacement
 
-@property (copy, nonatomic, nullable) NSArray *recommendedProducts;
+@property (copy, nonatomic, nullable) NSArray<RCHRecommendedProduct *> *recommendedProducts;
 @property (assign, nonatomic) RCHStrategy strategyName;
 @property (copy, nonatomic, nullable) NSString *strategyMessage;
 @property (copy, nonatomic, nullable) NSString *htmlElementId;

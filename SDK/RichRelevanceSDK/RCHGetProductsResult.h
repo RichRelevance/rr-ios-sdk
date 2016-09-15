@@ -16,10 +16,12 @@
 #import "RCHAPIResult.h"
 #import "RCHImportable.h"
 
+@class RCHRecommendedProduct;
+
 @interface RCHGetProductsResult : RCHAPIResult <RCHImportable>
 
 @property (copy, nonatomic, nullable) NSString *requestID;
-@property (copy, nonatomic, nullable) NSArray *products;
+@property (copy, nonatomic, nullable) NSArray<RCHRecommendedProduct *> *products;
 @property (copy, nonatomic, nullable) NSString *status;
 @property (copy, nonatomic, nullable) NSString *errormessage;
 

@@ -15,6 +15,7 @@
 
 #import "RCHAPIResult.h"
 #import "RCHCOmmonINcludes.h"
+@class RCHRecommendedProduct;
 
 @interface RCHStrategyResult : RCHAPIResult
 
@@ -22,6 +23,6 @@
 @property (copy, nonatomic, nullable) NSString *message;
 @property (copy, nonatomic, nullable) NSString *errormessage;
 @property (assign, nonatomic) RCHStrategy strategyName;
-@property (copy, nonatomic, nullable) NSArray *recommendedProducts;
+@property (copy, nonatomic, nullable) NSArray<RCHRecommendedProduct *> *recommendedProducts;
 
 @end

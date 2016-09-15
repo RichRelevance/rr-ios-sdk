@@ -17,6 +17,7 @@
 #import "RCHImportable.h"
 
 @class RCHRange;
+@class RCHCategory;
 
 @interface RCHRecommendedProduct : NSObject <RCHImportable>
 
@@ -38,7 +39,7 @@
 
 @property (copy, nonatomic, nullable) NSDictionary *attributes;
 @property (copy, nonatomic, nullable) NSArray *categoryIDs;
-@property (copy, nonatomic, nullable) NSArray *categories;
+@property (copy, nonatomic, nullable) NSArray<RCHCategory *> *categories;
 
 /*!
  *  Track a view of this product using the default API client.

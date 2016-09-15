@@ -37,7 +37,7 @@
 @interface RCHUserProfileOrder : RCHUserProfileElement
 
 @property (copy, nonatomic, nullable) NSString *orderID;
-@property (copy, nonatomic, nullable) NSArray *items;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileElementItem *> *items;
 
 @end
 
@@ -61,7 +61,7 @@
 
 @interface RCHUserProfileAddedToCartItem : RCHUserProfileElement
 
-@property (copy, nonatomic) NSArray *items;
+@property (copy, nonatomic) NSArray<RCHUserProfileElementItem *> *items;
 
 @end
 
@@ -77,7 +77,7 @@
 
 @interface RCHUserProfileUserAttributes : RCHUserProfileElement
 
-@property (copy, nonatomic) NSDictionary *values;
+@property (copy, nonatomic) NSDictionary<NSString *, NSObject *> *values;
 
 @end
 

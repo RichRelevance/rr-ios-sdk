@@ -14,6 +14,17 @@
 //  limitations under the License.
 
 #import "RCHAPIResult.h"
+@class RCHUserProfileElementItem;
+@class RCHUserProfileViewedCategory;
+@class RCHUserProfileOrder;
+@class RCHUserProfileViewedBrand;
+@class RCHUserProfileAddedToCartItem;
+@class RCHUserProfileSearchTerm;
+@class RCHUserProfileUserAttributes;
+@class RCHUserProfileReferrer;
+@class RCHUserProfileVerbNoun;
+@class RCHUserProfileCountedEvent;
+@class RCHUserProfileUserSegments;
 
 @interface RCHUserProfileResult : RCHAPIResult
 
@@ -21,18 +32,18 @@
 @property (copy, nonatomic, nullable) NSString *mostRecentRRUserGUID;
 @property (copy, nonatomic, nullable) NSDate *timeOfFirstEvent;
 
-@property (copy, nonatomic, nullable) NSArray *viewedItems;
-@property (copy, nonatomic, nullable) NSArray *clickedItems;
-@property (copy, nonatomic, nullable) NSArray *referrerURLs;
-@property (copy, nonatomic, nullable) NSArray *orders;
-@property (copy, nonatomic, nullable) NSArray *viewedCategories;
-@property (copy, nonatomic, nullable) NSArray *viewedBrands;
-@property (copy, nonatomic, nullable) NSArray *addedToCartItems;
-@property (copy, nonatomic, nullable) NSArray *searchedTerms;
-@property (copy, nonatomic, nullable) NSArray *userAttributes;
-@property (copy, nonatomic, nullable) NSArray *userSegments;
-@property (copy, nonatomic, nullable) NSArray *verbNouns;
-@property (copy, nonatomic, nullable) NSArray *countedEvents;
-@property (copy, nonatomic, nullable) NSDictionary *batchAttributes;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileElementItem *> *viewedItems;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileElementItem *> *clickedItems;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileOrder *> *orders;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileViewedCategory *> *viewedCategories;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileViewedBrand *> *viewedBrands;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileAddedToCartItem *> *addedToCartItems;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileSearchTerm *> *searchedTerms;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileUserAttributes *> *userAttributes;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileReferrer *> *referrerURLs;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileVerbNoun *> *verbNouns;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileCountedEvent *> *countedEvents;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileUserSegments *> *userSegments;
+@property (copy, nonatomic, nullable) NSDictionary<NSString *, NSObject *> *batchAttributes;
 
 @end
