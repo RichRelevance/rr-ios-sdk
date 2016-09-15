@@ -18,6 +18,7 @@
 /*!
  A request placement object represents a two-part placement entity. Intended for use when making placement requests.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHRequestPlacement : NSObject
 
 @property (assign, nonatomic) RCHPlacementPageType pageType;
@@ -160,3 +161,5 @@
 - (instancetype)setPurchasedProducts:(NSDictionary *)purchasedProducts;
 
 @end
+
+NS_ASSUME_NONNULL_END

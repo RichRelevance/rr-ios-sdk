@@ -17,9 +17,9 @@
 
 @interface RCHPersonalizeResult : RCHAPIResult
 
-@property (copy, nonatomic) NSString *status;
-@property (copy, nonatomic) NSString *errormessage;
-@property (copy, nonatomic) NSArray *placements;
-@property (copy, nonatomic) id request;
+@property (copy, nonatomic, nullable) NSString *status;
+@property (copy, nonatomic, nullable) NSString *errormessage;
+@property (copy, nonatomic, nullable) NSArray *placements;
+@property (copy, nonatomic, nullable) id request;
 
 @end

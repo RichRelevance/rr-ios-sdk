@@ -18,10 +18,10 @@
 
 @interface RCHStrategyResult : RCHAPIResult
 
-@property (copy, nonatomic) NSString *requestID;
-@property (copy, nonatomic) NSString *message;
-@property (copy, nonatomic) NSString *errormessage;
+@property (copy, nonatomic, nullable) NSString *requestID;
+@property (copy, nonatomic, nullable) NSString *message;
+@property (copy, nonatomic, nullable) NSString *errormessage;
 @property (assign, nonatomic) RCHStrategy strategyName;
-@property (copy, nonatomic) NSArray *recommendedProducts;
+@property (copy, nonatomic, nullable) NSArray *recommendedProducts;
 
 @end

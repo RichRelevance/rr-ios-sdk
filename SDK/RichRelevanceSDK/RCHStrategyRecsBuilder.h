@@ -18,6 +18,7 @@
 /*!
  *  A request builder for the "recsUsingStrategy" endpoint.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHStrategyRecsBuilder : RCHRequestBuilder
 
 ///-------------------------------
@@ -114,3 +115,4 @@
 - (instancetype)setRegionID:(NSString *)regionID;
 
 @end
+NS_ASSUME_NONNULL_END

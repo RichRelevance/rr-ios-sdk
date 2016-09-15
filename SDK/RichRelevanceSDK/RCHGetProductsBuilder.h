@@ -18,6 +18,7 @@
 /*!
  A builder for creating a getProducts request.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHGetProductsBuilder : RCHRequestBuilder
 
 /*!
@@ -35,3 +36,4 @@
 - (instancetype)setCatalogFeedCustomAttributes:(NSArray *)attributes;
 
 @end
+NS_ASSUME_NONNULL_END

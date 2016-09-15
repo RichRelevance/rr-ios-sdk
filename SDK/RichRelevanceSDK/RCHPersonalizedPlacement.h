@@ -17,6 +17,6 @@
 
 @interface RCHPersonalizedPlacement : RCHPlacement
 
-@property (copy, nonatomic) NSArray *creatives;
+@property (copy, nonatomic, nullable) NSArray *creatives;
 
 @end

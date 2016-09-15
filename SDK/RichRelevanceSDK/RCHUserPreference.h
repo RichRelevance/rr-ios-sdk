@@ -19,9 +19,9 @@
 
 @interface RCHUserPreference : NSObject <RCHImportable>
 
-@property (copy, nonatomic) NSArray *like;
-@property (copy, nonatomic) NSArray *dislike;
-@property (copy, nonatomic) NSArray *neutral;
-@property (copy, nonatomic) NSArray *notForRecs;
+@property (copy, nonatomic, nullable) NSArray *like;
+@property (copy, nonatomic, nullable) NSArray *dislike;
+@property (copy, nonatomic, nullable) NSArray *neutral;
+@property (copy, nonatomic, nullable) NSArray *notForRecs;
 
 @end

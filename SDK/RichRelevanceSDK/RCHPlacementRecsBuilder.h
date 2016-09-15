@@ -18,6 +18,7 @@
 /*!
  *  A request builder for the "recsForPlacements" endpoint.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHPlacementRecsBuilder : RCHPlacementsBuilder
 
 ///-------------------------------
@@ -202,3 +203,4 @@
 - (instancetype)setFilterAttributes:(NSDictionary *)filterAttributes;
 
 @end
+NS_ASSUME_NONNULL_END

@@ -17,22 +17,22 @@
 
 @interface RCHUserProfileResult : RCHAPIResult
 
-@property (copy, nonatomic) NSString *userID;
-@property (copy, nonatomic) NSString *mostRecentRRUserGUID;
-@property (copy, nonatomic) NSDate *timeOfFirstEvent;
+@property (copy, nonatomic, nullable) NSString *userID;
+@property (copy, nonatomic, nullable) NSString *mostRecentRRUserGUID;
+@property (copy, nonatomic, nullable) NSDate *timeOfFirstEvent;
 
-@property (copy, nonatomic) NSArray *viewedItems;
-@property (copy, nonatomic) NSArray *clickedItems;
-@property (copy, nonatomic) NSArray *referrerURLs;
-@property (copy, nonatomic) NSArray *orders;
-@property (copy, nonatomic) NSArray *viewedCategories;
-@property (copy, nonatomic) NSArray *viewedBrands;
-@property (copy, nonatomic) NSArray *addedToCartItems;
-@property (copy, nonatomic) NSArray *searchedTerms;
-@property (copy, nonatomic) NSArray *userAttributes;
-@property (copy, nonatomic) NSArray *userSegments;
-@property (copy, nonatomic) NSArray *verbNouns;
-@property (copy, nonatomic) NSArray *countedEvents;
-@property (copy, nonatomic) NSDictionary *batchAttributes;
+@property (copy, nonatomic, nullable) NSArray *viewedItems;
+@property (copy, nonatomic, nullable) NSArray *clickedItems;
+@property (copy, nonatomic, nullable) NSArray *referrerURLs;
+@property (copy, nonatomic, nullable) NSArray *orders;
+@property (copy, nonatomic, nullable) NSArray *viewedCategories;
+@property (copy, nonatomic, nullable) NSArray *viewedBrands;
+@property (copy, nonatomic, nullable) NSArray *addedToCartItems;
+@property (copy, nonatomic, nullable) NSArray *searchedTerms;
+@property (copy, nonatomic, nullable) NSArray *userAttributes;
+@property (copy, nonatomic, nullable) NSArray *userSegments;
+@property (copy, nonatomic, nullable) NSArray *verbNouns;
+@property (copy, nonatomic, nullable) NSArray *countedEvents;
+@property (copy, nonatomic, nullable) NSDictionary *batchAttributes;
 
 @end
