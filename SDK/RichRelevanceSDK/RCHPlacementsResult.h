@@ -15,11 +15,13 @@
 
 #import "RCHAPIResult.h"
 
+@class RCHRecommendedPlacement;
+
 @interface RCHPlacementsResult : RCHAPIResult
 
-@property (copy, nonatomic) NSString *viewGUID;
-@property (copy, nonatomic) NSString *status;
-@property (copy, nonatomic) NSString *errormessage;
-@property (copy, nonatomic) NSArray *placements;
+@property (copy, nonatomic, nullable) NSString *viewGUID;
+@property (copy, nonatomic, nullable) NSString *status;
+@property (copy, nonatomic, nullable) NSString *errormessage;
+@property (copy, nonatomic, nullable) NSArray<RCHRecommendedPlacement *> *placements;
 
 @end

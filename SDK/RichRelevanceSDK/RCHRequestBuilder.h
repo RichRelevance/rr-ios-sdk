@@ -18,6 +18,7 @@
 #import "RCHRange.h"
 #import "RCHAPIConstants.h"
 
+NS_ASSUME_NONNULL_BEGIN
 OBJC_EXTERN NSString *const kRCHRequestBuilderPipeListDelimiter;
 OBJC_EXTERN NSString *const kRCHRequestBuilderCommaListDelimiter;
 OBJC_EXTERN NSString *const kRCHRequestBuilderDefaultDictListDelimiter;
@@ -149,3 +150,4 @@ OBJC_EXTERN NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter;
 - (NSDictionary *)build;
 
 @end
+NS_ASSUME_NONNULL_END

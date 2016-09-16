@@ -18,6 +18,7 @@
 /*!
  A request builder for the personalize endpoint. 
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHPersonalizeBuilder : RCHPlacementsBuilder
 
 ///-------------------------------
@@ -85,3 +86,4 @@
 - (instancetype)setCatalogFeedCustomAttributes:(NSArray *)attributes;
 
 @end
+NS_ASSUME_NONNULL_END

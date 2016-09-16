@@ -24,6 +24,6 @@
 /*!
  *  The entire parsed JSON response for this result as a raw Foundation data struct.
  */
-@property (copy, nonnull) id rawResponse;
+@property (copy, nonatomic) id rawResponse;
 
 @end
