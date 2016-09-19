@@ -38,6 +38,7 @@
 #import "RCHPersonalizeResponseParser.h"
 #import "RCHPersonalizedPlacement.h"
 #import "RCHCreative.h"
+#import "RCHAutocompleteResponseParser.h"
 
 @interface RCHAPIResponseParserTest : XCTestCase
 
@@ -345,6 +346,25 @@
     expect(creative.trackingURL).to.equal(@"http://qa.richrelevance.com/rrserver/emailTracking?a=showcaseparent&vg=808d4f9c-aeb3-4630-938b-2b53be72a86b&cpi=NONE&pgt=9&pa=omnichannel&pt=home_page.omnichannel&pcam=766611&pcre=12367");
     expect(creative.campaign).to.equal(@"mobile: shoes");
     expect(creative.rawValues).notTo.beNil();
+}
+
+- (void)testAutocomplete
+{
+    NSURL *URL = [[NSBundle bundleForClass:[self class]] URLForResource:@"find_autocomplete" withExtension:@"json"];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:URL];
+    id JSONObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+
+    RCHAutocompleteResponseParser *parser = [[RCHAutocompleteResponseParser alloc] init];
+
+    NSArray *result = [parser parseResponse:JSONObject error:nil];
+    expect(result).notTo.beNil();
+    expect(result).to.haveCount(4);
+
+    RCHAutocompleteSuggestion *suggestion = result[0];
+    expect(suggestion.text).to.equal(@"maxi dress");
+    expect(suggestion.suggestionID).to.equal(@"maxi dress");
+    expect(suggestion.type).to.equal(@"TOPTRENDS");
+    expect(suggestion.popularity).to.equal(221);
 }
 
 @end

@@ -48,6 +48,7 @@ NSString *const kRCHAPIRequestUserPrefPath = @"rrserver/api/user/preference";
 NSString *const kRCHAPIRequestUserProfilePath = @"userProfile/api/v1/service/userProfile";
 NSString *const kRCHAPIRequestPersonalizePath = @"rrserver/api/personalize";
 NSString *const kRCHAPIRequestGetProductsPath = @"rrserver/api/rrPlatform/getProducts";
+NSString *const kRCHAPIRequestFindAutocompletePath = @"find/v1/autocomplete";
 
 #pragma mark - Recommendations
 
@@ -120,3 +121,15 @@ NSString *const kRCHAPIRequestParamPersonalizeEmailCampaignID = @"cpi";
 NSString *const kRCHAPIRequestParamPersonalizeExternalCategoryIDs = @"cis";
 NSString *const kRCHAPIRequestParamPersonalizeCategoryName = @"cn";
 NSString *const kRCHAPIRequestParamPersonalizeRecProductsCount = @"recProductsCount";
+
+#pragma mark - Autocomplete
+
+NSString *const kRCHAPIRequestParamAutocompleteQuery = @"query";
+NSString *const kRCHAPIRequestParamAutocompleteLanguage = @"lang";
+NSString *const kRCHAPIRequestParamAutocompleteStart = @"start";
+NSString *const kRCHAPIRequestParamAutocompleteCount = @"rows";
+
+NSString *const kRCHAPIResponseKeyAutocompleteTerms = @"terms";
+NSString *const kRCHAPIResponseKeyAutocompleteType = @"type";
+NSString *const kRCHAPIResponseKeyAutocompleteValue = @"value";
+
