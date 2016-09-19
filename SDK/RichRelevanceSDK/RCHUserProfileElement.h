@@ -18,17 +18,17 @@
 
 @interface RCHUserProfileElement : NSObject <RCHImportable>
 
-@property (copy, nonatomic) NSString *sessionID;
-@property (copy, nonatomic) NSString *channel;
-@property (copy, nonatomic) NSDate *timestamp;
+@property (copy, nonatomic, nullable) NSString *sessionID;
+@property (copy, nonatomic, nullable) NSString *channel;
+@property (copy, nonatomic, nullable) NSDate *timestamp;
 
 @end
 
 @interface RCHUserProfileElementItem : NSObject <RCHImportable>
 
-@property (copy, nonatomic) NSString *itemID;
-@property (copy, nonatomic) NSNumber *quantity;
-@property (copy, nonatomic) NSNumber *priceInCents;
+@property (copy, nonatomic, nullable) NSString *itemID;
+@property (copy, nonatomic, nullable) NSNumber *quantity;
+@property (copy, nonatomic, nullable) NSNumber *priceInCents;
 
 @end
 
@@ -36,8 +36,8 @@
 
 @interface RCHUserProfileOrder : RCHUserProfileElement
 
-@property (copy, nonatomic) NSString *orderID;
-@property (copy, nonatomic) NSArray *items;
+@property (copy, nonatomic, nullable) NSString *orderID;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileElementItem *> *items;
 
 @end
 
@@ -45,7 +45,7 @@
 
 @interface RCHUserProfileViewedCategory : RCHUserProfileElement
 
-@property (copy, nonatomic) NSString *categoryID;
+@property (copy, nonatomic, nullable) NSString *categoryID;
 
 @end
 
@@ -53,7 +53,7 @@
 
 @interface RCHUserProfileViewedBrand : RCHUserProfileElement
 
-@property (copy, nonatomic) NSString *brand;
+@property (copy, nonatomic, nullable) NSString *brand;
 
 @end
 
@@ -61,7 +61,7 @@
 
 @interface RCHUserProfileAddedToCartItem : RCHUserProfileElement
 
-@property (copy, nonatomic) NSArray *items;
+@property (copy, nonatomic) NSArray<RCHUserProfileElementItem *> *items;
 
 @end
 
@@ -77,7 +77,7 @@
 
 @interface RCHUserProfileUserAttributes : RCHUserProfileElement
 
-@property (copy, nonatomic) NSDictionary *values;
+@property (copy, nonatomic) NSDictionary<NSString *, NSObject *> *values;
 
 @end
 

@@ -18,6 +18,7 @@
 /*!
  *  A range representation.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHRange : NSObject
 
 /*!
@@ -36,7 +37,7 @@
  *  @param min The min value, or nil for no min
  *  @param max The max value or nil for no max
  *
- *  @return <#return value description#>
+ *  @return A new range instance
  */
 
 - (instancetype)init NS_UNAVAILABLE;
@@ -51,3 +52,4 @@
 - (NSString *)delimitedStringValue;
 
 @end
+NS_ASSUME_NONNULL_END

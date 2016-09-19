@@ -18,6 +18,7 @@
 /*!
  *  A request builder for the user/preference API endpoint.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHUserPrefBuilder : RCHRequestBuilder
 
 ///-------------------------------
@@ -75,3 +76,4 @@
 - (instancetype)addFetchPreference:(RCHUserPrefFieldType)preference;
 
 @end
+NS_ASSUME_NONNULL_END

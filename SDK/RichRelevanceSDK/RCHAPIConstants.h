@@ -13,6 +13,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+NS_ASSUME_NONNULL_BEGIN
+
 @import Foundation;
 
 ///-------------------------------
@@ -154,3 +156,5 @@ OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeEmailCampaignID;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeExternalCategoryIDs;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeCategoryName;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeRecProductsCount;
+
+NS_ASSUME_NONNULL_END

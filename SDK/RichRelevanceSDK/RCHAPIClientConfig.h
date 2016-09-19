@@ -13,6 +13,8 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
+NS_ASSUME_NONNULL_BEGIN
+
 @import Foundation;
 
 /*!
@@ -123,3 +125,5 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 - (NSString *)protocolString;
 
 @end
+
+NS_ASSUME_NONNULL_END
