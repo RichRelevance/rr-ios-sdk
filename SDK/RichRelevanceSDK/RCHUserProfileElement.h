@@ -61,7 +61,7 @@
 
 @interface RCHUserProfileAddedToCartItem : RCHUserProfileElement
 
-@property (copy, nonatomic) NSArray<RCHUserProfileElementItem *> *items;
+@property (copy, nonatomic, nullable) NSArray<RCHUserProfileElementItem *> *items;
 
 @end
 
@@ -69,7 +69,7 @@
 
 @interface RCHUserProfileSearchTerm : RCHUserProfileElement
 
-@property (copy, nonatomic) NSString *searchTerm;
+@property (copy, nonatomic, nullable) NSString *searchTerm;
 
 @end
 
@@ -77,7 +77,7 @@
 
 @interface RCHUserProfileUserAttributes : RCHUserProfileElement
 
-@property (copy, nonatomic) NSDictionary<NSString *, NSObject *> *values;
+@property (copy, nonatomic, nullable) NSDictionary<NSString *, NSObject *> *values;
 
 @end
 
@@ -85,7 +85,7 @@
 
 @interface RCHUserProfileReferrer : RCHUserProfileElement
 
-@property (copy, nonatomic) NSString *URL;
+@property (copy, nonatomic, nullable) NSString *URL;
 
 @end
 
@@ -93,7 +93,7 @@
 
 @interface RCHUserProfileUserSegments : RCHUserProfileElement
 
-@property (copy, nonatomic) NSArray *segments;
+@property (copy, nonatomic, nullable) NSArray *segments;
 
 @end
 
@@ -101,8 +101,8 @@
 
 @interface RCHUserProfileVerbNoun : RCHUserProfileElement
 
-@property (copy, nonatomic) NSString *verb;
-@property (copy, nonatomic) NSString *noun;
+@property (copy, nonatomic, nullable) NSString *verb;
+@property (copy, nonatomic, nullable) NSString *noun;
 
 @end
 
@@ -110,8 +110,8 @@
 
 @interface RCHUserProfileCountedEvent : NSObject <RCHImportable>
 
-@property (copy, nonatomic) NSString *value;
-@property (copy, nonatomic) NSNumber *count;
-@property (copy, nonatomic) NSDate *mostRecentTime;
+@property (copy, nonatomic, nullable) NSString *value;
+@property (copy, nonatomic, nullable) NSNumber *count;
+@property (copy, nonatomic, nullable) NSDate *mostRecentTime;
 
 @end
