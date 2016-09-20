@@ -56,7 +56,7 @@ OBJC_EXTERN NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter;
  *  @param value The value to set, must be a Foundation value
  *  @param key   The key under which to set the value, must not be nil
  */
-- (instancetype)setValue:(id)value forKey:(NSString *)key;
+- (instancetype)setValue:(nullable id)value forKey:(NSString *)key;
 
 /*!
  *  Get a value for the specified key.
