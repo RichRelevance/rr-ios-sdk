@@ -41,7 +41,6 @@
 		0172E5B81B3B139A00D09C7A /* RZFilteredCollectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5AA1B3B139A00D09C7A /* RZFilteredCollectionList.m */; };
 		0172E5B91B3B139A00D09C7A /* RZObserverCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5AC1B3B139A00D09C7A /* RZObserverCollection.m */; };
 		0172E5BA1B3B139A00D09C7A /* RZSortedCollectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5AE1B3B139A00D09C7A /* RZSortedCollectionList.m */; };
-		35F1361552D631843E139395 /* libPods-RichRelevanceSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27073DEB03B2F39150C7CB2A /* libPods-RichRelevanceSDKDemo.a */; };
 		723895C51B38553D00ACFE58 /* RCHProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 723895C31B38553D00ACFE58 /* RCHProductCell.m */; };
 		723895C61B38553D00ACFE58 /* RCHProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 723895C41B38553D00ACFE58 /* RCHProductCell.xib */; };
 		723895C91B3860C300ACFE58 /* UIViewController+RCHExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 723895C81B3860C300ACFE58 /* UIViewController+RCHExtensions.m */; };
@@ -63,6 +62,7 @@
 		72E821C21AFBACC900E71DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E821C01AFBACC900E71DA4 /* Main.storyboard */; };
 		72E821C41AFBACC900E71DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E821C31AFBACC900E71DA4 /* Images.xcassets */; };
 		72E821C71AFBACC900E71DA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E821C51AFBACC900E71DA4 /* LaunchScreen.xib */; };
+		8EEA60E0555A0278EF0A17C5 /* libPods-RichRelevanceSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -150,9 +150,6 @@
 		0172E5AD1B3B139A00D09C7A /* RZSortedCollectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZSortedCollectionList.h; sourceTree = "<group>"; };
 		0172E5AE1B3B139A00D09C7A /* RZSortedCollectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZSortedCollectionList.m; sourceTree = "<group>"; };
 		0172E5AF1B3B139A00D09C7A /* RZCollectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCollectionList.h; sourceTree = "<group>"; };
-		06A373778916B83D5FE46B1C /* Pods-RichRelevanceSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
-		27073DEB03B2F39150C7CB2A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		546E8CBDFD00423B6FF2B45D /* Pods-RichRelevanceSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		723895C21B38553D00ACFE58 /* RCHProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHProductCell.h; sourceTree = "<group>"; };
 		723895C31B38553D00ACFE58 /* RCHProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHProductCell.m; sourceTree = "<group>"; };
 		723895C41B38553D00ACFE58 /* RCHProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCHProductCell.xib; sourceTree = "<group>"; };
@@ -190,6 +187,9 @@
 		72E821C11AFBACC900E71DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72E821C31AFBACC900E71DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		72E821C61AFBACC900E71DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		84D3417C4402EBA33BAF6EA1 /* Pods-RichRelevanceSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AF8909EC5A985504D4AE0B72 /* Pods-RichRelevanceSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F1361552D631843E139395 /* libPods-RichRelevanceSDKDemo.a in Frameworks */,
+				8EEA60E0555A0278EF0A17C5 /* libPods-RichRelevanceSDKDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,23 +339,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		360BC5F049356DBAAF468CCE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				546E8CBDFD00423B6FF2B45D /* Pods-RichRelevanceSDKDemo.debug.xcconfig */,
-				06A373778916B83D5FE46B1C /* Pods-RichRelevanceSDKDemo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3E2C6E8E80C6B770495E4251 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				27073DEB03B2F39150C7CB2A /* libPods-RichRelevanceSDKDemo.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		723895C11B38551D00ACFE58 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,8 +452,8 @@
 			children = (
 				72E821B51AFBACC900E71DA4 /* RichRelevanceSDKDemo */,
 				72E821B41AFBACC900E71DA4 /* Products */,
-				3E2C6E8E80C6B770495E4251 /* Frameworks */,
-				360BC5F049356DBAAF468CCE /* Pods */,
+				AD68D720CB855E1B5FA4C105 /* Pods */,
+				F473393DB891475060A8AEB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -505,6 +488,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AD68D720CB855E1B5FA4C105 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84D3417C4402EBA33BAF6EA1 /* Pods-RichRelevanceSDKDemo.debug.xcconfig */,
+				AF8909EC5A985504D4AE0B72 /* Pods-RichRelevanceSDKDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F473393DB891475060A8AEB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,13 +512,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72E821D61AFBACC900E71DA4 /* Build configuration list for PBXNativeTarget "RichRelevanceSDKDemo" */;
 			buildPhases = (
-				B9D8BC782A13FA22AF48486D /* [CP] Check Pods Manifest.lock */,
+				15AEA245E1D0B28AAFCD8938 /* [CP] Check Pods Manifest.lock */,
 				72E821AF1AFBACC900E71DA4 /* Sources */,
 				72E821B01AFBACC900E71DA4 /* Frameworks */,
 				72E821B11AFBACC900E71DA4 /* Resources */,
 				0172E5C11B3B15B100D09C7A /* Embed Frameworks */,
-				08F1B4A4F04F191286B9DDE3 /* [CP] Embed Pods Frameworks */,
-				22A32EA5BF97D404BB591C9C /* [CP] Copy Pods Resources */,
+				3F44A73E31C6AFED4F84409B /* [CP] Embed Pods Frameworks */,
+				0A7F8324FE2E78125F4F7862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -580,22 +580,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08F1B4A4F04F191286B9DDE3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		22A32EA5BF97D404BB591C9C /* [CP] Copy Pods Resources */ = {
+		0A7F8324FE2E78125F4F7862 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -610,7 +595,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9D8BC782A13FA22AF48486D /* [CP] Check Pods Manifest.lock */ = {
+		15AEA245E1D0B28AAFCD8938 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -623,6 +608,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F44A73E31C6AFED4F84409B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -788,7 +788,7 @@
 		};
 		72E821D71AFBACC900E71DA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 546E8CBDFD00423B6FF2B45D /* Pods-RichRelevanceSDKDemo.debug.xcconfig */;
+			baseConfigurationReference = 84D3417C4402EBA33BAF6EA1 /* Pods-RichRelevanceSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -802,7 +802,7 @@
 		};
 		72E821D81AFBACC900E71DA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06A373778916B83D5FE46B1C /* Pods-RichRelevanceSDKDemo.release.xcconfig */;
+			baseConfigurationReference = AF8909EC5A985504D4AE0B72 /* Pods-RichRelevanceSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: RichRelevance Inc.";
