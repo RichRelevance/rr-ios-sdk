@@ -24,12 +24,12 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  Min value, or nil for no min.
  */
-@property (strong, nonatomic) NSNumber *min;
+@property (strong, nonatomic, nullable) NSNumber *min;
 
 /*!
  *  Max value, or nil for no max.
  */
-@property (strong, nonatomic) NSNumber *max;
+@property (strong, nonatomic, nullable) NSNumber *max;
 
 /*!
  *  Create a new range instance.
@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithMin:(NSNumber *)min max:(NSNumber *)max NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMin:(nullable NSNumber *)min max:(nullable NSNumber *)max NS_DESIGNATED_INITIALIZER;
 
 /*!
  *  A delimited range string value: ```min:max```
