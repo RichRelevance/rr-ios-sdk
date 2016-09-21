@@ -1,0 +1,22 @@
+dependencies:
+  pre:
+    - "[[ ! -s \"$(git rev-parse --git-dir)/shallow\" ]] || git fetch --unshallow"
+
+machine:
+  xcode:
+    version: "7.3.1"
+
+test:
+  override:
+    - bundle exec fastlane tests
+
+deployment:
+  integration:
+    branch: [develop]
+    commands:
+      - bundle exec fastlane develop
+
+  sprint:
+    tag: /sprint-.*/
+    commands:
+      - bundle exec fastlane sprint

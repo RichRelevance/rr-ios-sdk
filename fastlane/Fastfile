@@ -1,0 +1,68 @@
+# ENV['IPA_OUTPUT_DIR'] = "Set by build environment"
+# ENV['RR_HOCKEYAPP_TOKEN'] = "Set by build environment"
+
+ENV['IPA_OUTPUT_DIR'] ||= ENV['CIRCLE_ARTIFACTS'] || "./build"
+
+fastlane_version "1.85.0"
+default_platform :ios
+
+platform :ios do
+
+  # Lanes ----------------------
+
+  before_all do
+    if ENV['IPA_OUTPUT_DIR'] && ENV['IPA_OUTPUT_DIR'].length > 0
+      sh "rm -rf $IPA_OUTPUT_DIR && mkdir $IPA_OUTPUT_DIR"
+    end
+  end
+
+  desc "Runs tests"
+  lane :test do
+    scan(
+      output_types: 'junit',
+      scheme: 'RichRelevanceSDK',
+      output_directory: "#{ENV['CIRCLE_TEST_REPORTS']}",
+      buildlog_path: "#{ENV['IPA_OUTPUT_DIR']}",
+  )
+  end
+
+  desc "Builds and packages enterprise app for the develop server and uploads to Hockey"
+  lane :develop do
+    build('RichRelevanceSDKDemo', 'enterprise')
+    upload_to_hockey('61fc6ba60a944ae39e304986939c989b')
+  end
+  
+  desc "Builds and packages enterprise app for the sprint server and uploads to Hockey"
+  lane :sprint do
+    build('RichRelevanceSDKDemo', 'enterprise')
+    upload_to_hockey('087627f079784e66a631aa7e79c11c75')
+  end
+
+# Helpers ----------------------
+
+  def build(scheme, export_method)
+    gym(
+      output_directory: "#{ENV['IPA_OUTPUT_DIR']}",
+      output_name: "RichRelevanceSDKDemo",
+      export_method: export_method,
+      scheme: scheme,
+      include_bitcode: false,
+      xcargs: "BUILD_NUMBER=#{build_number}",
+      buildlog_path: "#{ENV['IPA_OUTPUT_DIR']}",
+    )
+  end
+
+  def upload_to_hockey(app_id)
+      hockey({
+        public_identifier: app_id,
+        api_token: ENV['RR_HOCKEYAPP_TOKEN'],
+        ipa: "#{ENV['IPA_OUTPUT_DIR']}/RichRelevanceSDKDemo.ipa",
+        notify: '0'
+      })
+  end
+
+  def build_number
+    `git rev-list HEAD --count`.chomp()
+  end
+
+end
