@@ -6,10 +6,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   RichRelevanceSDK:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  RichRelevanceSDK: 641709bfb3ecb6dfd144f54dee97d56be0c9a681
+  RichRelevanceSDK: 13bdf15ef7227b09691badffc932f1bef55bab02
 
 PODFILE CHECKSUM: 867592ff604843a4a1a57adefcd867d7c21cdba0
 
