@@ -8,7 +8,7 @@ machine:
 
 test:
   override:
-    - bundle exec fastlane tests
+    - bundle exec fastlane test
 
 deployment:
   integration:
