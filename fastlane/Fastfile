@@ -30,14 +30,14 @@ platform :ios do
   lane :develop do
     unlock_keychain(path: "./Demo/Signing/Raizlabs.keychain", password: ENV['RZ_KEYCHAIN_PASSWORD'])
     build('RichRelevanceSDKDemo', 'enterprise')
-    upload_to_hockey('61fc6ba60a944ae39e304986939c989b')
+    upload_to_hockey('9d1f45347ed74c9092ec4fb5981576c1')
   end
   
   desc "Builds and packages enterprise app for the sprint server and uploads to Hockey"
   lane :sprint do
     unlock_keychain(path: "./Demo/Signing/Raizlabs.keychain", password: ENV['RZ_KEYCHAIN_PASSWORD'])
     build('RichRelevanceSDKDemo', 'enterprise')
-    upload_to_hockey('087627f079784e66a631aa7e79c11c75')
+    upload_to_hockey('f9e0abcee8723f74a0217fcc11faac02')
   end
 
 # Helpers ----------------------
