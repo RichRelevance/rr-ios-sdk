@@ -22,6 +22,7 @@
 #import "RCHUserPrefBuilder.h"
 #import "RCHPersonalizeBuilder.h"
 #import "RCHGetProductsBuilder.h"
+#import "RCHAutocompleteBuilder.h"
 
 @interface RCHSDK ()
 
@@ -153,6 +154,14 @@
     [builder setPreferences:preferences];
     [builder setTargetType:targetType];
     [builder setActionType:actionType];
+
+    return builder;
+}
+
++ (RCHAutocompleteBuilder *)builderForAutocompleteWithText:(NSString *)text;
+{
+    RCHAutocompleteBuilder *builder = [[RCHAutocompleteBuilder alloc] init];
+    [builder setQuery:text];
 
     return builder;
 }

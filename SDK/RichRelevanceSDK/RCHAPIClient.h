@@ -15,10 +15,12 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class RCHAPIClientConfig;
 
-typedef void (^RCHAPIClientSuccess)(id responseObject);
-typedef void (^RCHAPIClientFailure)(id responseObject, NSError *error);
+typedef void (^RCHAPIClientSuccess)(id _Nullable responseObject);
+typedef void (^RCHAPIClientFailure)(id _Nullable responseObject, NSError  * _Nullable error);
 
 /*!
  *  The API client is the central location for all Rich Relevance API interactions. This class includes
@@ -81,3 +83,5 @@ typedef void (^RCHAPIClientFailure)(id responseObject, NSError *error);
 - (void)trackProductViewWithURL:(NSString *)productClickURL;
 
 @end
+
+NS_ASSUME_NONNULL_END

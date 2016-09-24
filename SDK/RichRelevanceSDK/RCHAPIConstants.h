@@ -15,6 +15,8 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 ///-------------------------------
 /// @name General
 ///-------------------------------
@@ -65,6 +67,7 @@ OBJC_EXTERN NSString *const kRCHAPIRequestUserPrefPath;
 OBJC_EXTERN NSString *const kRCHAPIRequestUserProfilePath;
 OBJC_EXTERN NSString *const kRCHAPIRequestPersonalizePath;
 OBJC_EXTERN NSString *const kRCHAPIRequestGetProductsPath;
+OBJC_EXTERN NSString *const kRCHAPIRequestFindAutocompletePath;
 
 ///-------------------------------
 /// @name Response
@@ -154,3 +157,19 @@ OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeEmailCampaignID;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeExternalCategoryIDs;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeCategoryName;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeRecProductsCount;
+
+
+///-------------------------------
+/// @name Autocomplete
+///-------------------------------
+
+OBJC_EXTERN NSString *const kRCHAPIRequestParamAutocompleteQuery;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamAutocompleteLanguage;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamAutocompleteStart;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamAutocompleteCount;
+
+OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteTerms;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteType;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteValue;
+
+NS_ASSUME_NONNULL_END

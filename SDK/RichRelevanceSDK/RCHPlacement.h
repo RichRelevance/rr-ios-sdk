@@ -19,8 +19,8 @@
 
 @interface RCHPlacement : NSObject <RCHImportable>
 
-@property (copy, nonatomic) NSString *placement;
+@property (copy, nonatomic, nullable) NSString *placement;
 @property (assign, nonatomic) RCHPlacementPageType placementType;
-@property (copy, nonatomic) NSString *html;
+@property (copy, nonatomic, nullable) NSString *html;
 
 @end

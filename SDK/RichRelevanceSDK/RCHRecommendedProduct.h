@@ -17,28 +17,29 @@
 #import "RCHImportable.h"
 
 @class RCHRange;
+@class RCHCategory;
 
 @interface RCHRecommendedProduct : NSObject <RCHImportable>
 
-@property (copy, nonatomic) NSString *productID;
-@property (copy, nonatomic) NSString *name;
-@property (copy, nonatomic) NSString *brand;
-@property (copy, nonatomic) NSString *genre;
-@property (copy, nonatomic) NSString *clickURL;
-@property (copy, nonatomic) NSString *imageURL;
-@property (copy, nonatomic) NSNumber *salePriceCents;
-@property (copy, nonatomic) NSNumber *rating;
-@property (copy, nonatomic) NSNumber *numReviews;
-@property (copy, nonatomic) NSString *regionPriceDescription;
-@property (copy, nonatomic) NSString *regionalProductSku;
-@property (copy, nonatomic) NSNumber *priceCents;
+@property (copy, nonatomic, nullable) NSString *productID;
+@property (copy, nonatomic, nullable) NSString *name;
+@property (copy, nonatomic, nullable) NSString *brand;
+@property (copy, nonatomic, nullable) NSString *genre;
+@property (copy, nonatomic, nullable) NSString *clickURL;
+@property (copy, nonatomic, nullable) NSString *imageURL;
+@property (copy, nonatomic, nullable) NSNumber *salePriceCents;
+@property (copy, nonatomic, nullable) NSNumber *rating;
+@property (copy, nonatomic, nullable) NSNumber *numReviews;
+@property (copy, nonatomic, nullable) NSString *regionPriceDescription;
+@property (copy, nonatomic, nullable) NSString *regionalProductSku;
+@property (copy, nonatomic, nullable) NSNumber *priceCents;
 @property (assign, nonatomic) BOOL isRecommendable;
-@property (strong, nonatomic) RCHRange *priceRangeCents;
-@property (strong, nonatomic) RCHRange *salePriceRangeCents;
+@property (strong, nonatomic, nullable) RCHRange *priceRangeCents;
+@property (strong, nonatomic, nullable) RCHRange *salePriceRangeCents;
 
-@property (copy, nonatomic) NSDictionary *attributes;
-@property (copy, nonatomic) NSArray *categoryIDs;
-@property (copy, nonatomic) NSArray *categories;
+@property (copy, nonatomic, nullable) NSDictionary *attributes;
+@property (copy, nonatomic, nullable) NSArray *categoryIDs;
+@property (copy, nonatomic, nullable) NSArray<RCHCategory *> *categories;
 
 /*!
  *  Track a view of this product using the default API client.

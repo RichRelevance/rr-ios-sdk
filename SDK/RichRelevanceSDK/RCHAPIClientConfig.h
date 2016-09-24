@@ -15,6 +15,7 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  *  The default Rich Relevance production endpoint.
  */
@@ -123,3 +124,5 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 - (NSString *)protocolString;
 
 @end
+
+NS_ASSUME_NONNULL_END

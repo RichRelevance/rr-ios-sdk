@@ -28,10 +28,12 @@
 @class RCHRequestProduct;
 @class RCHPersonalizeBuilder;
 @class RCHGetProductsBuilder;
+@class RCHAutocompleteBuilder;
 
 /*!
  *  The central launchpoint for all Rich Relevance SDK activity. 
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHSDK : NSObject
 
 ///-------------------------------
@@ -175,10 +177,21 @@
  *  @param targetType  The target field type, one of the values in RCHUserPrefFieldType
  *  @param actionType  The action type, one of the values in RCHUserPrefActionType
  *
- *  @return <#return value description#>
+ *  @return A pre-populated builder
  */
 + (RCHUserPrefBuilder *)builderForTrackingPreferences:(NSArray *)preferences
                                            targetType:(RCHUserPrefFieldType)targetType
                                            actionType:(RCHUserPrefActionType)actionType;
 
+
+/*!
+ *  Produce a builder to retrieve autocomplete options.
+ *
+ *  @param text The text to be autocompleted
+ *
+ *  @return A pre-populated builder
+ */
++ (RCHAutocompleteBuilder *)builderForAutocompleteWithText:(NSString *)text;
+
 @end
+NS_ASSUME_NONNULL_END

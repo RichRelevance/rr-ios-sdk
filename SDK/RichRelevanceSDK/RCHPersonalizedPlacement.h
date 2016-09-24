@@ -15,8 +15,10 @@
 
 #import <RichRelevanceSDK/RichRelevanceSDK.h>
 
+@class RCHCreative;
+
 @interface RCHPersonalizedPlacement : RCHPlacement
 
-@property (copy, nonatomic) NSArray *creatives;
+@property (copy, nonatomic, nullable) NSArray<RCHCreative *> *creatives;
 
 @end
