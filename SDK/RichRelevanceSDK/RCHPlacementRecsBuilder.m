@@ -148,6 +148,16 @@
     return self;
 }
 
+- (instancetype)setAddedToCartProductID:(NSString *)productID {
+    if (productID != nil) {
+        [self setValue:productID forKey:kRCHAPIRequestParamRecommendationsAddedToCartProductID];
+    } else {
+        [RCHLog logError:@"Invalid parameter, nil  product passed to %@", NSStringFromSelector(_cmd)];
+    }
+    
+    return self;
+}
+
 - (instancetype)setRegistryID:(NSString *)registryID;
 {
     return [self setValue:registryID forKey:kRCHAPIRequestParamRecommendationsRegistryID];

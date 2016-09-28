@@ -34,6 +34,13 @@
 - (instancetype)initWithPageType:(RCHPlacementPageType)pageType name:(NSString *)name NS_DESIGNATED_INITIALIZER;
 
 /*!
+ *  Create a new instance of a request placement in listening mode. Listening mode allows to track events (such as clicks, views and purchases) without returning personalization.
+ *
+ *  @param pageType The page type, one of RCHPlacementPageType
+ */
+- (instancetype)initWithListeningPageType:(RCHPlacementPageType)pageType;
+
+/*!
  *  The string representation of this request placement, ready for API consumption.
  */
 - (NSString *)stringRepresentation;

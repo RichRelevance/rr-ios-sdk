@@ -99,6 +99,7 @@ NSString *const kRCHAPIRequestParamRecommendationsEmailCampaignId = @"emailCampa
 NSString *const kRCHAPIRequestParamRecommendationsStrategyRequestID = @"requestId";
 NSString *const kRCHAPIRequestParamRecommendationsStrategyBlockedProductIds = @"blockedProductIds";
 NSString *const kRCHAPIRequestParamRecommendationsStrategyRegionID = @"region";
+NSString *const kRCHAPIRequestParamRecommendationsAddedToCartProductID = @"atcid";
 
 #pragma mark - User Pref
 

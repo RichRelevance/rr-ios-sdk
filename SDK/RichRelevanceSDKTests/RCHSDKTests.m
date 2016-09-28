@@ -114,44 +114,55 @@
     [RCHSDK builderForRecsWithPlacement:nil];
 }
 
-- (void)testBuilderForTrackingProductViewWithPlacement
+- (void)testBuilderForTrackingProductView
 {
-    RCHRequestPlacement *placement = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeCart name:@"vertical"];
-    RCHPlacementRecsBuilder *builder = [RCHSDK builderForTrackingProductViewWithPlacement:placement productID:@"1"];
+    RCHPlacementRecsBuilder *builder = [RCHSDK builderForTrackingProductViewWithProductID:@"1"];
     NSDictionary *dict = [builder build][kRCHAPIBuilderParamRequestParameters];
     NSDictionary *info = [builder build][kRCHAPIBuilderParamRequestInfo];
-
+    
     expect(dict).notTo.beNil();
     expect(info[kRCHAPIBuilderParamRequestInfoPath]).to.equal(kRCHAPIRequestRecsForPlacementsPath);
-    expect(dict[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(@"cart_page.vertical");
+    expect(dict[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(@"item_page");
     expect(dict[kRCHAPIRequestParamRecommendationsProductID]).to.equal(@"1");
-
+    
     // Don't crash
-    [RCHSDK builderForTrackingProductViewWithPlacement:nil productID:nil];
+    [RCHSDK builderForTrackingProductViewWithProductID:nil];
 }
 
-- (void)testBuilderForTrackingPurchaseWithPlacement
+- (void)testBuilderForTrackingPurchase
 {
-    RCHRequestPlacement *placement = [[RCHRequestPlacement alloc] initWithPageType:RCHPlacementPageTypeCart name:@"vertical"];
     RCHRequestProduct *product = [[RCHRequestProduct alloc] initWithIdentifier:@"1" quantity:@2 priceCents:@3];
-    RCHPlacementRecsBuilder *builder = [RCHSDK builderForTrackingPurchaseWithPlacement:placement
-                                                                               orderID:@"2"
-                                                                               product:product];
+    RCHPlacementRecsBuilder *builder = [RCHSDK builderForTrackingPurchaseWithOrderID:@"2"
+                                                                             product:product];
     NSDictionary *dict = [builder build][kRCHAPIBuilderParamRequestParameters];
     NSDictionary *info = [builder build][kRCHAPIBuilderParamRequestInfo];
-
+    
     expect(dict).notTo.beNil();
     expect(info[kRCHAPIBuilderParamRequestInfoPath]).to.equal(kRCHAPIRequestRecsForPlacementsPath);
-    expect(dict[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(@"cart_page.vertical");
+    expect(dict[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(@"purchase_complete_page");
     expect(dict[kRCHAPIRequestParamRecommendationsOrderID]).to.equal(@"2");
     expect(dict[kRCHAPIRequestParamRecommendationsProductID]).to.equal(@"1");
     expect(dict[kRCHAPIRequestParamRecommendationsItemQuantities]).to.equal(@"2");
     expect(dict[kRCHAPIRequestParamRecommendationsProductPricesCents]).to.equal(@"3");
-
+    
     // Don't crash
-    [RCHSDK builderForTrackingPurchaseWithPlacement:nil
-                                            orderID:nil
-                                            product:nil];
+    [RCHSDK builderForTrackingPurchaseWithOrderID:nil
+                                          product:nil];
+}
+
+- (void)testBuilderForTrackingCategoryView
+{
+    RCHPlacementRecsBuilder *builder = [RCHSDK builderForTrackingCategoryViewWithCategoryID:@"1"];
+    NSDictionary *dict = [builder build][kRCHAPIBuilderParamRequestParameters];
+    NSDictionary *info = [builder build][kRCHAPIBuilderParamRequestInfo];
+    
+    expect(dict).notTo.beNil();
+    expect(info[kRCHAPIBuilderParamRequestInfoPath]).to.equal(kRCHAPIRequestRecsForPlacementsPath);
+    expect(dict[kRCHAPIRequestParamRecommendationsPlacements]).to.equal(@"category_page");
+    expect(dict[kRCHAPIRequestParamRecommendationsCategoryID]).to.equal(@"1");
+    
+    // Don't crash
+    [RCHSDK builderForTrackingCategoryViewWithCategoryID:nil];
 }
 
 - (void)testBuilderForUserProfile

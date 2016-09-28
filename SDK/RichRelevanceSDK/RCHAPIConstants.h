@@ -127,6 +127,7 @@ OBJC_EXTERN NSString *const kRCHAPIRequestParamRecommendationsEmailCampaignId;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamRecommendationsStrategyRequestID;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamRecommendationsStrategyBlockedProductIds;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamRecommendationsStrategyRegionID;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamRecommendationsAddedToCartProductID;
 
 ///-------------------------------
 /// @name User Preferences
