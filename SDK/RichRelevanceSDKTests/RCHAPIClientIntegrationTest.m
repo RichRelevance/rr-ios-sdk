@@ -99,7 +99,7 @@
 
 - (void)testBasic_OAuth
 {
-    [Expecta setAsynchronousTestTimeout:10.0];
+    [Expecta setAsynchronousTestTimeout:120.0];
 
     self.config.useHTTPS = YES;
 
@@ -204,7 +204,7 @@
 
 - (void)testUserProfileGetFields
 {
-    [Expecta setAsynchronousTestTimeout:10.0];
+    [Expecta setAsynchronousTestTimeout:120.0];
     self.config.useHTTPS = YES;
 
     RCHUserProfileBuilder *builder = [RCHSDK builderForUserProfileFieldType:RCHUserProfileFieldTypeAll];
