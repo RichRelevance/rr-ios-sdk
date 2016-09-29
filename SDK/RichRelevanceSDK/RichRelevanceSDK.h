@@ -38,6 +38,7 @@ FOUNDATION_EXPORT const unsigned char RichRelevanceSDKVersionString[];
 #import <RichRelevanceSDK/RCHUserProfileBuilder.h>
 #import <RichRelevanceSDK/RCHPersonalizeBuilder.h>
 #import <RichRelevanceSDK/RCHGetProductsBuilder.h>
+#import <RichRelevanceSDK/RCHAutocompleteBuilder.h>
 
 // API
 

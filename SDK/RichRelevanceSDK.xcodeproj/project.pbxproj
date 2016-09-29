@@ -221,12 +221,13 @@
 		72F892841B3204A600381C4D /* NSURLRequest+RZIExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F8927C1B3204A600381C4D /* NSURLRequest+RZIExtensions.m */; };
 		72F892851B3204A600381C4D /* RZIHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F8927E1B3204A600381C4D /* RZIHost.m */; };
 		72F892861B3204A600381C4D /* RZIRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F892811B3204A600381C4D /* RZIRoutes.m */; };
+		AB7243961D9DA0F5007812B8 /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB7243971D9DA0F5007812B8 /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */; };
 		ABDF7DD01D90662600E4800A /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */; };
-		ABDF7DD11D90662600E4800A /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */; };
+		ABDF7DD11D90662600E4800A /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDF7DD31D90672700E4800A /* find_autocomplete.json in Resources */ = {isa = PBXBuildFile; fileRef = ABDF7DD21D90672700E4800A /* find_autocomplete.json */; };
 		ABDF7DD71D906F4900E4800A /* RCHAutocompleteSuggestion.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DD51D906F4900E4800A /* RCHAutocompleteSuggestion.h */; };
 		ABDF7DD81D906F4900E4800A /* RCHAutocompleteSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DD61D906F4900E4800A /* RCHAutocompleteSuggestion.m */; };
-		ABDF7DDD1D9070F100E4800A /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */; };
 		ABDF7DDF1D9070F600E4800A /* RCHAutocompleteSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DD61D906F4900E4800A /* RCHAutocompleteSuggestion.m */; };
 		ABDF7DE21D90711200E4800A /* RCHAutocompleteResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DE01D90711200E4800A /* RCHAutocompleteResponseParser.h */; };
 		ABDF7DE31D90711200E4800A /* RCHAutocompleteResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DE11D90711200E4800A /* RCHAutocompleteResponseParser.m */; };
@@ -870,6 +871,7 @@
 				2B7AB4691D63BA3900E011DC /* NSObject+RCHImport.h in Headers */,
 				2B7AB46A1D63BA3900E011DC /* RCHNetworkReachabilityManager.h in Headers */,
 				2B7AB46B1D63BA3900E011DC /* RCHOAuth.h in Headers */,
+				AB7243961D9DA0F5007812B8 /* RCHAutocompleteBuilder.h in Headers */,
 				2B7AB46C1D63BA3900E011DC /* RCHGetProductsResult.h in Headers */,
 				2B7AB46D1D63BA3900E011DC /* NSObject+RCHImport_Private.h in Headers */,
 			);
@@ -1159,10 +1161,10 @@
 				2B7AB42B1D63BA3900E011DC /* RCHPlacementsResult.m in Sources */,
 				2B7AB42C1D63BA3900E011DC /* RCHPersonalizeResult.m in Sources */,
 				2B7AB42D1D63BA3900E011DC /* RCHUserPrefBuilder.m in Sources */,
-				ABDF7DDD1D9070F100E4800A /* RCHAutocompleteBuilder.m in Sources */,
 				2B7AB42E1D63BA3900E011DC /* RCHSDK.m in Sources */,
 				2B7AB42F1D63BA3900E011DC /* RCHRecsUsingStrategyResponseParser.m in Sources */,
 				ABDF7DDF1D9070F600E4800A /* RCHAutocompleteSuggestion.m in Sources */,
+				AB7243971D9DA0F5007812B8 /* RCHAutocompleteBuilder.m in Sources */,
 				2B7AB4301D63BA3900E011DC /* RCHPlacement.m in Sources */,
 				2B7AB4311D63BA3900E011DC /* RCHPersonalizedPlacement.m in Sources */,
 				2B7AB4321D63BA3900E011DC /* RCHErrors.m in Sources */,

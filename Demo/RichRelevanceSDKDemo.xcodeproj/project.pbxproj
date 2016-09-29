@@ -63,6 +63,10 @@
 		72E821C41AFBACC900E71DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E821C31AFBACC900E71DA4 /* Images.xcassets */; };
 		72E821C71AFBACC900E71DA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E821C51AFBACC900E71DA4 /* LaunchScreen.xib */; };
 		8EEA60E0555A0278EF0A17C5 /* libPods-RichRelevanceSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */; };
+		B82E620B1D9C5D12007EB3FF /* RCHCatalogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E61F71D95FB16007EB3FF /* RCHCatalogCollectionViewController.swift */; };
+		B82E620D1D9C6971007EB3FF /* RCHProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E61F91D95FC85007EB3FF /* RCHProductCollectionViewCell.swift */; };
+		B82E62101D9C7D4D007EB3FF /* RCHProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */; };
+		B82E62111D9C7D78007EB3FF /* SearchDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -189,6 +193,11 @@
 		72E821C61AFBACC900E71DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		84D3417C4402EBA33BAF6EA1 /* Pods-RichRelevanceSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF8909EC5A985504D4AE0B72 /* Pods-RichRelevanceSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SearchDemo.storyboard; path = RichRelevanceSDKDemo/SearchDemo.storyboard; sourceTree = "<group>"; };
+		B82E61F71D95FB16007EB3FF /* RCHCatalogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCHCatalogCollectionViewController.swift; path = RichRelevanceSDKDemo/RCHCatalogCollectionViewController.swift; sourceTree = "<group>"; };
+		B82E61F91D95FC85007EB3FF /* RCHProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCHProductCollectionViewCell.swift; path = RichRelevanceSDKDemo/RCHProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RCHProductCollectionViewCell.xib; path = RichRelevanceSDKDemo/RCHProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		B82E620F1D9C7ACB007EB3FF /* RichRelevanceSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RichRelevanceSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -450,6 +459,7 @@
 		72E821AA1AFBACC800E71DA4 = {
 			isa = PBXGroup;
 			children = (
+				B82E61EF1D95FA44007EB3FF /* RichRelevanceSearchDemo */,
 				72E821B51AFBACC900E71DA4 /* RichRelevanceSDKDemo */,
 				72E821B41AFBACC900E71DA4 /* Products */,
 				AD68D720CB855E1B5FA4C105 /* Pods */,
@@ -497,6 +507,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B82E61EF1D95FA44007EB3FF /* RichRelevanceSearchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B82E620F1D9C7ACB007EB3FF /* RichRelevanceSDKDemo-Bridging-Header.h */,
+				B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */,
+				B82E61F01D95FA5C007EB3FF /* View Controllers */,
+			);
+			name = RichRelevanceSearchDemo;
+			sourceTree = "<group>";
+		};
+		B82E61F01D95FA5C007EB3FF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B82E61F41D95FAE6007EB3FF /* Catalog */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B82E61F41D95FAE6007EB3FF /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				B82E61F71D95FB16007EB3FF /* RCHCatalogCollectionViewController.swift */,
+				B82E61F51D95FAF2007EB3FF /* Product Cell */,
+			);
+			name = Catalog;
+			sourceTree = "<group>";
+		};
+		B82E61F51D95FAF2007EB3FF /* Product Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B82E61F91D95FC85007EB3FF /* RCHProductCollectionViewCell.swift */,
+				B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */,
+			);
+			name = "Product Cell";
+			sourceTree = "<group>";
+		};
 		F473393DB891475060A8AEB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +586,7 @@
 				TargetAttributes = {
 					72E821B21AFBACC900E71DA4 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -566,6 +613,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82E62111D9C7D78007EB3FF /* SearchDemo.storyboard in Resources */,
+				B82E62101D9C7D4D007EB3FF /* RCHProductCollectionViewCell.xib in Resources */,
 				72E821C21AFBACC900E71DA4 /* Main.storyboard in Resources */,
 				0172E5931B3B132100D09C7A /* SVProgressHUD.bundle in Resources */,
 				7295003F1B72906300C1F946 /* RCHProductCard.xib in Resources */,
@@ -632,6 +681,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82E620D1D9C6971007EB3FF /* RCHProductCollectionViewCell.swift in Sources */,
+				B82E620B1D9C5D12007EB3FF /* RCHCatalogCollectionViewController.swift in Sources */,
 				0172E5B21B3B139A00D09C7A /* RZBaseCollectionList.m in Sources */,
 				015C4F341B739B6400AC95CB /* RCHAppearance.m in Sources */,
 				015C4F391B73FE1300AC95CB /* RCHSwipePrefsViewController.m in Sources */,
@@ -791,6 +842,7 @@
 			baseConfigurationReference = 84D3417C4402EBA33BAF6EA1 /* Pods-RichRelevanceSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/build";
 				INFOPLIST_FILE = RichRelevanceSDKDemo/Info.plist;
@@ -798,6 +850,9 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b4bad975-4464-4e48-94a8-8a6cd730fede";
+				SWIFT_OBJC_BRIDGING_HEADER = "RichRelevanceSDKDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -806,6 +861,7 @@
 			baseConfigurationReference = AF8909EC5A985504D4AE0B72 /* Pods-RichRelevanceSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/build";
 				INFOPLIST_FILE = RichRelevanceSDKDemo/Info.plist;
@@ -813,6 +869,8 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b4bad975-4464-4e48-94a8-8a6cd730fede";
+				SWIFT_OBJC_BRIDGING_HEADER = "RichRelevanceSDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
