@@ -27,6 +27,9 @@
 #import "RCHRecsForPlacementsResponseParser.h"
 #import "RCHNetworkReachabilityManager.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+
 @interface RCHAPIClient (UnderTest)
 
 @property (strong, nonatomic) RCHNetworkReachabilityManager *reachability;
@@ -475,3 +478,5 @@ typedef void (^RCHNetworkReachabilityStatusBlock)(RCHNetworkReachabilityStatus s
 }
 
 @end
+
+#pragma clang diagnostic pop

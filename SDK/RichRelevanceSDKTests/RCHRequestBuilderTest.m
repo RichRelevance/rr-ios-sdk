@@ -22,6 +22,9 @@
 
 static NSString *const kRCHRequestBuilderTestDefaultPath = @"/defaultPath";
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+
 @interface RCHRequestBuilder (UnderTest)
 
 @property (strong, nonatomic) NSMutableDictionary *requestParams;
@@ -152,3 +155,5 @@ static NSString *const kRCHRequestBuilderTestDefaultPath = @"/defaultPath";
 }
 
 @end
+
+#pragma clang diagnostic pop
