@@ -16,6 +16,7 @@
 #import "AppDelegate.h"
 #import "RCHAppearance.h"
 #import <RichRelevanceSDK/RichRelevanceSDK.h>
+#import "RCHStringConstants.h"
 
 @interface AppDelegate ()
 
@@ -34,16 +35,21 @@
 
 - (void)configureRRSDK
 {
-    // First create a configuration and use it to configure the default client.
+    // Pull saved client or default if none
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:@"bccfa17d092268c0", kRCHUserDefaultKeyApiKey, nil]];
+    NSString *apiClientKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiKey];
 
+    // Create a configuration and use it to configure the default client.
+    
     RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"showcaseparent"
-                                                               APIClientKey:@"bccfa17d092268c0"
+                                                               APIClientKey:apiClientKey
                                                                    endpoint:RCHEndpointProduction
                                                                    useHTTPS:YES];
     config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";
     config.userID = @"RZTestUser";
     config.sessionID = [[NSUUID UUID] UUIDString];
-    ;
+    
     [[RCHSDK defaultClient] configure:config];
 
     // Set the log level to debug so we can observe the API traffic

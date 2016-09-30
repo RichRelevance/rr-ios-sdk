@@ -4,4 +4,6 @@
 
 #import "RichRelevanceSDK/RichRelevanceSDK.h"
 #import "UIImageView+WebCache.h"
+#import "RCHUserManagementViewController.h"
+#import "RCHStringConstants.h"
 

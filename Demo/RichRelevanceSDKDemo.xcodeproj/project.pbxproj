@@ -67,6 +67,7 @@
 		B82E620D1D9C6971007EB3FF /* RCHProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E61F91D95FC85007EB3FF /* RCHProductCollectionViewCell.swift */; };
 		B82E62101D9C7D4D007EB3FF /* RCHProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */; };
 		B82E62111D9C7D78007EB3FF /* SearchDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */; };
+		B82E62151D9C9664007EB3FF /* RCHUserManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -198,6 +199,9 @@
 		B82E61F91D95FC85007EB3FF /* RCHProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCHProductCollectionViewCell.swift; path = RichRelevanceSDKDemo/RCHProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RCHProductCollectionViewCell.xib; path = RichRelevanceSDKDemo/RCHProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		B82E620F1D9C7ACB007EB3FF /* RichRelevanceSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RichRelevanceSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		B82E62131D9C9664007EB3FF /* RCHUserManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHUserManagementViewController.h; sourceTree = "<group>"; };
+		B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHUserManagementViewController.m; sourceTree = "<group>"; };
+		B82E62241D9EF57D007EB3FF /* RCHStringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCHStringConstants.h; sourceTree = "<group>"; };
 		EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -229,6 +233,7 @@
 				72E821BB1AFBACC900E71DA4 /* AppDelegate.m */,
 				015C4F321B739B6400AC95CB /* RCHAppearance.h */,
 				015C4F331B739B6400AC95CB /* RCHAppearance.m */,
+				B82E62241D9EF57D007EB3FF /* RCHStringConstants.h */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -445,6 +450,7 @@
 		72E5460E1B384A73004A9A01 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B82E62121D9C9646007EB3FF /* User Management */,
 				72E821BD1AFBACC900E71DA4 /* RCHRootViewController.h */,
 				72E821BE1AFBACC900E71DA4 /* RCHRootViewController.m */,
 				723895C11B38551D00ACFE58 /* Common */,
@@ -541,6 +547,15 @@
 				B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */,
 			);
 			name = "Product Cell";
+			sourceTree = "<group>";
+		};
+		B82E62121D9C9646007EB3FF /* User Management */ = {
+			isa = PBXGroup;
+			children = (
+				B82E62131D9C9664007EB3FF /* RCHUserManagementViewController.h */,
+				B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */,
+			);
+			name = "User Management";
 			sourceTree = "<group>";
 		};
 		F473393DB891475060A8AEB4 /* Frameworks */ = {
@@ -701,6 +716,7 @@
 				723895C51B38553D00ACFE58 /* RCHProductCell.m in Sources */,
 				729500321B7286FF00C1F946 /* RCHSwipeProductsViewController.m in Sources */,
 				0172E58B1B3B132100D09C7A /* UIButton+WebCache.m in Sources */,
+				B82E62151D9C9664007EB3FF /* RCHUserManagementViewController.m in Sources */,
 				0172E5941B3B132100D09C7A /* SVProgressHUD.m in Sources */,
 				0172E5881B3B132100D09C7A /* SDWebImageDownloaderOperation.m in Sources */,
 				0172E5B81B3B139A00D09C7A /* RZFilteredCollectionList.m in Sources */,
