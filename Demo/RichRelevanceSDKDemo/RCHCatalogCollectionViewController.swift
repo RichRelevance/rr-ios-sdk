@@ -28,7 +28,6 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
     
     func loadData() {
         
-        // TODO: Set title to selected client
         self.title = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyClientName)
         
         spinner.startAnimating()

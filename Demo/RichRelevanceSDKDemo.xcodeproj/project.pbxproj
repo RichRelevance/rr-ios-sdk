@@ -68,6 +68,7 @@
 		B82E62101D9C7D4D007EB3FF /* RCHProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */; };
 		B82E62111D9C7D78007EB3FF /* SearchDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */; };
 		B82E62151D9C9664007EB3FF /* RCHUserManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */; };
+		B82E62271DA2E7AC007EB3FF /* RCHSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -202,6 +203,7 @@
 		B82E62131D9C9664007EB3FF /* RCHUserManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHUserManagementViewController.h; sourceTree = "<group>"; };
 		B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHUserManagementViewController.m; sourceTree = "<group>"; };
 		B82E62241D9EF57D007EB3FF /* RCHStringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCHStringConstants.h; sourceTree = "<group>"; };
+		B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHSearchViewController.swift; sourceTree = "<group>"; };
 		EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -526,6 +528,7 @@
 		B82E61F01D95FA5C007EB3FF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B82E62251DA2E790007EB3FF /* Search */,
 				B82E61F41D95FAE6007EB3FF /* Catalog */,
 			);
 			name = "View Controllers";
@@ -556,6 +559,14 @@
 				B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */,
 			);
 			name = "User Management";
+			sourceTree = "<group>";
+		};
+		B82E62251DA2E790007EB3FF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 		F473393DB891475060A8AEB4 /* Frameworks */ = {
@@ -746,6 +757,7 @@
 				723895DA1B39A73C00ACFE58 /* RCHUserPrefsViewController.m in Sources */,
 				723895DE1B39D12D00ACFE58 /* RCHUserProfileViewController.m in Sources */,
 				0172E5841B3B132100D09C7A /* SDImageCache.m in Sources */,
+				B82E62271DA2E7AC007EB3FF /* RCHSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
