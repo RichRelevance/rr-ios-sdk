@@ -45,7 +45,7 @@ static const NSTimeInterval kRCHAPIClientConfigDefaultResourceTimeout = 60.0f;
 
         _APIKey = APIKey;
         _APIClientKey = APIClientKey;
-
+        _locale = [NSLocale currentLocale];
         if (![self isValid]) {
             return nil;
         }

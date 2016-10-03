@@ -94,7 +94,7 @@ OBJC_EXTERN NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter;
 - (instancetype)addValue:(id)value toArrayForhKey:(NSString *)key;
 
 /*!
- *  Set a dicionary as value. This will result in the key/value paris of
+ *  Set a dicionary as value. This will result in the key/value pairs of
  *  the dictionary being passed in one of several delimited formats.
  *
  *  @param dict        The dictionary to set as value, must contain instances of NSString or NSNumber

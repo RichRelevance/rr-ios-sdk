@@ -221,8 +221,30 @@
 		72F892841B3204A600381C4D /* NSURLRequest+RZIExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F8927C1B3204A600381C4D /* NSURLRequest+RZIExtensions.m */; };
 		72F892851B3204A600381C4D /* RZIHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F8927E1B3204A600381C4D /* RZIHost.m */; };
 		72F892861B3204A600381C4D /* RZIRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F892811B3204A600381C4D /* RZIRoutes.m */; };
+		AB293C531D9DAD4C00543D8B /* RCHSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = AB293C511D9DAD4C00543D8B /* RCHSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB293C541D9DAD4C00543D8B /* RCHSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AB293C521D9DAD4C00543D8B /* RCHSearchResult.m */; };
 		AB7243961D9DA0F5007812B8 /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB7243971D9DA0F5007812B8 /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */; };
+		AB8497BB1DA2C2C900FE3414 /* RCHSearchLink.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497B91DA2C2C900FE3414 /* RCHSearchLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497BC1DA2C2C900FE3414 /* RCHSearchLink.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497B91DA2C2C900FE3414 /* RCHSearchLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497BD1DA2C2C900FE3414 /* RCHSearchLink.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497BA1DA2C2C900FE3414 /* RCHSearchLink.m */; };
+		AB8497BE1DA2C2C900FE3414 /* RCHSearchLink.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497BA1DA2C2C900FE3414 /* RCHSearchLink.m */; };
+		AB8497C11DA2C37400FE3414 /* RCHSearchProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497BF1DA2C37400FE3414 /* RCHSearchProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497C21DA2C37400FE3414 /* RCHSearchProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497BF1DA2C37400FE3414 /* RCHSearchProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497C31DA2C37400FE3414 /* RCHSearchProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497C01DA2C37400FE3414 /* RCHSearchProduct.m */; };
+		AB8497C41DA2C37400FE3414 /* RCHSearchProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497C01DA2C37400FE3414 /* RCHSearchProduct.m */; };
+		AB8497C71DA2C42800FE3414 /* RCHSearchFacet.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497C51DA2C42800FE3414 /* RCHSearchFacet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497C81DA2C42800FE3414 /* RCHSearchFacet.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497C51DA2C42800FE3414 /* RCHSearchFacet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497C91DA2C42800FE3414 /* RCHSearchFacet.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497C61DA2C42800FE3414 /* RCHSearchFacet.m */; };
+		AB8497CA1DA2C42800FE3414 /* RCHSearchFacet.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497C61DA2C42800FE3414 /* RCHSearchFacet.m */; };
+		AB8497CD1DA2C7D900FE3414 /* RCHSearchResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497CB1DA2C7D900FE3414 /* RCHSearchResponseParser.h */; };
+		AB8497CE1DA2C7D900FE3414 /* RCHSearchResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497CB1DA2C7D900FE3414 /* RCHSearchResponseParser.h */; };
+		AB8497CF1DA2C7D900FE3414 /* RCHSearchResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497CC1DA2C7D900FE3414 /* RCHSearchResponseParser.m */; };
+		AB8497D01DA2C7D900FE3414 /* RCHSearchResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497CC1DA2C7D900FE3414 /* RCHSearchResponseParser.m */; };
+		AB8497D21DA2C94500FE3414 /* find_search.json in Resources */ = {isa = PBXBuildFile; fileRef = AB8497D11DA2C94500FE3414 /* find_search.json */; };
+		AB8497D31DA2EAC000FE3414 /* RCHSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = AB293C511D9DAD4C00543D8B /* RCHSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497D61DA2F7FE00FE3414 /* RCHSearchBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497D41DA2F7FE00FE3414 /* RCHSearchBuilder.m */; };
+		AB8497D71DA2F7FE00FE3414 /* RCHSearchBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497D51DA2F7FE00FE3414 /* RCHSearchBuilder.h */; };
 		ABDF7DD01D90662600E4800A /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */; };
 		ABDF7DD11D90662600E4800A /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDF7DD31D90672700E4800A /* find_autocomplete.json in Resources */ = {isa = PBXBuildFile; fileRef = ABDF7DD21D90672700E4800A /* find_autocomplete.json */; };
@@ -381,6 +403,19 @@
 		72F892811B3204A600381C4D /* RZIRoutes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZIRoutes.m; sourceTree = "<group>"; };
 		83CC2A0EC97BBECBB1770627 /* Pods-RichRelevanceSDKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKTests/Pods-RichRelevanceSDKTests.release.xcconfig"; sourceTree = "<group>"; };
 		A14A01E6DF97CF55F327DA87 /* libPods-RichRelevanceSDKTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB293C511D9DAD4C00543D8B /* RCHSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHSearchResult.h; sourceTree = "<group>"; };
+		AB293C521D9DAD4C00543D8B /* RCHSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHSearchResult.m; sourceTree = "<group>"; };
+		AB8497B91DA2C2C900FE3414 /* RCHSearchLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHSearchLink.h; sourceTree = "<group>"; };
+		AB8497BA1DA2C2C900FE3414 /* RCHSearchLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHSearchLink.m; sourceTree = "<group>"; };
+		AB8497BF1DA2C37400FE3414 /* RCHSearchProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHSearchProduct.h; sourceTree = "<group>"; };
+		AB8497C01DA2C37400FE3414 /* RCHSearchProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHSearchProduct.m; sourceTree = "<group>"; };
+		AB8497C51DA2C42800FE3414 /* RCHSearchFacet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHSearchFacet.h; sourceTree = "<group>"; };
+		AB8497C61DA2C42800FE3414 /* RCHSearchFacet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHSearchFacet.m; sourceTree = "<group>"; };
+		AB8497CB1DA2C7D900FE3414 /* RCHSearchResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHSearchResponseParser.h; sourceTree = "<group>"; };
+		AB8497CC1DA2C7D900FE3414 /* RCHSearchResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHSearchResponseParser.m; sourceTree = "<group>"; };
+		AB8497D11DA2C94500FE3414 /* find_search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = find_search.json; sourceTree = "<group>"; };
+		AB8497D41DA2F7FE00FE3414 /* RCHSearchBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHSearchBuilder.m; sourceTree = "<group>"; };
+		AB8497D51DA2F7FE00FE3414 /* RCHSearchBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHSearchBuilder.h; sourceTree = "<group>"; };
 		ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHAutocompleteBuilder.m; sourceTree = "<group>"; };
 		ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHAutocompleteBuilder.h; sourceTree = "<group>"; };
 		ABDF7DD21D90672700E4800A /* find_autocomplete.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = find_autocomplete.json; sourceTree = "<group>"; };
@@ -596,6 +631,8 @@
 				7217B6E41B753A9C00FDB3AC /* RCHGetProductsBuilder.m */,
 				ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */,
 				ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */,
+				AB8497D51DA2F7FE00FE3414 /* RCHSearchBuilder.h */,
+				AB8497D41DA2F7FE00FE3414 /* RCHSearchBuilder.m */,
 			);
 			name = Builder;
 			sourceTree = "<group>";
@@ -694,6 +731,7 @@
 			isa = PBXGroup;
 			children = (
 				ABDF7DD41D906F0600E4800A /* Autocomplete */,
+				AB293C501D9DACE000543D8B /* Search */,
 				72BC32661B1799D700BFC9D2 /* Common */,
 				729A0D2F1B1F7DFA003BD93F /* Recommendations */,
 				721DB04D1B2F185200715375 /* User Pref */,
@@ -735,6 +773,8 @@
 				7217B6E81B753EEC00FDB3AC /* RCHGetProductsResponseParser.m */,
 				ABDF7DE01D90711200E4800A /* RCHAutocompleteResponseParser.h */,
 				ABDF7DE11D90711200E4800A /* RCHAutocompleteResponseParser.m */,
+				AB8497CB1DA2C7D900FE3414 /* RCHSearchResponseParser.h */,
+				AB8497CC1DA2C7D900FE3414 /* RCHSearchResponseParser.m */,
 			);
 			name = Response;
 			sourceTree = "<group>";
@@ -757,6 +797,7 @@
 				721DB04B1B2F15CD00715375 /* user_pref.json */,
 				7295FFFF1B7142FD00C1F946 /* personalize.json */,
 				ABDF7DD21D90672700E4800A /* find_autocomplete.json */,
+				AB8497D11DA2C94500FE3414 /* find_search.json */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -803,6 +844,21 @@
 			path = RZImposter;
 			sourceTree = "<group>";
 		};
+		AB293C501D9DACE000543D8B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				AB293C511D9DAD4C00543D8B /* RCHSearchResult.h */,
+				AB293C521D9DAD4C00543D8B /* RCHSearchResult.m */,
+				AB8497B91DA2C2C900FE3414 /* RCHSearchLink.h */,
+				AB8497BA1DA2C2C900FE3414 /* RCHSearchLink.m */,
+				AB8497BF1DA2C37400FE3414 /* RCHSearchProduct.h */,
+				AB8497C01DA2C37400FE3414 /* RCHSearchProduct.m */,
+				AB8497C51DA2C42800FE3414 /* RCHSearchFacet.h */,
+				AB8497C61DA2C42800FE3414 /* RCHSearchFacet.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		ABDF7DD41D906F0600E4800A /* Autocomplete */ = {
 			isa = PBXGroup;
 			children = (
@@ -847,13 +903,16 @@
 				2B7AB4521D63BA3900E011DC /* RCHCategory.h in Headers */,
 				2B7AB4531D63BA3900E011DC /* RCHUserPrefResult.h in Headers */,
 				2B7AB4541D63BA3900E011DC /* RCHUserPreference.h in Headers */,
+				AB8497D31DA2EAC000FE3414 /* RCHSearchResult.h in Headers */,
 				2B7AB4551D63BA3900E011DC /* RCHUserProfileResult.h in Headers */,
 				2B7AB4561D63BA3900E011DC /* RCHUserProfileElement.h in Headers */,
 				2B7AB4571D63BA3900E011DC /* RCHCreative.h in Headers */,
 				2B7AB4581D63BA3900E011DC /* RCHCommonIncludes.h in Headers */,
+				AB8497BC1DA2C2C900FE3414 /* RCHSearchLink.h in Headers */,
 				2B7AB4591D63BA3900E011DC /* RCHAPIResponseParser.h in Headers */,
 				2B7AB45A1D63BA3900E011DC /* RCHRecsForPlacementsResponseParser.h in Headers */,
 				2B7AB45B1D63BA3900E011DC /* RCHRecsUsingStrategyResponseParser.h in Headers */,
+				AB8497C21DA2C37400FE3414 /* RCHSearchProduct.h in Headers */,
 				2B7AB45C1D63BA3900E011DC /* RCHUserPrefResponseParser.h in Headers */,
 				2B7AB45D1D63BA3900E011DC /* RCHGetProductsResponseParser.h in Headers */,
 				2B7AB45E1D63BA3900E011DC /* RCHUserProfileResponseParser.h in Headers */,
@@ -866,6 +925,7 @@
 				2B7AB4651D63BA3900E011DC /* RCHWebUtils.h in Headers */,
 				2B7AB49D1D63BDC200E011DC /* RichRelevanceSDK.h in Headers */,
 				2B7AB4661D63BA3900E011DC /* RCHPersonalizedPlacement.h in Headers */,
+				AB8497C81DA2C42800FE3414 /* RCHSearchFacet.h in Headers */,
 				2B7AB4671D63BA3900E011DC /* RCHLog.h in Headers */,
 				2B7AB4681D63BA3900E011DC /* RCHPersonalizeResponseParser.h in Headers */,
 				2B7AB4691D63BA3900E011DC /* NSObject+RCHImport.h in Headers */,
@@ -873,6 +933,7 @@
 				2B7AB46B1D63BA3900E011DC /* RCHOAuth.h in Headers */,
 				AB7243961D9DA0F5007812B8 /* RCHAutocompleteBuilder.h in Headers */,
 				2B7AB46C1D63BA3900E011DC /* RCHGetProductsResult.h in Headers */,
+				AB8497CE1DA2C7D900FE3414 /* RCHSearchResponseParser.h in Headers */,
 				2B7AB46D1D63BA3900E011DC /* NSObject+RCHImport_Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -886,7 +947,9 @@
 				72BC32441B0CEE1400BFC9D2 /* RCHErrors.h in Headers */,
 				7294CCE41B0654DB008ACC1A /* RCHRequestBuilder.h in Headers */,
 				72BC32581B17567600BFC9D2 /* RCHImportable.h in Headers */,
+				AB8497CD1DA2C7D900FE3414 /* RCHSearchResponseParser.h in Headers */,
 				7294CCE61B0654DB008ACC1A /* RCHPlacementRecsBuilder.h in Headers */,
+				AB8497BB1DA2C2C900FE3414 /* RCHSearchLink.h in Headers */,
 				720492A11B7139BF00517115 /* RCHPersonalizeResult.h in Headers */,
 				7294CCE81B0654DB008ACC1A /* RCHStrategyRecsBuilder.h in Headers */,
 				ABDF7DD71D906F4900E4800A /* RCHAutocompleteSuggestion.h in Headers */,
@@ -898,6 +961,7 @@
 				ABDF7DD11D90662600E4800A /* RCHAutocompleteBuilder.h in Headers */,
 				72BC325C1B17657300BFC9D2 /* RCHPlacementsResult.h in Headers */,
 				729A0D321B1F7E31003BD93F /* RCHStrategyResult.h in Headers */,
+				AB8497C71DA2C42800FE3414 /* RCHSearchFacet.h in Headers */,
 				72BC32601B17662800BFC9D2 /* RCHPlacement.h in Headers */,
 				72BC32641B176AEA00BFC9D2 /* RCHRecommendedProduct.h in Headers */,
 				7217B6E51B753A9C00FDB3AC /* RCHGetProductsBuilder.h in Headers */,
@@ -915,8 +979,10 @@
 				7217B6E91B753EEC00FDB3AC /* RCHGetProductsResponseParser.h in Headers */,
 				721DB0471B273D7100715375 /* RCHUserProfileResponseParser.h in Headers */,
 				7294CCD81B053FB6008ACC1A /* RCHAPIClient.h in Headers */,
+				AB8497D71DA2F7FE00FE3414 /* RCHSearchBuilder.h in Headers */,
 				72BC32311B0B9EC700BFC9D2 /* RCHAPIClientConfig.h in Headers */,
 				72BC323A1B0CC89800BFC9D2 /* RCHAPIConstants.h in Headers */,
+				AB293C531D9DAD4C00543D8B /* RCHSearchResult.h in Headers */,
 				720492A51B713AF300517115 /* RCHRecommendedPlacement.h in Headers */,
 				72F5CD421B0A321C0002168C /* RCHLogLevels.h in Headers */,
 				7204929C1B70FA3700517115 /* RCHPersonalizeBuilder.h in Headers */,
@@ -927,6 +993,7 @@
 				72BC32551B17567600BFC9D2 /* NSObject+RCHImport.h in Headers */,
 				ABDF7DE21D90711200E4800A /* RCHAutocompleteResponseParser.h in Headers */,
 				721DB05C1B2F3CC200715375 /* RCHNetworkReachabilityManager.h in Headers */,
+				AB8497C11DA2C37400FE3414 /* RCHSearchProduct.h in Headers */,
 				729A0D3D1B209A61003BD93F /* RCHOAuth.h in Headers */,
 				7217B6EE1B753F7300FDB3AC /* RCHGetProductsResult.h in Headers */,
 				72BC32571B17567600BFC9D2 /* NSObject+RCHImport_Private.h in Headers */,
@@ -1006,6 +1073,7 @@
 				TargetAttributes = {
 					7294CCB61B053C36008ACC1A = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					7294CCC11B053C36008ACC1A = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -1053,6 +1121,7 @@
 				729500001B7142FD00C1F946 /* personalize.json in Resources */,
 				72BC327B1B18B37300BFC9D2 /* recs_for_placements.json in Resources */,
 				721DB04C1B2F15CE00715375 /* user_pref.json in Resources */,
+				AB8497D21DA2C94500FE3414 /* find_search.json in Resources */,
 				72D1739F1B190152006FF7BF /* recs_for_placements_error.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1139,9 +1208,11 @@
 				2B7AB4151D63BA3900E011DC /* RCHAPIConstants.m in Sources */,
 				2B7AB4161D63BA3900E011DC /* RCHRecommendedPlacement.m in Sources */,
 				2B7AB4171D63BA3900E011DC /* RCHCreative.m in Sources */,
+				AB8497D01DA2C7D900FE3414 /* RCHSearchResponseParser.m in Sources */,
 				2B7AB4181D63BA3900E011DC /* RCHPlacementsBuilder.m in Sources */,
 				2B7AB4191D63BA3900E011DC /* RCHNetworkReachabilityManager.m in Sources */,
 				2B7AB41A1D63BA3900E011DC /* RCHWebUtils.m in Sources */,
+				AB8497CA1DA2C42800FE3414 /* RCHSearchFacet.m in Sources */,
 				2B7AB41B1D63BA3900E011DC /* RCHLog.m in Sources */,
 				2B7AB41C1D63BA3900E011DC /* RCHOAuth.m in Sources */,
 				2B7AB41D1D63BA3900E011DC /* RCHPersonalizeResponseParser.m in Sources */,
@@ -1152,6 +1223,7 @@
 				2B7AB4221D63BA3900E011DC /* RCHCommonIncludes.m in Sources */,
 				2B7AB4231D63BA3900E011DC /* RCHUserProfileResult.m in Sources */,
 				2B7AB4241D63BA3900E011DC /* RCHGetProductsResponseParser.m in Sources */,
+				AB8497BE1DA2C2C900FE3414 /* RCHSearchLink.m in Sources */,
 				2B7AB4251D63BA3900E011DC /* RCHUserPreference.m in Sources */,
 				2B7AB4261D63BA3900E011DC /* RCHUserPrefResult.m in Sources */,
 				2B7AB4271D63BA3900E011DC /* RCHRecommendedProduct.m in Sources */,
@@ -1179,6 +1251,7 @@
 				2B7AB43B1D63BA3900E011DC /* RCHPersonalizeBuilder.m in Sources */,
 				2B7AB43C1D63BA3900E011DC /* RCHCategory.m in Sources */,
 				2B7AB43D1D63BA3900E011DC /* RCHUserProfileElement.m in Sources */,
+				AB8497C41DA2C37400FE3414 /* RCHSearchProduct.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1192,6 +1265,7 @@
 				729500041B71479000C1F946 /* RCHCreative.m in Sources */,
 				720492971B6FE93600517115 /* RCHPlacementsBuilder.m in Sources */,
 				721DB05D1B2F3CC200715375 /* RCHNetworkReachabilityManager.m in Sources */,
+				AB8497C91DA2C42800FE3414 /* RCHSearchFacet.m in Sources */,
 				72BC32401B0CD18E00BFC9D2 /* RCHWebUtils.m in Sources */,
 				72F5CD401B0A31660002168C /* RCHLog.m in Sources */,
 				729A0D3E1B20A7DB003BD93F /* RCHOAuth.m in Sources */,
@@ -1202,6 +1276,7 @@
 				72BC32831B18F12C00BFC9D2 /* RCHAPIResult.m in Sources */,
 				72BC32751B17A1C900BFC9D2 /* RCHCommonIncludes.m in Sources */,
 				721DB0361B272EE300715375 /* RCHUserProfileResult.m in Sources */,
+				AB8497D61DA2F7FE00FE3414 /* RCHSearchBuilder.m in Sources */,
 				7217B6EA1B753EEC00FDB3AC /* RCHGetProductsResponseParser.m in Sources */,
 				721DB0551B2F18FA00715375 /* RCHUserPreference.m in Sources */,
 				721DB0511B2F188D00715375 /* RCHUserPrefResult.m in Sources */,
@@ -1215,7 +1290,10 @@
 				ABDF7DD01D90662600E4800A /* RCHAutocompleteBuilder.m in Sources */,
 				7294CCF21B067AC3008ACC1A /* RCHSDK.m in Sources */,
 				729A0D371B1F8C81003BD93F /* RCHRecsUsingStrategyResponseParser.m in Sources */,
+				AB293C541D9DAD4C00543D8B /* RCHSearchResult.m in Sources */,
+				AB8497BD1DA2C2C900FE3414 /* RCHSearchLink.m in Sources */,
 				72BC32611B17662800BFC9D2 /* RCHPlacement.m in Sources */,
+				AB8497C31DA2C37400FE3414 /* RCHSearchProduct.m in Sources */,
 				7295FFFA1B713F7400C1F946 /* RCHPersonalizedPlacement.m in Sources */,
 				72BC32451B0CEE1400BFC9D2 /* RCHErrors.m in Sources */,
 				ABDF7DD81D906F4900E4800A /* RCHAutocompleteSuggestion.m in Sources */,
@@ -1226,6 +1304,7 @@
 				721DB0591B2F1D6100715375 /* RCHUserPrefResponseParser.m in Sources */,
 				72BC32561B17567600BFC9D2 /* NSObject+RCHImport.m in Sources */,
 				72BC326A1B1799ED00BFC9D2 /* RCHRange.m in Sources */,
+				AB8497CF1DA2C7D900FE3414 /* RCHSearchResponseParser.m in Sources */,
 				721DB0481B273D7100715375 /* RCHUserProfileResponseParser.m in Sources */,
 				7204929D1B70FA3700517115 /* RCHPersonalizeBuilder.m in Sources */,
 				72BC326E1B179CAB00BFC9D2 /* RCHCategory.m in Sources */,
@@ -1396,6 +1475,7 @@
 		7294CCCE1B053C36008ACC1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1406,12 +1486,15 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		7294CCCF1B053C36008ACC1A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1421,6 +1504,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

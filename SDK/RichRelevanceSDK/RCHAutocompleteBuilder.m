@@ -30,22 +30,22 @@
 
 - (instancetype)setQuery:(NSString *)text
 {
-    return [self setValue:text forKey:kRCHAPIRequestParamAutocompleteQuery];
+    return [self setValue:text forKey:kRCHAPIRequestParamFindQuery];
 }
 
 - (instancetype)setLocale:(NSLocale *)locale
 {
-    return [self setValue:[locale objectForKey:NSLocaleLanguageCode] forKey:kRCHAPIRequestParamAutocompleteLanguage];
+    return [self setValue:[locale objectForKey:NSLocaleLanguageCode] forKey:kRCHAPIRequestParamFindLanguage];
 }
 
 - (instancetype)setPageCount:(NSInteger)pageCount
 {
-    return [self setValue:@(pageCount) forKey:kRCHAPIRequestParamAutocompleteCount];
+    return [self setValue:@(pageCount) forKey:kRCHAPIRequestParamFindCount];
 }
 
 - (instancetype)setPageStart:(NSInteger)pageStart
 {
-    return [self setValue:@(pageStart) forKey:kRCHAPIRequestParamAutocompleteStart];
+    return [self setValue:@(pageStart) forKey:kRCHAPIRequestParamFindStart];
 }
 
 @end

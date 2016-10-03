@@ -61,9 +61,20 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 @property (copy, nonatomic) NSString *sessionID;
 
 /*!
+ *  The Locale the client is in. This defaults to being configured with [NSLocale currentLocale].
+ *  This will use the `languageCode` property of the locale to submit along to supported endpoints.
+ */
+@property (copy, nonatomic) NSLocale *locale;
+
+/*!
  *  The Rich Relevance API endpoint. Default value is RCHEndpointProduction
  */
 @property (copy, readonly, nonatomic) NSString *endpoint;
+
+/*!
+ *  A channel is a description of the caller of this API.
+ */
+@property (copy, readonly, nonatomic) NSString *channel;
 
 /*!
  *  Whether or not to use HTTPS for all requests. Default value is YES.

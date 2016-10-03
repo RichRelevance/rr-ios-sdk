@@ -29,6 +29,7 @@
 @class RCHPersonalizeBuilder;
 @class RCHGetProductsBuilder;
 @class RCHAutocompleteBuilder;
+@class RCHSearchBuilder;
 
 /*!
  *  The central launchpoint for all Rich Relevance SDK activity. 
@@ -187,11 +188,22 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  Produce a builder to retrieve autocomplete options.
  *
- *  @param text The text to be autocompleted
+ *  @param query The text to be autocompleted
  *
  *  @return A pre-populated builder
  */
-+ (RCHAutocompleteBuilder *)builderForAutocompleteWithText:(NSString *)text;
++ (RCHAutocompleteBuilder *)builderForAutocompleteWithQuery:(NSString *)query;
+
+/*!
+ *  Produce a builder to search with the specified query
+ *
+ *  @param placement The placement to search
+ *  @param query The text to be searched
+ *
+ *  @return A pre-populated builder
+ */
++ (RCHSearchBuilder *)builderForSearchPlacement:(RCHRequestPlacement *)placement withQuery:(NSString *)query;
+
 
 @end
 NS_ASSUME_NONNULL_END

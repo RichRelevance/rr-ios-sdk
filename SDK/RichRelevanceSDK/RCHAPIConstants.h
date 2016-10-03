@@ -68,6 +68,7 @@ OBJC_EXTERN NSString *const kRCHAPIRequestUserProfilePath;
 OBJC_EXTERN NSString *const kRCHAPIRequestPersonalizePath;
 OBJC_EXTERN NSString *const kRCHAPIRequestGetProductsPath;
 OBJC_EXTERN NSString *const kRCHAPIRequestFindAutocompletePath;
+OBJC_EXTERN NSString *const kRCHAPIRequestFindSearchPath;
 
 ///-------------------------------
 /// @name Response
@@ -163,13 +164,27 @@ OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeRecProductsCount;
 /// @name Autocomplete
 ///-------------------------------
 
-OBJC_EXTERN NSString *const kRCHAPIRequestParamAutocompleteQuery;
-OBJC_EXTERN NSString *const kRCHAPIRequestParamAutocompleteLanguage;
-OBJC_EXTERN NSString *const kRCHAPIRequestParamAutocompleteStart;
-OBJC_EXTERN NSString *const kRCHAPIRequestParamAutocompleteCount;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamFindQuery;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamFindLanguage;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamFindStart;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamFindCount;
 
 OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteTerms;
 OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteType;
 OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteValue;
+
+///-------------------------------
+/// @name Search
+///-------------------------------
+
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchPlacement;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchFilter;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchFacet;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchSort;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchChannel;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchLog;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchRegion;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchReference;
+
 
 NS_ASSUME_NONNULL_END
