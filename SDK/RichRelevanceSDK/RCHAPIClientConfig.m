@@ -19,7 +19,7 @@ NSString *const RCHEndpointProduction = @"recs.richrelevance.com";
 NSString *const RCHEndpointIntegration = @"integration.richrelevance.com";
 
 NSString *const RCHEndpointService = @"service.richrelevance.com";
-NSString *const RCHEndpointDevelop = @"developer.richrelevance.com";
+NSString *const RCHEndpointDevelop = @"qa.richrelevance.com";
 
 NSString *const RCHDefaultChannel = @"iOS";
 

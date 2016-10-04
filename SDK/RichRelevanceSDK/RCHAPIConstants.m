@@ -50,8 +50,8 @@ NSString *const kRCHAPIRequestUserPrefPath = @"rrserver/api/user/preference";
 NSString *const kRCHAPIRequestUserProfilePath = @"userProfile/api/v1/service/userProfile";
 NSString *const kRCHAPIRequestPersonalizePath = @"rrserver/api/personalize";
 NSString *const kRCHAPIRequestGetProductsPath = @"rrserver/api/rrPlatform/getProducts";
-NSString *const kRCHAPIRequestFindAutocompletePath = @"find/v1/autocomplete";
-NSString *const kRCHAPIRequestFindSearchPath = @"find/v1/query";
+NSString *const kRCHAPIRequestFindAutocompletePath = @"rrserver/api/find/v1/autocomplete";
+NSString *const kRCHAPIRequestFindSearchPath = @"rrserver/api/find/v1";
 
 #pragma mark - Recommendations
 
