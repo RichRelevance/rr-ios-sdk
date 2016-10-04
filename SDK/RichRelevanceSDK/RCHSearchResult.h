@@ -14,7 +14,7 @@
 //  limitations under the License.
 
 #import <RichRelevanceSDK/RichRelevanceSDK.h>
-
+#import "RCHAPIResult.h"
 @class RCHSearchLink;
 @class RCHSearchProduct;
 @class RCHSearchFacet;

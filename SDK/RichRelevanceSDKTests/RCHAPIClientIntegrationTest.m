@@ -43,6 +43,7 @@
 @interface RCHAPIClient (UnderTest)
 
 @property (strong, nonatomic) NSMutableArray *failedClickTrackURLs;
+@property (strong, nonatomic) NSString *opaqueRCSToken;
 
 @end
 

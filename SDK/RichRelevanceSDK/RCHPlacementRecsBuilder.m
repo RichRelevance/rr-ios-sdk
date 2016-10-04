@@ -136,10 +136,10 @@
 - (instancetype)addPurchasedProduct:(RCHRequestProduct *)product
 {
     if (product != nil) {
-        [self addValue:product.identifier toArrayForhKey:kRCHAPIRequestParamRecommendationsProductID];
-        [self addValue:product.quantity toArrayForhKey:kRCHAPIRequestParamRecommendationsItemQuantities];
-        [self addValue:product.priceCents toArrayForhKey:kRCHAPIRequestParamRecommendationsProductPricesCents];
-        [self addValue:product.priceDollars toArrayForhKey:kRCHAPIRequestParamRecommendationsProductPrices];
+        [self addValue:product.identifier toArrayForKey:kRCHAPIRequestParamRecommendationsProductID];
+        [self addValue:product.quantity toArrayForKey:kRCHAPIRequestParamRecommendationsItemQuantities];
+        [self addValue:product.priceCents toArrayForKey:kRCHAPIRequestParamRecommendationsProductPricesCents];
+        [self addValue:product.priceDollars toArrayForKey:kRCHAPIRequestParamRecommendationsProductPrices];
     }
     else {
         [RCHLog logError:@"Invalid parameter, nil  product passed to %@", NSStringFromSelector(_cmd)];
@@ -167,7 +167,7 @@
 {
     if (strategy != RCHStrategyDefault) {
         NSString *strategyString = [RCHEnumMappings stringFromStrategy:strategy];
-        [self addValue:strategyString toArrayForhKey:kRCHAPIRequestParamRecommendationsStrategySet];
+        [self addValue:strategyString toArrayForKey:kRCHAPIRequestParamRecommendationsStrategySet];
     }
 
     return self;

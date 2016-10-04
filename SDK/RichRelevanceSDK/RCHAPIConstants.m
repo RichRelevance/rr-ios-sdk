@@ -23,6 +23,7 @@ NSString *const kRCHAPICommonParamUserID = @"userId";
 NSString *const kRCHAPICommonParamSessionID = @"sessionId";
 NSString *const kRCHAPICommonParamUserIDShort = @"u";
 NSString *const kRCHAPICommonParamSessionIDShort = @"s";
+NSString *const kRCHAPICommonParamRCS = @"rcs";
 
 #pragma mark - Request Info
 
@@ -32,6 +33,7 @@ NSString *const kRCHAPIBuilderParamRequestInfoPath = @"com.richrelevance.SDK.Req
 NSString *const kRCHAPIBuilderParamRequestInfoParserClass = @"com.richrelevance.SDK.ResponseParserClass";
 NSString *const kRCHAPIBuilderParamRequestInfoRequiresOAuth = @"com.richrelevance.SDK.RequiresOAuth";
 NSString *const kRCHAPIBuilderParamRequestInfoUserAndSessionStyle = @"com.richrelevance.SDK.UserAndSessionParamStyle";
+NSString *const kRCHAPIBuilderParamRequestInfoEmbedRCS = @"com.richrelevance.SDK.EmbedRCS";
 
 #pragma mark - Response
 
@@ -49,7 +51,7 @@ NSString *const kRCHAPIRequestUserProfilePath = @"userProfile/api/v1/service/use
 NSString *const kRCHAPIRequestPersonalizePath = @"rrserver/api/personalize";
 NSString *const kRCHAPIRequestGetProductsPath = @"rrserver/api/rrPlatform/getProducts";
 NSString *const kRCHAPIRequestFindAutocompletePath = @"find/v1/autocomplete";
-NSString *const kRCHAPIRequestFindSearchPath = @"find/v1";
+NSString *const kRCHAPIRequestFindSearchPath = @"find/v1/query";
 
 #pragma mark - Recommendations
 
@@ -146,3 +148,18 @@ NSString *const kRCHAPIRequestParamSearchChannel = @"channelId";
 NSString *const kRCHAPIRequestParamSearchLog = @"log";
 NSString *const kRCHAPIRequestParamSearchRegion = @"region";
 NSString *const kRCHAPIRequestParamSearchReference = @"pref";
+
+NSString *const kRCHAPIRequestParamSearchAscending = @"ASC";
+NSString *const kRCHAPIRequestParamSearchDescending = @"DESC";
+NSString *const kRCHAPIRequestParamSearchSSL = @"ssl";
+
+NSString *const kRCHAPIResponseKeySearchProducts = @"docs";
+NSString *const kRCHAPIResponseKeySearchPlacements = @"placements";
+NSString *const kRCHAPIResponseKeySearchTrackingURL = @"searchTrackingUrl";
+NSString *const kRCHAPIResponseKeySearchNumFound = @"numFound";
+NSString *const kRCHAPIResponseKeySearchSpellChecked = @"spellchecked";
+NSString *const kRCHAPIResponseKeySearchLinks = @"links";
+NSString *const kRCHAPIResponseKeySearchFacets = @"facets";
+NSString *const kRCHAPIResponseKeySearchFacet = @"facet";
+NSString *const kRCHAPIResponseKeySearchValues = @"values";
+NSString *const kRCHAPIResponseKeySearchMessage = @"message";

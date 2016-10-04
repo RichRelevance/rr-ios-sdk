@@ -105,7 +105,7 @@ static NSString *const kRCHRequestPlacementDelimiter = @".";
 {
     if (placement != nil) {
         NSString *placementString = [placement stringRepresentation];
-        [self addValue:placementString toArrayForhKey:kRCHAPIRequestParamRecommendationsPlacements];
+        [self addValue:placementString toArrayForKey:kRCHAPIRequestParamRecommendationsPlacements];
     }
     else {
         [RCHLog logError:@"Invalid parameter, nil placement passed to %@", NSStringFromSelector(_cmd)];

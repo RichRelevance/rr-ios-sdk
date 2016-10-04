@@ -23,6 +23,7 @@
     self = [super initWithAPIPath:kRCHAPIRequestFindAutocompletePath];
     if (self) {
         [self setLocale:[NSLocale currentLocale]];
+        [self setUserAndSessionParamStyle:RCHAPIClientUserAndSessionParamStyleAPIKeyInPath];
         [self setResponseParserClass:[RCHAutocompleteResponseParser class]];
     }
     return self;

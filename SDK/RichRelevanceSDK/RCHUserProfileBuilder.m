@@ -34,7 +34,7 @@
 - (instancetype)addFieldType:(RCHUserProfileFieldType)fieldType
 {
     if (fieldType != RCHUserProfileFieldTypeNotSet) {
-        [self addValue:[RCHEnumMappings stringFromUserProfileFieldType:fieldType] toArrayForhKey:kRCHAPIRequestParamUserProfileFields];
+        [self addValue:[RCHEnumMappings stringFromUserProfileFieldType:fieldType] toArrayForKey:kRCHAPIRequestParamUserProfileFields];
     }
 
     return self;

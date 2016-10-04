@@ -72,7 +72,7 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 @property (copy, readonly, nonatomic) NSString *endpoint;
 
 /*!
- *  A channel is a description of the caller of this API.
+ *  A channel is a description of the caller of this API. This defaults to 'iOS'.
  */
 @property (copy, readonly, nonatomic) NSString *channel;
 
@@ -106,11 +106,18 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 ///-------------------------------
 
 /*!
- *  Creates a full HTTP base URL for the configured endpoint.
+ *  Creates a full HTTP base URL for the default configured endpoint.
  *
  *  @return An HTTP base URL
  */
-- (NSURL *)baseURL;
+- (NSURL * __nullable)baseURL;
+
+/*!
+ *  The baseURL for the new services.
+ *
+ *  @return The base URL for the new services.
+ */
+- (NSURL * __nullable)baseURLv2;
 
 /*!
  *  Validates this configuration includes values for all required fields.

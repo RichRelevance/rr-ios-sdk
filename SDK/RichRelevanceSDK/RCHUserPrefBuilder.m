@@ -114,7 +114,7 @@ typedef NS_ENUM(NSInteger, RCHUserPrefRequestMode) {
     [self setMode:RCHUserPrefRequestModeFetch];
 
     if (preference != RCHUserPrefFieldTypeNotSet) {
-        [self addValue:[RCHEnumMappings stringFromUserPrefFieldType:preference] toArrayForhKey:kRCHAPIRequestParamUserPrefFields];
+        [self addValue:[RCHEnumMappings stringFromUserPrefFieldType:preference] toArrayForKey:kRCHAPIRequestParamUserPrefFields];
     }
 
     return self;

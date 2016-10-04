@@ -23,20 +23,20 @@
 
 - (BOOL)rch_shouldImportValue:(id)value forKey:(NSString *)key
 {
-    if ([key isEqualToString:@"placements"] && [value isKindOfClass:[NSArray class]]) {
+    if ([key isEqualToString:kRCHAPIResponseKeySearchPlacements] && [value isKindOfClass:[NSArray class]]) {
         NSArray<NSDictionary *> *placements = value;
         if (placements.count > 0 && [placements[0] isKindOfClass:[NSDictionary class]]) {
             NSDictionary *placement = placements[0];
-            self.searchTrackingURL = placement[@"searchTrackingUrl"];
-            self.count = [placement[@"numFound"] unsignedIntegerValue];
-            self.spellCheckedQuery = placement[@"spellchecked"];
-
-            NSArray<NSDictionary *> *products = placement[@"docs"];
+            self.searchTrackingURL = placement[kRCHAPIResponseKeySearchTrackingURL];
+            self.count = [placement[kRCHAPIResponseKeySearchNumFound] unsignedIntegerValue];
+            self.spellCheckedQuery = placement[kRCHAPIResponseKeySearchSpellChecked];
+            self.opaqueRCSToken = placement[kRCHAPICommonParamRCS];
+            NSArray<NSDictionary *> *products = placement[kRCHAPIResponseKeySearchProducts];
             if ([products isKindOfClass:[NSArray class]]) {
                 self.products = [RCHSearchProduct rch_objectsFromArray:products];
             }
 
-            NSDictionary<NSString *, NSArray *> *links = placement[@"links"];
+            NSDictionary<NSString *, NSArray *> *links = placement[kRCHAPIResponseKeySearchLinks];
             NSMutableDictionary<NSString *, NSArray<RCHSearchLink *> *> *resultLinks = [NSMutableDictionary dictionary];
             if ([links isKindOfClass:[NSDictionary class]]) {
                 [links enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSArray * _Nonnull obj, BOOL * _Nonnull stop) {
@@ -45,12 +45,12 @@
             }
             self.links = resultLinks;
 
-            NSArray<NSDictionary *> *facets = placement[@"facets"];
+            NSArray<NSDictionary *> *facets = placement[kRCHAPIResponseKeySearchFacets];
             NSMutableDictionary<NSString *, NSArray<RCHSearchFacet *> *> *resultFacets = [NSMutableDictionary dictionary];
             if ([facets isKindOfClass:[NSArray class]]) {
                 for (NSDictionary *facet in facets) {
-                    NSString *key = facet[@"facet"];
-                    NSArray *values = facet[@"values"];
+                    NSString *key = facet[kRCHAPIResponseKeySearchFacet];
+                    NSArray *values = facet[kRCHAPIResponseKeySearchValues];
                     resultFacets[key] = [RCHSearchFacet rch_objectsFromArray:values];
                 }
             }
@@ -58,7 +58,7 @@
         }
         return NO;
     }
-    else if ([key isEqualToString:@"message"] && [value isKindOfClass:[NSString class]]) {
+    else if ([key isEqualToString:kRCHAPIResponseKeySearchMessage] && [value isKindOfClass:[NSString class]]) {
         self.errormessage = value;
     }
 

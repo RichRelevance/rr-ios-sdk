@@ -26,4 +26,10 @@
  */
 @property (copy, nonatomic) id rawResponse;
 
+/*!
+ *  If this property is set, the RCS token will be saved by the API client and
+ *  added to future requests that use the RCS token.
+ */
+@property (nonatomic, copy) NSString *opaqueRCSToken;
+
 @end

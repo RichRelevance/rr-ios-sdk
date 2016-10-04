@@ -23,8 +23,11 @@
 {
     self = [super initWithAPIPath:kRCHAPIRequestFindSearchPath];
     if (self) {
-        [self setLocale:[NSLocale currentLocale]];
         [self setResponseParserClass:[RCHSearchResponseParser class]];
+        [self setValue:@YES forKey:kRCHAPIRequestParamSearchSSL];
+        [self setEmbedRCSToken:YES];
+        [self setLocale:[NSLocale currentLocale]];
+        [self setUserAndSessionParamStyle:RCHAPIClientUserAndSessionParamStyleLongWithAPIKeyInPath];
     }
     return self;
 }
@@ -51,24 +54,24 @@
 
 - (instancetype)addSortOrder:(NSString *)field ascending:(BOOL)ascending
 {
-    return [self addFilter:field value:kRCHAPIRequestParamSearchSort];
+    NSString *sortValue = [NSString stringWithFormat:@"%@ %@", field, ascending ? kRCHAPIRequestParamSearchAscending :kRCHAPIRequestParamSearchDescending];
+    return [self addValue:sortValue toMultipleArgumentArrayForKey:kRCHAPIRequestParamSearchSort];
 }
 
 - (instancetype)addFilter:(NSString *)field value:(NSString *)value
 {
     NSString *filterValue = [NSString stringWithFormat:@"%@:\"%@\"", field, value];
-    return [self addValue:filterValue toArrayForhKey:kRCHAPIRequestParamSearchFilter];
+    return [self addValue:filterValue toArrayForKey:kRCHAPIRequestParamSearchFilter];
 }
 
 - (instancetype)addFilterFromFacet:(RCHSearchFacet *)facet
 {
-    return [self addFilter:facet.filter value:kRCHAPIRequestParamSearchFilter];
+    return [self addValue:facet.filter toArrayForKey:kRCHAPIRequestParamSearchFilter];
 }
 
 - (instancetype)setFacetFields:(NSArray<NSString *> *)fields
 {
-    NSString *fieldsString = [fields componentsJoinedByString:@"|"];
-    return [self setValue:fieldsString forKey:kRCHAPIRequestParamSearchFacet];
+    return [self setValue:fields forKey:kRCHAPIRequestParamSearchFacet];
 }
 
 - (instancetype)setLocale:(NSLocale *)locale

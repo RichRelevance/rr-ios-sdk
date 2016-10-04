@@ -244,7 +244,9 @@
 		AB8497D21DA2C94500FE3414 /* find_search.json in Resources */ = {isa = PBXBuildFile; fileRef = AB8497D11DA2C94500FE3414 /* find_search.json */; };
 		AB8497D31DA2EAC000FE3414 /* RCHSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = AB293C511D9DAD4C00543D8B /* RCHSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8497D61DA2F7FE00FE3414 /* RCHSearchBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497D41DA2F7FE00FE3414 /* RCHSearchBuilder.m */; };
-		AB8497D71DA2F7FE00FE3414 /* RCHSearchBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497D51DA2F7FE00FE3414 /* RCHSearchBuilder.h */; };
+		AB8497D71DA2F7FE00FE3414 /* RCHSearchBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497D51DA2F7FE00FE3414 /* RCHSearchBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497D81DA3304B00FE3414 /* RCHSearchBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497D51DA2F7FE00FE3414 /* RCHSearchBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8497D91DA3305400FE3414 /* RCHSearchBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497D41DA2F7FE00FE3414 /* RCHSearchBuilder.m */; };
 		ABDF7DD01D90662600E4800A /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */; };
 		ABDF7DD11D90662600E4800A /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDF7DD31D90672700E4800A /* find_autocomplete.json in Resources */ = {isa = PBXBuildFile; fileRef = ABDF7DD21D90672700E4800A /* find_autocomplete.json */; };
@@ -915,6 +917,7 @@
 				AB8497C21DA2C37400FE3414 /* RCHSearchProduct.h in Headers */,
 				2B7AB45C1D63BA3900E011DC /* RCHUserPrefResponseParser.h in Headers */,
 				2B7AB45D1D63BA3900E011DC /* RCHGetProductsResponseParser.h in Headers */,
+				AB8497D81DA3304B00FE3414 /* RCHSearchBuilder.h in Headers */,
 				2B7AB45E1D63BA3900E011DC /* RCHUserProfileResponseParser.h in Headers */,
 				2B7AB45F1D63BA3900E011DC /* RCHAPIClient.h in Headers */,
 				2B7AB4601D63BA3900E011DC /* RCHAPIClientConfig.h in Headers */,
@@ -1228,6 +1231,7 @@
 				2B7AB4261D63BA3900E011DC /* RCHUserPrefResult.m in Sources */,
 				2B7AB4271D63BA3900E011DC /* RCHRecommendedProduct.m in Sources */,
 				2B7AB4281D63BA3900E011DC /* RCHUserProfileBuilder.m in Sources */,
+				AB8497D91DA3305400FE3414 /* RCHSearchBuilder.m in Sources */,
 				2B7AB4291D63BA3900E011DC /* RCHAPIClientConfig.m in Sources */,
 				2B7AB42A1D63BA3900E011DC /* RCHAPIClient.m in Sources */,
 				2B7AB42B1D63BA3900E011DC /* RCHPlacementsResult.m in Sources */,
