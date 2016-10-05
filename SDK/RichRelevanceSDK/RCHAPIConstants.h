@@ -210,5 +210,6 @@ OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchFacets;
 OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchFacet;
 OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchValues;
 OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchMessage;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchAddToCartParams;
 
 NS_ASSUME_NONNULL_END

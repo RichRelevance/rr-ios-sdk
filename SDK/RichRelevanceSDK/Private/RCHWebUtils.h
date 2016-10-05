@@ -27,5 +27,6 @@
 @interface RCHWebUtils : NSObject
 
 + (NSString *)queryStringFromParameters:(NSDictionary *)parameters withEncoding:(NSStringEncoding)encoding;
++ (NSDictionary<NSString *, NSString *> *)keyValuesFromParameterString:(NSString *)string;
 
 @end

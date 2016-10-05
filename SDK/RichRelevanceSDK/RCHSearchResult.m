@@ -31,6 +31,7 @@
             self.count = [placement[kRCHAPIResponseKeySearchNumFound] unsignedIntegerValue];
             self.spellCheckedQuery = placement[kRCHAPIResponseKeySearchSpellChecked];
             self.opaqueRCSToken = placement[kRCHAPICommonParamRCS];
+            self.addToCartParameters = placement[kRCHAPIResponseKeySearchAddToCartParams];
             NSArray<NSDictionary *> *products = placement[kRCHAPIResponseKeySearchProducts];
             if ([products isKindOfClass:[NSArray class]]) {
                 self.products = [RCHSearchProduct rch_objectsFromArray:products];

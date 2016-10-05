@@ -163,3 +163,4 @@ NSString *const kRCHAPIResponseKeySearchFacets = @"facets";
 NSString *const kRCHAPIResponseKeySearchFacet = @"facet";
 NSString *const kRCHAPIResponseKeySearchValues = @"values";
 NSString *const kRCHAPIResponseKeySearchMessage = @"message";
+NSString *const kRCHAPIResponseKeySearchAddToCartParams = @"addtoCartParams";

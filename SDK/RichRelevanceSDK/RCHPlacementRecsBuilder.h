@@ -14,6 +14,7 @@
 //  limitations under the License.
 
 #import "RCHPlacementsBuilder.h"
+@class RCHSearchResult;
 
 /*!
  *  A request builder for the "recsForPlacements" endpoint.
@@ -201,6 +202,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param filterAttributes An NSDictionary of key/value pairs that represent filter attributes. Values can be of type NSString or NSNumber for single values, or, NSArray for multi-value attributes.
  */
 - (instancetype)setFilterAttributes:(NSDictionary *)filterAttributes;
+
+/*!
+ *  Add to cart only. Specify the search result that brought the user to the add to cart page.
+ *
+ *  @param searchResult The search result that the user initiated prior to adding the product to the cart.
+ */
+- (instancetype)addParametersFromSearchResult:(RCHSearchResult *)searchResult;
 
 @end
 NS_ASSUME_NONNULL_END

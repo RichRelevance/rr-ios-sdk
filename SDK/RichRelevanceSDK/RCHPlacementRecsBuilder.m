@@ -17,6 +17,8 @@
 #import "RCHLog.h"
 #import "RCHAPIConstants.h"
 #import "RCHRecsForPlacementsResponseParser.h"
+#import "RCHSearchResult.h"
+#import "RCHWebUtils.h"
 
 @interface RCHPlacementRecsBuilder ()
 
@@ -201,6 +203,16 @@
 - (instancetype)setFilterAttributes:(NSDictionary *)filterAttributes
 {
     return [self setDictionaryValue:filterAttributes forKey:kRCHAPIRequestParamRecommendationsFilterAttributes flattenKeys:NO];
+}
+
+- (instancetype)addParametersFromSearchResult:(RCHSearchResult *)searchResult
+{
+    NSString *parameterString = searchResult.addToCartParameters;
+    NSDictionary<NSString *, NSString *> *parameters = [RCHWebUtils keyValuesFromParameterString:parameterString];
+    [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
+        [self setValue:obj forKey:key];
+    }];
+    return self;
 }
 
 #pragma mark - Build

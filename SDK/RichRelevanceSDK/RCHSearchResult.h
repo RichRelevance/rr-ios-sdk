@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) NSUInteger count;
 @property (copy, nonatomic, nullable) NSString *spellCheckedQuery;
 @property (copy, nonatomic, nullable) NSString *searchTrackingURL;
+@property (copy, nonatomic, nullable) NSString *addToCartParameters;
 
 @property (copy, nonatomic, nullable) NSArray<RCHSearchProduct *> *products;
 @property (copy, nonatomic, nullable) NSDictionary<NSString *, NSArray<RCHSearchFacet *> *> *facets;
