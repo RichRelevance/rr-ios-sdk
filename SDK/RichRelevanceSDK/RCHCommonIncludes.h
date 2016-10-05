@@ -86,23 +86,6 @@ typedef NS_ENUM(NSInteger, RCHUserProfileFieldType) {
     RCHUserProfileFieldTypeAll
 };
 
-typedef NS_ENUM(NSInteger, RCHSearchFieldType) {
-    RCHSearchFieldTypeNotSet = 0,
-    RCHSearchFieldTypeViewedItems,
-    RCHSearchFieldTypeClickedItems,
-    RCHSearchFieldTypeReferrerUrls,
-    RCHSearchFieldTypeOrders,
-    RCHSearchFieldTypeViewedCategories,
-    RCHSearchFieldTypeViewedBrands,
-    RCHSearchFieldTypeAddedToCartItems,
-    RCHSearchFieldTypeSearchedTerms,
-    RCHSearchFieldTypeUserAttributes,
-    RCHSearchFieldTypeUserSegments,
-    RCHSearchFieldTypeVerbNouns,
-    RCHSearchFieldTypeCountedEvents,
-    RCHSearchFieldTypeAll
-};
-
 /*!
  A collection of helper methods to convert typedef values to strings and the reverse.
  */

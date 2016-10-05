@@ -177,12 +177,6 @@ NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter = @":";
     return self;
 }
 
-- (instancetype)setIncludesEncryptedCook:(BOOL)requiresOAuth
-{
-    self.requestInfo[kRCHAPIBuilderParamRequestInfoRequiresOAuth] = [NSNumber numberWithBool:requiresOAuth];
-    return self;
-}
-
 - (instancetype)setUserAndSessionParamStyle:(RCHAPIClientUserAndSessionParamStyle)style
 {
     self.requestInfo[kRCHAPIBuilderParamRequestInfoUserAndSessionStyle] = @(style);

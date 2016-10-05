@@ -17,7 +17,7 @@
 #import <XCTest/XCTest.h>
 #define EXP_SHORTHAND
 #import "Expecta.h"
-//#import "RCHPlacementsResult.h"
+#import "RCHPlacementsResult.h"
 #import "RCHAPIResponseParser.h"
 #import "RCHPlacement.h"
 #import "RCHRecommendedProduct.h"
