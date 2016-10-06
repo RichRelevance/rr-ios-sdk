@@ -7,103 +7,115 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02BD5F10BFB7F0AFAB42F8404333ACE8 /* RCHAPIResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FBF1F210A8987419106B83D4C18E5FF /* RCHAPIResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		056E2841D14B332B4B146576CCA931AA /* RCHRecommendedPlacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D797AE6C1C1839E913475E7AABAD277 /* RCHRecommendedPlacement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		07BA6C6D016DCE3BF1518B176C5F5C3C /* RCHUserProfileResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D54A7A17410266E5CA03989E226A4E9B /* RCHUserProfileResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		07D49969E21D7951FAE9EBC51D2F9142 /* RCHOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 456965FDB8BBD0E5D906882BC0F126E0 /* RCHOAuth.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0F7743709A8CC1DB6B18B2972EFC0AAF /* RCHLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B673BB8A578E5E5314E022D530AFDD /* RCHLog.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		123064C497D4F16A004509EAAF54BF86 /* RCHLogLevels.h in Headers */ = {isa = PBXBuildFile; fileRef = 13669508E8F38AF6FDE94816089E3F97 /* RCHLogLevels.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19FB83B5DC97D12AD726A51554DB266A /* RCHUserProfileElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B380782552DD02219EBD19D487FCCB /* RCHUserProfileElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		19FD175CBD73CC4BA1EE6A84936B7960 /* RCHRange.h in Headers */ = {isa = PBXBuildFile; fileRef = DAC4D48A898BD4AF14A955629E19CA54 /* RCHRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B7E338B21831AB27262A0846C0E0FFD /* RCHAPIResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA3E2E6BD12A2C2B893943699B43018 /* RCHAPIResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C8365A8578A5180F27C0A8953893108 /* RCHUserPrefResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C4356CA88544F9B72DD507C5C9C847FE /* RCHUserPrefResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D7DA9E3215F33CCD556D947B24A41AA /* RCHRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 98234C298BE8D728E7FFCB4A73D5A0AB /* RCHRange.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		26F4913FF13265097C2EC608E3496A2B /* RCHUserProfileResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 799A726139861C35262287B61BAB3864 /* RCHUserProfileResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2B7A39A1626FA6510DE3F2A03F602B35 /* RCHAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F76B0E5EF3DA895E27E5B7F4E093F99 /* RCHAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2EA4DE0A7DF81D4ABB769552030FC0CE /* RCHAPIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 463D66570EE042C6164FBF4BC23E6C2D /* RCHAPIConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32F48A713CA6DCAB17D42E982A5780D9 /* RCHGetProductsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 790A406CE51DCEA7BECD655180500DBF /* RCHGetProductsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		332CB9182ABE8C326DF14BA13680DB16 /* RCHUserProfileBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C678BA0C251374788ED7CC0D4DA839 /* RCHUserProfileBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		353FC353141E3877C61E8A38E2D5797A /* RCHPlacementRecsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6720D51E472C166FC4C7E54C78A80A11 /* RCHPlacementRecsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38A10A351CB3F923754F54F9C6DF4FB8 /* NSObject+RCHImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 95B1C0199070E5FAA4146C732387CC9C /* NSObject+RCHImport.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3A32ADA9D4D09EFD24D000B3A5DC2393 /* RCHGetProductsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 199383D1E12858549E277F1BFCDA582A /* RCHGetProductsResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3F36DAA6142DF6AA33835FA2108F7E64 /* RCHAPIClientConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D62BE0373C5558A796699799585709F9 /* RCHAPIClientConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		422AA7285951E1064717188BF30B175D /* RCHUserProfileResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 630439F8DBF659EB12980802D195D7D1 /* RCHUserProfileResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42A5B13DE3058FA254AAE896F88A8202 /* RCHAutocompleteSuggestion.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E5B876329972166EDB295629407BB08 /* RCHAutocompleteSuggestion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		446801CB111124F1B648062728515F99 /* RCHPersonalizeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CC0ADD6A3FE165E5A0A8B592EDBC24 /* RCHPersonalizeBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		464527E5DC120D78FC0FCBB2BEB3EACA /* RCHPlacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C55EB21A138E03E8260AD9EC632FFD3 /* RCHPlacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49F17DF1BFF0B8F4F0FA79AA204D7D37 /* RCHUserPrefResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 79484CF4A57EC8B07014A5962CDC540F /* RCHUserPrefResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CC0CBFC817C8CE43623D809D9318FBD /* RCHUserPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EEF09C5F3723164C563D1140A969BE6 /* RCHUserPreference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D1631E917880F31682424F3D6DD4DE6 /* RCHAutocompleteSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC768C7B65392A2DB0452823F5C548B /* RCHAutocompleteSuggestion.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4E70A06F8A7569D5B3E4B393B58EB604 /* RCHUserPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 07128B3DC723E124D1077702A6106A4D /* RCHUserPreference.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4FEDC969F3990EBADE8A45B3A9544FCC /* RCHRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3DC75F48242834A325DEECA07030C3 /* RCHRequestBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		544A06CB8521BC756E614A8E2ACFB236 /* RichRelevanceSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D79B9427D6C3454E762B0CA6DF788A /* RichRelevanceSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		545776997BAD90C24A2378DA07CF3C04 /* RCHPlacementsResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC10A7E586080EE08CCAEC386B1B448 /* RCHPlacementsResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		545C06EC4333575AB32798F01C9B262D /* RCHOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 6717DEC5CD656EB8BBE54020CC2CA676 /* RCHOAuth.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		54B3623AE65870DB506185C2153F1BF3 /* RCHUserProfileElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA0B43AAE965BD3EB63E0DD15070A61 /* RCHUserProfileElement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		024F4B5C60B42DAA631116F97F07EBF0 /* RCHStrategyRecsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B622C48D6EDFD9FDF7AEE2E3AC768D8 /* RCHStrategyRecsBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0369C7B3A90DB9C7452015E2F01DBF8D /* RCHSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EA427F887994B81C5CD1BB5799536F06 /* RCHSearchResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		047DDF78FD96FF7178BFB233D6FD8258 /* RCHPersonalizeResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F9736C806C167681233863573531F7 /* RCHPersonalizeResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		06E0D36A98F68F303F2B57E4FA8BA069 /* RCHPlacementRecsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6AE3B6074B91175965CAD27F8DBA46 /* RCHPlacementRecsBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		07849172B430FFAE40FA5923C0E00E03 /* RCHCommonIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = C653B621D860B2B3612FA8DE33FF8D24 /* RCHCommonIncludes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C2730A4EF810A4781F6077A531099EC /* RCHAPIResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 7222F97781AA10408D9A64AFCCA0E2BE /* RCHAPIResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D112F147810C811F370A97332C86A74 /* RCHErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D937575B122C5DC3675842D3ED5FAA4 /* RCHErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E1399B6E5984972F5A1DCA218440361 /* RCHSearchProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = F7FF9019A96708F4D5CF959307374B14 /* RCHSearchProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FD394183FC58C347653DA428F5E72EE /* RCHAPIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C68A913DD5E3EFD71CF9F5905160A3 /* RCHAPIConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A5149E0ED980BDB75B1CF7BBDFE9686 /* RCHGetProductsResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA5C7AD770FC95C529FA0779725901E /* RCHGetProductsResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		200B7735974362DF961E6BC0C2989F96 /* RCHSearchBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C450840D334991BF0D267B4BF45693 /* RCHSearchBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2347A154A9784F4591BADD087C665392 /* RCHPlacement.m in Sources */ = {isa = PBXBuildFile; fileRef = D11262307BB1BF1EE136AE202D91ED61 /* RCHPlacement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		23708413145E145A86D19B6CEB44157D /* RCHSearchResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 990C243E0E6D80476686D1755ACEFC36 /* RCHSearchResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24CAC6A5971C83B5992BDAE49BD9FB8E /* RCHGetProductsResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D5BCD8A4F887DAA07925D2C4D1165F3 /* RCHGetProductsResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26871A516FB268A9E4E7A2AEBB87C14E /* RCHAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B0E7DBA6BB3B2818CA0663EBF154 /* RCHAPIClient.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		26AD10EED555C1596787387EA6674D8E /* RichRelevanceSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E162C4BBAA1C70161EE07A7D19BCF803 /* RichRelevanceSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26B72744B98F8079B9BA0B76E46164A3 /* RCHUserProfileElement.h in Headers */ = {isa = PBXBuildFile; fileRef = B8A7EAE6FF3986BE41CCD2D9AD500488 /* RCHUserProfileElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2908D4B1264A854EC36C9377A5F1E9FC /* RCHPersonalizeResult.h in Headers */ = {isa = PBXBuildFile; fileRef = AF7078A894496E9BE3FD2BBA57C8F4F1 /* RCHPersonalizeResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C58BDFE464A6DD65BE12C2C4FBC70CF /* RCHAutocompleteSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC88BD5F6ECF6FC1C64A136DD298450 /* RCHAutocompleteSuggestion.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2E22E202E56BCE8F17911A4B558E0F31 /* RCHAPIResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E651FC1B649A05F57A2DDA50A57E3E /* RCHAPIResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E2EE36DA581CBCB56E5FBFF68C9261F /* RichRelevanceSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B4866B3E75507ECD2032F77EE60DB0 /* RichRelevanceSDK-dummy.m */; };
+		326947ABD59DF091026043AC99E759DB /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 03EFA6E3795E2221F5D04C77A1672149 /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3551892BB1EF8A4A4AAAFA2A68E7E349 /* RCHAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D0B9D577060356BCE7BB447F58CB0A60 /* RCHAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		380D326024C3AD914F103A7DD58D275E /* RCHGetProductsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 477F4AE38E61D7AA9410B4D1D915413D /* RCHGetProductsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3825BE6F25FE0FE984F3DB82B62E9F64 /* RCHRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F37921DC8A3F81AA4CA4057D5ACCC3 /* RCHRange.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		39AAC96D97E363BA2FCC1BE3B504DE90 /* RCHUserPrefBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C70F6F8E0DD1DD9C5F717185D1E523 /* RCHUserPrefBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3AF5577A50D86035FE80D82F47A7C343 /* RCHSearchResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5252867B56BDE567BA99FBEC85DD52 /* RCHSearchResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3C6BC8EF67186A8C49A547F4B64ABDC5 /* RCHImportable.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A08CDE82500B6DF07768A587C3CD2D0 /* RCHImportable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EBB82EB18C246ECBA26E7EC9D53407C /* RCHAPIClientConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C08E14335F27C34CE7DC6B0F38E9460 /* RCHAPIClientConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		404A0FBD6146F6CD8D06D74AE691DBFC /* RCHUserProfileResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 559652131795B2A28CEDA704EED6749A /* RCHUserProfileResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		418D5225BAFC3A8EF713297B7F525109 /* RCHSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 71CFA7371366D27A4C27779AF1937768 /* RCHSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		445EBDEDFEED00A82B2FA583554169DC /* RCHUserPrefBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = F487528455524C6BD8C0C24649C258C9 /* RCHUserPrefBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		463256B9CF6192E94E610CB1E3D03D26 /* RCHAutocompleteSuggestion.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F40BCBDA75193EF621FB51D717B2BC4 /* RCHAutocompleteSuggestion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AC75CA678AD8563EE42A0D65C252284 /* RCHPersonalizedPlacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B16065398C5F589F9511A6F813DAA62 /* RCHPersonalizedPlacement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4B59440B3ACB2A5F67ABEE6D82BAFFFA /* RCHStrategyResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEDEA4EF25FEC7144858BA6974B41B1 /* RCHStrategyResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4E87AFB22FF2C8184407E265D6891F46 /* RCHSearchFacet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E7F58047B54D97AA72BE462E585F1FE /* RCHSearchFacet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52754A9D01B506E9E08C0597A52D5515 /* RCHPlacementRecsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 098601FBE94364CD70DAD8802781AAB6 /* RCHPlacementRecsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		539ECD304142E39125728B3A1FF9E8D2 /* RCHLogLevels.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D01AF34DAF0D02C734079AEFE616C14 /* RCHLogLevels.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54BCB08A7EF80EA8598AA2DCC80E48DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		56B3569891BE7818B7F770A6568E04DE /* RCHImportable.h in Headers */ = {isa = PBXBuildFile; fileRef = EA87F6C2A9C25567FF4E5C31413F3379 /* RCHImportable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		573B158CD40FAE8E8C8778256958EC27 /* RCHCommonIncludes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9188026231CB906ED6E83C1AA4A86351 /* RCHCommonIncludes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5A58A77DFD58833BCC442DB66F9EA38D /* NSObject+RCHImport_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B9D30C0084D1ECE68669F53CF2B60158 /* NSObject+RCHImport_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		5E4892C889033427231A632EA4DF0F9E /* RCHGetProductsResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 96DC4A02AE4BCFCCFF3A8096C0C16A1C /* RCHGetProductsResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FF8E22175F793B465FC5C59EBA0D27E /* RCHPersonalizeResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9E6A8B5574AF50B0AE4C4EC8C12E71 /* RCHPersonalizeResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		62AA8A68052C9D981E61351448024D40 /* RCHNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E961B287AD546620D735D436CA7750 /* RCHNetworkReachabilityManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		54D80FF9A6CC64BD097C3B5519920F13 /* RCHAPIResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C159246718D6382C03090223EF85A3 /* RCHAPIResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		56C26A1FD5BF7B03843072FC026450C9 /* RCHPlacementsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B3B478340A4862EE944D56FB2EDB9E /* RCHPlacementsBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		57E6A519E0E3B01551B45CF910EB3488 /* RCHUserProfileBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A064D811B1829C5639B2721E821E6BC /* RCHUserProfileBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		59CD31252C447D4DF8084DAB82A31869 /* RCHStrategyResult.h in Headers */ = {isa = PBXBuildFile; fileRef = C1B0D40EA86CD8AB8B75C2C09CABD908 /* RCHStrategyResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C78AB41BB29D707645AC0DBB46180FC /* RCHWebUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E864FF9A5E379D4DAED8FEE9D34FB5C4 /* RCHWebUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		612273FF03BEA3EB4D3FA2D929C2B7A2 /* RCHRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 164AF79D7E45A179F23AD4629B2EDF29 /* RCHRequestBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		642FBE38E24B21F50A26829685E58DCA /* RCHNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C0C9B500CAE71F21D74E55CA01C4E34 /* RCHNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		66319E1F2F97F85E3316697E078B8FBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		6644292CFAE38E03C37978E9880CEB6A /* RCHRecsUsingStrategyResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C0207AA6BA6CC6280EBFA4EE2D8A5D /* RCHRecsUsingStrategyResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		67BC1D60A5877725B796FD0122394CAA /* RCHStrategyRecsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F642BADE7D60865B7D03E65578D1E7C3 /* RCHStrategyRecsBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6A7D53F03C1FD545506A70D69FFDA1AD /* RCHPersonalizeResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = A094361D914476698F3932CE0BE9C5C3 /* RCHPersonalizeResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F11668D008C6BFC0EC3EB0905F008E4 /* RCHUserProfileResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = EF37B386FE6BDD06ECA1F75E3A43F1ED /* RCHUserProfileResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F7280B65E03A1841BAB98785B6256B0 /* RCHPersonalizeResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC36F73A1FD5526FF85CD01821F4105 /* RCHPersonalizeResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F7CBAFA7097DEEB24D673695B7BE2F7 /* RCHUserPrefBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = B5DACB3C55D00D3424768DB91526A806 /* RCHUserPrefBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74C6C824579C833802930E175487E9BB /* RCHCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 830D3E8B19CCD9779B706CD10D2B5B0C /* RCHCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6868DEF396A0BF9A5D1D0F3081D15C9E /* RCHSearchBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 416C297D0D174693399A05A9D0452F7E /* RCHSearchBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6905B90020584EDD01E99F58F7641793 /* RCHAutocompleteResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B422EF3191E7ED6D482AD145F4B5F19B /* RCHAutocompleteResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6E6F63D737062430353D9A0637060A53 /* RCHUserPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = A282DE359FC12828BA1398C338781F09 /* RCHUserPreference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		708E9F69C0B12C6A366330674DDAE906 /* RCHRecsUsingStrategyResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B821041D8FC9CB32B8000F90F8400CA /* RCHRecsUsingStrategyResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7590A39F90FB085B4C288F7849AEDF10 /* Pods-RichRelevanceSDKDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D33CBCDA24E2E5A60DABFB18BFC77A5A /* Pods-RichRelevanceSDKDemo-dummy.m */; };
-		76B1927E2699040383AC55789498280F /* RCHPlacementRecsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 682635B2AB7E164934C6C4465C371D9C /* RCHPlacementRecsBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		79AE896F76E5261D992F13796FFECDAF /* RCHPersonalizeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BA8284EDD11AA24B4988FFB21584DD /* RCHPersonalizeResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7C04F534162AEB5F81B7A6BA394B2DF1 /* NSObject+RCHImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A204D3D95E086F783568DD9CA514BA6 /* NSObject+RCHImport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		818C0EC5C0A8577F32091DBA74A33955 /* RCHPlacementsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FFCF0FEDBEF865386B4019D2A8CF40 /* RCHPlacementsBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		84DC89C9CA2355BF8519535D8244E599 /* RCHSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D60DE9B86FEF4FC89BC16660B7AFE2 /* RCHSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		861EE327455A43894AAA71323760C656 /* RCHAPIResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 83248C8D4FEA9C9BC104067650DC7A0D /* RCHAPIResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		875A7A2B07F380B5654E49AADE358A7E /* RCHNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F93875F013CE5125C25AC4827191452B /* RCHNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		8853793579A763EA0A615625D3AAE296 /* RCHAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CF48B8C962528B3D9FAD64438F013D /* RCHAPIClient.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		888B83A903BBC45B6FE51FE7E496F1F4 /* RCHStrategyRecsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D39412A42A79325E6EE2B32D0436C75C /* RCHStrategyRecsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C33CA95FBB654CFFF9E4F90D32863D3 /* RCHErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = FA84FD452C672C018784886ED06E017E /* RCHErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9064F9CB103BC80234C19D3A1515684E /* RCHAPIClientConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B088CF7492718ED8CF6E865608D627A6 /* RCHAPIClientConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93A579053B8C40499E175F845462981B /* RCHAutocompleteResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7E3ECC60A2B5006779578530E80E01 /* RCHAutocompleteResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		96F54F6B2C77BD3AC9FA75E1967FAD52 /* RCHPersonalizedPlacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BBDCC3A3C996C5191E437CA0833EF5 /* RCHPersonalizedPlacement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9737B1B2D8561CD0B684DBBE4F486AC6 /* RCHRecsForPlacementsResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 378C3D87A2C0AF983F2EBFA023F41520 /* RCHRecsForPlacementsResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D1E1508F1EB86D20D8760C43666003E /* RCHWebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A245246C0CDB11355B17B16D782EE5 /* RCHWebUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A6CF242A2AF6F2C14C2BEA02E9B0CA52 /* RCHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781817E50ECDF7218845DDA92467040 /* RCHCategory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A7944A3A8CBCCA4BCAC4350C1268656E /* RCHUserPrefResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E88773C5ABA13B29BFFDF907F6BC399F /* RCHUserPrefResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AA9E24E4D5FFC9D0FD277268702047F3 /* RCHPersonalizedPlacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 849F8D28E7AC9A4EAEC93527897BB64B /* RCHPersonalizedPlacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC7BB39BF929139A6B3D3BB9D28D8B9E /* RCHPersonalizeBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 56932A694EAF5901016E05F97DA192DC /* RCHPersonalizeBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD3D3BF4A532226BC62E354FA720EA6A /* RCHRecsUsingStrategyResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4128942A1E3ED5B50DB5927B7ECA237A /* RCHRecsUsingStrategyResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE01A43D06F293775285AF0484F86ADD /* RCHRecsForPlacementsResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FE76FA0A907C39E7E77D7728884506 /* RCHRecsForPlacementsResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AE03DD85945C0F75396D1BE0C6D79103 /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 126F803B8323D76E3E07C0BFCA21FA69 /* RCHAutocompleteBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B44A35569583145460C92BECC8D0D710 /* RCHGetProductsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1EACB58A0BF7B3222766BB99F1B6E /* RCHGetProductsBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B7576E004452E64F01467785425449A4 /* RCHRecommendedProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 28E56368829E9B038ED74E90507A6894 /* RCHRecommendedProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA610ABA86A1D6464EA4B699B720CF95 /* RCHSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = F097C6F3355BC580317942AEDD86476F /* RCHSDK.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BC4AC5662F7D76724AD7A3122E2A9DAD /* RCHPlacementsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 880DD2E3988BD8C39789DC4BA26F0245 /* RCHPlacementsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE332D7985AA8B47C03CB688CE4A00C3 /* RichRelevanceSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B4866B3E75507ECD2032F77EE60DB0 /* RichRelevanceSDK-dummy.m */; };
-		BF9B5C6149ECDDA07C2B53E4587EBF19 /* RCHUserPrefResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B5B37E5464F89E3666AC88B3FA911F /* RCHUserPrefResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C04842BB5135324B13AA5DF13CAB874D /* RCHAPIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7EBB230943C11FA12AB4B417D3CF42 /* RCHAPIConstants.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C12BCF3A574497BE7638A2FB5E0F0103 /* RCHRecommendedPlacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 75ADDEE8017925F50B20301F79210E00 /* RCHRecommendedPlacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C28D02C60DAF4E7B66460217309D224A /* RCHStrategyResult.h in Headers */ = {isa = PBXBuildFile; fileRef = C91DE66E56D45BCCA7D7CC6345BB2A2A /* RCHStrategyResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6D299B0A1703E5CECDE7CDDCA1771BB /* RCHGetProductsResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8E2101DE575C384FC06421732CE2FC /* RCHGetProductsResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C873F3E06093814FCAF1468A5B3D7319 /* RCHRecommendedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CBEFDF586BB6D1D47B1B4B6152B167 /* RCHRecommendedProduct.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C912165B1F1BBC2D7C806DEB68594613 /* RCHErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = D4240E6BC0649A2B9E81A765CEDC2863 /* RCHErrors.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CBD3D0E3FF0F8866821FC71B577630B6 /* RCHRequestBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = F7050DA0E8B674DE5AB0E70335196D5B /* RCHRequestBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D074B521FB63C5CE8F26AF1B619206F4 /* RCHCreative.m in Sources */ = {isa = PBXBuildFile; fileRef = FC968355DB3DB6927BF267C76D185C70 /* RCHCreative.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D613121D667DDE6C84E64D1C56A01C40 /* RCHCreative.h in Headers */ = {isa = PBXBuildFile; fileRef = FB60148FE0F71D8A27039E78D1218D46 /* RCHCreative.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D71FCFA954F5E09FB7A56FCE6F945DF5 /* RCHPlacementsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FE6C926BC618F3C1D58342AA212899 /* RCHPlacementsResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D80EC6C98965D5868DAC1155F42A8B71 /* RCHPlacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 848CF85F9D573248112DF2DDF92A7891 /* RCHPlacement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DAB82CABF0AA0429D401149240A13298 /* RCHGetProductsResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B346B592D271D7991464E2275FDB6A3 /* RCHGetProductsResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DCD40F45E6E63EFB7382A0EA517FE181 /* RCHUserProfileBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 4535D4E137D4FD6A11284BA1B7E6A54E /* RCHUserProfileBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEAAB1C76335078DA8046BDECDABCEFF /* RCHAutocompleteResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 700DDB7A1113A46F4BE45A494AC3C630 /* RCHAutocompleteResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DFAB645EB04CF199FC2978FB67F82711 /* RCHWebUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 11155EB4C69BA5DE84AD025A3B72D3DF /* RCHWebUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E09FBB5E5CEAE64043BF9245F148255A /* RCHLog.h in Headers */ = {isa = PBXBuildFile; fileRef = A7528AC2739E2724999E3F17F8BF130D /* RCHLog.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E6538E9755A5E277568FC1D4275EA00B /* RCHUserPrefBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75372AA609BC9D2A7F2236BD91A9BF10 /* RCHUserPrefBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EED3B6F5BF1E7D41FCD42B281B2F2346 /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ECE430F72DE98A02E02D70A0EA24B3DF /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F6B34DAC503F399E0CD4D6EB170D1672 /* RCHCommonIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = DD942377778ED0940095351806F3C210 /* RCHCommonIncludes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9BC30A11F354456BE9F07833839D6D2 /* RCHStrategyResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 430113F31C05F847CC6B8C616AAE7C46 /* RCHStrategyResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		779A1C9D6F4CD25BBC3119FDA06E8E7D /* RCHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F10AEA200F712A19EADBF6FD8529C673 /* RCHCategory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7B375E6679BE4B412FF0E2CDC7DA87DC /* RCHOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = BB59DA73B76299D24C8FF4177282ACE9 /* RCHOAuth.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7C42AB49D49B941A3BCD0F46C0F1D13B /* RCHUserProfileResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BA104F15A05AC56A2D2F7B0CF88ED1 /* RCHUserProfileResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7D7CA9F4D939E6F15607C190AB78915D /* RCHGetProductsResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AA30B7AF49C11CBDD8FA46DDD70F5253 /* RCHGetProductsResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7F93E7104670042DCB34BFC2B7B7A312 /* RCHUserPrefResult.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E1D8E3C447E5E226C366E94B3EB591 /* RCHUserPrefResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82EC53578DE855C69A0AD39589E40240 /* RCHRecommendedPlacement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8FF5A925175ED552F8A98029C697C /* RCHRecommendedPlacement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8A74540147FEF7F88375195661DCEDA5 /* NSObject+RCHImport_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E767F638293EED4B924763D545E4FC /* NSObject+RCHImport_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		8BD2B8E2A48EE47BAF7A3E0011C8AEF4 /* RCHSearchProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 96642A56EE46700B245632BE25979502 /* RCHSearchProduct.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8FD1CC3FCA705397E25DCB4AE90E53C5 /* RCHCreative.m in Sources */ = {isa = PBXBuildFile; fileRef = 509756B1083E4AA1741584FD73BA41E6 /* RCHCreative.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9183BB1D02D2419450B7D006751E11B2 /* RCHSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F51851C6F2BB0CEFD9730D6F09C05A4 /* RCHSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A941F6CCEEA52309525E451C3DB82C1 /* RCHPersonalizeBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB24140FF9BE076ED149596ECF3B759 /* RCHPersonalizeBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AD31219D31F01F56E359771EC7CCFB4 /* RCHRecommendedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F850801ABFCEC3101AB0EEA35D4E7AF /* RCHRecommendedProduct.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9DB9FC98B892DC990403D24474309801 /* RCHRange.h in Headers */ = {isa = PBXBuildFile; fileRef = F640BE694BD86A8F73A3569CB2CC2E41 /* RCHRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FEA345B6D02B46D03B5C383B87A3472 /* RCHUserProfileElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 498B44875A57E28071908E9989900571 /* RCHUserProfileElement.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A039A216EFB46705503D64543D6DCA97 /* RCHUserPrefResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D70DDEC4D5F17BE952F2F1117DC890EF /* RCHUserPrefResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A095750235EA8F575C7B20F702F55FE3 /* RCHRecsForPlacementsResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 742F14BB7FA5EC4DE981EBBD70EA6D74 /* RCHRecsForPlacementsResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A22FE9E5475478AF8E1322011D038464 /* RCHUserProfileResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 56500C02E4B03260EB5FF948418A799F /* RCHUserProfileResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3C8236CCD3079B191C30E5374358C48 /* RCHAPIConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3D7E4833A36D3BF457E3CA3850BB75 /* RCHAPIConstants.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A4DF6D8E7E8F9DCBBB66EDC15E5F0857 /* RCHNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A41B176A1C99543BE974115748D245C9 /* RCHNetworkReachabilityManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A760F3065B1CED639C4FF79F32AAA473 /* NSObject+RCHImport.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AA25495EE0DBC819E2BA7BCAFD34191 /* NSObject+RCHImport.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AB753AA670312996E46158D28430A58A /* RCHErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF80DC092D476F48BE112165E9340C /* RCHErrors.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AF5F28011488B449B8568B483CF6E20B /* RCHRequestBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = CC6F5119B72521AC9DBFF7C8FE4952CC /* RCHRequestBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B11B17AD40D20EB1401EDA7BFBE85C90 /* RCHSearchFacet.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D0B39388DAF52A271F27CD63F7F7A1 /* RCHSearchFacet.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B12F0208DC0D6D35DA27B4CB9BF5DE92 /* RCHLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EE99BC3772A0C56971D90BCE7CF8B627 /* RCHLog.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B150980170E39FD5BB8E7F038C4C1B4D /* RCHUserProfileResult.h in Headers */ = {isa = PBXBuildFile; fileRef = AE6FA200A8A7254AC2555B63DBB71117 /* RCHUserProfileResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2F785B678B04C4BB4424247D60A6FC8 /* RCHPlacementsResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F20FCBA9326999AE9978F255E87529 /* RCHPlacementsResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B72147A801B01E4499B5ABAD7F666C0E /* RCHAPIClientConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 72A017CB9A6F92200AE29F0A6D210A81 /* RCHAPIClientConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9D0454F60FA4CF69609C5306379326E /* RCHPlacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7E12D2A38E30D92A619548ABC277BA /* RCHPlacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BABFE9015C810F49546075384CC19E67 /* RCHUserProfileBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 354FBC9D76CF1F6B715A513705EE0BE6 /* RCHUserProfileBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEE0DCDAE889D0D8D544AC1DC7F4F60E /* RCHGetProductsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7A702C104445FC761A94A18A9575A /* RCHGetProductsResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CCE299E34DFC04B58D1A1E56CF0B42EB /* RCHStrategyRecsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 286A48A34EC48FC3FBB763E452247384 /* RCHStrategyRecsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD27B6B27B634A2CA88D86ABB1339C8B /* RCHAutocompleteResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = F86821E5F91B6D25CB288C101942F03B /* RCHAutocompleteResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D921AEA12218553295840534D09F6864 /* RCHPersonalizedPlacement.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9A3EF9FC76AF23EBB2ACFF5D4536D3 /* RCHPersonalizedPlacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB569C47818B6C0F470353E95E5AAAD3 /* RCHPersonalizeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7D8C339C9971CF72CE5CEBA62F6ADC /* RCHPersonalizeResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DC6FF4F70E92C8C446263D66C52F1E9A /* RCHPlacementsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 795FB3F8B25464628E9F91B5D2F125F2 /* RCHPlacementsResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DC87E9F36028EEB0C2CD860AF24C6542 /* RCHRecsForPlacementsResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FEE8E854B4F34ACEB7912B79D36161 /* RCHRecsForPlacementsResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DD9F6FBF197FDF2A272F2F429678D7F6 /* RCHUserPrefResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = D6103B11E09D6C426EE5E711BC2A147A /* RCHUserPrefResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DED3BD3C63504B9FCCBD19486B1CEF3A /* RCHRecommendedProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 1521FD4CE171E847F11F8F388E235CF1 /* RCHRecommendedProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEE2C351F58CCF540C6D4BBE242B4753 /* RCHSearchLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0EC415F3A96B55EFA2DFAA76A40743 /* RCHSearchLink.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DF457BE0B441839471B4B9EA57946004 /* RCHCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = A85608DD8C2E78F0EE06830A547EF848 /* RCHCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B3557889C971E797759896BFA0A64A /* RCHLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4382E48D5BD674767DBCBA585EB2AB82 /* RCHLog.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E4042EDA47E80B5B922D311DD58458CD /* RCHPersonalizeResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C94B0381ECC2D562D487CD155FA3443 /* RCHPersonalizeResponseParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5D12249939D20E2E1AF54F638D35FD3 /* RCHGetProductsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E4A197B45F019C673D51F2FFDAC721 /* RCHGetProductsBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E9A59AC3D47AADB8B3B4D609B00CFB6D /* RCHRecommendedPlacement.h in Headers */ = {isa = PBXBuildFile; fileRef = 358B6B9EF1ED74CE8244252705D571C9 /* RCHRecommendedPlacement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC36B89F510E6BDF0306585C31BDA60E /* RCHCommonIncludes.m in Sources */ = {isa = PBXBuildFile; fileRef = 476BF5D8F37FB25D0B106E31B2B680A0 /* RCHCommonIncludes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ECC8746010D8A14914C44F952AA7BB66 /* RCHUserPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA45892AF81AB3C39A8FF5ECED675B3 /* RCHUserPreference.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EE541BDCE76AA6EA3B14CD5171025762 /* RCHSearchLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 06BAD0409F0F1B7129039336FA17DD28 /* RCHSearchLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2358C8A65BA20A6EA4554DF148476E2 /* RCHPlacementsBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D7D7035EA011F8BB743BF6A352C617B /* RCHPlacementsBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6E6FCC798F6A702D9CF92A7FA83C4F0 /* RCHCreative.h in Headers */ = {isa = PBXBuildFile; fileRef = 599E3ABCAD27A5C0C59D98572D80D076 /* RCHCreative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6F7835BDCCF208564D77B2F5BD36667 /* RCHPersonalizeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 458A502D5302CBCE961ED1E60AA37CF8 /* RCHPersonalizeBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F948512E7E2E9079F8E074B5F34BE817 /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D50E233EE9B2B3B3FE8842D94023CAC /* RCHAutocompleteBuilder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F95B3C094F23666D0DA8A7E52C4FAD8A /* RCHSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9D06289B71AD55AC877088AEA2997B /* RCHSDK.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FE763ECD6048C5C3CB77A3689F04767A /* RCHRecsUsingStrategyResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D6CA83A58A0857B801AB491B5A1239 /* RCHRecsUsingStrategyResponseParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FE77BF4D58AFE494E4C6E29ED5E8E351 /* RCHWebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A77969D21A127058583E382B0C43C /* RCHWebUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FF28F0204C4930F25ED1E430E07AB824 /* RCHUserPrefResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E087E010ED56374D5B4E3E4B805550 /* RCHUserPrefResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FF79F5C11CE374B49135EA12D44F692E /* RCHOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = A82B1F0301F20C975F0858DA4FC24410 /* RCHOAuth.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		FFBB5BC6E8DC61076FE427F87C434CA3 /* NSObject+RCHImport.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF915F10FD5BA7653F038E3F8C62C03 /* NSObject+RCHImport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,113 +129,125 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07128B3DC723E124D1077702A6106A4D /* RCHUserPreference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserPreference.m; sourceTree = "<group>"; };
+		03EFA6E3795E2221F5D04C77A1672149 /* RCHAutocompleteBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAutocompleteBuilder.h; sourceTree = "<group>"; };
+		06BAD0409F0F1B7129039336FA17DD28 /* RCHSearchLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHSearchLink.h; sourceTree = "<group>"; };
 		082761FF51C98D81DFDBFFE2C9A96C1A /* Pods-RichRelevanceSDKDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichRelevanceSDKDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		0AC36F73A1FD5526FF85CD01821F4105 /* RCHPersonalizeResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPersonalizeResult.h; sourceTree = "<group>"; };
-		11155EB4C69BA5DE84AD025A3B72D3DF /* RCHWebUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHWebUtils.h; sourceTree = "<group>"; };
-		126F803B8323D76E3E07C0BFCA21FA69 /* RCHAutocompleteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAutocompleteBuilder.m; sourceTree = "<group>"; };
-		12BBDCC3A3C996C5191E437CA0833EF5 /* RCHPersonalizedPlacement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPersonalizedPlacement.m; sourceTree = "<group>"; };
-		13669508E8F38AF6FDE94816089E3F97 /* RCHLogLevels.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHLogLevels.h; sourceTree = "<group>"; };
-		199383D1E12858549E277F1BFCDA582A /* RCHGetProductsResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHGetProductsResult.m; sourceTree = "<group>"; };
-		1CC10A7E586080EE08CCAEC386B1B448 /* RCHPlacementsResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPlacementsResult.h; sourceTree = "<group>"; };
-		22B673BB8A578E5E5314E022D530AFDD /* RCHLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHLog.m; sourceTree = "<group>"; };
-		28E56368829E9B038ED74E90507A6894 /* RCHRecommendedProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRecommendedProduct.h; sourceTree = "<group>"; };
-		29CBEFDF586BB6D1D47B1B4B6152B167 /* RCHRecommendedProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRecommendedProduct.m; sourceTree = "<group>"; };
-		32A245246C0CDB11355B17B16D782EE5 /* RCHWebUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHWebUtils.m; sourceTree = "<group>"; };
-		33CC0ADD6A3FE165E5A0A8B592EDBC24 /* RCHPersonalizeBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPersonalizeBuilder.m; sourceTree = "<group>"; };
-		378C3D87A2C0AF983F2EBFA023F41520 /* RCHRecsForPlacementsResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRecsForPlacementsResponseParser.h; sourceTree = "<group>"; };
-		3A204D3D95E086F783568DD9CA514BA6 /* NSObject+RCHImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RCHImport.m"; sourceTree = "<group>"; };
-		3EEF09C5F3723164C563D1140A969BE6 /* RCHUserPreference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserPreference.h; sourceTree = "<group>"; };
-		4128942A1E3ED5B50DB5927B7ECA237A /* RCHRecsUsingStrategyResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRecsUsingStrategyResponseParser.h; sourceTree = "<group>"; };
+		098601FBE94364CD70DAD8802781AAB6 /* RCHPlacementRecsBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPlacementRecsBuilder.h; sourceTree = "<group>"; };
+		0F850801ABFCEC3101AB0EEA35D4E7AF /* RCHRecommendedProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRecommendedProduct.m; sourceTree = "<group>"; };
+		0FA5C7AD770FC95C529FA0779725901E /* RCHGetProductsResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHGetProductsResponseParser.h; sourceTree = "<group>"; };
+		11F20FCBA9326999AE9978F255E87529 /* RCHPlacementsResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPlacementsResult.h; sourceTree = "<group>"; };
+		12D6CA83A58A0857B801AB491B5A1239 /* RCHRecsUsingStrategyResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRecsUsingStrategyResponseParser.m; sourceTree = "<group>"; };
+		1521FD4CE171E847F11F8F388E235CF1 /* RCHRecommendedProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRecommendedProduct.h; sourceTree = "<group>"; };
+		164AF79D7E45A179F23AD4629B2EDF29 /* RCHRequestBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRequestBuilder.m; sourceTree = "<group>"; };
+		1B16065398C5F589F9511A6F813DAA62 /* RCHPersonalizedPlacement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPersonalizedPlacement.m; sourceTree = "<group>"; };
+		1E5252867B56BDE567BA99FBEC85DD52 /* RCHSearchResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHSearchResponseParser.m; sourceTree = "<group>"; };
+		21F37921DC8A3F81AA4CA4057D5ACCC3 /* RCHRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRange.m; sourceTree = "<group>"; };
+		286A48A34EC48FC3FBB763E452247384 /* RCHStrategyRecsBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHStrategyRecsBuilder.h; sourceTree = "<group>"; };
+		2E3D7E4833A36D3BF457E3CA3850BB75 /* RCHAPIConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAPIConstants.m; sourceTree = "<group>"; };
+		2E7F58047B54D97AA72BE462E585F1FE /* RCHSearchFacet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHSearchFacet.h; sourceTree = "<group>"; };
+		31C159246718D6382C03090223EF85A3 /* RCHAPIResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAPIResult.m; sourceTree = "<group>"; };
+		32E767F638293EED4B924763D545E4FC /* NSObject+RCHImport_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+RCHImport_Private.h"; sourceTree = "<group>"; };
+		34B3B478340A4862EE944D56FB2EDB9E /* RCHPlacementsBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPlacementsBuilder.m; sourceTree = "<group>"; };
+		354FBC9D76CF1F6B715A513705EE0BE6 /* RCHUserProfileBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserProfileBuilder.h; sourceTree = "<group>"; };
+		358B6B9EF1ED74CE8244252705D571C9 /* RCHRecommendedPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRecommendedPlacement.h; sourceTree = "<group>"; };
+		3D7D7035EA011F8BB743BF6A352C617B /* RCHPlacementsBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPlacementsBuilder.h; sourceTree = "<group>"; };
+		416C297D0D174693399A05A9D0452F7E /* RCHSearchBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHSearchBuilder.h; sourceTree = "<group>"; };
 		42B4866B3E75507ECD2032F77EE60DB0 /* RichRelevanceSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RichRelevanceSDK-dummy.m"; sourceTree = "<group>"; };
-		430113F31C05F847CC6B8C616AAE7C46 /* RCHStrategyResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHStrategyResult.m; sourceTree = "<group>"; };
-		4535D4E137D4FD6A11284BA1B7E6A54E /* RCHUserProfileBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserProfileBuilder.h; sourceTree = "<group>"; };
-		456965FDB8BBD0E5D906882BC0F126E0 /* RCHOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHOAuth.m; sourceTree = "<group>"; };
-		463D66570EE042C6164FBF4BC23E6C2D /* RCHAPIConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIConstants.h; sourceTree = "<group>"; };
-		48BA8284EDD11AA24B4988FFB21584DD /* RCHPersonalizeResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPersonalizeResult.m; sourceTree = "<group>"; };
+		4382E48D5BD674767DBCBA585EB2AB82 /* RCHLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHLog.h; sourceTree = "<group>"; };
+		458A502D5302CBCE961ED1E60AA37CF8 /* RCHPersonalizeBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPersonalizeBuilder.m; sourceTree = "<group>"; };
+		476BF5D8F37FB25D0B106E31B2B680A0 /* RCHCommonIncludes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHCommonIncludes.m; sourceTree = "<group>"; };
+		477F4AE38E61D7AA9410B4D1D915413D /* RCHGetProductsBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHGetProductsBuilder.h; sourceTree = "<group>"; };
+		48BA104F15A05AC56A2D2F7B0CF88ED1 /* RCHUserProfileResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserProfileResult.m; sourceTree = "<group>"; };
 		48F81175E9AEF5EFC50C5E08D6B95B47 /* Pods-RichRelevanceSDKDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RichRelevanceSDKDemo-resources.sh"; sourceTree = "<group>"; };
+		498B44875A57E28071908E9989900571 /* RCHUserProfileElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserProfileElement.m; sourceTree = "<group>"; };
 		4BAFA305259D3D491613F8FF3DE5EE1F /* Pods-RichRelevanceSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichRelevanceSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4CA0A1B966F46B5AB30659FC98E63420 /* Pods-RichRelevanceSDKDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RichRelevanceSDKDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4F76B0E5EF3DA895E27E5B7F4E093F99 /* RCHAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIClient.h; sourceTree = "<group>"; };
-		56932A694EAF5901016E05F97DA192DC /* RCHPersonalizeBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPersonalizeBuilder.h; sourceTree = "<group>"; };
+		4E7E12D2A38E30D92A619548ABC277BA /* RCHPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPlacement.h; sourceTree = "<group>"; };
+		4F0EC415F3A96B55EFA2DFAA76A40743 /* RCHSearchLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHSearchLink.m; sourceTree = "<group>"; };
+		509756B1083E4AA1741584FD73BA41E6 /* RCHCreative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHCreative.m; sourceTree = "<group>"; };
+		511A77969D21A127058583E382B0C43C /* RCHWebUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHWebUtils.m; sourceTree = "<group>"; };
+		559652131795B2A28CEDA704EED6749A /* RCHUserProfileResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserProfileResponseParser.m; sourceTree = "<group>"; };
+		56500C02E4B03260EB5FF948418A799F /* RCHUserProfileResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserProfileResponseParser.h; sourceTree = "<group>"; };
 		57687BC8C6E38B215873450CF278CC88 /* Pods-RichRelevanceSDKDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RichRelevanceSDKDemo-frameworks.sh"; sourceTree = "<group>"; };
-		5DC768C7B65392A2DB0452823F5C548B /* RCHAutocompleteSuggestion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAutocompleteSuggestion.m; sourceTree = "<group>"; };
-		5FBF1F210A8987419106B83D4C18E5FF /* RCHAPIResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIResponseParser.h; sourceTree = "<group>"; };
-		630439F8DBF659EB12980802D195D7D1 /* RCHUserProfileResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserProfileResult.h; sourceTree = "<group>"; };
+		599E3ABCAD27A5C0C59D98572D80D076 /* RCHCreative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHCreative.h; sourceTree = "<group>"; };
+		5C0C9B500CAE71F21D74E55CA01C4E34 /* RCHNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		5C94B0381ECC2D562D487CD155FA3443 /* RCHPersonalizeResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPersonalizeResponseParser.h; sourceTree = "<group>"; };
+		5CB24140FF9BE076ED149596ECF3B759 /* RCHPersonalizeBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPersonalizeBuilder.h; sourceTree = "<group>"; };
+		5D01AF34DAF0D02C734079AEFE616C14 /* RCHLogLevels.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHLogLevels.h; sourceTree = "<group>"; };
+		5D50E233EE9B2B3B3FE8842D94023CAC /* RCHAutocompleteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAutocompleteBuilder.m; sourceTree = "<group>"; };
+		5D937575B122C5DC3675842D3ED5FAA4 /* RCHErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHErrors.h; sourceTree = "<group>"; };
+		5F40BCBDA75193EF621FB51D717B2BC4 /* RCHAutocompleteSuggestion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAutocompleteSuggestion.h; sourceTree = "<group>"; };
+		5F51851C6F2BB0CEFD9730D6F09C05A4 /* RCHSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHSDK.h; sourceTree = "<group>"; };
+		63B7A702C104445FC761A94A18A9575A /* RCHGetProductsResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHGetProductsResult.m; sourceTree = "<group>"; };
 		656759F75860CC13E1221A4AD93BBC99 /* Pods-RichRelevanceSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichRelevanceSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
-		6717DEC5CD656EB8BBE54020CC2CA676 /* RCHOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHOAuth.h; sourceTree = "<group>"; };
-		6720D51E472C166FC4C7E54C78A80A11 /* RCHPlacementRecsBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPlacementRecsBuilder.h; sourceTree = "<group>"; };
-		682635B2AB7E164934C6C4465C371D9C /* RCHPlacementRecsBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPlacementRecsBuilder.m; sourceTree = "<group>"; };
-		6E8E2101DE575C384FC06421732CE2FC /* RCHGetProductsResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHGetProductsResponseParser.m; sourceTree = "<group>"; };
-		700DDB7A1113A46F4BE45A494AC3C630 /* RCHAutocompleteResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAutocompleteResponseParser.h; sourceTree = "<group>"; };
-		73B380782552DD02219EBD19D487FCCB /* RCHUserProfileElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserProfileElement.h; sourceTree = "<group>"; };
-		75372AA609BC9D2A7F2236BD91A9BF10 /* RCHUserPrefBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserPrefBuilder.m; sourceTree = "<group>"; };
-		75ADDEE8017925F50B20301F79210E00 /* RCHRecommendedPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRecommendedPlacement.h; sourceTree = "<group>"; };
-		790A406CE51DCEA7BECD655180500DBF /* RCHGetProductsBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHGetProductsBuilder.h; sourceTree = "<group>"; };
-		79484CF4A57EC8B07014A5962CDC540F /* RCHUserPrefResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserPrefResult.h; sourceTree = "<group>"; };
-		799A726139861C35262287B61BAB3864 /* RCHUserProfileResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserProfileResponseParser.m; sourceTree = "<group>"; };
-		7C7E3ECC60A2B5006779578530E80E01 /* RCHAutocompleteResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAutocompleteResponseParser.m; sourceTree = "<group>"; };
-		7C9E6A8B5574AF50B0AE4C4EC8C12E71 /* RCHPersonalizeResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPersonalizeResponseParser.m; sourceTree = "<group>"; };
-		7E5B876329972166EDB295629407BB08 /* RCHAutocompleteSuggestion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAutocompleteSuggestion.h; sourceTree = "<group>"; };
-		830D3E8B19CCD9779B706CD10D2B5B0C /* RCHCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHCategory.h; sourceTree = "<group>"; };
-		83248C8D4FEA9C9BC104067650DC7A0D /* RCHAPIResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAPIResult.m; sourceTree = "<group>"; };
-		848CF85F9D573248112DF2DDF92A7891 /* RCHPlacement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPlacement.m; sourceTree = "<group>"; };
-		849F8D28E7AC9A4EAEC93527897BB64B /* RCHPersonalizedPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPersonalizedPlacement.h; sourceTree = "<group>"; };
-		8781817E50ECDF7218845DDA92467040 /* RCHCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHCategory.m; sourceTree = "<group>"; };
-		87C678BA0C251374788ED7CC0D4DA839 /* RCHUserProfileBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserProfileBuilder.m; sourceTree = "<group>"; };
-		880DD2E3988BD8C39789DC4BA26F0245 /* RCHPlacementsBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPlacementsBuilder.h; sourceTree = "<group>"; };
-		8B346B592D271D7991464E2275FDB6A3 /* RCHGetProductsResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHGetProductsResult.h; sourceTree = "<group>"; };
-		8C55EB21A138E03E8260AD9EC632FFD3 /* RCHPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPlacement.h; sourceTree = "<group>"; };
-		8CA3E2E6BD12A2C2B893943699B43018 /* RCHAPIResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIResult.h; sourceTree = "<group>"; };
-		9188026231CB906ED6E83C1AA4A86351 /* RCHCommonIncludes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHCommonIncludes.m; sourceTree = "<group>"; };
+		6DB8FF5A925175ED552F8A98029C697C /* RCHRecommendedPlacement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRecommendedPlacement.m; sourceTree = "<group>"; };
+		71CFA7371366D27A4C27779AF1937768 /* RCHSearchResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHSearchResult.h; sourceTree = "<group>"; };
+		7222F97781AA10408D9A64AFCCA0E2BE /* RCHAPIResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIResponseParser.h; sourceTree = "<group>"; };
+		72A017CB9A6F92200AE29F0A6D210A81 /* RCHAPIClientConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIClientConfig.h; sourceTree = "<group>"; };
+		742F14BB7FA5EC4DE981EBBD70EA6D74 /* RCHRecsForPlacementsResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRecsForPlacementsResponseParser.h; sourceTree = "<group>"; };
+		76D0B39388DAF52A271F27CD63F7F7A1 /* RCHSearchFacet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHSearchFacet.m; sourceTree = "<group>"; };
+		795FB3F8B25464628E9F91B5D2F125F2 /* RCHPlacementsResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPlacementsResult.m; sourceTree = "<group>"; };
+		7B622C48D6EDFD9FDF7AEE2E3AC768D8 /* RCHStrategyRecsBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHStrategyRecsBuilder.m; sourceTree = "<group>"; };
+		7C08E14335F27C34CE7DC6B0F38E9460 /* RCHAPIClientConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAPIClientConfig.m; sourceTree = "<group>"; };
+		7D5BCD8A4F887DAA07925D2C4D1165F3 /* RCHGetProductsResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHGetProductsResult.h; sourceTree = "<group>"; };
+		7DEDEA4EF25FEC7144858BA6974B41B1 /* RCHStrategyResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHStrategyResult.m; sourceTree = "<group>"; };
+		82F9736C806C167681233863573531F7 /* RCHPersonalizeResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPersonalizeResponseParser.m; sourceTree = "<group>"; };
+		83E087E010ED56374D5B4E3E4B805550 /* RCHUserPrefResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserPrefResult.m; sourceTree = "<group>"; };
+		8AA25495EE0DBC819E2BA7BCAFD34191 /* NSObject+RCHImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+RCHImport.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95B1C0199070E5FAA4146C732387CC9C /* NSObject+RCHImport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+RCHImport.h"; sourceTree = "<group>"; };
-		96DC4A02AE4BCFCCFF3A8096C0C16A1C /* RCHGetProductsResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHGetProductsResponseParser.h; sourceTree = "<group>"; };
-		98234C298BE8D728E7FFCB4A73D5A0AB /* RCHRange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRange.m; sourceTree = "<group>"; };
-		9D797AE6C1C1839E913475E7AABAD277 /* RCHRecommendedPlacement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRecommendedPlacement.m; sourceTree = "<group>"; };
-		A094361D914476698F3932CE0BE9C5C3 /* RCHPersonalizeResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPersonalizeResponseParser.h; sourceTree = "<group>"; };
-		A1C0207AA6BA6CC6280EBFA4EE2D8A5D /* RCHRecsUsingStrategyResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRecsUsingStrategyResponseParser.m; sourceTree = "<group>"; };
-		A5E961B287AD546620D735D436CA7750 /* RCHNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		A7528AC2739E2724999E3F17F8BF130D /* RCHLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHLog.h; sourceTree = "<group>"; };
-		AC3DC75F48242834A325DEECA07030C3 /* RCHRequestBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRequestBuilder.m; sourceTree = "<group>"; };
+		95C450840D334991BF0D267B4BF45693 /* RCHSearchBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHSearchBuilder.m; sourceTree = "<group>"; };
+		96642A56EE46700B245632BE25979502 /* RCHSearchProduct.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHSearchProduct.m; sourceTree = "<group>"; };
+		990C243E0E6D80476686D1755ACEFC36 /* RCHSearchResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHSearchResponseParser.h; sourceTree = "<group>"; };
+		9A064D811B1829C5639B2721E821E6BC /* RCHUserProfileBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserProfileBuilder.m; sourceTree = "<group>"; };
+		9A08CDE82500B6DF07768A587C3CD2D0 /* RCHImportable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHImportable.h; sourceTree = "<group>"; };
+		9A6AE3B6074B91175965CAD27F8DBA46 /* RCHPlacementRecsBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPlacementRecsBuilder.m; sourceTree = "<group>"; };
+		9B821041D8FC9CB32B8000F90F8400CA /* RCHRecsUsingStrategyResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRecsUsingStrategyResponseParser.h; sourceTree = "<group>"; };
+		A1E4A197B45F019C673D51F2FFDAC721 /* RCHGetProductsBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHGetProductsBuilder.m; sourceTree = "<group>"; };
+		A282DE359FC12828BA1398C338781F09 /* RCHUserPreference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserPreference.h; sourceTree = "<group>"; };
+		A41B176A1C99543BE974115748D245C9 /* RCHNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		A82B1F0301F20C975F0858DA4FC24410 /* RCHOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHOAuth.h; sourceTree = "<group>"; };
+		A85608DD8C2E78F0EE06830A547EF848 /* RCHCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHCategory.h; sourceTree = "<group>"; };
+		AA30B7AF49C11CBDD8FA46DDD70F5253 /* RCHGetProductsResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHGetProductsResponseParser.m; sourceTree = "<group>"; };
+		AA9A3EF9FC76AF23EBB2ACFF5D4536D3 /* RCHPersonalizedPlacement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPersonalizedPlacement.h; sourceTree = "<group>"; };
+		AB7D8C339C9971CF72CE5CEBA62F6ADC /* RCHPersonalizeResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPersonalizeResult.m; sourceTree = "<group>"; };
 		ACD12D7731BF35018DF80ACB37D1ACC6 /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B088CF7492718ED8CF6E865608D627A6 /* RCHAPIClientConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIClientConfig.h; sourceTree = "<group>"; };
-		B5DACB3C55D00D3424768DB91526A806 /* RCHUserPrefBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserPrefBuilder.h; sourceTree = "<group>"; };
-		B7B5B37E5464F89E3666AC88B3FA911F /* RCHUserPrefResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserPrefResult.m; sourceTree = "<group>"; };
-		B9D30C0084D1ECE68669F53CF2B60158 /* NSObject+RCHImport_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+RCHImport_Private.h"; sourceTree = "<group>"; };
+		AE6FA200A8A7254AC2555B63DBB71117 /* RCHUserProfileResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserProfileResult.h; sourceTree = "<group>"; };
+		AF7078A894496E9BE3FD2BBA57C8F4F1 /* RCHPersonalizeResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHPersonalizeResult.h; sourceTree = "<group>"; };
+		B0FEE8E854B4F34ACEB7912B79D36161 /* RCHRecsForPlacementsResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRecsForPlacementsResponseParser.m; sourceTree = "<group>"; };
+		B422EF3191E7ED6D482AD145F4B5F19B /* RCHAutocompleteResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAutocompleteResponseParser.m; sourceTree = "<group>"; };
+		B8A7EAE6FF3986BE41CCD2D9AD500488 /* RCHUserProfileElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserProfileElement.h; sourceTree = "<group>"; };
+		BB59DA73B76299D24C8FF4177282ACE9 /* RCHOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHOAuth.m; sourceTree = "<group>"; };
+		BCC88BD5F6ECF6FC1C64A136DD298450 /* RCHAutocompleteSuggestion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAutocompleteSuggestion.m; sourceTree = "<group>"; };
+		BEA45892AF81AB3C39A8FF5ECED675B3 /* RCHUserPreference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserPreference.m; sourceTree = "<group>"; };
+		C1B0D40EA86CD8AB8B75C2C09CABD908 /* RCHStrategyResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHStrategyResult.h; sourceTree = "<group>"; };
 		C3F6CED83CDE623A02BD91057F9EB51A /* RichRelevanceSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RichRelevanceSDK-prefix.pch"; sourceTree = "<group>"; };
-		C4356CA88544F9B72DD507C5C9C847FE /* RCHUserPrefResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserPrefResponseParser.h; sourceTree = "<group>"; };
-		C5FE76FA0A907C39E7E77D7728884506 /* RCHRecsForPlacementsResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHRecsForPlacementsResponseParser.m; sourceTree = "<group>"; };
-		C7CF48B8C962528B3D9FAD64438F013D /* RCHAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAPIClient.m; sourceTree = "<group>"; };
-		C91DE66E56D45BCCA7D7CC6345BB2A2A /* RCHStrategyResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHStrategyResult.h; sourceTree = "<group>"; };
-		CE7EBB230943C11FA12AB4B417D3CF42 /* RCHAPIConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAPIConstants.m; sourceTree = "<group>"; };
+		C653B621D860B2B3612FA8DE33FF8D24 /* RCHCommonIncludes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHCommonIncludes.h; sourceTree = "<group>"; };
+		CAF915F10FD5BA7653F038E3F8C62C03 /* NSObject+RCHImport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RCHImport.m"; sourceTree = "<group>"; };
+		CC6F5119B72521AC9DBFF7C8FE4952CC /* RCHRequestBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRequestBuilder.h; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D0B9D577060356BCE7BB447F58CB0A60 /* RCHAPIClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIClient.h; sourceTree = "<group>"; };
+		D11262307BB1BF1EE136AE202D91ED61 /* RCHPlacement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPlacement.m; sourceTree = "<group>"; };
 		D33CBCDA24E2E5A60DABFB18BFC77A5A /* Pods-RichRelevanceSDKDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RichRelevanceSDKDemo-dummy.m"; sourceTree = "<group>"; };
-		D39412A42A79325E6EE2B32D0436C75C /* RCHStrategyRecsBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHStrategyRecsBuilder.h; sourceTree = "<group>"; };
-		D4240E6BC0649A2B9E81A765CEDC2863 /* RCHErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHErrors.m; sourceTree = "<group>"; };
-		D54A7A17410266E5CA03989E226A4E9B /* RCHUserProfileResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserProfileResult.m; sourceTree = "<group>"; };
-		D5FE6C926BC618F3C1D58342AA212899 /* RCHPlacementsResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPlacementsResult.m; sourceTree = "<group>"; };
-		D62BE0373C5558A796699799585709F9 /* RCHAPIClientConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAPIClientConfig.m; sourceTree = "<group>"; };
+		D4E1D8E3C447E5E226C366E94B3EB591 /* RCHUserPrefResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserPrefResult.h; sourceTree = "<group>"; };
+		D6103B11E09D6C426EE5E711BC2A147A /* RCHUserPrefResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserPrefResponseParser.h; sourceTree = "<group>"; };
+		D70DDEC4D5F17BE952F2F1117DC890EF /* RCHUserPrefResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserPrefResponseParser.m; sourceTree = "<group>"; };
 		D77C4167D10ECC99F79DFC958D6109B9 /* libRichRelevanceSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRichRelevanceSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7FFCF0FEDBEF865386B4019D2A8CF40 /* RCHPlacementsBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHPlacementsBuilder.m; sourceTree = "<group>"; };
-		DAC4D48A898BD4AF14A955629E19CA54 /* RCHRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRange.h; sourceTree = "<group>"; };
-		DD942377778ED0940095351806F3C210 /* RCHCommonIncludes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHCommonIncludes.h; sourceTree = "<group>"; };
-		E3D60DE9B86FEF4FC89BC16660B7AFE2 /* RCHSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHSDK.h; sourceTree = "<group>"; };
-		E4D1EACB58A0BF7B3222766BB99F1B6E /* RCHGetProductsBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHGetProductsBuilder.m; sourceTree = "<group>"; };
-		E88773C5ABA13B29BFFDF907F6BC399F /* RCHUserPrefResponseParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserPrefResponseParser.m; sourceTree = "<group>"; };
-		EA87F6C2A9C25567FF4E5C31413F3379 /* RCHImportable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHImportable.h; sourceTree = "<group>"; };
-		ECE430F72DE98A02E02D70A0EA24B3DF /* RCHAutocompleteBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAutocompleteBuilder.h; sourceTree = "<group>"; };
-		EF37B386FE6BDD06ECA1F75E3A43F1ED /* RCHUserProfileResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserProfileResponseParser.h; sourceTree = "<group>"; };
-		F097C6F3355BC580317942AEDD86476F /* RCHSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHSDK.m; sourceTree = "<group>"; };
-		F2D79B9427D6C3454E762B0CA6DF788A /* RichRelevanceSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RichRelevanceSDK.h; sourceTree = "<group>"; };
-		F642BADE7D60865B7D03E65578D1E7C3 /* RCHStrategyRecsBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHStrategyRecsBuilder.m; sourceTree = "<group>"; };
-		F7050DA0E8B674DE5AB0E70335196D5B /* RCHRequestBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRequestBuilder.h; sourceTree = "<group>"; };
-		F93875F013CE5125C25AC4827191452B /* RCHNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		FA84FD452C672C018784886ED06E017E /* RCHErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHErrors.h; sourceTree = "<group>"; };
-		FB60148FE0F71D8A27039E78D1218D46 /* RCHCreative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHCreative.h; sourceTree = "<group>"; };
+		E162C4BBAA1C70161EE07A7D19BCF803 /* RichRelevanceSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RichRelevanceSDK.h; sourceTree = "<group>"; };
+		E4E651FC1B649A05F57A2DDA50A57E3E /* RCHAPIResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIResult.h; sourceTree = "<group>"; };
+		E864FF9A5E379D4DAED8FEE9D34FB5C4 /* RCHWebUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHWebUtils.h; sourceTree = "<group>"; };
+		EA427F887994B81C5CD1BB5799536F06 /* RCHSearchResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHSearchResult.m; sourceTree = "<group>"; };
+		EABF80DC092D476F48BE112165E9340C /* RCHErrors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHErrors.m; sourceTree = "<group>"; };
+		EE99BC3772A0C56971D90BCE7CF8B627 /* RCHLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHLog.m; sourceTree = "<group>"; };
+		F10AEA200F712A19EADBF6FD8529C673 /* RCHCategory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHCategory.m; sourceTree = "<group>"; };
+		F487528455524C6BD8C0C24649C258C9 /* RCHUserPrefBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHUserPrefBuilder.h; sourceTree = "<group>"; };
+		F4C70F6F8E0DD1DD9C5F717185D1E523 /* RCHUserPrefBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserPrefBuilder.m; sourceTree = "<group>"; };
+		F5C68A913DD5E3EFD71CF9F5905160A3 /* RCHAPIConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAPIConstants.h; sourceTree = "<group>"; };
+		F640BE694BD86A8F73A3569CB2CC2E41 /* RCHRange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHRange.h; sourceTree = "<group>"; };
+		F786B0E7DBA6BB3B2818CA0663EBF154 /* RCHAPIClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHAPIClient.m; sourceTree = "<group>"; };
+		F7FF9019A96708F4D5CF959307374B14 /* RCHSearchProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHSearchProduct.h; sourceTree = "<group>"; };
+		F86821E5F91B6D25CB288C101942F03B /* RCHAutocompleteResponseParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RCHAutocompleteResponseParser.h; sourceTree = "<group>"; };
+		FA9D06289B71AD55AC877088AEA2997B /* RCHSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHSDK.m; sourceTree = "<group>"; };
 		FB9DB06E9C5F7250A40B83EBDB63ADF2 /* RichRelevanceSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RichRelevanceSDK.xcconfig; sourceTree = "<group>"; };
-		FC968355DB3DB6927BF267C76D185C70 /* RCHCreative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHCreative.m; sourceTree = "<group>"; };
-		FDA0B43AAE965BD3EB63E0DD15070A61 /* RCHUserProfileElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RCHUserProfileElement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,11 +284,117 @@
 		15B04C7106B82AE20D262CFEE5061F56 /* RichRelevanceSDK */ = {
 			isa = PBXGroup;
 			children = (
-				F3C868AEFDA43BA0FDA689B053EFCCB7 /* SDK */,
+				88CA761BB8A30C4B96A12C1D8579FA7A /* SDK */,
 				0E52BE2A88FD63356AF9EF828A61641C /* Support Files */,
 			);
 			name = RichRelevanceSDK;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		3B0555EE6F0D31B795842F8EDBA6A799 /* RichRelevanceSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D0B9D577060356BCE7BB447F58CB0A60 /* RCHAPIClient.h */,
+				F786B0E7DBA6BB3B2818CA0663EBF154 /* RCHAPIClient.m */,
+				72A017CB9A6F92200AE29F0A6D210A81 /* RCHAPIClientConfig.h */,
+				7C08E14335F27C34CE7DC6B0F38E9460 /* RCHAPIClientConfig.m */,
+				F5C68A913DD5E3EFD71CF9F5905160A3 /* RCHAPIConstants.h */,
+				2E3D7E4833A36D3BF457E3CA3850BB75 /* RCHAPIConstants.m */,
+				7222F97781AA10408D9A64AFCCA0E2BE /* RCHAPIResponseParser.h */,
+				E4E651FC1B649A05F57A2DDA50A57E3E /* RCHAPIResult.h */,
+				31C159246718D6382C03090223EF85A3 /* RCHAPIResult.m */,
+				03EFA6E3795E2221F5D04C77A1672149 /* RCHAutocompleteBuilder.h */,
+				5D50E233EE9B2B3B3FE8842D94023CAC /* RCHAutocompleteBuilder.m */,
+				F86821E5F91B6D25CB288C101942F03B /* RCHAutocompleteResponseParser.h */,
+				B422EF3191E7ED6D482AD145F4B5F19B /* RCHAutocompleteResponseParser.m */,
+				5F40BCBDA75193EF621FB51D717B2BC4 /* RCHAutocompleteSuggestion.h */,
+				BCC88BD5F6ECF6FC1C64A136DD298450 /* RCHAutocompleteSuggestion.m */,
+				A85608DD8C2E78F0EE06830A547EF848 /* RCHCategory.h */,
+				F10AEA200F712A19EADBF6FD8529C673 /* RCHCategory.m */,
+				C653B621D860B2B3612FA8DE33FF8D24 /* RCHCommonIncludes.h */,
+				476BF5D8F37FB25D0B106E31B2B680A0 /* RCHCommonIncludes.m */,
+				599E3ABCAD27A5C0C59D98572D80D076 /* RCHCreative.h */,
+				509756B1083E4AA1741584FD73BA41E6 /* RCHCreative.m */,
+				5D937575B122C5DC3675842D3ED5FAA4 /* RCHErrors.h */,
+				EABF80DC092D476F48BE112165E9340C /* RCHErrors.m */,
+				477F4AE38E61D7AA9410B4D1D915413D /* RCHGetProductsBuilder.h */,
+				A1E4A197B45F019C673D51F2FFDAC721 /* RCHGetProductsBuilder.m */,
+				0FA5C7AD770FC95C529FA0779725901E /* RCHGetProductsResponseParser.h */,
+				AA30B7AF49C11CBDD8FA46DDD70F5253 /* RCHGetProductsResponseParser.m */,
+				7D5BCD8A4F887DAA07925D2C4D1165F3 /* RCHGetProductsResult.h */,
+				63B7A702C104445FC761A94A18A9575A /* RCHGetProductsResult.m */,
+				EE99BC3772A0C56971D90BCE7CF8B627 /* RCHLog.m */,
+				5D01AF34DAF0D02C734079AEFE616C14 /* RCHLogLevels.h */,
+				A41B176A1C99543BE974115748D245C9 /* RCHNetworkReachabilityManager.m */,
+				BB59DA73B76299D24C8FF4177282ACE9 /* RCHOAuth.m */,
+				5CB24140FF9BE076ED149596ECF3B759 /* RCHPersonalizeBuilder.h */,
+				458A502D5302CBCE961ED1E60AA37CF8 /* RCHPersonalizeBuilder.m */,
+				AA9A3EF9FC76AF23EBB2ACFF5D4536D3 /* RCHPersonalizedPlacement.h */,
+				1B16065398C5F589F9511A6F813DAA62 /* RCHPersonalizedPlacement.m */,
+				5C94B0381ECC2D562D487CD155FA3443 /* RCHPersonalizeResponseParser.h */,
+				82F9736C806C167681233863573531F7 /* RCHPersonalizeResponseParser.m */,
+				AF7078A894496E9BE3FD2BBA57C8F4F1 /* RCHPersonalizeResult.h */,
+				AB7D8C339C9971CF72CE5CEBA62F6ADC /* RCHPersonalizeResult.m */,
+				4E7E12D2A38E30D92A619548ABC277BA /* RCHPlacement.h */,
+				D11262307BB1BF1EE136AE202D91ED61 /* RCHPlacement.m */,
+				098601FBE94364CD70DAD8802781AAB6 /* RCHPlacementRecsBuilder.h */,
+				9A6AE3B6074B91175965CAD27F8DBA46 /* RCHPlacementRecsBuilder.m */,
+				3D7D7035EA011F8BB743BF6A352C617B /* RCHPlacementsBuilder.h */,
+				34B3B478340A4862EE944D56FB2EDB9E /* RCHPlacementsBuilder.m */,
+				11F20FCBA9326999AE9978F255E87529 /* RCHPlacementsResult.h */,
+				795FB3F8B25464628E9F91B5D2F125F2 /* RCHPlacementsResult.m */,
+				F640BE694BD86A8F73A3569CB2CC2E41 /* RCHRange.h */,
+				21F37921DC8A3F81AA4CA4057D5ACCC3 /* RCHRange.m */,
+				358B6B9EF1ED74CE8244252705D571C9 /* RCHRecommendedPlacement.h */,
+				6DB8FF5A925175ED552F8A98029C697C /* RCHRecommendedPlacement.m */,
+				1521FD4CE171E847F11F8F388E235CF1 /* RCHRecommendedProduct.h */,
+				0F850801ABFCEC3101AB0EEA35D4E7AF /* RCHRecommendedProduct.m */,
+				742F14BB7FA5EC4DE981EBBD70EA6D74 /* RCHRecsForPlacementsResponseParser.h */,
+				B0FEE8E854B4F34ACEB7912B79D36161 /* RCHRecsForPlacementsResponseParser.m */,
+				9B821041D8FC9CB32B8000F90F8400CA /* RCHRecsUsingStrategyResponseParser.h */,
+				12D6CA83A58A0857B801AB491B5A1239 /* RCHRecsUsingStrategyResponseParser.m */,
+				CC6F5119B72521AC9DBFF7C8FE4952CC /* RCHRequestBuilder.h */,
+				164AF79D7E45A179F23AD4629B2EDF29 /* RCHRequestBuilder.m */,
+				5F51851C6F2BB0CEFD9730D6F09C05A4 /* RCHSDK.h */,
+				FA9D06289B71AD55AC877088AEA2997B /* RCHSDK.m */,
+				416C297D0D174693399A05A9D0452F7E /* RCHSearchBuilder.h */,
+				95C450840D334991BF0D267B4BF45693 /* RCHSearchBuilder.m */,
+				2E7F58047B54D97AA72BE462E585F1FE /* RCHSearchFacet.h */,
+				76D0B39388DAF52A271F27CD63F7F7A1 /* RCHSearchFacet.m */,
+				06BAD0409F0F1B7129039336FA17DD28 /* RCHSearchLink.h */,
+				4F0EC415F3A96B55EFA2DFAA76A40743 /* RCHSearchLink.m */,
+				F7FF9019A96708F4D5CF959307374B14 /* RCHSearchProduct.h */,
+				96642A56EE46700B245632BE25979502 /* RCHSearchProduct.m */,
+				990C243E0E6D80476686D1755ACEFC36 /* RCHSearchResponseParser.h */,
+				1E5252867B56BDE567BA99FBEC85DD52 /* RCHSearchResponseParser.m */,
+				71CFA7371366D27A4C27779AF1937768 /* RCHSearchResult.h */,
+				EA427F887994B81C5CD1BB5799536F06 /* RCHSearchResult.m */,
+				286A48A34EC48FC3FBB763E452247384 /* RCHStrategyRecsBuilder.h */,
+				7B622C48D6EDFD9FDF7AEE2E3AC768D8 /* RCHStrategyRecsBuilder.m */,
+				C1B0D40EA86CD8AB8B75C2C09CABD908 /* RCHStrategyResult.h */,
+				7DEDEA4EF25FEC7144858BA6974B41B1 /* RCHStrategyResult.m */,
+				F487528455524C6BD8C0C24649C258C9 /* RCHUserPrefBuilder.h */,
+				F4C70F6F8E0DD1DD9C5F717185D1E523 /* RCHUserPrefBuilder.m */,
+				A282DE359FC12828BA1398C338781F09 /* RCHUserPreference.h */,
+				BEA45892AF81AB3C39A8FF5ECED675B3 /* RCHUserPreference.m */,
+				D6103B11E09D6C426EE5E711BC2A147A /* RCHUserPrefResponseParser.h */,
+				D70DDEC4D5F17BE952F2F1117DC890EF /* RCHUserPrefResponseParser.m */,
+				D4E1D8E3C447E5E226C366E94B3EB591 /* RCHUserPrefResult.h */,
+				83E087E010ED56374D5B4E3E4B805550 /* RCHUserPrefResult.m */,
+				354FBC9D76CF1F6B715A513705EE0BE6 /* RCHUserProfileBuilder.h */,
+				9A064D811B1829C5639B2721E821E6BC /* RCHUserProfileBuilder.m */,
+				B8A7EAE6FF3986BE41CCD2D9AD500488 /* RCHUserProfileElement.h */,
+				498B44875A57E28071908E9989900571 /* RCHUserProfileElement.m */,
+				56500C02E4B03260EB5FF948418A799F /* RCHUserProfileResponseParser.h */,
+				559652131795B2A28CEDA704EED6749A /* RCHUserProfileResponseParser.m */,
+				AE6FA200A8A7254AC2555B63DBB71117 /* RCHUserProfileResult.h */,
+				48BA104F15A05AC56A2D2F7B0CF88ED1 /* RCHUserProfileResult.m */,
+				511A77969D21A127058583E382B0C43C /* RCHWebUtils.m */,
+				E162C4BBAA1C70161EE07A7D19BCF803 /* RichRelevanceSDK.h */,
+				A3909CAD9D8D1F2B1936EAA59B26B068 /* Import */,
+				4C213D55123F0158D49D9C4427000B0C /* Private */,
+			);
+			path = RichRelevanceSDK;
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -284,6 +414,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4C213D55123F0158D49D9C4427000B0C /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				4382E48D5BD674767DBCBA585EB2AB82 /* RCHLog.h */,
+				5C0C9B500CAE71F21D74E55CA01C4E34 /* RCHNetworkReachabilityManager.h */,
+				A82B1F0301F20C975F0858DA4FC24410 /* RCHOAuth.h */,
+				E864FF9A5E379D4DAED8FEE9D34FB5C4 /* RCHWebUtils.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
 		5C8908623E6004AF973DB3107D3C49E4 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,117 +433,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7474AC512070A9F2C2A075C23ED5EAB3 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				A7528AC2739E2724999E3F17F8BF130D /* RCHLog.h */,
-				F93875F013CE5125C25AC4827191452B /* RCHNetworkReachabilityManager.h */,
-				6717DEC5CD656EB8BBE54020CC2CA676 /* RCHOAuth.h */,
-				11155EB4C69BA5DE84AD025A3B72D3DF /* RCHWebUtils.h */,
-			);
-			path = Private;
-			sourceTree = "<group>";
-		};
 		77613FB8223D9E94F485B01DD2DC14E4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
 				15B04C7106B82AE20D262CFEE5061F56 /* RichRelevanceSDK */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		7CCB4C59EB41E353ECDF0735070CC3B6 /* RichRelevanceSDK */ = {
-			isa = PBXGroup;
-			children = (
-				4F76B0E5EF3DA895E27E5B7F4E093F99 /* RCHAPIClient.h */,
-				C7CF48B8C962528B3D9FAD64438F013D /* RCHAPIClient.m */,
-				B088CF7492718ED8CF6E865608D627A6 /* RCHAPIClientConfig.h */,
-				D62BE0373C5558A796699799585709F9 /* RCHAPIClientConfig.m */,
-				463D66570EE042C6164FBF4BC23E6C2D /* RCHAPIConstants.h */,
-				CE7EBB230943C11FA12AB4B417D3CF42 /* RCHAPIConstants.m */,
-				5FBF1F210A8987419106B83D4C18E5FF /* RCHAPIResponseParser.h */,
-				8CA3E2E6BD12A2C2B893943699B43018 /* RCHAPIResult.h */,
-				83248C8D4FEA9C9BC104067650DC7A0D /* RCHAPIResult.m */,
-				ECE430F72DE98A02E02D70A0EA24B3DF /* RCHAutocompleteBuilder.h */,
-				126F803B8323D76E3E07C0BFCA21FA69 /* RCHAutocompleteBuilder.m */,
-				700DDB7A1113A46F4BE45A494AC3C630 /* RCHAutocompleteResponseParser.h */,
-				7C7E3ECC60A2B5006779578530E80E01 /* RCHAutocompleteResponseParser.m */,
-				7E5B876329972166EDB295629407BB08 /* RCHAutocompleteSuggestion.h */,
-				5DC768C7B65392A2DB0452823F5C548B /* RCHAutocompleteSuggestion.m */,
-				830D3E8B19CCD9779B706CD10D2B5B0C /* RCHCategory.h */,
-				8781817E50ECDF7218845DDA92467040 /* RCHCategory.m */,
-				DD942377778ED0940095351806F3C210 /* RCHCommonIncludes.h */,
-				9188026231CB906ED6E83C1AA4A86351 /* RCHCommonIncludes.m */,
-				FB60148FE0F71D8A27039E78D1218D46 /* RCHCreative.h */,
-				FC968355DB3DB6927BF267C76D185C70 /* RCHCreative.m */,
-				FA84FD452C672C018784886ED06E017E /* RCHErrors.h */,
-				D4240E6BC0649A2B9E81A765CEDC2863 /* RCHErrors.m */,
-				790A406CE51DCEA7BECD655180500DBF /* RCHGetProductsBuilder.h */,
-				E4D1EACB58A0BF7B3222766BB99F1B6E /* RCHGetProductsBuilder.m */,
-				96DC4A02AE4BCFCCFF3A8096C0C16A1C /* RCHGetProductsResponseParser.h */,
-				6E8E2101DE575C384FC06421732CE2FC /* RCHGetProductsResponseParser.m */,
-				8B346B592D271D7991464E2275FDB6A3 /* RCHGetProductsResult.h */,
-				199383D1E12858549E277F1BFCDA582A /* RCHGetProductsResult.m */,
-				22B673BB8A578E5E5314E022D530AFDD /* RCHLog.m */,
-				13669508E8F38AF6FDE94816089E3F97 /* RCHLogLevels.h */,
-				A5E961B287AD546620D735D436CA7750 /* RCHNetworkReachabilityManager.m */,
-				456965FDB8BBD0E5D906882BC0F126E0 /* RCHOAuth.m */,
-				56932A694EAF5901016E05F97DA192DC /* RCHPersonalizeBuilder.h */,
-				33CC0ADD6A3FE165E5A0A8B592EDBC24 /* RCHPersonalizeBuilder.m */,
-				849F8D28E7AC9A4EAEC93527897BB64B /* RCHPersonalizedPlacement.h */,
-				12BBDCC3A3C996C5191E437CA0833EF5 /* RCHPersonalizedPlacement.m */,
-				A094361D914476698F3932CE0BE9C5C3 /* RCHPersonalizeResponseParser.h */,
-				7C9E6A8B5574AF50B0AE4C4EC8C12E71 /* RCHPersonalizeResponseParser.m */,
-				0AC36F73A1FD5526FF85CD01821F4105 /* RCHPersonalizeResult.h */,
-				48BA8284EDD11AA24B4988FFB21584DD /* RCHPersonalizeResult.m */,
-				8C55EB21A138E03E8260AD9EC632FFD3 /* RCHPlacement.h */,
-				848CF85F9D573248112DF2DDF92A7891 /* RCHPlacement.m */,
-				6720D51E472C166FC4C7E54C78A80A11 /* RCHPlacementRecsBuilder.h */,
-				682635B2AB7E164934C6C4465C371D9C /* RCHPlacementRecsBuilder.m */,
-				880DD2E3988BD8C39789DC4BA26F0245 /* RCHPlacementsBuilder.h */,
-				D7FFCF0FEDBEF865386B4019D2A8CF40 /* RCHPlacementsBuilder.m */,
-				1CC10A7E586080EE08CCAEC386B1B448 /* RCHPlacementsResult.h */,
-				D5FE6C926BC618F3C1D58342AA212899 /* RCHPlacementsResult.m */,
-				DAC4D48A898BD4AF14A955629E19CA54 /* RCHRange.h */,
-				98234C298BE8D728E7FFCB4A73D5A0AB /* RCHRange.m */,
-				75ADDEE8017925F50B20301F79210E00 /* RCHRecommendedPlacement.h */,
-				9D797AE6C1C1839E913475E7AABAD277 /* RCHRecommendedPlacement.m */,
-				28E56368829E9B038ED74E90507A6894 /* RCHRecommendedProduct.h */,
-				29CBEFDF586BB6D1D47B1B4B6152B167 /* RCHRecommendedProduct.m */,
-				378C3D87A2C0AF983F2EBFA023F41520 /* RCHRecsForPlacementsResponseParser.h */,
-				C5FE76FA0A907C39E7E77D7728884506 /* RCHRecsForPlacementsResponseParser.m */,
-				4128942A1E3ED5B50DB5927B7ECA237A /* RCHRecsUsingStrategyResponseParser.h */,
-				A1C0207AA6BA6CC6280EBFA4EE2D8A5D /* RCHRecsUsingStrategyResponseParser.m */,
-				F7050DA0E8B674DE5AB0E70335196D5B /* RCHRequestBuilder.h */,
-				AC3DC75F48242834A325DEECA07030C3 /* RCHRequestBuilder.m */,
-				E3D60DE9B86FEF4FC89BC16660B7AFE2 /* RCHSDK.h */,
-				F097C6F3355BC580317942AEDD86476F /* RCHSDK.m */,
-				D39412A42A79325E6EE2B32D0436C75C /* RCHStrategyRecsBuilder.h */,
-				F642BADE7D60865B7D03E65578D1E7C3 /* RCHStrategyRecsBuilder.m */,
-				C91DE66E56D45BCCA7D7CC6345BB2A2A /* RCHStrategyResult.h */,
-				430113F31C05F847CC6B8C616AAE7C46 /* RCHStrategyResult.m */,
-				B5DACB3C55D00D3424768DB91526A806 /* RCHUserPrefBuilder.h */,
-				75372AA609BC9D2A7F2236BD91A9BF10 /* RCHUserPrefBuilder.m */,
-				3EEF09C5F3723164C563D1140A969BE6 /* RCHUserPreference.h */,
-				07128B3DC723E124D1077702A6106A4D /* RCHUserPreference.m */,
-				C4356CA88544F9B72DD507C5C9C847FE /* RCHUserPrefResponseParser.h */,
-				E88773C5ABA13B29BFFDF907F6BC399F /* RCHUserPrefResponseParser.m */,
-				79484CF4A57EC8B07014A5962CDC540F /* RCHUserPrefResult.h */,
-				B7B5B37E5464F89E3666AC88B3FA911F /* RCHUserPrefResult.m */,
-				4535D4E137D4FD6A11284BA1B7E6A54E /* RCHUserProfileBuilder.h */,
-				87C678BA0C251374788ED7CC0D4DA839 /* RCHUserProfileBuilder.m */,
-				73B380782552DD02219EBD19D487FCCB /* RCHUserProfileElement.h */,
-				FDA0B43AAE965BD3EB63E0DD15070A61 /* RCHUserProfileElement.m */,
-				EF37B386FE6BDD06ECA1F75E3A43F1ED /* RCHUserProfileResponseParser.h */,
-				799A726139861C35262287B61BAB3864 /* RCHUserProfileResponseParser.m */,
-				630439F8DBF659EB12980802D195D7D1 /* RCHUserProfileResult.h */,
-				D54A7A17410266E5CA03989E226A4E9B /* RCHUserProfileResult.m */,
-				32A245246C0CDB11355B17B16D782EE5 /* RCHWebUtils.m */,
-				F2D79B9427D6C3454E762B0CA6DF788A /* RichRelevanceSDK.h */,
-				8C68A1DA296C875B4DC737C499E208C6 /* Import */,
-				7474AC512070A9F2C2A075C23ED5EAB3 /* Private */,
-			);
-			path = RichRelevanceSDK;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -416,13 +452,21 @@
 			);
 			sourceTree = "<group>";
 		};
-		8C68A1DA296C875B4DC737C499E208C6 /* Import */ = {
+		88CA761BB8A30C4B96A12C1D8579FA7A /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				95B1C0199070E5FAA4146C732387CC9C /* NSObject+RCHImport.h */,
-				3A204D3D95E086F783568DD9CA514BA6 /* NSObject+RCHImport.m */,
-				EA87F6C2A9C25567FF4E5C31413F3379 /* RCHImportable.h */,
-				F64DE45BAA3198712E3A01CC359140C8 /* Private */,
+				3B0555EE6F0D31B795842F8EDBA6A799 /* RichRelevanceSDK */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		A3909CAD9D8D1F2B1936EAA59B26B068 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				8AA25495EE0DBC819E2BA7BCAFD34191 /* NSObject+RCHImport.h */,
+				CAF915F10FD5BA7653F038E3F8C62C03 /* NSObject+RCHImport.m */,
+				9A08CDE82500B6DF07768A587C3CD2D0 /* RCHImportable.h */,
+				E8D1344FBF5B4E20CDE1DB6D855ABEAE /* Private */,
 			);
 			path = Import;
 			sourceTree = "<group>";
@@ -450,18 +494,10 @@
 			path = "Target Support Files/Pods-RichRelevanceSDKDemo";
 			sourceTree = "<group>";
 		};
-		F3C868AEFDA43BA0FDA689B053EFCCB7 /* SDK */ = {
+		E8D1344FBF5B4E20CDE1DB6D855ABEAE /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				7CCB4C59EB41E353ECDF0735070CC3B6 /* RichRelevanceSDK */,
-			);
-			path = SDK;
-			sourceTree = "<group>";
-		};
-		F64DE45BAA3198712E3A01CC359140C8 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				B9D30C0084D1ECE68669F53CF2B60158 /* NSObject+RCHImport_Private.h */,
+				32E767F638293EED4B924763D545E4FC /* NSObject+RCHImport_Private.h */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -469,59 +505,65 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		438FF9257F206171EDC8A7CDD36A8B69 /* Headers */ = {
+		EA30D2254ACDA700706491EE763E18CF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A10A351CB3F923754F54F9C6DF4FB8 /* NSObject+RCHImport.h in Headers */,
-				5A58A77DFD58833BCC442DB66F9EA38D /* NSObject+RCHImport_Private.h in Headers */,
-				2B7A39A1626FA6510DE3F2A03F602B35 /* RCHAPIClient.h in Headers */,
-				9064F9CB103BC80234C19D3A1515684E /* RCHAPIClientConfig.h in Headers */,
-				2EA4DE0A7DF81D4ABB769552030FC0CE /* RCHAPIConstants.h in Headers */,
-				02BD5F10BFB7F0AFAB42F8404333ACE8 /* RCHAPIResponseParser.h in Headers */,
-				1B7E338B21831AB27262A0846C0E0FFD /* RCHAPIResult.h in Headers */,
-				EED3B6F5BF1E7D41FCD42B281B2F2346 /* RCHAutocompleteBuilder.h in Headers */,
-				DEAAB1C76335078DA8046BDECDABCEFF /* RCHAutocompleteResponseParser.h in Headers */,
-				42A5B13DE3058FA254AAE896F88A8202 /* RCHAutocompleteSuggestion.h in Headers */,
-				74C6C824579C833802930E175487E9BB /* RCHCategory.h in Headers */,
-				F6B34DAC503F399E0CD4D6EB170D1672 /* RCHCommonIncludes.h in Headers */,
-				D613121D667DDE6C84E64D1C56A01C40 /* RCHCreative.h in Headers */,
-				8C33CA95FBB654CFFF9E4F90D32863D3 /* RCHErrors.h in Headers */,
-				32F48A713CA6DCAB17D42E982A5780D9 /* RCHGetProductsBuilder.h in Headers */,
-				5E4892C889033427231A632EA4DF0F9E /* RCHGetProductsResponseParser.h in Headers */,
-				DAB82CABF0AA0429D401149240A13298 /* RCHGetProductsResult.h in Headers */,
-				56B3569891BE7818B7F770A6568E04DE /* RCHImportable.h in Headers */,
-				E09FBB5E5CEAE64043BF9245F148255A /* RCHLog.h in Headers */,
-				123064C497D4F16A004509EAAF54BF86 /* RCHLogLevels.h in Headers */,
-				875A7A2B07F380B5654E49AADE358A7E /* RCHNetworkReachabilityManager.h in Headers */,
-				545C06EC4333575AB32798F01C9B262D /* RCHOAuth.h in Headers */,
-				AC7BB39BF929139A6B3D3BB9D28D8B9E /* RCHPersonalizeBuilder.h in Headers */,
-				AA9E24E4D5FFC9D0FD277268702047F3 /* RCHPersonalizedPlacement.h in Headers */,
-				6A7D53F03C1FD545506A70D69FFDA1AD /* RCHPersonalizeResponseParser.h in Headers */,
-				6F7280B65E03A1841BAB98785B6256B0 /* RCHPersonalizeResult.h in Headers */,
-				464527E5DC120D78FC0FCBB2BEB3EACA /* RCHPlacement.h in Headers */,
-				353FC353141E3877C61E8A38E2D5797A /* RCHPlacementRecsBuilder.h in Headers */,
-				BC4AC5662F7D76724AD7A3122E2A9DAD /* RCHPlacementsBuilder.h in Headers */,
-				545776997BAD90C24A2378DA07CF3C04 /* RCHPlacementsResult.h in Headers */,
-				19FD175CBD73CC4BA1EE6A84936B7960 /* RCHRange.h in Headers */,
-				C12BCF3A574497BE7638A2FB5E0F0103 /* RCHRecommendedPlacement.h in Headers */,
-				B7576E004452E64F01467785425449A4 /* RCHRecommendedProduct.h in Headers */,
-				9737B1B2D8561CD0B684DBBE4F486AC6 /* RCHRecsForPlacementsResponseParser.h in Headers */,
-				AD3D3BF4A532226BC62E354FA720EA6A /* RCHRecsUsingStrategyResponseParser.h in Headers */,
-				CBD3D0E3FF0F8866821FC71B577630B6 /* RCHRequestBuilder.h in Headers */,
-				84DC89C9CA2355BF8519535D8244E599 /* RCHSDK.h in Headers */,
-				888B83A903BBC45B6FE51FE7E496F1F4 /* RCHStrategyRecsBuilder.h in Headers */,
-				C28D02C60DAF4E7B66460217309D224A /* RCHStrategyResult.h in Headers */,
-				6F7CBAFA7097DEEB24D673695B7BE2F7 /* RCHUserPrefBuilder.h in Headers */,
-				4CC0CBFC817C8CE43623D809D9318FBD /* RCHUserPreference.h in Headers */,
-				1C8365A8578A5180F27C0A8953893108 /* RCHUserPrefResponseParser.h in Headers */,
-				49F17DF1BFF0B8F4F0FA79AA204D7D37 /* RCHUserPrefResult.h in Headers */,
-				DCD40F45E6E63EFB7382A0EA517FE181 /* RCHUserProfileBuilder.h in Headers */,
-				19FB83B5DC97D12AD726A51554DB266A /* RCHUserProfileElement.h in Headers */,
-				6F11668D008C6BFC0EC3EB0905F008E4 /* RCHUserProfileResponseParser.h in Headers */,
-				422AA7285951E1064717188BF30B175D /* RCHUserProfileResult.h in Headers */,
-				DFAB645EB04CF199FC2978FB67F82711 /* RCHWebUtils.h in Headers */,
-				544A06CB8521BC756E614A8E2ACFB236 /* RichRelevanceSDK.h in Headers */,
+				A760F3065B1CED639C4FF79F32AAA473 /* NSObject+RCHImport.h in Headers */,
+				8A74540147FEF7F88375195661DCEDA5 /* NSObject+RCHImport_Private.h in Headers */,
+				3551892BB1EF8A4A4AAAFA2A68E7E349 /* RCHAPIClient.h in Headers */,
+				B72147A801B01E4499B5ABAD7F666C0E /* RCHAPIClientConfig.h in Headers */,
+				0FD394183FC58C347653DA428F5E72EE /* RCHAPIConstants.h in Headers */,
+				0C2730A4EF810A4781F6077A531099EC /* RCHAPIResponseParser.h in Headers */,
+				2E22E202E56BCE8F17911A4B558E0F31 /* RCHAPIResult.h in Headers */,
+				326947ABD59DF091026043AC99E759DB /* RCHAutocompleteBuilder.h in Headers */,
+				CD27B6B27B634A2CA88D86ABB1339C8B /* RCHAutocompleteResponseParser.h in Headers */,
+				463256B9CF6192E94E610CB1E3D03D26 /* RCHAutocompleteSuggestion.h in Headers */,
+				DF457BE0B441839471B4B9EA57946004 /* RCHCategory.h in Headers */,
+				07849172B430FFAE40FA5923C0E00E03 /* RCHCommonIncludes.h in Headers */,
+				F6E6FCC798F6A702D9CF92A7FA83C4F0 /* RCHCreative.h in Headers */,
+				0D112F147810C811F370A97332C86A74 /* RCHErrors.h in Headers */,
+				380D326024C3AD914F103A7DD58D275E /* RCHGetProductsBuilder.h in Headers */,
+				1A5149E0ED980BDB75B1CF7BBDFE9686 /* RCHGetProductsResponseParser.h in Headers */,
+				24CAC6A5971C83B5992BDAE49BD9FB8E /* RCHGetProductsResult.h in Headers */,
+				3C6BC8EF67186A8C49A547F4B64ABDC5 /* RCHImportable.h in Headers */,
+				E1B3557889C971E797759896BFA0A64A /* RCHLog.h in Headers */,
+				539ECD304142E39125728B3A1FF9E8D2 /* RCHLogLevels.h in Headers */,
+				642FBE38E24B21F50A26829685E58DCA /* RCHNetworkReachabilityManager.h in Headers */,
+				FF79F5C11CE374B49135EA12D44F692E /* RCHOAuth.h in Headers */,
+				9A941F6CCEEA52309525E451C3DB82C1 /* RCHPersonalizeBuilder.h in Headers */,
+				D921AEA12218553295840534D09F6864 /* RCHPersonalizedPlacement.h in Headers */,
+				E4042EDA47E80B5B922D311DD58458CD /* RCHPersonalizeResponseParser.h in Headers */,
+				2908D4B1264A854EC36C9377A5F1E9FC /* RCHPersonalizeResult.h in Headers */,
+				B9D0454F60FA4CF69609C5306379326E /* RCHPlacement.h in Headers */,
+				52754A9D01B506E9E08C0597A52D5515 /* RCHPlacementRecsBuilder.h in Headers */,
+				F2358C8A65BA20A6EA4554DF148476E2 /* RCHPlacementsBuilder.h in Headers */,
+				B2F785B678B04C4BB4424247D60A6FC8 /* RCHPlacementsResult.h in Headers */,
+				9DB9FC98B892DC990403D24474309801 /* RCHRange.h in Headers */,
+				E9A59AC3D47AADB8B3B4D609B00CFB6D /* RCHRecommendedPlacement.h in Headers */,
+				DED3BD3C63504B9FCCBD19486B1CEF3A /* RCHRecommendedProduct.h in Headers */,
+				A095750235EA8F575C7B20F702F55FE3 /* RCHRecsForPlacementsResponseParser.h in Headers */,
+				708E9F69C0B12C6A366330674DDAE906 /* RCHRecsUsingStrategyResponseParser.h in Headers */,
+				AF5F28011488B449B8568B483CF6E20B /* RCHRequestBuilder.h in Headers */,
+				9183BB1D02D2419450B7D006751E11B2 /* RCHSDK.h in Headers */,
+				6868DEF396A0BF9A5D1D0F3081D15C9E /* RCHSearchBuilder.h in Headers */,
+				4E87AFB22FF2C8184407E265D6891F46 /* RCHSearchFacet.h in Headers */,
+				EE541BDCE76AA6EA3B14CD5171025762 /* RCHSearchLink.h in Headers */,
+				0E1399B6E5984972F5A1DCA218440361 /* RCHSearchProduct.h in Headers */,
+				23708413145E145A86D19B6CEB44157D /* RCHSearchResponseParser.h in Headers */,
+				418D5225BAFC3A8EF713297B7F525109 /* RCHSearchResult.h in Headers */,
+				CCE299E34DFC04B58D1A1E56CF0B42EB /* RCHStrategyRecsBuilder.h in Headers */,
+				59CD31252C447D4DF8084DAB82A31869 /* RCHStrategyResult.h in Headers */,
+				445EBDEDFEED00A82B2FA583554169DC /* RCHUserPrefBuilder.h in Headers */,
+				6E6F63D737062430353D9A0637060A53 /* RCHUserPreference.h in Headers */,
+				DD9F6FBF197FDF2A272F2F429678D7F6 /* RCHUserPrefResponseParser.h in Headers */,
+				7F93E7104670042DCB34BFC2B7B7A312 /* RCHUserPrefResult.h in Headers */,
+				BABFE9015C810F49546075384CC19E67 /* RCHUserProfileBuilder.h in Headers */,
+				26B72744B98F8079B9BA0B76E46164A3 /* RCHUserProfileElement.h in Headers */,
+				A22FE9E5475478AF8E1322011D038464 /* RCHUserProfileResponseParser.h in Headers */,
+				B150980170E39FD5BB8E7F038C4C1B4D /* RCHUserProfileResult.h in Headers */,
+				5C78AB41BB29D707645AC0DBB46180FC /* RCHWebUtils.h in Headers */,
+				26AD10EED555C1596787387EA6674D8E /* RichRelevanceSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,9 +591,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E951B7E4EE15D686F6CA4575A52945D /* Build configuration list for PBXNativeTarget "RichRelevanceSDK" */;
 			buildPhases = (
-				350BB45618989A824F3EEBA27B23737E /* Sources */,
+				0F5CEF2BCCC5BDEE39C87DFDE3BDC150 /* Sources */,
 				FD7D5F6F9A0FCCD66E64DC13E00BD0C8 /* Frameworks */,
-				438FF9257F206171EDC8A7CDD36A8B69 /* Headers */,
+				EA30D2254ACDA700706491EE763E18CF /* Headers */,
 			);
 			buildRules = (
 			);
@@ -590,55 +632,61 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		350BB45618989A824F3EEBA27B23737E /* Sources */ = {
+		0F5CEF2BCCC5BDEE39C87DFDE3BDC150 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C04F534162AEB5F81B7A6BA394B2DF1 /* NSObject+RCHImport.m in Sources */,
-				8853793579A763EA0A615625D3AAE296 /* RCHAPIClient.m in Sources */,
-				3F36DAA6142DF6AA33835FA2108F7E64 /* RCHAPIClientConfig.m in Sources */,
-				C04842BB5135324B13AA5DF13CAB874D /* RCHAPIConstants.m in Sources */,
-				861EE327455A43894AAA71323760C656 /* RCHAPIResult.m in Sources */,
-				AE03DD85945C0F75396D1BE0C6D79103 /* RCHAutocompleteBuilder.m in Sources */,
-				93A579053B8C40499E175F845462981B /* RCHAutocompleteResponseParser.m in Sources */,
-				4D1631E917880F31682424F3D6DD4DE6 /* RCHAutocompleteSuggestion.m in Sources */,
-				A6CF242A2AF6F2C14C2BEA02E9B0CA52 /* RCHCategory.m in Sources */,
-				573B158CD40FAE8E8C8778256958EC27 /* RCHCommonIncludes.m in Sources */,
-				D074B521FB63C5CE8F26AF1B619206F4 /* RCHCreative.m in Sources */,
-				C912165B1F1BBC2D7C806DEB68594613 /* RCHErrors.m in Sources */,
-				B44A35569583145460C92BECC8D0D710 /* RCHGetProductsBuilder.m in Sources */,
-				C6D299B0A1703E5CECDE7CDDCA1771BB /* RCHGetProductsResponseParser.m in Sources */,
-				3A32ADA9D4D09EFD24D000B3A5DC2393 /* RCHGetProductsResult.m in Sources */,
-				0F7743709A8CC1DB6B18B2972EFC0AAF /* RCHLog.m in Sources */,
-				62AA8A68052C9D981E61351448024D40 /* RCHNetworkReachabilityManager.m in Sources */,
-				07D49969E21D7951FAE9EBC51D2F9142 /* RCHOAuth.m in Sources */,
-				446801CB111124F1B648062728515F99 /* RCHPersonalizeBuilder.m in Sources */,
-				96F54F6B2C77BD3AC9FA75E1967FAD52 /* RCHPersonalizedPlacement.m in Sources */,
-				5FF8E22175F793B465FC5C59EBA0D27E /* RCHPersonalizeResponseParser.m in Sources */,
-				79AE896F76E5261D992F13796FFECDAF /* RCHPersonalizeResult.m in Sources */,
-				D80EC6C98965D5868DAC1155F42A8B71 /* RCHPlacement.m in Sources */,
-				76B1927E2699040383AC55789498280F /* RCHPlacementRecsBuilder.m in Sources */,
-				818C0EC5C0A8577F32091DBA74A33955 /* RCHPlacementsBuilder.m in Sources */,
-				D71FCFA954F5E09FB7A56FCE6F945DF5 /* RCHPlacementsResult.m in Sources */,
-				1D7DA9E3215F33CCD556D947B24A41AA /* RCHRange.m in Sources */,
-				056E2841D14B332B4B146576CCA931AA /* RCHRecommendedPlacement.m in Sources */,
-				C873F3E06093814FCAF1468A5B3D7319 /* RCHRecommendedProduct.m in Sources */,
-				AE01A43D06F293775285AF0484F86ADD /* RCHRecsForPlacementsResponseParser.m in Sources */,
-				6644292CFAE38E03C37978E9880CEB6A /* RCHRecsUsingStrategyResponseParser.m in Sources */,
-				4FEDC969F3990EBADE8A45B3A9544FCC /* RCHRequestBuilder.m in Sources */,
-				BA610ABA86A1D6464EA4B699B720CF95 /* RCHSDK.m in Sources */,
-				67BC1D60A5877725B796FD0122394CAA /* RCHStrategyRecsBuilder.m in Sources */,
-				F9BC30A11F354456BE9F07833839D6D2 /* RCHStrategyResult.m in Sources */,
-				E6538E9755A5E277568FC1D4275EA00B /* RCHUserPrefBuilder.m in Sources */,
-				4E70A06F8A7569D5B3E4B393B58EB604 /* RCHUserPreference.m in Sources */,
-				A7944A3A8CBCCA4BCAC4350C1268656E /* RCHUserPrefResponseParser.m in Sources */,
-				BF9B5C6149ECDDA07C2B53E4587EBF19 /* RCHUserPrefResult.m in Sources */,
-				332CB9182ABE8C326DF14BA13680DB16 /* RCHUserProfileBuilder.m in Sources */,
-				54B3623AE65870DB506185C2153F1BF3 /* RCHUserProfileElement.m in Sources */,
-				26F4913FF13265097C2EC608E3496A2B /* RCHUserProfileResponseParser.m in Sources */,
-				07BA6C6D016DCE3BF1518B176C5F5C3C /* RCHUserProfileResult.m in Sources */,
-				9D1E1508F1EB86D20D8760C43666003E /* RCHWebUtils.m in Sources */,
-				BE332D7985AA8B47C03CB688CE4A00C3 /* RichRelevanceSDK-dummy.m in Sources */,
+				FFBB5BC6E8DC61076FE427F87C434CA3 /* NSObject+RCHImport.m in Sources */,
+				26871A516FB268A9E4E7A2AEBB87C14E /* RCHAPIClient.m in Sources */,
+				3EBB82EB18C246ECBA26E7EC9D53407C /* RCHAPIClientConfig.m in Sources */,
+				A3C8236CCD3079B191C30E5374358C48 /* RCHAPIConstants.m in Sources */,
+				54D80FF9A6CC64BD097C3B5519920F13 /* RCHAPIResult.m in Sources */,
+				F948512E7E2E9079F8E074B5F34BE817 /* RCHAutocompleteBuilder.m in Sources */,
+				6905B90020584EDD01E99F58F7641793 /* RCHAutocompleteResponseParser.m in Sources */,
+				2C58BDFE464A6DD65BE12C2C4FBC70CF /* RCHAutocompleteSuggestion.m in Sources */,
+				779A1C9D6F4CD25BBC3119FDA06E8E7D /* RCHCategory.m in Sources */,
+				EC36B89F510E6BDF0306585C31BDA60E /* RCHCommonIncludes.m in Sources */,
+				8FD1CC3FCA705397E25DCB4AE90E53C5 /* RCHCreative.m in Sources */,
+				AB753AA670312996E46158D28430A58A /* RCHErrors.m in Sources */,
+				E5D12249939D20E2E1AF54F638D35FD3 /* RCHGetProductsBuilder.m in Sources */,
+				7D7CA9F4D939E6F15607C190AB78915D /* RCHGetProductsResponseParser.m in Sources */,
+				BEE0DCDAE889D0D8D544AC1DC7F4F60E /* RCHGetProductsResult.m in Sources */,
+				B12F0208DC0D6D35DA27B4CB9BF5DE92 /* RCHLog.m in Sources */,
+				A4DF6D8E7E8F9DCBBB66EDC15E5F0857 /* RCHNetworkReachabilityManager.m in Sources */,
+				7B375E6679BE4B412FF0E2CDC7DA87DC /* RCHOAuth.m in Sources */,
+				F6F7835BDCCF208564D77B2F5BD36667 /* RCHPersonalizeBuilder.m in Sources */,
+				4AC75CA678AD8563EE42A0D65C252284 /* RCHPersonalizedPlacement.m in Sources */,
+				047DDF78FD96FF7178BFB233D6FD8258 /* RCHPersonalizeResponseParser.m in Sources */,
+				DB569C47818B6C0F470353E95E5AAAD3 /* RCHPersonalizeResult.m in Sources */,
+				2347A154A9784F4591BADD087C665392 /* RCHPlacement.m in Sources */,
+				06E0D36A98F68F303F2B57E4FA8BA069 /* RCHPlacementRecsBuilder.m in Sources */,
+				56C26A1FD5BF7B03843072FC026450C9 /* RCHPlacementsBuilder.m in Sources */,
+				DC6FF4F70E92C8C446263D66C52F1E9A /* RCHPlacementsResult.m in Sources */,
+				3825BE6F25FE0FE984F3DB82B62E9F64 /* RCHRange.m in Sources */,
+				82EC53578DE855C69A0AD39589E40240 /* RCHRecommendedPlacement.m in Sources */,
+				9AD31219D31F01F56E359771EC7CCFB4 /* RCHRecommendedProduct.m in Sources */,
+				DC87E9F36028EEB0C2CD860AF24C6542 /* RCHRecsForPlacementsResponseParser.m in Sources */,
+				FE763ECD6048C5C3CB77A3689F04767A /* RCHRecsUsingStrategyResponseParser.m in Sources */,
+				612273FF03BEA3EB4D3FA2D929C2B7A2 /* RCHRequestBuilder.m in Sources */,
+				F95B3C094F23666D0DA8A7E52C4FAD8A /* RCHSDK.m in Sources */,
+				200B7735974362DF961E6BC0C2989F96 /* RCHSearchBuilder.m in Sources */,
+				B11B17AD40D20EB1401EDA7BFBE85C90 /* RCHSearchFacet.m in Sources */,
+				DEE2C351F58CCF540C6D4BBE242B4753 /* RCHSearchLink.m in Sources */,
+				8BD2B8E2A48EE47BAF7A3E0011C8AEF4 /* RCHSearchProduct.m in Sources */,
+				3AF5577A50D86035FE80D82F47A7C343 /* RCHSearchResponseParser.m in Sources */,
+				0369C7B3A90DB9C7452015E2F01DBF8D /* RCHSearchResult.m in Sources */,
+				024F4B5C60B42DAA631116F97F07EBF0 /* RCHStrategyRecsBuilder.m in Sources */,
+				4B59440B3ACB2A5F67ABEE6D82BAFFFA /* RCHStrategyResult.m in Sources */,
+				39AAC96D97E363BA2FCC1BE3B504DE90 /* RCHUserPrefBuilder.m in Sources */,
+				ECC8746010D8A14914C44F952AA7BB66 /* RCHUserPreference.m in Sources */,
+				A039A216EFB46705503D64543D6DCA97 /* RCHUserPrefResponseParser.m in Sources */,
+				FF28F0204C4930F25ED1E430E07AB824 /* RCHUserPrefResult.m in Sources */,
+				57E6A519E0E3B01551B45CF910EB3488 /* RCHUserProfileBuilder.m in Sources */,
+				9FEA345B6D02B46D03B5C383B87A3472 /* RCHUserProfileElement.m in Sources */,
+				404A0FBD6146F6CD8D06D74AE691DBFC /* RCHUserProfileResponseParser.m in Sources */,
+				7C42AB49D49B941A3BCD0F46C0F1D13B /* RCHUserProfileResult.m in Sources */,
+				FE77BF4D58AFE494E4C6E29ED5E8E351 /* RCHWebUtils.m in Sources */,
+				2E2EE36DA581CBCB56E5FBFF68C9261F /* RichRelevanceSDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

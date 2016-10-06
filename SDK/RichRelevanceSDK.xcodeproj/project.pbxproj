@@ -247,6 +247,7 @@
 		AB8497D71DA2F7FE00FE3414 /* RCHSearchBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497D51DA2F7FE00FE3414 /* RCHSearchBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8497D81DA3304B00FE3414 /* RCHSearchBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8497D51DA2F7FE00FE3414 /* RCHSearchBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8497D91DA3305400FE3414 /* RCHSearchBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8497D41DA2F7FE00FE3414 /* RCHSearchBuilder.m */; };
+		AB9B04791DA6DD7F000F09CE /* RCHSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = AB293C521D9DAD4C00543D8B /* RCHSearchResult.m */; };
 		ABDF7DD01D90662600E4800A /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */; };
 		ABDF7DD11D90662600E4800A /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDF7DD31D90672700E4800A /* find_autocomplete.json in Resources */ = {isa = PBXBuildFile; fileRef = ABDF7DD21D90672700E4800A /* find_autocomplete.json */; };
@@ -1226,6 +1227,7 @@
 				2B7AB4221D63BA3900E011DC /* RCHCommonIncludes.m in Sources */,
 				2B7AB4231D63BA3900E011DC /* RCHUserProfileResult.m in Sources */,
 				2B7AB4241D63BA3900E011DC /* RCHGetProductsResponseParser.m in Sources */,
+				AB9B04791DA6DD7F000F09CE /* RCHSearchResult.m in Sources */,
 				AB8497BE1DA2C2C900FE3414 /* RCHSearchLink.m in Sources */,
 				2B7AB4251D63BA3900E011DC /* RCHUserPreference.m in Sources */,
 				2B7AB4261D63BA3900E011DC /* RCHUserPrefResult.m in Sources */,
