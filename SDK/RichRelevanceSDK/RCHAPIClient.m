@@ -277,6 +277,7 @@
         }
         case RCHAPIClientUserAndSessionParamStyleNone: {
             newParams[kRCHAPICommonParamAPIKey] = self.clientConfig.APIKey;
+            break;
         }
         default:
             break;
