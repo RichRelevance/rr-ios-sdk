@@ -27,9 +27,7 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
     }
     
     func loadData() {
-        
-        // TODO: Set title to selected client
-        self.title = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyClientName)
+        navigationItem.title = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyClientName)
         
         spinner.startAnimating()
         spinner.isHidden = false
@@ -74,8 +72,9 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
-        numberFormatter.string(from: product.priceCents!)
+        let priceCentsToDollars = (product.priceCents?.intValue)! / 100 as NSNumber
         
+        cell.priceLabel.text = numberFormatter.string(from: priceCentsToDollars)
         cell.productImage.sd_setImage(with: URL(string: product.imageURL!))
         cell.brandLabel.text = product.brand?.uppercased()
         cell.titleLabel.text = product.name
