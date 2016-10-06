@@ -95,6 +95,7 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
 //        autocompleteArray = []
         autocompleteTableView.reloadData()
         autocompleteTableView.isHidden = true
+        searchProductsView.isHidden = false
     }
     
     func showNoResults() {
@@ -170,14 +171,17 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
 
         if !searchTerm.isEmpty && autocompleteArray.count > 0 {
             let searchTermLength = searchTerm.characters.count
-
-            let highlightColor = UIColor(red: 0, green: 121/255, blue: 253/255, alpha: 1)
-            let blueAttribute = [NSBackgroundColorAttributeName : highlightColor]
+            let autocompleteTermLength = autocompleteString.characters.count
             
-            let attributedString = NSMutableAttributedString(string: autocompleteString, attributes: nil)
-            attributedString.addAttributes(blueAttribute, range: NSRange.init(location: 0, length: searchTermLength))
-        
-            cell.textLabel?.attributedText = attributedString
+            if autocompleteTermLength >= searchTermLength {
+                let highlightColor = UIColor(red: 0, green: 121/255, blue: 253/255, alpha: 1)
+                let blueAttribute = [NSBackgroundColorAttributeName : highlightColor]
+                
+                let attributedString = NSMutableAttributedString(string: autocompleteString, attributes: nil)
+                attributedString.addAttributes(blueAttribute, range: NSRange.init(location: 0, length: searchTermLength))
+                
+                cell.textLabel?.attributedText = attributedString
+            }
         } else {
             cell.textLabel?.text = autocompleteString
         }
@@ -198,7 +202,6 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "productDetailSegue" {
             if let destinationViewControler = segue.destination as? RCHProductDetailViewController {
                 guard let selectedIndexPath = searchResultsCollectionView.indexPathsForSelectedItems else {

@@ -143,6 +143,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-9W-Ygk">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" misplaced="YES" image="icn-tabbar-search" translatesAutoresizingMaskIntoConstraints="NO" id="Xc7-Vp-NyB">
+                                        <frame key="frameInset" minX="124" width="88" height="88"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-a4-9wr">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <color key="textColor" red="0.29803921568627451" green="0.37647058823529411" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5rS-a4-9wr" firstAttribute="top" secondItem="Xc7-Vp-NyB" secondAttribute="bottom" constant="20" id="GTG-Ov-Y1v"/>
+                                    <constraint firstAttribute="bottom" secondItem="5rS-a4-9wr" secondAttribute="bottom" constant="-26" id="SDM-KQ-lxS"/>
+                                    <constraint firstItem="Xc7-Vp-NyB" firstAttribute="centerX" secondItem="PCm-9W-Ygk" secondAttribute="centerX" id="Zmb-o7-m4o"/>
+                                    <constraint firstItem="Xc7-Vp-NyB" firstAttribute="top" secondItem="PCm-9W-Ygk" secondAttribute="top" id="agI-el-9Qj"/>
+                                    <constraint firstItem="5rS-a4-9wr" firstAttribute="centerX" secondItem="PCm-9W-Ygk" secondAttribute="centerX" id="ts5-D1-szR"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dR2-1d-qrG">
                                 <frame key="frameInset" minY="62" maxX="-1" maxY="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +192,7 @@
                                     <outlet property="delegate" destination="k2I-Uj-dtt" id="i6r-Yz-sg2"/>
                                 </connections>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k4g-YI-daA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k4g-YI-daA">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -217,26 +237,6 @@
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.27843137254901962" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Z4Y-AE-OGa"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-9W-Ygk">
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" misplaced="YES" image="icn-tabbar-search" translatesAutoresizingMaskIntoConstraints="NO" id="Xc7-Vp-NyB">
-                                        <frame key="frameInset" minX="124" width="88" height="88"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Products" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rS-a4-9wr">
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <color key="textColor" red="0.29803921568627451" green="0.37647058823529411" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="5rS-a4-9wr" firstAttribute="top" secondItem="Xc7-Vp-NyB" secondAttribute="bottom" constant="20" id="GTG-Ov-Y1v"/>
-                                    <constraint firstAttribute="bottom" secondItem="5rS-a4-9wr" secondAttribute="bottom" constant="-26" id="SDM-KQ-lxS"/>
-                                    <constraint firstItem="Xc7-Vp-NyB" firstAttribute="centerX" secondItem="PCm-9W-Ygk" secondAttribute="centerX" id="Zmb-o7-m4o"/>
-                                    <constraint firstItem="Xc7-Vp-NyB" firstAttribute="top" secondItem="PCm-9W-Ygk" secondAttribute="top" id="agI-el-9Qj"/>
-                                    <constraint firstItem="5rS-a4-9wr" firstAttribute="centerX" secondItem="PCm-9W-Ygk" secondAttribute="centerX" id="ts5-D1-szR"/>
                                 </constraints>
                             </view>
                         </subviews>
