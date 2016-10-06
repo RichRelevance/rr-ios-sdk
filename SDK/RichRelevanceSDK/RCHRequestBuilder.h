@@ -92,7 +92,7 @@ OBJC_EXTERN NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter;
 - (instancetype)addValue:(id)value toArrayForKey:(NSString *)key;
 
 /*!
- *  Add a new value to an array that is represented as multiple arguments, not a string delimited array.
+ *  Add a new value to an array that is represented as multiple arguments, not a string delimited array, e.g. ```key=a&key=b&key=c```
  *  @param value The new value to add, an instance of either NSString or NSNumber
  *  @param key   The key under which to add the value
  */
