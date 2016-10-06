@@ -238,6 +238,7 @@
 
     switch (style) {
         case RCHAPIClientUserAndSessionParamStyleLong: {
+            newParams[kRCHAPICommonParamAPIKey] = self.clientConfig.APIKey;
             newParams[kRCHAPICommonParamAPIClientKey] = self.clientConfig.APIClientKey;
 
             if (self.clientConfig.userID != nil && self.clientConfig.userID.length > 0) {
