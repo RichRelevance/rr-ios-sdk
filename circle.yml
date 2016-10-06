@@ -12,7 +12,7 @@ test:
 
 deployment:
   integration:
-    branch: [develop]
+    branch: [master, develop]
     commands:
       - bundle exec fastlane develop
 
