@@ -88,13 +88,19 @@ OBJC_EXTERN NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter;
  *
  *  @param value The new value to add, an instance of either NSString or NSNumber
  *  @param key   The key under which to add the value
- *
- *  @return <#return value description#>
  */
-- (instancetype)addValue:(id)value toArrayForhKey:(NSString *)key;
+- (instancetype)addValue:(id)value toArrayForKey:(NSString *)key;
 
 /*!
- *  Set a dicionary as value. This will result in the key/value paris of
+ *  Add a new value to an array that is represented as multiple arguments, not a string delimited array, e.g. ```key=a&key=b&key=c```
+ *  @param value The new value to add, an instance of either NSString or NSNumber
+ *  @param key   The key under which to add the value
+ */
+- (instancetype)addValue:(id)value toMultipleArgumentArrayForKey:(NSString *)key;
+
+
+/*!
+ *  Set a dicionary as value. This will result in the key/value pairs of
  *  the dictionary being passed in one of several delimited formats.
  *
  *  @param dict        The dictionary to set as value, must contain instances of NSString or NSNumber
@@ -135,6 +141,11 @@ OBJC_EXTERN NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter;
  *  @param style The param style, @see RCHAPIClientUserAndSessionParamStyle for possible values
  */
 - (instancetype)setUserAndSessionParamStyle:(RCHAPIClientUserAndSessionParamStyle)style;
+
+/*!
+ *  Embed the RCS Token in the request. This is an opaque encrypted token used by the endpoint
+ */
+- (instancetype)setEmbedRCSToken:(BOOL)embed;
 
 ///-------------------------------
 /// @name Build

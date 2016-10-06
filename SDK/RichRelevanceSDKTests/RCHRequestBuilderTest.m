@@ -22,6 +22,9 @@
 
 static NSString *const kRCHRequestBuilderTestDefaultPath = @"/defaultPath";
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+
 @interface RCHRequestBuilder (UnderTest)
 
 @property (strong, nonatomic) NSMutableDictionary *requestParams;
@@ -118,13 +121,13 @@ static NSString *const kRCHRequestBuilderTestDefaultPath = @"/defaultPath";
 
 - (void)testAddValueToArrayForKey
 {
-    [self.builder addValue:@"value1" toArrayForhKey:@"key1"];
+    [self.builder addValue:@"value1" toArrayForKey:@"key1"];
     NSString *arrayString = self.builder.requestParams[@"key1"];
 
     expect(arrayString).notTo.beNil();
     expect(arrayString).to.equal(@"value1");
 
-    [self.builder addValue:@"value2" toArrayForhKey:@"key1"];
+    [self.builder addValue:@"value2" toArrayForKey:@"key1"];
     NSString *arrayString2 = self.builder.requestParams[@"key1"];
     expect(arrayString2).notTo.beNil();
     expect(arrayString2).to.equal(@"value1|value2");
@@ -151,4 +154,12 @@ static NSString *const kRCHRequestBuilderTestDefaultPath = @"/defaultPath";
     expect(self.builder.requestParams[@"key1"]).to.equal(@"k1:1|k2:2|k3:A|k3:B|k3:1");
 }
 
+- (void)testEmbedRCS
+{
+    [self.builder setEmbedRCSToken:YES];
+    expect(self.builder.requestInfo[kRCHAPIBuilderParamRequestInfoEmbedRCS]).toNot.beNil;
+}
+
 @end
+
+#pragma clang diagnostic pop

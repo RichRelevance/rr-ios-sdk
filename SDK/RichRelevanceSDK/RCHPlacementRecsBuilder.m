@@ -17,6 +17,8 @@
 #import "RCHLog.h"
 #import "RCHAPIConstants.h"
 #import "RCHRecsForPlacementsResponseParser.h"
+#import "RCHSearchResult.h"
+#import "RCHWebUtils.h"
 
 @interface RCHPlacementRecsBuilder ()
 
@@ -136,10 +138,10 @@
 - (instancetype)addPurchasedProduct:(RCHRequestProduct *)product
 {
     if (product != nil) {
-        [self addValue:product.identifier toArrayForhKey:kRCHAPIRequestParamRecommendationsProductID];
-        [self addValue:product.quantity toArrayForhKey:kRCHAPIRequestParamRecommendationsItemQuantities];
-        [self addValue:product.priceCents toArrayForhKey:kRCHAPIRequestParamRecommendationsProductPricesCents];
-        [self addValue:product.priceDollars toArrayForhKey:kRCHAPIRequestParamRecommendationsProductPrices];
+        [self addValue:product.identifier toArrayForKey:kRCHAPIRequestParamRecommendationsProductID];
+        [self addValue:product.quantity toArrayForKey:kRCHAPIRequestParamRecommendationsItemQuantities];
+        [self addValue:product.priceCents toArrayForKey:kRCHAPIRequestParamRecommendationsProductPricesCents];
+        [self addValue:product.priceDollars toArrayForKey:kRCHAPIRequestParamRecommendationsProductPrices];
     }
     else {
         [RCHLog logError:@"Invalid parameter, nil  product passed to %@", NSStringFromSelector(_cmd)];
@@ -167,7 +169,7 @@
 {
     if (strategy != RCHStrategyDefault) {
         NSString *strategyString = [RCHEnumMappings stringFromStrategy:strategy];
-        [self addValue:strategyString toArrayForhKey:kRCHAPIRequestParamRecommendationsStrategySet];
+        [self addValue:strategyString toArrayForKey:kRCHAPIRequestParamRecommendationsStrategySet];
     }
 
     return self;
@@ -201,6 +203,16 @@
 - (instancetype)setFilterAttributes:(NSDictionary *)filterAttributes
 {
     return [self setDictionaryValue:filterAttributes forKey:kRCHAPIRequestParamRecommendationsFilterAttributes flattenKeys:NO];
+}
+
+- (instancetype)addParametersFromSearchResult:(RCHSearchResult *)searchResult
+{
+    NSString *parameterString = searchResult.addToCartParameters;
+    NSDictionary<NSString *, NSString *> *parameters = [RCHWebUtils keyValuesFromParameterString:parameterString];
+    [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
+        [self setValue:obj forKey:key];
+    }];
+    return self;
 }
 
 #pragma mark - Build

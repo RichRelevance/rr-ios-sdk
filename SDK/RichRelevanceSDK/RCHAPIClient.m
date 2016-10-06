@@ -22,6 +22,7 @@
 #import "RCHAPIResponseParser.h"
 #import "RCHOAuth.h"
 #import "RCHNetworkReachabilityManager.h"
+#import "RCHAPIResult.h"
 
 @interface RCHAPIClient ()
 
@@ -29,6 +30,7 @@
 @property (strong, nonatomic) NSURLSession *URLSession;
 @property (strong, nonatomic) RCHNetworkReachabilityManager *reachability;
 @property (strong, nonatomic) NSMutableArray *failedClickTrackURLs;
+@property (copy, nonatomic) NSString *opaqueRCSToken;
 
 @end
 
@@ -100,8 +102,11 @@
     [RCHLog logDebug:@"Request: %@", requestDict];
 
     if ([self validateRequest:requestDict success:success failure:failure]) {
-        NSDictionary *requestInfo = requestDict[kRCHAPIBuilderParamRequestInfo];
+        NSMutableDictionary *requestInfo = [requestDict[kRCHAPIBuilderParamRequestInfo] mutableCopy];
 
+        if ([requestInfo[kRCHAPIBuilderParamRequestInfoEmbedRCS] boolValue]) {
+            requestInfo[kRCHAPICommonParamRCS] = self.opaqueRCSToken;
+        }
         [self GET:requestInfo[kRCHAPIBuilderParamRequestInfoPath] parameters:requestDict success:^(id responseObject) {
 
             [RCHLog logDebug:@"%s: API responded with: %@", __PRETTY_FUNCTION__, responseObject];
@@ -111,6 +116,11 @@
             if (parser != nil && responseObject != nil) {
                 NSError *parseError = nil;
                 result = [parser parseResponse:responseObject error:&parseError];
+
+                if ([result isKindOfClass:[RCHAPIResult class]]) {
+                    RCHAPIClient *apiResult = result;
+                    self.opaqueRCSToken = apiResult.opaqueRCSToken ?: self.opaqueRCSToken;
+                }
 
                 if (parseError != nil) {
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -192,6 +202,10 @@
     else {
         NSDictionary *signedRequestParams = [self addAuthToParams:requestParams style:userAndSessionStyle];
         URL = [self URLFromPath:path parameters:signedRequestParams];
+        if (userAndSessionStyle == RCHAPIClientUserAndSessionParamStyleLongWithAPIKeyInPath ||
+            userAndSessionStyle == RCHAPIClientUserAndSessionParamStyleAPIKeyInPath) {
+            URL = [URL URLByAppendingPathComponent:self.clientConfig.APIClientKey];
+        }
         URL = [NSURL URLWithString:[URL absoluteString]];
         URLRequest = [NSURLRequest requestWithURL:URL];
     }
@@ -222,10 +236,9 @@
 {
     NSMutableDictionary *newParams = [requestParams mutableCopy];
 
-    newParams[kRCHAPICommonParamAPIKey] = self.clientConfig.APIKey;
-
     switch (style) {
         case RCHAPIClientUserAndSessionParamStyleLong: {
+            newParams[kRCHAPICommonParamAPIKey] = self.clientConfig.APIKey;
             newParams[kRCHAPICommonParamAPIClientKey] = self.clientConfig.APIClientKey;
 
             if (self.clientConfig.userID != nil && self.clientConfig.userID.length > 0) {
@@ -239,6 +252,8 @@
             break;
         }
         case RCHAPIClientUserAndSessionParamStyleShort: {
+            newParams[kRCHAPICommonParamAPIKey] = self.clientConfig.APIKey;
+
             if (self.clientConfig.userID != nil && self.clientConfig.userID.length > 0) {
                 newParams[kRCHAPICommonParamUserIDShort] = self.clientConfig.userID;
             }
@@ -249,7 +264,20 @@
 
             break;
         }
+        case RCHAPIClientUserAndSessionParamStyleLongWithAPIKeyInPath: {
+            if (self.clientConfig.userID != nil && self.clientConfig.userID.length > 0) {
+                newParams[kRCHAPICommonParamUserID] = self.clientConfig.userID;
+            }
+
+            if (self.clientConfig.sessionID != nil && self.clientConfig.sessionID.length > 0) {
+                newParams[kRCHAPICommonParamSessionID] = self.clientConfig.sessionID;
+            }
+
+            break;
+        }
         case RCHAPIClientUserAndSessionParamStyleNone: {
+            newParams[kRCHAPICommonParamAPIKey] = self.clientConfig.APIKey;
+            break;
         }
         default:
             break;
@@ -265,7 +293,7 @@
     NSMutableDictionary *newParams = parameters != nil ? [parameters mutableCopy] : [NSMutableDictionary dictionary];
 
     //!!! A handful of list parameters need to be specified as repeat params, (i.e. foo=1&foo=2&foo=3)
-    // If any value is specified as a list, this sitnifies we need to break out the values into repeats.
+    // If any value is specified as a list, this signifies we need to break out the values into repeats.
     NSMutableString *repeatParamsString = [NSMutableString string];
     NSArray *sortedKeys = [newParams.allKeys sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     for (id key in sortedKeys) {
@@ -290,7 +318,13 @@
 
     URLString = [URLString stringByAppendingFormat:@"?%@", queryString];
 
-    return [NSURL URLWithString:URLString relativeToURL:[self.clientConfig baseURL]];
+    NSURL *baseURL = ([self isV2Path:path] ? self.clientConfig.baseURLv2 : self.clientConfig.baseURL);
+    return [NSURL URLWithString:URLString relativeToURL:baseURL];
+}
+
+- (BOOL)isV2Path:(NSString *)path
+{
+    return [path hasPrefix:kRCHAPIRequestFindSearchPath] || [path hasPrefix:kRCHAPIRequestFindAutocompletePath];
 }
 
 - (NSURLRequest *)OAuthURLRequestFromPath:(NSString *)path parameters:(NSDictionary *)parameters

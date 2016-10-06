@@ -39,6 +39,11 @@
 #import "RCHPersonalizedPlacement.h"
 #import "RCHCreative.h"
 #import "RCHAutocompleteResponseParser.h"
+#import "RCHSearchResponseParser.h"
+#import "RCHSearchResult.h"
+#import "RCHSearchFacet.h"
+#import "RCHSearchProduct.h"
+#import "RCHSearchLink.h"
 
 @interface RCHAPIResponseParserTest : XCTestCase
 
@@ -365,6 +370,51 @@
     expect(suggestion.suggestionID).to.equal(@"maxi dress");
     expect(suggestion.type).to.equal(@"TOPTRENDS");
     expect(suggestion.popularity).to.equal(221);
+}
+
+- (void)testSearch
+{
+    NSURL *URL = [[NSBundle bundleForClass:[self class]] URLForResource:@"find_search" withExtension:@"json"];
+    NSData *data = [[NSData alloc] initWithContentsOfURL:URL];
+    id JSONObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+
+    RCHSearchResponseParser *parser = [[RCHSearchResponseParser alloc] init];
+
+    RCHSearchResult *result = [parser parseResponse:JSONObject error:nil];
+    expect(result).notTo.beNil();
+    expect(result.request).notTo.beNil();
+    expect(result.searchTrackingURL).notTo.beNil();
+    expect(result.links).to.haveCount(3);
+    expect(result.links[@"directlink"]).to.haveCount(1);
+    expect(result.links[@"banner"]).to.haveCount(1);
+    expect(result.links[@"sponsored"]).to.haveCount(1);
+    expect(result.products).to.haveCount(2);
+
+    if (result.products.count == 0) { return; }
+    RCHSearchProduct *product = result.products[0];
+    expect(product.productID).to.equal(@"10308694");
+    expect(product.name).to.equal(@"T-Gel Original Shampoo, 8.5oz");
+    expect(product.linkID).to.equal(@"");
+    expect(product.salePriceCents).to.equal(@797);
+    expect(product.priceCents).to.equal(@798);
+    expect(product.clickURL).to.equal(@"http://localhost:8101/rrserver/api/v1/service/track/click/showcaseparent?a=showcaseparent&vg=80015896-f4fe-44c5-41ab-6654e0877e89&pti=2&pa=sort&hpi=0&stn=PersonalizedProductSearchAndBrowse&stid=184&rti=2&sgs=&u=u1234&mvtId=0&mvtTs=1458177239699&uguid=8005b4f0-f4fe-44c5-c846-f553982b6b8f&channelId=WEB&s=s1234&pg=-1&page=0&query=t&lang=en&p=10308694&ind=0&ct=http://labs.richrelevance.com/storre/catalog/product/view/sku/10308694");
+    expect(product.imageURL).to.equal(@"http://labs.richrelevance.com/storre/media/catalog/product/t/-/t-gel-original-shampoo-8.5oz-1e2df9930cf89d1614debdbaa3feaf38.jpg");
+
+    NSArray<RCHSearchFacet *> *brand = result.facets[@"brand_facet"];
+    if (brand.count == 0) { return; }
+    RCHSearchFacet *facet = brand[0];
+    expect(facet.title).to.equal(@"Generic");
+    expect(facet.filter).to.equal(@"{!tag=brand_facet}brand_facet:\"Generic\"");
+    expect(facet.count).to.equal(126);
+
+    NSArray<RCHSearchLink *> *direct = result.links[@"sponsored"];
+    if (direct.count == 0) { return; }
+    RCHSearchLink *link = direct[0];
+    expect(link.title).to.equal(@"sponsored-title");
+    expect(link.subtitle).to.equal(@"sponsored-subtitle");
+    expect(link.linkID).to.equal(@"sponsored-id");
+    expect(link.URL).to.equal(@"sponsored-url");
+    expect(link.imageURL).to.equal(@"sponsored-image-url");
 }
 
 @end

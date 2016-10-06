@@ -26,14 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param productIDs An NSArray of NSString instances representing product IDs.
  */
-- (instancetype)setProductIDs:(NSArray *)productIDs;
+- (instancetype)setProductIDs:(NSArray<NSString *> *)productIDs;
 
 /*!
  *  Retrieves custom attributes provided in the catalog feed.
  *
  *  @param attributes A list of NSString instances, pass a list containing a single value of * to retrieve all attributes.
  */
-- (instancetype)setCatalogFeedCustomAttributes:(NSArray *)attributes;
+- (instancetype)setCatalogFeedCustomAttributes:(NSArray<NSString *> *)attributes;
 
 @end
 NS_ASSUME_NONNULL_END

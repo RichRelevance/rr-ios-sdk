@@ -13,23 +13,12 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 
-@import Foundation;
-#import "RCHImportable.h"
+#import "RCHAPIResponseParser.h"
+#import "RCHAutocompleteSuggestion.h"
 
 /*!
- *  A generic API result class, intended for subclassing.
+ *  Response parser for search results
  */
-@interface RCHAPIResult : NSObject <RCHImportable>
-
-/*!
- *  The entire parsed JSON response for this result as a raw Foundation data struct.
- */
-@property (copy, nonatomic) id rawResponse;
-
-/*!
- *  If this property is set, the RCS token will be saved by the API client and
- *  added to future requests that use the RCS token.
- */
-@property (nonatomic, copy) NSString *opaqueRCSToken;
+@interface RCHSearchResponseParser : NSObject <RCHAPIResponseParser>
 
 @end

@@ -33,8 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)setQuery:(NSString *)text;
 
 /*!
- *  The Language the query is performed in. This defaults to being configured with [NSLocale currentLocale].
- *  This will use the `languageCode` property of the locale to submit along with the query text.
+ *  The Language the query is performed in. 
  *
  *  @param text The string to obtain autocomplete suggestions for.
  */
