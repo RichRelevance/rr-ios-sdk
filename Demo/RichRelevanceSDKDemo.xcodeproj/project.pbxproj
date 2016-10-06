@@ -69,6 +69,7 @@
 		B82E62111D9C7D78007EB3FF /* SearchDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */; };
 		B82E62151D9C9664007EB3FF /* RCHUserManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */; };
 		B82E62271DA2E7AC007EB3FF /* RCHSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */; };
+		B82E622A1DA47449007EB3FF /* RCHProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62291DA47449007EB3FF /* RCHProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -204,6 +205,7 @@
 		B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHUserManagementViewController.m; sourceTree = "<group>"; };
 		B82E62241D9EF57D007EB3FF /* RCHStringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCHStringConstants.h; sourceTree = "<group>"; };
 		B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHSearchViewController.swift; sourceTree = "<group>"; };
+		B82E62291DA47449007EB3FF /* RCHProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHProductDetailViewController.swift; sourceTree = "<group>"; };
 		EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -528,6 +530,7 @@
 		B82E61F01D95FA5C007EB3FF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B82E62281DA4742F007EB3FF /* Product Detail */,
 				B82E62251DA2E790007EB3FF /* Search */,
 				B82E61F41D95FAE6007EB3FF /* Catalog */,
 			);
@@ -567,6 +570,14 @@
 				B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		B82E62281DA4742F007EB3FF /* Product Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B82E62291DA47449007EB3FF /* RCHProductDetailViewController.swift */,
+			);
+			name = "Product Detail";
 			sourceTree = "<group>";
 		};
 		F473393DB891475060A8AEB4 /* Frameworks */ = {
@@ -738,6 +749,7 @@
 				72E546111B384ABC004A9A01 /* RCHPlacementRecsViewController.m in Sources */,
 				0172E58D1B3B132100D09C7A /* UIImage+MultiFormat.m in Sources */,
 				0172E5901B3B132100D09C7A /* UIImageView+WebCache.m in Sources */,
+				B82E622A1DA47449007EB3FF /* RCHProductDetailViewController.swift in Sources */,
 				723895C91B3860C300ACFE58 /* UIViewController+RCHExtensions.m in Sources */,
 				0172E5911B3B132100D09C7A /* UIView+WebCacheOperation.m in Sources */,
 				0172E5B41B3B139A00D09C7A /* RZCollectionListNotificationWrappers.m in Sources */,
