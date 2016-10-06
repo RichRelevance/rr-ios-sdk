@@ -92,7 +92,7 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     
     func resetSearch() {
         view.endEditing(true)
-        autocompleteArray = []
+//        autocompleteArray = []
         autocompleteTableView.reloadData()
         autocompleteTableView.isHidden = true
     }
@@ -179,7 +179,7 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
         
             cell.textLabel?.attributedText = attributedString
         } else {
-            cell.textLabel?.text = ""
+            cell.textLabel?.text = autocompleteString
         }
         
         let blurEffect = UIBlurEffect(style: .light)
