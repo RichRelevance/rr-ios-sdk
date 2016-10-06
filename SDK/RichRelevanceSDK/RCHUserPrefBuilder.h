@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param prefs An NSArray of NSString instances representing preferences
  */
-- (instancetype)setPreferences:(NSArray *)prefs;
+- (instancetype)setPreferences:(NSArray<NSString *> *)prefs;
 
 /*!
  *  The type of value being passed as a preference.

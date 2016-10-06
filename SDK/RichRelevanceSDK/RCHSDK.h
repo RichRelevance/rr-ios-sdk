@@ -141,7 +141,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return A pre-populated builder
  */
-+ (RCHGetProductsBuilder *)builderForGetProducts:(NSArray *)productIDs;
++ (RCHGetProductsBuilder *)builderForGetProducts:(NSArray<NSString *> *)productIDs;
 
 ///-------------------------------
 /// @name Tracking Builder Helpers
@@ -180,7 +180,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return A pre-populated builder
  */
-+ (RCHUserPrefBuilder *)builderForTrackingPreferences:(NSArray *)preferences
++ (RCHUserPrefBuilder *)builderForTrackingPreferences:(NSArray<NSString *> *)preferences
                                            targetType:(RCHUserPrefFieldType)targetType
                                            actionType:(RCHUserPrefActionType)actionType;
 

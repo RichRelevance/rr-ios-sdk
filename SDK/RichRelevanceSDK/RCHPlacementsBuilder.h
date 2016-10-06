@@ -116,7 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param userAttributes An NSDictionary of key/value pairs that represent the current user. Values can be of type NSString or NSNumber for single values, or, NSArray for multi-value attributes.
  */
-- (instancetype)setUserAttributes:(NSDictionary *)userAttributes;
+- (instancetype)setUserAttributes:(NSDictionary<NSString *, NSObject *> *)userAttributes;
 
 /*!
  *  Shopper’s referrer prior to viewing this page. Used for reporting and merchandising. Highly recommended.
@@ -130,14 +130,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param categoryHintIDs A list of NSString instances that represent category hint IDs
  */
-- (instancetype)setCategoryHintIDs:(NSArray *)categoryHintIDs;
+- (instancetype)setCategoryHintIDs:(NSArray<NSString *> *)categoryHintIDs;
 
 /*!
  *  To supply user segments. Should be passed in to have a segment targeted campaign work correctly.
  *
  *  @param userSegments Key/value pairs representing user segment information, segment ID -> segment name
  */
-- (instancetype)setUserSegments:(NSDictionary *)userSegments;
+- (instancetype)setUserSegments:(NSDictionary<NSString *, NSString *> *)userSegments;
 
 /*!
  *  Region ID. Must be consistent with the ID used in the product region feed.
@@ -151,14 +151,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param viewdProducts An NSDictionary whose keys are Product IDs as instances of NSString and whose values are either single NSDate timestamps or an NSArray of multiple NSDate timestamps.
  */
-- (instancetype)setViewedProducts:(NSDictionary *)viewdProducts;
+- (instancetype)setViewedProducts:(NSDictionary<NSString *, NSObject *> *)viewdProducts;
 
 /*!
  *  List the product IDs of the products user purchased in the current session, including timestamps for each view.
  *
  *  @param purchasedProducts An NSDictionary whose keys are Product IDs as instances of NSString and whose values are either single NSDate timestamps or an NSArray of multiple NSDate timestamps.
  */
-- (instancetype)setPurchasedProducts:(NSDictionary *)purchasedProducts;
+- (instancetype)setPurchasedProducts:(NSDictionary<NSString *, NSObject *> *)purchasedProducts;
 
 @end
 
