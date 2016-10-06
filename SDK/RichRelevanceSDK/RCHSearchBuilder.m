@@ -23,11 +23,13 @@
 {
     self = [super initWithAPIPath:kRCHAPIRequestFindSearchPath];
     if (self) {
-        [self setResponseParserClass:[RCHSearchResponseParser class]];
-        [self setValue:@YES forKey:kRCHAPIRequestParamSearchSSL];
-        [self setEmbedRCSToken:YES];
-        [self setLocale:[NSLocale currentLocale]];
         [self setUserAndSessionParamStyle:RCHAPIClientUserAndSessionParamStyleLongWithAPIKeyInPath];
+        [self setResponseParserClass:[RCHSearchResponseParser class]];
+        [self setEmbedRCSToken:YES];
+        [self setValue:@YES forKey:kRCHAPIRequestParamSearchSSL];
+        [self setLocale:[NSLocale currentLocale]];
+        [self setPageStart:0];
+        [self setPageCount:20];
     }
     return self;
 }
