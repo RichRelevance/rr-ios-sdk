@@ -31,13 +31,15 @@
     NSString *apiKey = self.apiKeyField.text;
     [self.view endEditing:YES];
     
+    NSString *currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyCurrentUser];
+    
     // Configure the new API client
     RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"showcaseparent"
                                                                APIClientKey:apiKey
                                                                    endpoint:RCHEndpointProduction
                                                                    useHTTPS:YES];
     config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";
-    config.userID = @"RZTestUser";
+    config.userID = currentUser;
     config.sessionID = [[NSUUID UUID] UUIDString];
     
     [[RCHSDK defaultClient] configure:config];

@@ -9,4 +9,6 @@
 // Common
 #define kRCHUserDefaultKeyApiKey @"apiKey"
 #define kRCHUserDefaultKeyClientName @"clientName"
+#define kRCHUserDefaultKeyUserIDs @"userIDs"
+#define kRCHUserDefaultKeyCurrentUser @"currentUser"
 
