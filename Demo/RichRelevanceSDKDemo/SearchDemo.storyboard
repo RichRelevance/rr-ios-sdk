@@ -282,8 +282,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJ8-vW-M23"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denim Shirt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-aU-KuU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJ8-vW-M23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denim Shirt " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-aU-KuU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8bf-Zq-Z3S"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -325,7 +328,7 @@
                             <constraint firstItem="7ay-aU-KuU" firstAttribute="leading" secondItem="yie-g6-gmF" secondAttribute="leadingMargin" constant="4" id="4Ow-AP-equ"/>
                             <constraint firstItem="rd9-i8-X71" firstAttribute="centerX" secondItem="yie-g6-gmF" secondAttribute="centerX" id="GL5-gV-L5E"/>
                             <constraint firstItem="AVS-Y7-ESI" firstAttribute="top" secondItem="gJ8-vW-M23" secondAttribute="bottom" constant="8" id="Hht-dX-auY"/>
-                            <constraint firstItem="7ay-aU-KuU" firstAttribute="top" secondItem="AVS-Y7-ESI" secondAttribute="bottom" constant="13" id="PNa-7q-d0q"/>
+                            <constraint firstItem="7ay-aU-KuU" firstAttribute="top" secondItem="AVS-Y7-ESI" secondAttribute="bottom" constant="21" id="PNa-7q-d0q"/>
                             <constraint firstItem="56M-4O-SJx" firstAttribute="leading" secondItem="yie-g6-gmF" secondAttribute="leadingMargin" constant="4" id="b5k-dn-1bT"/>
                             <constraint firstItem="gJ8-vW-M23" firstAttribute="leading" secondItem="yie-g6-gmF" secondAttribute="leadingMargin" constant="-16" id="cMX-KH-kIz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7ay-aU-KuU" secondAttribute="trailing" constant="4" id="ifQ-PX-u7Z"/>
@@ -334,7 +337,7 @@
                             <constraint firstItem="gJ8-vW-M23" firstAttribute="top" secondItem="jTC-F9-7P6" secondAttribute="bottom" constant="-1" id="sdm-G0-AqF"/>
                             <constraint firstItem="AVS-Y7-ESI" firstAttribute="leading" secondItem="yie-g6-gmF" secondAttribute="leadingMargin" constant="4" id="ssO-6e-FF1"/>
                             <constraint firstItem="rd9-i8-X71" firstAttribute="top" secondItem="56M-4O-SJx" secondAttribute="bottom" constant="23" id="vjv-24-g6h"/>
-                            <constraint firstItem="56M-4O-SJx" firstAttribute="top" secondItem="7ay-aU-KuU" secondAttribute="bottom" constant="16" id="y9S-gW-yDx"/>
+                            <constraint firstItem="56M-4O-SJx" firstAttribute="top" secondItem="7ay-aU-KuU" secondAttribute="bottom" constant="8" id="y9S-gW-yDx"/>
                             <constraint firstItem="rxc-te-sbi" firstAttribute="top" secondItem="rd9-i8-X71" secondAttribute="bottom" constant="24" id="yaD-Lg-Yvi"/>
                         </constraints>
                     </view>
@@ -358,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KiT-XE-NTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2490" y="482"/>
+            <point key="canvasLocation" x="2464.8000000000002" y="494.30284857571218"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zfG-bR-czT">

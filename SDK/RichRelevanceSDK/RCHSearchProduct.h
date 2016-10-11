@@ -13,6 +13,7 @@
 @property (copy, nonatomic, nullable) NSString *productID;
 @property (copy, nonatomic, nullable) NSString *name;
 @property (copy, nonatomic, nullable) NSString *linkID;
+@property (copy, nonatomic, nullable) NSString *brand;
 
 @property (copy, nonatomic, nullable) NSNumber *salePriceCents;
 @property (copy, nonatomic, nullable) NSNumber *priceCents;

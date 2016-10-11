@@ -19,8 +19,8 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     @IBOutlet weak var searchProductsImageView: UIImageView!
     @IBOutlet weak var autocompleteTableView: UITableView!
     
-    var productArray: [RCHRecommendedProduct] = []
-    var autocompleteArray: [String] = ["Boots", "Bomber", "Boucle", "Boyfriend"]
+    var productArray: [RCHSearchProduct] = []
+    var autocompleteArray: [String] = []
     var searchTerm = ""
     
     override func viewDidLoad() {
@@ -52,6 +52,21 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
         autocompleteTableView.tableFooterView = footerView
         
         searchResultsCollectionView!.register(UINib(nibName: "RCHProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        
+        // Temp: Config API for usable API key
+        
+        guard let currentUserID = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyClientName) else {
+            print("Error getting current user")
+            return
+        }
+        
+        let config = RCHAPIClientConfig(apiKey: "showcaseparent", apiClientKey: "199c81c05e473265", endpoint: RCHEndpointProduction, useHTTPS: false)
+        config.apiClientSecret = "r5j50mlag06593401nd4kt734i"
+        config.userID = currentUserID
+        config.sessionID = UUID().uuidString
+        
+        RCHSDK.defaultClient().configure(config)
+
     }
     
     @IBAction func handleTapOnFooter(sender: UITapGestureRecognizer) {
@@ -60,42 +75,38 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     
     // MARK: Search
 
-    func searchForProducts(withTerm: String) {
+    func searchForProducts(withTerm searchText: String) {
+        let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")
+        let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchText)
         
-        // TODO: Replace with search call when ready
-        let strategyBuilder: RCHStrategyRecsBuilder = RCHSDK.builderForRecs(with: .siteWideBestSellers)
-        
-        RCHSDK.defaultClient().sendRequest(strategyBuilder.build(), success: { (responseObject) in
+        RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
             
-            guard let strategyResponse = responseObject as? RCHStrategyResult else {
-                print("Result Error")
+            guard let searchResult = responseObject as? RCHSearchResult else {
                 return
             }
-            guard let productArray = strategyResponse.recommendedProducts else {
-                print("Recommended Products Error")
-                return
-            }
-            self.productArray = productArray
+            
+            self.productArray = searchResult.products!
             
             if self.productArray.count == 0 {
                 self.showNoResults()
             } else {
+                self.searchResultsCollectionView.reloadData()
                 self.searchResultsCollectionView.isHidden = false
-                self.searchResultsCollectionView?.reloadData()
-
             }
         }) { (responseObject, error) in
             print(error)
         }
-//        resetSearch()
     }
     
     func resetSearch() {
         view.endEditing(true)
-//        autocompleteArray = []
+        autocompleteArray = []
         autocompleteTableView.reloadData()
         autocompleteTableView.isHidden = true
         searchProductsView.isHidden = false
+        if productArray.isEmpty {
+            showNoResults()
+        }
     }
     
     func showNoResults() {
@@ -120,13 +131,37 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // TODO: Autocomplete and live searching here
-        searchTerm = searchText
-        searchForProducts(withTerm: searchText)
-        autocompleteTableView.reloadData()
-        print(searchText)
+        if searchBar.text == "" {
+            productArray = []
+            autocompleteArray = []
+            autocompleteTableView.reloadData()
+            searchResultsCollectionView.reloadData()
+        } else {
+            
+            autocompleteTableView.isHidden = false
+            searchTerm = searchText
+            searchForProducts(withTerm: searchText)
+            print(searchText)
+            
+            // Autocomplete
+            
+            let autocompleteBuilder: RCHAutocompleteBuilder = RCHSDK.builderForAutocomplete(withQuery: searchText)
+            
+            RCHSDK.defaultClient().sendRequest(autocompleteBuilder.build(), success: { (responseObject) in
+                
+                guard let autocompleteSuggestions = responseObject as? [RCHAutocompleteSuggestion] else {
+                    print("Result Error")
+                    return
+                }
+                
+                self.autocompleteArray = autocompleteSuggestions.map({$0.text!})
+                self.autocompleteTableView.reloadData()
+            }) { (responseObject, error) in
+                print(error)
+            }
+        }
     }
-    
+ 
     // MARK: UICollectionViewDataSource
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -170,18 +205,18 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
         let autocompleteString = autocompleteArray[indexPath.row]
 
         if !searchTerm.isEmpty && autocompleteArray.count > 0 {
-            let searchTermLength = searchTerm.characters.count
-            let autocompleteTermLength = autocompleteString.characters.count
-            
-            if autocompleteTermLength >= searchTermLength {
+                let searchString = searchTerm.lowercased()
                 let highlightColor = UIColor(red: 0, green: 121/255, blue: 253/255, alpha: 1)
                 let blueAttribute = [NSBackgroundColorAttributeName : highlightColor]
-                
-                let attributedString = NSMutableAttributedString(string: autocompleteString, attributes: nil)
-                attributedString.addAttributes(blueAttribute, range: NSRange.init(location: 0, length: searchTermLength))
-                
+                let attributedString = NSMutableAttributedString(string: autocompleteString)
+            
+                let range: Range<String.Index> = autocompleteString.range(of: searchString)!
+                let index: Int = autocompleteString.distance(from: autocompleteString.startIndex, to: range.lowerBound)
+                let nsRange = NSMakeRange(index, searchString.characters.count)
+                attributedString.addAttributes(blueAttribute, range: nsRange)
+
                 cell.textLabel?.attributedText = attributedString
-            }
+    
         } else {
             cell.textLabel?.text = autocompleteString
         }
@@ -196,6 +231,7 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedSearchTerm = autocompleteArray[indexPath.row]
         searchForProducts(withTerm: selectedSearchTerm)
+        searchBar.text = selectedSearchTerm
         resetSearch()
     }
     
