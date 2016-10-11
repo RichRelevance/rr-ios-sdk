@@ -251,11 +251,12 @@
 		ABDF7DD01D90662600E4800A /* RCHAutocompleteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DCE1D90662600E4800A /* RCHAutocompleteBuilder.m */; };
 		ABDF7DD11D90662600E4800A /* RCHAutocompleteBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DCF1D90662600E4800A /* RCHAutocompleteBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDF7DD31D90672700E4800A /* find_autocomplete.json in Resources */ = {isa = PBXBuildFile; fileRef = ABDF7DD21D90672700E4800A /* find_autocomplete.json */; };
-		ABDF7DD71D906F4900E4800A /* RCHAutocompleteSuggestion.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DD51D906F4900E4800A /* RCHAutocompleteSuggestion.h */; };
+		ABDF7DD71D906F4900E4800A /* RCHAutocompleteSuggestion.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DD51D906F4900E4800A /* RCHAutocompleteSuggestion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABDF7DD81D906F4900E4800A /* RCHAutocompleteSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DD61D906F4900E4800A /* RCHAutocompleteSuggestion.m */; };
 		ABDF7DDF1D9070F600E4800A /* RCHAutocompleteSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DD61D906F4900E4800A /* RCHAutocompleteSuggestion.m */; };
 		ABDF7DE21D90711200E4800A /* RCHAutocompleteResponseParser.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DE01D90711200E4800A /* RCHAutocompleteResponseParser.h */; };
 		ABDF7DE31D90711200E4800A /* RCHAutocompleteResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDF7DE11D90711200E4800A /* RCHAutocompleteResponseParser.m */; };
+		B82E62351DADAE97007EB3FF /* RCHAutocompleteSuggestion.h in Headers */ = {isa = PBXBuildFile; fileRef = ABDF7DD51D906F4900E4800A /* RCHAutocompleteSuggestion.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -930,6 +931,7 @@
 				2B7AB49D1D63BDC200E011DC /* RichRelevanceSDK.h in Headers */,
 				2B7AB4661D63BA3900E011DC /* RCHPersonalizedPlacement.h in Headers */,
 				AB8497C81DA2C42800FE3414 /* RCHSearchFacet.h in Headers */,
+				B82E62351DADAE97007EB3FF /* RCHAutocompleteSuggestion.h in Headers */,
 				2B7AB4671D63BA3900E011DC /* RCHLog.h in Headers */,
 				2B7AB4681D63BA3900E011DC /* RCHPersonalizeResponseParser.h in Headers */,
 				2B7AB4691D63BA3900E011DC /* NSObject+RCHImport.h in Headers */,
@@ -946,6 +948,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABDF7DD71D906F4900E4800A /* RCHAutocompleteSuggestion.h in Headers */,
 				7294CCBD1B053C36008ACC1A /* RichRelevanceSDK.h in Headers */,
 				7294CCF11B067AC3008ACC1A /* RCHSDK.h in Headers */,
 				72BC32441B0CEE1400BFC9D2 /* RCHErrors.h in Headers */,
@@ -956,7 +959,6 @@
 				AB8497BB1DA2C2C900FE3414 /* RCHSearchLink.h in Headers */,
 				720492A11B7139BF00517115 /* RCHPersonalizeResult.h in Headers */,
 				7294CCE81B0654DB008ACC1A /* RCHStrategyRecsBuilder.h in Headers */,
-				ABDF7DD71D906F4900E4800A /* RCHAutocompleteSuggestion.h in Headers */,
 				7294CCEA1B0654DB008ACC1A /* RCHUserPrefBuilder.h in Headers */,
 				7294CCEC1B0654DB008ACC1A /* RCHUserProfileBuilder.h in Headers */,
 				72BC32821B18F12C00BFC9D2 /* RCHAPIResult.h in Headers */,
