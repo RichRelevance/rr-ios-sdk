@@ -45,8 +45,7 @@ class RCHAccountViewController: UIViewController {
         // Configure user with API
         
         guard let currentAPIKey = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyApiKey) else {
-            print("Error getting current API key")
-            return
+            fatalError()
         }
         
         let config = RCHAPIClientConfig(apiKey: "showcaseparent", apiClientKey: currentAPIKey, endpoint: RCHEndpointProduction, useHTTPS: true)
