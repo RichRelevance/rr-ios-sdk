@@ -8,77 +8,39 @@
 
 import UIKit
 
-class RCHAccountViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RCHAccountViewController: UIViewController {
 
     @IBOutlet var accountTableView: UITableView!
-    @IBOutlet var userIDTextField: UITextField!
-    @IBOutlet var modalView: UIView!
-    @IBOutlet var saveUserButton: UIButton!
-    @IBOutlet var userCellLabel: UILabel!
     
-    var userIDArray: [String]?
-    var currentUser: String?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationController?.navigationBar.tintColor = UIColor.white
-        saveUserButton.layer.cornerRadius = 4
-        modalView.isHidden = true
-        
-        guard let userIDArray = UserDefaults.standard.object(forKey: kRCHUserDefaultKeyUserIDs) as? [String] else {
-            self.userIDArray = []
-            return
+    var userIDs: [String] {
+        get {
+            return UserDefaults.standard.object(forKey: kRCHUserDefaultKeyUserIDs) as? [String] ?? []
         }
-        self.userIDArray = userIDArray
-        currentUser = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyCurrentUser)
-    }
-    
-    // MARK: Actions
-    
-    @IBAction func addUserSelected(_ sender: AnyObject) {
-        modalView.isHidden = false
-    }
-    
-    @IBAction func saveUserSelected(_ sender: AnyObject) {
-        modalView.isHidden = true
-        view.endEditing(true)
-        guard let newUser = userIDTextField.text else {
-            return
+        set {
+            UserDefaults.standard.set(newValue, forKey: kRCHUserDefaultKeyUserIDs)
+            UserDefaults.standard.synchronize()
+            accountTableView.reloadData()
         }
-        saveNewUser(withUser: newUser)
     }
-    
-    @IBAction func dismissModalSelected(_ sender: AnyObject) {
-        modalView.isHidden = true
-        view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
-        return true
+
+    var currentUser: String? {
+        get {
+            return UserDefaults.standard.object(forKey: kRCHUserDefaultKeyCurrentUser) as? String
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: kRCHUserDefaultKeyCurrentUser)
+            UserDefaults.standard.synchronize()
+            accountTableView.reloadData()
+        }
     }
     
     func saveNewUser(withUser newUser: String) {
-        let mutableUserArray: NSMutableArray = []
-        if let userArray = UserDefaults.standard.object(forKey: kRCHUserDefaultKeyUserIDs) as? [String] {
-            mutableUserArray.addObjects(from: userArray)
-        }
-        mutableUserArray.add(newUser)
-        
-        UserDefaults.standard.set(mutableUserArray, forKey: kRCHUserDefaultKeyUserIDs)
-        UserDefaults.standard.synchronize()
-        
-        userIDArray?.insert(newUser, at: 0)
-        switchCurrentUser(withUser: newUser)
+        userIDs.insert(newUser, at: 0)
+        currentUser = newUser
     }
     
     func switchCurrentUser(withUser user: String) {
-        UserDefaults.standard.set(user, forKey: kRCHUserDefaultKeyCurrentUser)
-        UserDefaults.standard.synchronize()
-        
         currentUser = user
-        accountTableView.reloadData()
         
         // Configure user with API
         
@@ -86,13 +48,41 @@ class RCHAccountViewController: UIViewController, UITableViewDelegate, UITableVi
             print("Error getting current API key")
             return
         }
-
+        
         let config = RCHAPIClientConfig(apiKey: "showcaseparent", apiClientKey: currentAPIKey, endpoint: RCHEndpointProduction, useHTTPS: true)
         config.apiClientSecret = "r5j50mlag06593401nd4kt734i"
         config.userID = user
         config.sessionID = UUID().uuidString
         
         RCHSDK.defaultClient().configure(config)
+    }
+
+}
+
+extension RCHAccountViewController: UITableViewDelegate, UITableViewDataSource {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func addUserSelected(_ sender: AnyObject) {
+        let alertView = UIAlertController(title: "", message: "Add new User ID", preferredStyle: .alert)
+        var inputTextField = UITextField()
+        alertView.addTextField(configurationHandler: { textField -> Void in
+            inputTextField = textField
+            inputTextField.autocapitalizationType = .words
+        })
+        alertView.addAction(UIAlertAction(title: "Done", style: .default, handler: { (UIAlertAction) in
+            let newUser = inputTextField.text
+            self.currentUser = newUser
+            self.userIDs.insert(newUser!, at: 0)
+        }))
+        alertView.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
     }
     
     // MARK: - TableView data source
@@ -102,29 +92,20 @@ class RCHAccountViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userIDArray!.count
+        return userIDs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
-        
-        let userID = (userIDArray?[indexPath.row])! as String
+
+        let userID = userIDs[indexPath.row]
         cell.textLabel?.text = userID
-        
-        if userID == currentUser {
-            cell.imageView?.image = UIImage(named: "icn-checked.pdf")
-            
-        } else {
-            cell.imageView?.image = nil
-        }
-        
+        cell.accessoryType = userID == currentUser ? .checkmark : .none
+        cell.tintColor = .white
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let userSelected = userIDArray?[indexPath.row] else {
-            return
-        }
-        switchCurrentUser(withUser: userSelected)
+        switchCurrentUser(withUser: userIDs[indexPath.row])
     }
 }

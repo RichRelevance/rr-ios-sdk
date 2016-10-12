@@ -25,6 +25,12 @@
     [super viewDidLoad];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.view endEditing:YES];
+    return YES;
+}
+
 - (IBAction)saveSelected:(id)sender {
     
     NSString *clientName = self.displayNameField.text;
