@@ -55,8 +55,8 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
         
         // Temp: Config API for usable API key
         
-        guard let currentUserID = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyClientName) else {
-            print("Error getting current user")
+        guard let currentUserID = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyCurrentUser) else {
+            fatalError()
             return
         }
         
