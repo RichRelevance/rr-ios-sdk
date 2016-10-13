@@ -16,8 +16,11 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
     
     var productArray: [RCHRecommendedProduct] = []
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         collectionView!.register(UINib(nibName: "RCHProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
@@ -39,6 +42,7 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
                 print("Result Error")
                 return
             }
+            
             guard let productArray = strategyResponse.recommendedProducts else {
                 print("Recommended Products Error")
                 return

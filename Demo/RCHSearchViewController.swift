@@ -46,7 +46,12 @@ class RCHSearchViewController: UIViewController {
             }
         }
     }
-    var searchTerm = ""
+    var searchTerm = "" {
+        didSet {
+            searchBar.text = searchTerm
+            var _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.searchForProducts), userInfo: nil, repeats: false)
+        }
+    }
 }
     
 extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
@@ -74,6 +79,17 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         
         searchResultsCollectionView!.register(UINib(nibName: "RCHProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
+        configureAPI()
+    }
+    
+    func resetSearch() {
+        view.endEditing(true)
+        autocompleteSuggestions.removeAll()
+    }
+    
+    // MARK: API
+    
+    func configureAPI() {
         // Temp: Config API for usable API key
         
         guard let currentUserID = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyCurrentUser) else {
@@ -86,18 +102,11 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         config.sessionID = UUID().uuidString
         
         RCHSDK.defaultClient().configure(config)
-
     }
-    
-    @IBAction func handleTapOnFooter(sender: UITapGestureRecognizer) {
-        resetSearch()
-    }
-    
-    // MARK: Search
 
-    func searchForProducts(withTerm searchText: String) {
+    func searchForProducts() {
         let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")
-        let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchText)
+        let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
         
         RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
             
@@ -112,21 +121,40 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         }
     }
     
-    func resetSearch() {
-        view.endEditing(true)
-        autocompleteSuggestions.removeAll()
+    func autocomplete(withQuery text: String) {
+        let autocompleteBuilder: RCHAutocompleteBuilder = RCHSDK.builderForAutocomplete(withQuery: text)
+        
+        RCHSDK.defaultClient().sendRequest(autocompleteBuilder.build(), success: { (responseObject) in
+            
+            guard let responseAutocompleteSuggestions = responseObject as? [RCHAutocompleteSuggestion] else {
+                print("Result Error")
+                return
+            }
+            
+            self.autocompleteSuggestions = responseAutocompleteSuggestions.map({$0.text!})
+        }) { (responseObject, error) in
+            print(error)
+        }
     }
+    
+    // MARK: IBActions
+    
+    @IBAction func handleTapOnFooter(sender: UITapGestureRecognizer) {
+        resetSearch()
+    }
+    
+    // MARK: UISearchBarDelegate
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchProductsView.isHidden = true
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchTerm = searchBar.text else {
+        guard let searchText = searchBar.text else {
             print("Error: no search term entered")
             return
         }
-        searchForProducts(withTerm: searchTerm)
+        searchTerm = searchText
         resetSearch()
     }
     
@@ -136,24 +164,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
             autocompleteSuggestions.removeAll()
         } else {
             searchTerm = searchText
-            searchForProducts(withTerm: searchText)
-            print(searchText)
-            
-            // Autocomplete
-            
-            let autocompleteBuilder: RCHAutocompleteBuilder = RCHSDK.builderForAutocomplete(withQuery: searchText)
-            
-            RCHSDK.defaultClient().sendRequest(autocompleteBuilder.build(), success: { (responseObject) in
-                
-                guard let responseAutocompleteSuggestions = responseObject as? [RCHAutocompleteSuggestion] else {
-                    print("Result Error")
-                    return
-                }
-                
-                self.autocompleteSuggestions = responseAutocompleteSuggestions.map({$0.text!})
-            }) { (responseObject, error) in
-                print(error)
-            }
+            autocomplete(withQuery: searchText)
         }
     }
  
@@ -196,26 +207,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "autocompleteCell", for: indexPath)
-        
-        let autocompleteString = autocompleteSuggestions[indexPath.row]
-        
-        if !searchTerm.isEmpty && autocompleteSuggestions.count > 0 {
-            let searchString = searchTerm.lowercased()
-            let highlightColor = UIColor(red: 0, green: 121/255, blue: 253/255, alpha: 1)
-            let blueAttribute = [NSBackgroundColorAttributeName : highlightColor]
-            let attributedString = NSMutableAttributedString(string: autocompleteString)
-            
-            if let range: Range<String.Index> = autocompleteString.range(of: searchString) {
-                let index: Int = autocompleteString.distance(from: autocompleteString.startIndex, to: range.lowerBound)
-                let nsRange = NSMakeRange(index, searchString.characters.count)
-                attributedString.addAttributes(blueAttribute, range: nsRange)
-                
-                cell.textLabel?.attributedText = attributedString
-            }
-            
-        } else {
-            cell.textLabel?.text = autocompleteString
-        }
+        cell.textLabel?.attributedText = attributedText(for: indexPath.row)
         
         let blurEffect = UIBlurEffect(style: .light)
         let effectView = UIVisualEffectView(effect: blurEffect)
@@ -224,14 +216,31 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         return cell
     }
     
+    func attributedText(for row: Int) -> NSAttributedString {
+        let autocompleteString = autocompleteSuggestions[row]
+
+        let attributedString = NSMutableAttributedString(string: autocompleteString)
+        
+        if !searchTerm.isEmpty && autocompleteSuggestions.count > 0 {
+            let searchString = searchTerm.lowercased()
+            let highlightColor = UIColor(red: 0, green: 121/255, blue: 253/255, alpha: 1)
+            let blueAttribute = [NSBackgroundColorAttributeName : highlightColor]
+            
+            if let range: Range<String.Index> = autocompleteString.range(of: searchString) {
+                let index: Int = autocompleteString.distance(from: autocompleteString.startIndex, to: range.lowerBound)
+                let nsRange = NSMakeRange(index, searchString.characters.count)
+                attributedString.addAttributes(blueAttribute, range: nsRange)
+            }
+        }
+        return attributedString
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedSearchTerm = autocompleteSuggestions[indexPath.row]
-        searchForProducts(withTerm: selectedSearchTerm)
-        searchBar.text = selectedSearchTerm
+        searchTerm = autocompleteSuggestions[indexPath.row]
         resetSearch()
     }
     
-    // MARK: - Navigation
+    // MARK: Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "productDetailSegue" {

@@ -29,6 +29,8 @@ class RCHProductDetailViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = UIColor.white
         
+        addToCartButton.layer.cornerRadius = 4
+        
         brandLabel.text = product?.brand?.uppercased()
         descriptionLabel.text = product?.name
         productImageView.sd_setImage(with: URL(string: (product?.imageURL)!))
