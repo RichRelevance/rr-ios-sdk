@@ -38,6 +38,7 @@
     // Pull saved client or default if none
     
     [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:@"bccfa17d092268c0", kRCHUserDefaultKeyApiKey, nil]];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:@"RZTestUser", kRCHUserDefaultKeyCurrentUser, nil]];
     NSString *apiClientKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiKey];
 
     // Create a configuration and use it to configure the default client.

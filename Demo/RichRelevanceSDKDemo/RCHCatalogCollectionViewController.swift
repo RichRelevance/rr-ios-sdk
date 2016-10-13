@@ -39,6 +39,7 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
                 print("Result Error")
                 return
             }
+            
             guard let productArray = strategyResponse.recommendedProducts else {
                 print("Recommended Products Error")
                 return

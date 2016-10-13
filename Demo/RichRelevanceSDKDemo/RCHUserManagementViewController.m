@@ -25,11 +25,19 @@
     [super viewDidLoad];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self.view endEditing:YES];
+    return YES;
+}
+
 - (IBAction)saveSelected:(id)sender {
     
     NSString *clientName = self.displayNameField.text;
     NSString *apiKey = self.apiKeyField.text;
     [self.view endEditing:YES];
+    
+    NSString *currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyCurrentUser];
     
     // Configure the new API client
     RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"showcaseparent"
@@ -37,7 +45,7 @@
                                                                    endpoint:RCHEndpointProduction
                                                                    useHTTPS:YES];
     config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";
-    config.userID = @"RZTestUser";
+    config.userID = currentUser;
     config.sessionID = [[NSUUID UUID] UUIDString];
     
     [[RCHSDK defaultClient] configure:config];
