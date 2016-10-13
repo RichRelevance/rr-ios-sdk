@@ -12,7 +12,7 @@
             <objects>
                 <navigationController id="ROG-eF-C8E" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shop" image="icn-tabbar-shop" selectedImage="icn-tabbar-shop" id="sJ8-UI-7kJ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="ao4-Yb-06B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ao4-Yb-06B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.21568627450980393" green="0.27843137254901962" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,7 +32,7 @@
         <scene sceneID="Rla-4X-DEv">
             <objects>
                 <collectionViewController id="7MY-1r-mLT" userLabel="RCHCatalogCollectionViewController" customClass="RCHCatalogCollectionViewController" customModule="RichRelevanceSDKDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="n3s-8h-q4H">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="n3s-8h-q4H">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,7 +115,7 @@
             <objects>
                 <navigationController id="3sD-Rh-dLl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="icn-tabbar-account" selectedImage="icn-tabbar-account" id="1HA-E6-M1y"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="zna-7C-Eay">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="zna-7C-Eay">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.21568627450980393" green="0.27843137254901962" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
@@ -218,6 +218,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="k2I-Uj-dtt" id="Ijt-Nm-eTH"/>
+                                    <outlet property="delegate" destination="k2I-Uj-dtt" id="Tgb-3o-gd3"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaZ-2U-v1V">
                                 <subviews>
@@ -232,6 +236,9 @@
                                             <string>Title</string>
                                             <string>Title</string>
                                         </scopeButtonTitles>
+                                        <connections>
+                                            <outlet property="delegate" destination="k2I-Uj-dtt" id="6FW-GZ-9ud"/>
+                                        </connections>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.27843137254901962" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -390,7 +397,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8mi-or-L4R" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="icn-tabbar-search" id="iD3-2k-3gm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="DlG-7O-Yh3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DlG-7O-Yh3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

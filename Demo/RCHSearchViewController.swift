@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "productCell"
 
-class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class RCHSearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var searchProductsView: UIView!
@@ -19,30 +19,51 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     @IBOutlet weak var searchProductsImageView: UIImageView!
     @IBOutlet weak var autocompleteTableView: UITableView!
     
-    var productArray: [RCHSearchProduct] = []
-    var autocompleteArray: [String] = []
+    var products: [RCHSearchProduct]  = [] {
+        didSet {
+            searchResultsCollectionView.reloadData()
+            if products.isEmpty {
+                searchResultsCollectionView.isHidden = true
+                searchProductsView.isHidden = false
+                searchProductsLabel.text = "No Results"
+                searchProductsImageView.image = UIImage(named: "icn-tabbar-shop.pdf")
+            } else {
+                searchResultsCollectionView.isHidden = false
+                searchProductsView.isHidden = true
+            }
+        }
+    }
+    var autocompleteSuggestions: [String] = [] {
+        didSet {
+            autocompleteTableView.reloadData()
+            if autocompleteSuggestions.isEmpty {
+                autocompleteTableView.isHidden = true
+                searchProductsLabel.text = "Search Products"
+                searchProductsImageView.image = UIImage(named: "icn-tabbar-search.pdf")
+                searchProductsView.isHidden = false
+            } else {
+                autocompleteTableView.isHidden = false
+            }
+        }
+    }
     var searchTerm = ""
+}
+    
+extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
+        setupView()
     }
     
     func setupView() {
-        searchBar.delegate = self
         searchResultsCollectionView.isHidden = true
-        searchResultsCollectionView.delegate = self
-        searchResultsCollectionView.dataSource = self
-        
-        autocompleteTableView.isHidden = true
-        autocompleteTableView.delegate = self
-        autocompleteTableView.dataSource = self
-        
+        searchProductsView.isHidden = false
+
         let footerViewFrame = CGRect(x: 0, y: 0, width: autocompleteTableView.frame.width, height: autocompleteTableView.frame.height)
         let footerView = UIView(frame: footerViewFrame)
         footerView.backgroundColor = UIColor.clear
@@ -57,7 +78,6 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
         
         guard let currentUserID = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyCurrentUser) else {
             fatalError()
-            return
         }
         
         let config = RCHAPIClientConfig(apiKey: "showcaseparent", apiClientKey: "199c81c05e473265", endpoint: RCHEndpointProduction, useHTTPS: false)
@@ -85,14 +105,8 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
                 return
             }
             
-            self.productArray = searchResult.products!
-            
-            if self.productArray.count == 0 {
-                self.showNoResults()
-            } else {
-                self.searchResultsCollectionView.reloadData()
-                self.searchResultsCollectionView.isHidden = false
-            }
+            self.products = searchResult.products!
+
         }) { (responseObject, error) in
             print(error)
         }
@@ -100,25 +114,11 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     
     func resetSearch() {
         view.endEditing(true)
-        autocompleteArray = []
-        autocompleteTableView.reloadData()
-        autocompleteTableView.isHidden = true
-        searchProductsView.isHidden = false
-        if productArray.isEmpty {
-            showNoResults()
-        }
-    }
-    
-    func showNoResults() {
-        searchResultsCollectionView.isHidden = true
-        searchProductsView.isHidden = false
-        searchProductsLabel.text = "No Results"
-        searchProductsImageView.image = UIImage(named: "icn-tabbar-shop.pdf")
+        autocompleteSuggestions.removeAll()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchProductsView.isHidden = true
-        autocompleteTableView.isHidden = false
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -132,13 +132,9 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == "" {
-            productArray = []
-            autocompleteArray = []
-            autocompleteTableView.reloadData()
-            searchResultsCollectionView.reloadData()
+            products.removeAll()
+            autocompleteSuggestions.removeAll()
         } else {
-            
-            autocompleteTableView.isHidden = false
             searchTerm = searchText
             searchForProducts(withTerm: searchText)
             print(searchText)
@@ -149,13 +145,12 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
             
             RCHSDK.defaultClient().sendRequest(autocompleteBuilder.build(), success: { (responseObject) in
                 
-                guard let autocompleteSuggestions = responseObject as? [RCHAutocompleteSuggestion] else {
+                guard let responseAutocompleteSuggestions = responseObject as? [RCHAutocompleteSuggestion] else {
                     print("Result Error")
                     return
                 }
                 
-                self.autocompleteArray = autocompleteSuggestions.map({$0.text!})
-                self.autocompleteTableView.reloadData()
+                self.autocompleteSuggestions = responseAutocompleteSuggestions.map({$0.text!})
             }) { (responseObject, error) in
                 print(error)
             }
@@ -169,12 +164,12 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productArray.count
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! RCHProductCollectionViewCell
-        let product = productArray[indexPath.row]
+        let product = products[indexPath.row]
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
@@ -195,28 +190,29 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return autocompleteArray.count
+        return autocompleteSuggestions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "autocompleteCell", for: indexPath)
         
-        let autocompleteString = autocompleteArray[indexPath.row]
-
-        if !searchTerm.isEmpty && autocompleteArray.count > 0 {
-                let searchString = searchTerm.lowercased()
-                let highlightColor = UIColor(red: 0, green: 121/255, blue: 253/255, alpha: 1)
-                let blueAttribute = [NSBackgroundColorAttributeName : highlightColor]
-                let attributedString = NSMutableAttributedString(string: autocompleteString)
+        let autocompleteString = autocompleteSuggestions[indexPath.row]
+        
+        if !searchTerm.isEmpty && autocompleteSuggestions.count > 0 {
+            let searchString = searchTerm.lowercased()
+            let highlightColor = UIColor(red: 0, green: 121/255, blue: 253/255, alpha: 1)
+            let blueAttribute = [NSBackgroundColorAttributeName : highlightColor]
+            let attributedString = NSMutableAttributedString(string: autocompleteString)
             
-                let range: Range<String.Index> = autocompleteString.range(of: searchString)!
+            if let range: Range<String.Index> = autocompleteString.range(of: searchString) {
                 let index: Int = autocompleteString.distance(from: autocompleteString.startIndex, to: range.lowerBound)
                 let nsRange = NSMakeRange(index, searchString.characters.count)
                 attributedString.addAttributes(blueAttribute, range: nsRange)
-
+                
                 cell.textLabel?.attributedText = attributedString
-    
+            }
+            
         } else {
             cell.textLabel?.text = autocompleteString
         }
@@ -229,7 +225,7 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedSearchTerm = autocompleteArray[indexPath.row]
+        let selectedSearchTerm = autocompleteSuggestions[indexPath.row]
         searchForProducts(withTerm: selectedSearchTerm)
         searchBar.text = selectedSearchTerm
         resetSearch()
@@ -243,7 +239,7 @@ class RCHSearchViewController: UIViewController, UISearchBarDelegate, UICollecti
                 guard let selectedIndexPath = searchResultsCollectionView.indexPathsForSelectedItems else {
                     return
                 }
-                let selectedProduct = productArray[selectedIndexPath[0].row]
+                let selectedProduct = products[selectedIndexPath[0].row]
                 destinationViewControler.product = selectedProduct
             }
         }
