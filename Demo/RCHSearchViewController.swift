@@ -19,6 +19,8 @@ class RCHSearchViewController: UIViewController {
     @IBOutlet weak var searchProductsImageView: UIImageView!
     @IBOutlet weak var autocompleteTableView: UITableView!
     
+    weak var timer = Timer()
+    
     var products: [RCHSearchProduct]  = [] {
         didSet {
             searchResultsCollectionView.reloadData()
@@ -48,8 +50,15 @@ class RCHSearchViewController: UIViewController {
     }
     var searchTerm = "" {
         didSet {
-            searchBar.text = searchTerm
-            var _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.searchForProducts), userInfo: nil, repeats: false)
+            if searchTerm.isEmpty {
+                products.removeAll()
+                autocompleteSuggestions.removeAll()
+            }
+            else {
+                searchBar.text = searchTerm
+                timer?.invalidate()
+                timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.searchForProducts), userInfo: nil, repeats: false)
+            }
         }
     }
 }
@@ -82,7 +91,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         configureAPI()
     }
     
-    func resetSearch() {
+    func dismissSearch() {
         view.endEditing(true)
         autocompleteSuggestions.removeAll()
     }
@@ -133,6 +142,10 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
             
             self.autocompleteSuggestions = responseAutocompleteSuggestions.map({$0.text!})
         }) { (responseObject, error) in
+            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
             print(error)
         }
     }
@@ -140,7 +153,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     // MARK: IBActions
     
     @IBAction func handleTapOnFooter(sender: UITapGestureRecognizer) {
-        resetSearch()
+        dismissSearch()
     }
     
     // MARK: UISearchBarDelegate
@@ -150,22 +163,12 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let searchText = searchBar.text else {
-            print("Error: no search term entered")
-            return
-        }
-        searchTerm = searchText
-        resetSearch()
+        dismissSearch()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == "" {
-            products.removeAll()
-            autocompleteSuggestions.removeAll()
-        } else {
-            searchTerm = searchText
-            autocomplete(withQuery: searchText)
-        }
+        searchTerm = searchText
+        autocomplete(withQuery: searchText)
     }
  
     // MARK: UICollectionViewDataSource
@@ -237,7 +240,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchTerm = autocompleteSuggestions[indexPath.row]
-        resetSearch()
+        dismissSearch()
     }
     
     // MARK: Navigation
