@@ -70,6 +70,7 @@ FOUNDATION_EXPORT const unsigned char RichRelevanceSDKVersionString[];
 #import <RichRelevanceSDK/RCHSearchLink.h>
 #import <RichRelevanceSDK/RCHSearchProduct.h>
 #import <RichRelevanceSDK/RCHSearchFacet.h>
+#import <RichRelevanceSDK/RCHAutocompleteSuggestion.h>
 
 // RESPONSE PARSER
 

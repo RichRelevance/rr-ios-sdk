@@ -16,8 +16,11 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
     
     var productArray: [RCHRecommendedProduct] = []
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         collectionView!.register(UINib(nibName: "RCHProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }

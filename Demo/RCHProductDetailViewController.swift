@@ -17,7 +17,7 @@ class RCHProductDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
     
-    var product: RCHRecommendedProduct?
+    var product: RCHSearchProduct?
     
     override func viewDidLoad() {
         super.viewDidLoad()

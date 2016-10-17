@@ -12,7 +12,7 @@
             <objects>
                 <navigationController id="ROG-eF-C8E" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shop" image="icn-tabbar-shop" selectedImage="icn-tabbar-shop" id="sJ8-UI-7kJ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ao4-Yb-06B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="ao4-Yb-06B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.21568627450980393" green="0.27843137254901962" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,7 +32,7 @@
         <scene sceneID="Rla-4X-DEv">
             <objects>
                 <collectionViewController id="7MY-1r-mLT" userLabel="RCHCatalogCollectionViewController" customClass="RCHCatalogCollectionViewController" customModule="RichRelevanceSDKDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="n3s-8h-q4H">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="n3s-8h-q4H">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,7 +86,7 @@
             <objects>
                 <navigationController id="3sD-Rh-dLl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" image="icn-tabbar-account" selectedImage="icn-tabbar-account" id="1HA-E6-M1y"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="zna-7C-Eay">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="zna-7C-Eay">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -268,6 +268,10 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="k2I-Uj-dtt" id="Ijt-Nm-eTH"/>
+                                    <outlet property="delegate" destination="k2I-Uj-dtt" id="Tgb-3o-gd3"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaZ-2U-v1V">
                                 <subviews>
@@ -282,6 +286,9 @@
                                             <string>Title</string>
                                             <string>Title</string>
                                         </scopeButtonTitles>
+                                        <connections>
+                                            <outlet property="delegate" destination="k2I-Uj-dtt" id="6FW-GZ-9ud"/>
+                                        </connections>
                                     </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.27843137254901962" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -332,8 +339,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJ8-vW-M23"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denim Shirt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-aU-KuU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJ8-vW-M23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Denim Shirt " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ay-aU-KuU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8bf-Zq-Z3S"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -375,7 +385,7 @@
                             <constraint firstItem="7ay-aU-KuU" firstAttribute="leading" secondItem="yie-g6-gmF" secondAttribute="leadingMargin" constant="4" id="4Ow-AP-equ"/>
                             <constraint firstItem="rd9-i8-X71" firstAttribute="centerX" secondItem="yie-g6-gmF" secondAttribute="centerX" id="GL5-gV-L5E"/>
                             <constraint firstItem="AVS-Y7-ESI" firstAttribute="top" secondItem="gJ8-vW-M23" secondAttribute="bottom" constant="8" id="Hht-dX-auY"/>
-                            <constraint firstItem="7ay-aU-KuU" firstAttribute="top" secondItem="AVS-Y7-ESI" secondAttribute="bottom" constant="13" id="PNa-7q-d0q"/>
+                            <constraint firstItem="7ay-aU-KuU" firstAttribute="top" secondItem="AVS-Y7-ESI" secondAttribute="bottom" constant="21" id="PNa-7q-d0q"/>
                             <constraint firstItem="56M-4O-SJx" firstAttribute="leading" secondItem="yie-g6-gmF" secondAttribute="leadingMargin" constant="4" id="b5k-dn-1bT"/>
                             <constraint firstItem="gJ8-vW-M23" firstAttribute="leading" secondItem="yie-g6-gmF" secondAttribute="leadingMargin" constant="-16" id="cMX-KH-kIz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7ay-aU-KuU" secondAttribute="trailing" constant="4" id="ifQ-PX-u7Z"/>
@@ -384,7 +394,7 @@
                             <constraint firstItem="gJ8-vW-M23" firstAttribute="top" secondItem="jTC-F9-7P6" secondAttribute="bottom" constant="-1" id="sdm-G0-AqF"/>
                             <constraint firstItem="AVS-Y7-ESI" firstAttribute="leading" secondItem="yie-g6-gmF" secondAttribute="leadingMargin" constant="4" id="ssO-6e-FF1"/>
                             <constraint firstItem="rd9-i8-X71" firstAttribute="top" secondItem="56M-4O-SJx" secondAttribute="bottom" constant="23" id="vjv-24-g6h"/>
-                            <constraint firstItem="56M-4O-SJx" firstAttribute="top" secondItem="7ay-aU-KuU" secondAttribute="bottom" constant="16" id="y9S-gW-yDx"/>
+                            <constraint firstItem="56M-4O-SJx" firstAttribute="top" secondItem="7ay-aU-KuU" secondAttribute="bottom" constant="8" id="y9S-gW-yDx"/>
                             <constraint firstItem="rxc-te-sbi" firstAttribute="top" secondItem="rd9-i8-X71" secondAttribute="bottom" constant="24" id="yaD-Lg-Yvi"/>
                         </constraints>
                     </view>
@@ -437,7 +447,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8mi-or-L4R" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="icn-tabbar-search" id="iD3-2k-3gm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DlG-7O-Yh3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="DlG-7O-Yh3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
