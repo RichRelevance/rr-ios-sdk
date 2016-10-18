@@ -204,11 +204,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)setFilterAttributes:(NSDictionary<NSString *, NSObject *> *)filterAttributes;
 
 /*!
- *  Add to cart only. Specify the search result that brought the user to the add to cart page.
+ *  Add to cart only. Specify parameters to add from a previous search result. This string should originate from RCHSearchResult.addToCartParameters
  *
- *  @param searchResult The search result that the user initiated prior to adding the product to the cart.
+ *  @param addToCartParams The addToCartParameters property of a RCHSearchResult.
  */
-- (instancetype)addParametersFromSearchResult:(RCHSearchResult *)searchResult;
+- (instancetype)addParametersFromSearchResult:(NSString *)addToCartParams;
+
+/*!
+ *  Add to cart only. Specify parameters to add from the last returned search result.
+ */
+- (instancetype)addParametersFromLastSearchResult;
 
 @end
 NS_ASSUME_NONNULL_END

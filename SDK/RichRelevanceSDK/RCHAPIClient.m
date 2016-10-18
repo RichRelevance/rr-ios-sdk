@@ -30,6 +30,7 @@
 @property (strong, nonatomic) NSURLSession *URLSession;
 @property (strong, nonatomic) RCHNetworkReachabilityManager *reachability;
 @property (strong, nonatomic) NSMutableArray *failedClickTrackURLs;
+
 @property (copy, nonatomic) NSString *opaqueRCSToken;
 
 @end
