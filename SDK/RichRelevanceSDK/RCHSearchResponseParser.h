@@ -21,4 +21,6 @@
  */
 @interface RCHSearchResponseParser : NSObject <RCHAPIResponseParser>
 
++ (NSString *)lastAddToCartParameters;
+
 @end
