@@ -18,6 +18,7 @@
 #import "RCHAPIConstants.h"
 #import "RCHRecsForPlacementsResponseParser.h"
 #import "RCHSearchResult.h"
+#import "RCHSearchResponseParser.h"
 #import "RCHWebUtils.h"
 
 @interface RCHPlacementRecsBuilder ()
@@ -205,15 +206,26 @@
     return [self setDictionaryValue:filterAttributes forKey:kRCHAPIRequestParamRecommendationsFilterAttributes flattenKeys:NO];
 }
 
-- (instancetype)addParametersFromSearchResult:(RCHSearchResult *)searchResult
+- (instancetype)addParametersFromSearchResult:(NSString *)addToCartParams;
 {
-    NSString *parameterString = searchResult.addToCartParameters;
-    NSDictionary<NSString *, NSString *> *parameters = [RCHWebUtils keyValuesFromParameterString:parameterString];
+    NSDictionary<NSString *, NSString *> *parameters = [RCHWebUtils keyValuesFromParameterString:addToCartParams];
     [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
         [self setValue:obj forKey:key];
     }];
     return self;
 }
+
+- (instancetype)addParametersFromLastSearchResult
+{
+    if ([RCHSearchResponseParser lastAddToCartParameters]) {
+        return [self addParametersFromSearchResult:[RCHSearchResponseParser lastAddToCartParameters]];
+    }
+    else {
+        [RCHLog logError:@"addParametersFromLastSearchResult called with no previous successful search result."];
+    }
+    return self;
+}
+
 
 #pragma mark - Build
 

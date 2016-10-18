@@ -17,7 +17,15 @@
 #import "RCHSearchResult.h"
 #import "NSObject+RCHImport.h"
 
+static NSString *RCHSearchResponseLastAddToCartParameter = nil;
+
 @implementation RCHSearchResponseParser
+
++ (NSString *)lastAddToCartParameters
+{
+    return RCHSearchResponseLastAddToCartParameter;
+}
+
 
 - (id)parseResponse:(id)responseObject error:(NSError *__autoreleasing *)error;
 {
@@ -36,6 +44,8 @@
     result = [RCHSearchResult rch_objectFromDictionary:responseObject];
     result.rawResponse = responseObject;
     result.request = responseObject[NSStringFromSelector(@selector(request))];
+
+    RCHSearchResponseLastAddToCartParameter = result.addToCartParameters;
 
     if ([result.status isEqualToString:kRCHAPIResponseKeyStatusError]) {
         if (error != nil) {
