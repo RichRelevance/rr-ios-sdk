@@ -13,14 +13,40 @@ private let reuseIdentifier = "productCell"
 class RCHSearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBarView: UIView!
     @IBOutlet weak var searchProductsView: UIView!
     @IBOutlet weak var searchResultsCollectionView: UICollectionView!
     @IBOutlet weak var searchProductsLabel: UILabel!
     @IBOutlet weak var searchProductsImageView: UIImageView!
     @IBOutlet weak var autocompleteTableView: UITableView!
+    @IBOutlet weak var sortFilterView: UIView!
+    @IBOutlet weak var sortButton: UIButton!
+    @IBOutlet weak var filterButton: UIButton!
+    
+    var nextButton = UIButton()
+    var previousButton = UIButton()
+    var sortPicker = UIPickerView()
+    var pickerView = UIView()
     
     weak var timer = Timer()
+    var currentSort: SortingOptions = .relevance
     
+    var pageCount = 0 {
+        didSet {
+            if pageCount > 0 {
+                previousButton.isEnabled = true
+            } else {
+                previousButton.isEnabled = false
+            }
+        }
+    }
+    
+    var pageStart = 0 {
+        didSet {
+           searchForProducts()
+        }
+    }
+
     var products: [RCHSearchProduct]  = [] {
         didSet {
             searchResultsCollectionView.reloadData()
@@ -28,10 +54,11 @@ class RCHSearchViewController: UIViewController {
                 searchResultsCollectionView.isHidden = true
                 searchProductsView.isHidden = false
                 searchProductsLabel.text = "No Results"
-                searchProductsImageView.image = UIImage(named: "icn-tabbar-shop.pdf")
+                searchProductsImageView.image = UIImage(named: "img-noresults.pdf")
             } else {
                 searchResultsCollectionView.isHidden = false
                 searchProductsView.isHidden = true
+//                sortFilterView.isHidden = false
             }
         }
     }
@@ -40,11 +67,9 @@ class RCHSearchViewController: UIViewController {
             autocompleteTableView.reloadData()
             if autocompleteSuggestions.isEmpty {
                 autocompleteTableView.isHidden = true
-                searchProductsLabel.text = "Search Products"
-                searchProductsImageView.image = UIImage(named: "icn-tabbar-search.pdf")
-                searchProductsView.isHidden = false
             } else {
                 autocompleteTableView.isHidden = false
+//                sortFilterView.isHidden = true
             }
         }
     }
@@ -53,6 +78,7 @@ class RCHSearchViewController: UIViewController {
             if searchTerm.isEmpty {
                 products.removeAll()
                 autocompleteSuggestions.removeAll()
+//                sortFilterView.isHidden = true
             }
             else {
                 searchBar.text = searchTerm
@@ -61,23 +87,33 @@ class RCHSearchViewController: UIViewController {
             }
         }
     }
+    
+    enum SortingOptions: String {
+        case priceLowest = "Price Low to High"
+        case priceHighest = "Price High to Low"
+        case newest = "Newest"
+        case relevance = "Relevance"
+        case rating = "Rating"
+        
+        static let allValues = [priceLowest, priceHighest,newest, relevance, rating]
+    }
 }
     
-extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
-        setupView()
+        configureAPI()
     }
     
     func setupView() {
         searchResultsCollectionView.isHidden = true
         searchProductsView.isHidden = false
-
         let footerViewFrame = CGRect(x: 0, y: 0, width: autocompleteTableView.frame.width, height: autocompleteTableView.frame.height)
         let footerView = UIView(frame: footerViewFrame)
         footerView.backgroundColor = UIColor.clear
@@ -86,14 +122,49 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         footerView.addGestureRecognizer(tapRecognizer)
         autocompleteTableView.tableFooterView = footerView
         
+        pickerView.frame = CGRect(x: 0, y: view.frame.height - 300, width: view.frame.width, height: 300)
+        sortPicker.dataSource = self
+        sortPicker.delegate = self
+        sortPicker.frame = CGRect(x: 0, y: 30, width: view.frame.width, height: 270)
+        sortPicker.backgroundColor = UIColor.lightGray
+        sortPicker.showsSelectionIndicator = true
+        
         searchResultsCollectionView!.register(UINib(nibName: "RCHProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         
-        configureAPI()
+        let toolBar = UIToolbar()
+        toolBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 30)
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.blue
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.sortPickerDoneSelected))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.sortPickerCancelSelected))
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        sortFilterView.isHidden = true
+        pickerView.addSubview(sortPicker)
+        pickerView.addSubview(toolBar)
+        view.addSubview(pickerView)
+        pickerView.isHidden = true
+        
+        previousButton.isEnabled = false
+        nextButton.isEnabled = false
     }
     
     func dismissSearch() {
         view.endEditing(true)
         autocompleteSuggestions.removeAll()
+        if products.isEmpty {
+            sortFilterView.isHidden = true
+            searchProductsLabel.text = "Search Products"
+            searchProductsImageView.image = UIImage(named: "img-search.pdf")
+        } else {
+            sortFilterView.isHidden = false
+        }
     }
     
     // MARK: API
@@ -103,8 +174,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         
         guard let currentUserID = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyCurrentUser) else {
             fatalError()
-        }
-        
+        }       
         let config = RCHAPIClientConfig(apiKey: "showcaseparent", apiClientKey: "199c81c05e473265", endpoint: RCHEndpointProduction, useHTTPS: false)
         config.apiClientSecret = "r5j50mlag06593401nd4kt734i"
         config.userID = currentUserID
@@ -116,6 +186,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     func searchForProducts() {
         let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")
         let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
+        searchBuilder.setPageStart(pageStart)
         
         RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
             
@@ -124,8 +195,17 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
             }
             
             self.products = searchResult.products!
+            if searchResult.count > 20 {
+                self.nextButton.isEnabled = true
+            } else {
+                self.nextButton.isEnabled = false
+            }
 
         }) { (responseObject, error) in
+            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
             print(error)
         }
     }
@@ -150,11 +230,96 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         }
     }
     
+    func sortProducts(selection: SortingOptions) {
+        let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")
+        let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
+        searchBuilder.setPageStart(pageStart)
+
+        var sortString = ""
+        var orderASC = true
+        
+        switch selection {
+        case .priceLowest:
+            sortString = "product_pricecents"
+            orderASC = true
+            break
+        case .priceHighest:
+            sortString = "product_pricecents"
+            orderASC = false
+            break
+        case .newest:
+            sortString = "product_release_date"
+            orderASC = false
+            break
+        case .rating:
+            sortString = "product_rating"
+            orderASC = false
+            break
+        case .relevance:
+            sortString = "product_relevance"
+            orderASC = true
+        }
+        
+        searchBuilder.addSortOrder(sortString, ascending: orderASC)
+        
+        RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
+            
+            guard let searchResult = responseObject as? RCHSearchResult else {
+                return
+            }
+            
+            self.products = searchResult.products!
+            
+        }) { (responseObject, error) in
+            print(error)
+        }
+        print(selection)
+    }
+    
     // MARK: IBActions
     
     @IBAction func handleTapOnFooter(sender: UITapGestureRecognizer) {
         dismissSearch()
     }
+    
+    @IBAction func sortSelected(_ sender: AnyObject) {
+        pickerView.isHidden = false
+    }
+    
+    @IBAction func filterSelected(_ sender: AnyObject) {
+        
+    }
+    
+    @IBAction func sortPickerDoneSelected(_ sender: AnyObject) {
+        pickerView.isHidden = true
+        print(SortingOptions.allValues[sortPicker.selectedRow(inComponent: 0)])
+        let sortOption: SortingOptions = SortingOptions.allValues[sortPicker.selectedRow(inComponent: 0)]
+        sortProducts(selection: sortOption)
+        let titleString = "Sort: \(sortOption.rawValue)"
+        sortButton.setTitle(titleString, for: .normal)
+    }
+    
+    @IBAction func sortPickerCancelSelected(_ sender: AnyObject) {
+        pickerView.isHidden = true
+    }
+    
+    @IBAction func handleTapGesture(gestureRecognizer: UITapGestureRecognizer) {
+        dismissSearch()
+    }
+    
+    @IBAction func footerButtonSelected(_ sender: AnyObject) {
+        if sender.tag == 2 {
+            pageStart += 20
+            pageCount += 1
+            print("next")
+        } else if sender.tag == 3 {
+            pageStart -= 20
+            pageCount -= 1
+            print("previous")
+        }
+        
+    }
+
     
     // MARK: UISearchBarDelegate
     
@@ -162,13 +327,28 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         searchProductsView.isHidden = true
     }
     
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         dismissSearch()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchTerm = searchText
-        autocomplete(withQuery: searchText)
+        sortFilterView.isHidden = true
+        if !searchTerm.isEmpty {
+            autocomplete(withQuery: searchText)
+        } else {
+            searchProductsView.isHidden = true
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        dismissSearch()
+        
+        searchProductsLabel.text = "Search Products"
+        searchProductsImageView.image = UIImage(named: "img-search.pdf")
+        searchProductsView.isHidden = false
+        sortFilterView.isHidden = true
     }
  
     // MARK: UICollectionViewDataSource
@@ -199,6 +379,13 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "productDetailSegue", sender: self)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footerView", for: indexPath) as! RCHSearchResultsCollectionReusableView
+        previousButton = headerView.previousButton
+        nextButton = headerView.nextButton
+        return headerView
     }
     
     // MARK: UITableViewDataSource
@@ -241,6 +428,20 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchTerm = autocompleteSuggestions[indexPath.row]
         dismissSearch()
+    }
+    
+    // MARK: UIPickerViewDelegate
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return SortingOptions.allValues.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return SortingOptions.allValues[row].rawValue
     }
     
     // MARK: Navigation

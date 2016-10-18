@@ -71,6 +71,7 @@
 		B82E622A1DA47449007EB3FF /* RCHProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62291DA47449007EB3FF /* RCHProductDetailViewController.swift */; };
 		B82E62321DA7274B007EB3FF /* RZBaseCollectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E59C1B3B139A00D09C7A /* RZBaseCollectionList.m */; };
 		B82E62341DA72832007EB3FF /* RCHAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62331DA72832007EB3FF /* RCHAccountViewController.swift */; };
+		B82E62391DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62381DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -208,6 +209,7 @@
 		B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHSearchViewController.swift; sourceTree = "<group>"; };
 		B82E62291DA47449007EB3FF /* RCHProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHProductDetailViewController.swift; sourceTree = "<group>"; };
 		B82E62331DA72832007EB3FF /* RCHAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHAccountViewController.swift; sourceTree = "<group>"; };
+		B82E62381DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHSearchResultsCollectionReusableView.swift; sourceTree = "<group>"; };
 		EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -571,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */,
+				B82E62381DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				0172E5BA1B3B139A00D09C7A /* RZSortedCollectionList.m in Sources */,
 				0172E5B01B3B139A00D09C7A /* NSFetchRequest+RZCreationHelpers.m in Sources */,
 				72E821BC1AFBACC900E71DA4 /* AppDelegate.m in Sources */,
+				B82E62391DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift in Sources */,
 				7295003D1B72904800C1F946 /* RCHProductCard.m in Sources */,
 				723895C51B38553D00ACFE58 /* RCHProductCell.m in Sources */,
 				729500321B7286FF00C1F946 /* RCHSwipeProductsViewController.m in Sources */,

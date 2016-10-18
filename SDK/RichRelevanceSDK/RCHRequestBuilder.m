@@ -116,8 +116,8 @@ NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter = @":";
 - (instancetype)addValue:(id)value toMultipleArgumentArrayForKey:(NSString *)key
 {
     if (value != nil) {
-        NSArray *value = [self valueForKey:key] ?: [NSArray array];
-        return [self setValue:[value arrayByAddingObject:key] forKey:key];
+        NSArray *array = [self valueForKey:key] ?: [NSArray array];
+        return [self setValue:[array arrayByAddingObject:value] forKey:key];
     }
 
     return self;
