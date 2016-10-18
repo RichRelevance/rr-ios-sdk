@@ -29,14 +29,23 @@ class RCHSearchViewController: UIViewController {
     var pickerView = UIView()
     
     weak var timer = Timer()
-    var currentSort: SortingOptions = .relevance
+    var currentSort: SortingOptions = .relevance {
+        didSet {
+            pickerView.isHidden = true
+            let titleString = "Sort: \(currentSort.rawValue)"
+            sortButton.setTitle(titleString, for: .normal)
+            searchForProducts()
+        }
+    }
     
     var pageCount = 0 {
         didSet {
             if pageCount > 0 {
                 previousButton.isEnabled = true
+                previousButton.setTitleColor(.blue, for: .normal)
             } else {
                 previousButton.isEnabled = false
+                previousButton.setTitleColor(.gray, for: .normal)
             }
         }
     }
@@ -58,7 +67,6 @@ class RCHSearchViewController: UIViewController {
             } else {
                 searchResultsCollectionView.isHidden = false
                 searchProductsView.isHidden = true
-//                sortFilterView.isHidden = false
             }
         }
     }
@@ -69,7 +77,6 @@ class RCHSearchViewController: UIViewController {
                 autocompleteTableView.isHidden = true
             } else {
                 autocompleteTableView.isHidden = false
-//                sortFilterView.isHidden = true
             }
         }
     }
@@ -78,7 +85,6 @@ class RCHSearchViewController: UIViewController {
             if searchTerm.isEmpty {
                 products.removeAll()
                 autocompleteSuggestions.removeAll()
-//                sortFilterView.isHidden = true
             }
             else {
                 searchBar.text = searchTerm
@@ -93,9 +99,8 @@ class RCHSearchViewController: UIViewController {
         case priceHighest = "Price High to Low"
         case newest = "Newest"
         case relevance = "Relevance"
-        case rating = "Rating"
         
-        static let allValues = [priceLowest, priceHighest,newest, relevance, rating]
+        static let allValues = [priceLowest, priceHighest, newest, relevance]
     }
 }
     
@@ -158,10 +163,12 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     func dismissSearch() {
         view.endEditing(true)
         autocompleteSuggestions.removeAll()
+        sortButton.setTitle("Sort", for: .normal)
         if products.isEmpty {
             sortFilterView.isHidden = true
             searchProductsLabel.text = "Search Products"
             searchProductsImageView.image = UIImage(named: "img-search.pdf")
+            searchProductsView.isHidden = false
         } else {
             sortFilterView.isHidden = false
         }
@@ -187,7 +194,30 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")
         let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
         searchBuilder.setPageStart(pageStart)
+        var sortString = ""
+        var orderASC = true
         
+        switch currentSort {
+        case .priceLowest:
+            sortString = "product_pricecents"
+            orderASC = true
+            break
+        case .priceHighest:
+            sortString = "product_pricecents"
+            orderASC = false
+            break
+        case .newest:
+            sortString = "product_release_date"
+            orderASC = false
+            break
+        case .relevance:
+            sortString = "product_relevance"
+        }
+        
+        if sortString != "product_relevance" {
+            searchBuilder.addSortOrder(sortString, ascending: orderASC)
+        }
+
         RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
             
             guard let searchResult = responseObject as? RCHSearchResult else {
@@ -195,10 +225,12 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
             }
             
             self.products = searchResult.products!
-            if searchResult.count > 20 {
+            if searchResult.count > 20 && self.products.count >= 20 {
                 self.nextButton.isEnabled = true
+                self.nextButton.setTitleColor(.blue, for: .normal)
             } else {
                 self.nextButton.isEnabled = false
+                self.nextButton.setTitleColor(.gray, for: .normal)
             }
 
         }) { (responseObject, error) in
@@ -230,52 +262,6 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         }
     }
     
-    func sortProducts(selection: SortingOptions) {
-        let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")
-        let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
-        searchBuilder.setPageStart(pageStart)
-
-        var sortString = ""
-        var orderASC = true
-        
-        switch selection {
-        case .priceLowest:
-            sortString = "product_pricecents"
-            orderASC = true
-            break
-        case .priceHighest:
-            sortString = "product_pricecents"
-            orderASC = false
-            break
-        case .newest:
-            sortString = "product_release_date"
-            orderASC = false
-            break
-        case .rating:
-            sortString = "product_rating"
-            orderASC = false
-            break
-        case .relevance:
-            sortString = "product_relevance"
-            orderASC = true
-        }
-        
-        searchBuilder.addSortOrder(sortString, ascending: orderASC)
-        
-        RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
-            
-            guard let searchResult = responseObject as? RCHSearchResult else {
-                return
-            }
-            
-            self.products = searchResult.products!
-            
-        }) { (responseObject, error) in
-            print(error)
-        }
-        print(selection)
-    }
-    
     // MARK: IBActions
     
     @IBAction func handleTapOnFooter(sender: UITapGestureRecognizer) {
@@ -287,47 +273,34 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     }
     
     @IBAction func filterSelected(_ sender: AnyObject) {
-        
+        // TODO: Filter
     }
     
     @IBAction func sortPickerDoneSelected(_ sender: AnyObject) {
-        pickerView.isHidden = true
-        print(SortingOptions.allValues[sortPicker.selectedRow(inComponent: 0)])
-        let sortOption: SortingOptions = SortingOptions.allValues[sortPicker.selectedRow(inComponent: 0)]
-        sortProducts(selection: sortOption)
-        let titleString = "Sort: \(sortOption.rawValue)"
-        sortButton.setTitle(titleString, for: .normal)
+        currentSort = SortingOptions.allValues[sortPicker.selectedRow(inComponent: 0)]
     }
     
     @IBAction func sortPickerCancelSelected(_ sender: AnyObject) {
         pickerView.isHidden = true
     }
     
-    @IBAction func handleTapGesture(gestureRecognizer: UITapGestureRecognizer) {
-        dismissSearch()
-    }
-    
     @IBAction func footerButtonSelected(_ sender: AnyObject) {
+        searchResultsCollectionView.setContentOffset(CGPoint.zero, animated: false)
         if sender.tag == 2 {
             pageStart += 20
             pageCount += 1
-            print("next")
         } else if sender.tag == 3 {
             pageStart -= 20
             pageCount -= 1
-            print("previous")
         }
-        
     }
 
-    
     // MARK: UISearchBarDelegate
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchProductsView.isHidden = true
     }
     
-
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         dismissSearch()
     }
@@ -344,11 +317,6 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         dismissSearch()
-        
-        searchProductsLabel.text = "Search Products"
-        searchProductsImageView.image = UIImage(named: "img-search.pdf")
-        searchProductsView.isHidden = false
-        sortFilterView.isHidden = true
     }
  
     // MARK: UICollectionViewDataSource
