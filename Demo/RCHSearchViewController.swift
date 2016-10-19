@@ -10,6 +10,15 @@ import UIKit
 
 private let reuseIdentifier = "productCell"
 
+enum SortingOptions: String {
+    case priceLowest = "Price Low to High"
+    case priceHighest = "Price High to Low"
+    case newest = "Newest"
+    case relevance = "Relevance"
+    
+    static let allValues = [priceLowest, priceHighest, newest, relevance]
+}
+
 class RCHSearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -34,7 +43,6 @@ class RCHSearchViewController: UIViewController {
             pickerView.isHidden = true
             let titleString = "Sort: \(currentSort.rawValue)"
             sortButton.setTitle(titleString, for: .normal)
-            searchForProducts()
         }
     }
     
@@ -47,12 +55,6 @@ class RCHSearchViewController: UIViewController {
                 previousButton.isEnabled = false
                 previousButton.setTitleColor(.gray, for: .normal)
             }
-        }
-    }
-    
-    var pageStart = 0 {
-        didSet {
-           searchForProducts()
         }
     }
 
@@ -88,22 +90,31 @@ class RCHSearchViewController: UIViewController {
             }
             else {
                 searchBar.text = searchTerm
-                timer?.invalidate()
-                timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.searchForProducts), userInfo: nil, repeats: false)
             }
         }
     }
-    
-    enum SortingOptions: String {
-        case priceLowest = "Price Low to High"
-        case priceHighest = "Price High to Low"
-        case newest = "Newest"
-        case relevance = "Relevance"
-        
-        static let allValues = [priceLowest, priceHighest, newest, relevance]
+}
+
+extension SortingOptions: CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .relevance: return ""
+        case .newest: return "product_release_date"
+        case .priceLowest: return "product_pricecents"
+        case .priceHighest: return "product_pricecents"
+        }
+    }
+    var order: Bool {
+        switch self {
+        case .relevance: return true
+        case .newest: return false
+        case .priceLowest: return true
+        case .priceHighest: return false
+        }
     }
 }
-    
+
+
 extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
     override func viewDidLoad() {
@@ -193,28 +204,11 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     func searchForProducts() {
         let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")
         let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
-        searchBuilder.setPageStart(pageStart)
-        var sortString = ""
-        var orderASC = true
+        searchBuilder.setPageStart(pageCount * 20)
+        let sortString = currentSort.description
+        let orderASC = currentSort.order
         
-        switch currentSort {
-        case .priceLowest:
-            sortString = "product_pricecents"
-            orderASC = true
-            break
-        case .priceHighest:
-            sortString = "product_pricecents"
-            orderASC = false
-            break
-        case .newest:
-            sortString = "product_release_date"
-            orderASC = false
-            break
-        case .relevance:
-            sortString = "product_relevance"
-        }
-        
-        if sortString != "product_relevance" {
+        if currentSort != .relevance {
             searchBuilder.addSortOrder(sortString, ascending: orderASC)
         }
 
@@ -278,6 +272,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     
     @IBAction func sortPickerDoneSelected(_ sender: AnyObject) {
         currentSort = SortingOptions.allValues[sortPicker.selectedRow(inComponent: 0)]
+        searchForProducts()
     }
     
     @IBAction func sortPickerCancelSelected(_ sender: AnyObject) {
@@ -287,12 +282,11 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     @IBAction func footerButtonSelected(_ sender: AnyObject) {
         searchResultsCollectionView.setContentOffset(CGPoint.zero, animated: false)
         if sender.tag == 2 {
-            pageStart += 20
             pageCount += 1
         } else if sender.tag == 3 {
-            pageStart -= 20
             pageCount -= 1
         }
+        searchForProducts()
     }
 
     // MARK: UISearchBarDelegate
@@ -310,6 +304,8 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         sortFilterView.isHidden = true
         if !searchTerm.isEmpty {
             autocomplete(withQuery: searchText)
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.searchForProducts), userInfo: nil, repeats: false)
         } else {
             searchProductsView.isHidden = true
         }
@@ -396,6 +392,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchTerm = autocompleteSuggestions[indexPath.row]
         dismissSearch()
+        searchForProducts()
     }
     
     // MARK: UIPickerViewDelegate
