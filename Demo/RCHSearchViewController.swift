@@ -10,6 +10,30 @@ import UIKit
 
 private let reuseIdentifier = "productCell"
 
+extension UIAlertController {
+    static func createFacetActionSheet(withTitle titles: [String?], onSelected: @escaping ((Int) -> ())) -> UIAlertController {
+        
+        let filterAlertController = UIAlertController(title: nil, message: "Choose Filter", preferredStyle: .actionSheet)
+        
+        for (index, title) in titles.enumerated() {
+            
+            let facetAction = UIAlertAction(title: title, style: .default, handler: {
+                (alert: UIAlertAction!) -> Void in
+                onSelected(index)
+            })
+            filterAlertController.addAction(facetAction)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+        })
+        
+        filterAlertController.addAction(cancelAction)
+        
+        return filterAlertController
+    }
+}
+
 enum SortingOptions: String {
     case priceLowest = "Price Low to High"
     case priceHighest = "Price High to Low"
@@ -38,6 +62,23 @@ class RCHSearchViewController: UIViewController {
     var pickerView = UIView()
     
     weak var timer = Timer()
+    var searchFacets: [String: [RCHSearchFacet]] = [:]
+    
+    var currentFilter: RCHSearchFacet? = nil {
+        didSet {
+            var titleString = ""
+            if currentFilter != nil {
+                guard let currentTitle = currentFilter?.title else {
+                    return
+                }
+                titleString = "Filter: \(currentTitle)"
+                filterButton.setTitle(titleString, for: .normal)
+            } else {
+                titleString = "Filter"
+            }
+            filterButton.setTitle(titleString, for: .normal)
+        }
+    }
     var currentSort: SortingOptions = .relevance {
         didSet {
             pickerView.isHidden = true
@@ -205,6 +246,10 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")
         let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
         searchBuilder.setPageStart(pageCount * 20)
+        if let searchFilter = currentFilter {
+            searchBuilder.addFilter(from: searchFilter)
+        }
+        
         let sortString = currentSort.description
         let orderASC = currentSort.order
         
@@ -219,6 +264,8 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
             }
             
             self.products = searchResult.products!
+            self.searchFacets = searchResult.facets!
+            
             if searchResult.count > 20 && self.products.count >= 20 {
                 self.nextButton.isEnabled = true
                 self.nextButton.setTitleColor(.blue, for: .normal)
@@ -267,7 +314,37 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     }
     
     @IBAction func filterSelected(_ sender: AnyObject) {
-        // TODO: Filter
+        
+        let titles = searchFacets.map({ $0.key })
+        
+        let alertController = UIAlertController.createFacetActionSheet(withTitle: titles) { index in
+            guard let facetSelected = self.searchFacets[titles[index]] else {
+                return
+            }
+            self.showSubFilter(withFacets: facetSelected)
+        }
+        
+        if currentFilter != nil {
+            let removeFilterAction = UIAlertAction(title: "Remove Filter", style: .destructive, handler: {
+                (alert: UIAlertAction!) -> Void in
+                self.currentFilter = nil
+                self.searchForProducts()
+            })
+            alertController.addAction(removeFilterAction)
+        }
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showSubFilter(withFacets facets: [RCHSearchFacet]) {
+        
+        let titles = facets.map( { $0.title })
+        
+        let alertController = UIAlertController.createFacetActionSheet(withTitle: titles) { index in
+            let facetSelected = facets[index]
+            self.currentFilter = facetSelected
+            self.searchForProducts()
+        }
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func sortPickerDoneSelected(_ sender: AnyObject) {
