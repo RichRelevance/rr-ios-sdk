@@ -28,7 +28,6 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         collectionView!.register(UINib(nibName: "RCHProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
     
@@ -59,6 +58,7 @@ class RCHCatalogCollectionViewController: UICollectionViewController {
             self.collectionView?.reloadData()
             self.spinner.stopAnimating()
         }) { (responseObject, error) in
+            self.spinner.stopAnimating()
             print(error)
         }
     }
