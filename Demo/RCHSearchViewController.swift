@@ -162,7 +162,6 @@ extension SortingOptions: CustomStringConvertible {
     }
 }
 
-
 extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
     override func viewDidLoad() {
@@ -377,6 +376,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchProductsView.isHidden = true
+        currentFilter = nil
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
