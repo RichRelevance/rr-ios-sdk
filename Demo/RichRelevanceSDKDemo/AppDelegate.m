@@ -38,20 +38,19 @@
     // Pull saved client or default if none
     
     [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:@"199c81c05e473265", kRCHUserDefaultKeyApiKey, nil]];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:@"ff7665ca55280538", kRCHUserDefaultKeyApiClientKey, nil]];
     [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:@"RZTestUser", kRCHUserDefaultKeyCurrentUser, nil]];
-    NSString *apiClientKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiKey];
-    
-//    [[NSUserDefaults standardUserDefaults] setObject:@"199c81c05e473265" forKey:kRCHUserDefaultKeyApiKey];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
+    NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiKey];
+    NSString *apiClientKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiClientKey];
+    NSString *userID = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyCurrentUser];
 
     // Create a configuration and use it to configure the default client.
     
-    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"showcaseparent"
+    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:apiKey
                                                                APIClientKey:apiClientKey
                                                                    endpoint:RCHEndpointProduction
                                                                    useHTTPS:YES];
-    config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";
-    config.userID = @"RZTestUser";
+    config.userID = userID;
     config.sessionID = [[NSUUID UUID] UUIDString];
     
     [[RCHSDK defaultClient] configure:config];
