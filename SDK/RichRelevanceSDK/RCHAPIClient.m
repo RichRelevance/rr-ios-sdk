@@ -205,7 +205,7 @@
         URL = [self URLFromPath:path parameters:signedRequestParams];
         if (userAndSessionStyle == RCHAPIClientUserAndSessionParamStyleLongWithAPIKeyInPath ||
             userAndSessionStyle == RCHAPIClientUserAndSessionParamStyleAPIKeyInPath) {
-            URL = [URL URLByAppendingPathComponent:self.clientConfig.APIClientKey];
+            URL = [URL URLByAppendingPathComponent:self.clientConfig.APIKey];
         }
         URL = [NSURL URLWithString:[URL absoluteString]];
         URLRequest = [NSURLRequest requestWithURL:URL];

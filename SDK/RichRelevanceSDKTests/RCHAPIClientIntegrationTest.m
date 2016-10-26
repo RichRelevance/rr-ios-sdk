@@ -320,8 +320,8 @@
     NSString *userID = @"RZTestUser";
     NSString *sessionID = [[NSUUID UUID] UUIDString];
 
-    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"showcaseparent"
-                                                               APIClientKey:@"199c81c05e473265"
+    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"199c81c05e473265"
+                                                               APIClientKey:@"ff7665ca55280538"
                                                                    endpoint:RCHEndpointProduction
                                                                    useHTTPS:NO];
     config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";

@@ -171,7 +171,6 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
-        configureAPI()
     }
     
     func setupView() {
@@ -233,20 +232,6 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     }
     
     // MARK: API
-    
-    func configureAPI() {
-        // Temp: Config API for usable API key
-        
-        guard let currentUserID = UserDefaults.standard.string(forKey: kRCHUserDefaultKeyCurrentUser) else {
-            fatalError()
-        }       
-        let config = RCHAPIClientConfig(apiKey: "showcaseparent", apiClientKey: "199c81c05e473265", endpoint: RCHEndpointProduction, useHTTPS: false)
-        config.apiClientSecret = "r5j50mlag06593401nd4kt734i"
-        config.userID = currentUserID
-        config.sessionID = UUID().uuidString
-        
-        RCHSDK.defaultClient().configure(config)
-    }
 
     func searchForProducts() {
         let placement: RCHRequestPlacement = RCHRequestPlacement.init(pageType: .search, name: "find")

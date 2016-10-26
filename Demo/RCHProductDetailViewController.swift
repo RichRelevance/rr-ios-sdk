@@ -49,7 +49,17 @@ class RCHProductDetailViewController: UIViewController {
     }
     
     @IBAction func addToCartSelected(_ sender: AnyObject) {
-        cartBarButton.image = UIImage(named:"icn-cart-item.pdf")
-        addToCartButton.setTitle("Added to Cart", for: .normal)
+        let placement = RCHRequestPlacement(pageType: .addToCart, name: "prod1")
+        let builder = RCHSDK.builderForRecs(with: placement)
+        RCHSDK.defaultClient().sendRequest(builder.build(), success: { (result) in
+            self.cartBarButton.image = UIImage(named:"icn-cart-item.pdf")
+            self.addToCartButton.setTitle("Added to Cart", for: .normal)
+        }) { (responseObject, error) in
+            let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
+            print(error)
+        }
     }
 }

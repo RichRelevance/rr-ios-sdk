@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *displayNameField;
 @property (weak, nonatomic) IBOutlet UITextField *apiKeyField;
+@property (weak, nonatomic) IBOutlet UITextField *apiClientKeyField;
 
 @end
 
@@ -30,6 +31,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.displayNameField.text = [[NSUserDefaults standardUserDefaults] stringForKey:kRCHUserDefaultKeyClientName];
+    self.apiKeyField.text = [[NSUserDefaults standardUserDefaults] stringForKey:kRCHUserDefaultKeyApiKey];
+    self.apiClientKeyField.text = [[NSUserDefaults standardUserDefaults] stringForKey:kRCHUserDefaultKeyApiClientKey];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -42,13 +50,14 @@
     
     NSString *clientName = self.displayNameField.text;
     NSString *apiKey = self.apiKeyField.text;
+    NSString *apiClientKey = self.apiClientKeyField.text;
     [self.view endEditing:YES];
     
     NSString *currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyCurrentUser];
     
     // Configure the new API client
-    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"showcaseparent"
-                                                               APIClientKey:apiKey
+    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:apiKey
+                                                               APIClientKey:apiClientKey
                                                                    endpoint:RCHEndpointProduction
                                                                    useHTTPS:YES];
     config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";
@@ -60,6 +69,7 @@
     // Save the client info locally
     [[NSUserDefaults standardUserDefaults] setObject:clientName forKey:kRCHUserDefaultKeyClientName];
     [[NSUserDefaults standardUserDefaults] setObject:apiKey forKey:kRCHUserDefaultKeyApiKey];
+    [[NSUserDefaults standardUserDefaults] setObject:apiClientKey forKey:kRCHUserDefaultKeyApiClientKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Client Saved", nil) preferredStyle:UIAlertControllerStyleAlert];

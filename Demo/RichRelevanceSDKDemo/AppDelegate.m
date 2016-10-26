@@ -35,20 +35,24 @@
 
 - (void)configureRRSDK
 {
-    // Pull saved client or default if none
-    
-    [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:@"bccfa17d092268c0", kRCHUserDefaultKeyApiKey, nil]];
-    [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithObjectsAndKeys:@"RZTestUser", kRCHUserDefaultKeyCurrentUser, nil]];
-    NSString *apiClientKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiKey];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: @{kRCHUserDefaultKeyApiKey: @"199c81c05e473265"}];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: @{kRCHUserDefaultKeyApiClientKey: @"ff7665ca55280538"}];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: @{kRCHUserDefaultKeyCurrentUser: @"RZTestUser"}];
+
+    // This is just for display purposes
+    [[NSUserDefaults standardUserDefaults] registerDefaults: @{kRCHUserDefaultKeyClientName: @"Guess"}];
+
+    NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiKey];
+    NSString *apiClientKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiClientKey];
+    NSString *userID = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyCurrentUser];
 
     // Create a configuration and use it to configure the default client.
-    
-    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"showcaseparent"
+    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:apiKey
                                                                APIClientKey:apiClientKey
                                                                    endpoint:RCHEndpointProduction
                                                                    useHTTPS:YES];
     config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";
-    config.userID = @"RZTestUser";
+    config.userID = userID;
     config.sessionID = [[NSUUID UUID] UUIDString];
     
     [[RCHSDK defaultClient] configure:config];
