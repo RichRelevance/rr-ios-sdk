@@ -217,7 +217,24 @@
                                 <color key="textColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client API Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDV-AH-VHA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDV-AH-VHA">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nay-WZ-brC">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cCw-eK-Gzf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dJq-iY-pTz" id="F5v-Tz-sYG"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Client Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98D-V7-zZM">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.3803921569" green="0.3803921569" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -235,11 +252,16 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8nX-NW-DLi" firstAttribute="top" secondItem="xDV-AH-VHA" secondAttribute="bottom" constant="5" id="297-Yx-i2x"/>
+                            <constraint firstItem="nay-WZ-brC" firstAttribute="top" secondItem="98D-V7-zZM" secondAttribute="bottom" constant="5" id="Be3-xt-kSv"/>
                             <constraint firstItem="aBy-va-otP" firstAttribute="trailing" secondItem="xDV-AH-VHA" secondAttribute="trailing" id="F7h-g6-fcp"/>
-                            <constraint firstItem="yXn-bK-xBU" firstAttribute="top" secondItem="8nX-NW-DLi" secondAttribute="bottom" constant="41" id="Mr5-dd-Bxb"/>
+                            <constraint firstItem="98D-V7-zZM" firstAttribute="top" secondItem="8nX-NW-DLi" secondAttribute="bottom" constant="11" id="Fjk-Eh-bZV"/>
                             <constraint firstItem="xDV-AH-VHA" firstAttribute="leading" secondItem="8nX-NW-DLi" secondAttribute="leading" id="Qkv-bh-Zwe"/>
                             <constraint firstItem="RLs-EH-K2e" firstAttribute="trailing" secondItem="clQ-57-Opl" secondAttribute="trailingMargin" id="ZiY-sB-9Af"/>
+                            <constraint firstItem="yXn-bK-xBU" firstAttribute="top" secondItem="nay-WZ-brC" secondAttribute="bottom" constant="24" id="cqH-1B-ec0"/>
+                            <constraint firstItem="yXn-bK-xBU" firstAttribute="centerX" secondItem="nay-WZ-brC" secondAttribute="centerX" id="dNQ-1c-RXm"/>
                             <constraint firstItem="aBy-va-otP" firstAttribute="leading" secondItem="RLs-EH-K2e" secondAttribute="leading" id="eJz-mP-ngT"/>
+                            <constraint firstItem="nay-WZ-brC" firstAttribute="trailing" secondItem="clQ-57-Opl" secondAttribute="trailingMargin" id="fal-39-vE4"/>
+                            <constraint firstItem="98D-V7-zZM" firstAttribute="leading" secondItem="nay-WZ-brC" secondAttribute="leading" id="hya-8g-J2S"/>
                             <constraint firstItem="aBy-va-otP" firstAttribute="leading" secondItem="clQ-57-Opl" secondAttribute="leadingMargin" id="i3v-Qx-Gzr"/>
                             <constraint firstItem="xDV-AH-VHA" firstAttribute="top" secondItem="RLs-EH-K2e" secondAttribute="bottom" constant="17" id="lUb-aK-6Oi"/>
                             <constraint firstItem="8nX-NW-DLi" firstAttribute="centerX" secondItem="yXn-bK-xBU" secondAttribute="centerX" id="o6G-LY-PNv"/>
@@ -251,6 +273,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Client Management" id="LzF-SZ-3oM"/>
                     <connections>
+                        <outlet property="apiClientKeyField" destination="nay-WZ-brC" id="urh-EU-vrN"/>
                         <outlet property="apiKeyField" destination="8nX-NW-DLi" id="7Su-YJ-wKP"/>
                         <outlet property="displayNameField" destination="RLs-EH-K2e" id="fDM-hs-wco"/>
                     </connections>
