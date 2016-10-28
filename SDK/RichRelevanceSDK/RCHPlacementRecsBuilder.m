@@ -210,7 +210,13 @@
 {
     NSDictionary<NSString *, NSString *> *parameters = [RCHWebUtils keyValuesFromParameterString:addToCartParams];
     [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
-        [self setValue:obj forKey:key];
+        if ([key isEqualToString:kRCHAPIRequestParamFindQuery]) {
+            // Swap query for searchTerm to adapt the old API to the new
+            [self setValue:obj forKey:kRCHAPIRequestParamRecommendationsSearchTerm];
+        }
+        else {
+            [self setValue:obj forKey:key];
+        }
     }];
     return self;
 }
