@@ -111,13 +111,11 @@ class RCHSearchViewController: UIViewController {
             searchResultsCollectionView.reloadData()
             if products.isEmpty {
                 searchResultsCollectionView.isHidden = true
-                searchProductsView.isHidden = false
-                searchProductsLabel.text = "No Results"
-                searchProductsImageView.image = UIImage(named: "img-noresults.pdf")
             } else {
                 searchResultsCollectionView.isHidden = false
-                searchProductsView.isHidden = true
             }
+            updateSearchProductsView()
+            updateSortFilterHiddentState()
         }
     }
     var autocompleteSuggestions: [String] = [] {
@@ -128,18 +126,32 @@ class RCHSearchViewController: UIViewController {
             } else {
                 autocompleteTableView.isHidden = false
             }
+            updateSortFilterHiddentState()
         }
     }
+
     var searchTerm = "" {
         didSet {
             if searchTerm.isEmpty {
                 products.removeAll()
                 autocompleteSuggestions.removeAll()
+                pageCount = 0
             }
             else {
                 searchBar.text = searchTerm
+                searchProductsView.isHidden = true
             }
         }
+    }
+
+    func updateSortFilterHiddentState() {
+        sortFilterView.isHidden = products.isEmpty || autocompleteTableView.isHidden == false
+    }
+
+    func updateSearchProductsView() {
+        searchProductsView.isHidden = !products.isEmpty
+        searchProductsLabel.text = searchTerm.isEmpty ? "Search Products" : "No Results"
+        searchProductsImageView.image = UIImage(named: searchTerm.isEmpty ? "img-search.pdf" : "img-noresults.pdf")
     }
 }
 
@@ -221,14 +233,7 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         view.endEditing(true)
         autocompleteSuggestions.removeAll()
         sortButton.setTitle("Sort", for: .normal)
-        if products.isEmpty {
-            sortFilterView.isHidden = true
-            searchProductsLabel.text = "Search Products"
-            searchProductsImageView.image = UIImage(named: "img-search.pdf")
-            searchProductsView.isHidden = false
-        } else {
-            sortFilterView.isHidden = false
-        }
+        updateSearchProductsView()
     }
     
     // MARK: API
@@ -249,11 +254,10 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         }
 
         RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
-            
-            guard let searchResult = responseObject as? RCHSearchResult else {
-                return
-            }
-            
+            guard let searchResult = responseObject as? RCHSearchResult else { return }
+            // If the search term has been emptied, ignore this response since there will not be another request to update it.
+            guard !self.searchTerm.isEmpty else { return }
+
             self.products = searchResult.products!
             self.searchFacets = searchResult.facets!
             
@@ -300,10 +304,6 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         dismissSearch()
     }
     
-    @IBAction func sortSelected(_ sender: AnyObject) {
-        pickerView.isHidden = false
-    }
-    
     @IBAction func filterSelected(_ sender: AnyObject) {
         
         let titles = searchFacets.map({ $0.key })
@@ -337,7 +337,11 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
         }
         self.present(alertController, animated: true, completion: nil)
     }
-    
+
+    @IBAction func sortSelected(_ sender: AnyObject) {
+        pickerView.isHidden = false
+    }
+
     @IBAction func sortPickerDoneSelected(_ sender: AnyObject) {
         currentSort = SortingOptions.allValues[sortPicker.selectedRow(inComponent: 0)]
         searchForProducts()
@@ -369,14 +373,11 @@ extension RCHSearchViewController: UISearchBarDelegate, UICollectionViewDelegate
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchTerm = searchText
-        sortFilterView.isHidden = true
+        searchTerm = searchText.replacingOccurrences(of: " ", with: "")
+        timer?.invalidate()
         if !searchTerm.isEmpty {
             autocomplete(withQuery: searchText)
-            timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.searchForProducts), userInfo: nil, repeats: false)
-        } else {
-            searchProductsView.isHidden = true
         }
     }
     
