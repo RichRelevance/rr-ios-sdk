@@ -135,6 +135,13 @@
     return builder;
 }
 
+
++ (RCHPlacementRecsBuilder *)builderForTrackingProductViewWithProductID:(NSString *)productID
+{
+    RCHRequestPlacement *placement = [[RCHRequestPlacement alloc] initWithListeningPageType:RCHPlacementPageTypeItem];
+    return [self builderForTrackingProductViewWithPlacement:placement productID:productID];
+}
+
 + (RCHPlacementRecsBuilder *)builderForTrackingPurchaseWithPlacement:(RCHRequestPlacement *)placement
                                                              orderID:(NSString *)orderID
                                                              product:(RCHRequestProduct *)product
@@ -143,7 +150,22 @@
     [builder addPlacement:placement];
     [builder setOrderID:orderID];
     [builder addPurchasedProduct:product];
+    
+    return builder;
+}
 
++ (RCHPlacementRecsBuilder *)builderForTrackingPurchaseWithOrderID:(NSString *)orderID product:(RCHRequestProduct *)product
+{
+    RCHRequestPlacement *placement = [[RCHRequestPlacement alloc] initWithListeningPageType:RCHPlacementPageTypePurchaseComplete];
+    return [self builderForTrackingPurchaseWithPlacement:placement orderID:orderID product:product];
+}
+
++ (RCHPlacementRecsBuilder *)builderForTrackingCategoryViewWithCategoryID:(NSString *)categoryID
+{
+    RCHRequestPlacement *placement = [[RCHRequestPlacement alloc] initWithListeningPageType:RCHPlacementPageTypeCategory];
+    RCHPlacementRecsBuilder *builder = [[RCHPlacementRecsBuilder alloc] init];
+    [builder addPlacement:placement];
+    [builder setCategoryID:categoryID];
     return builder;
 }
 

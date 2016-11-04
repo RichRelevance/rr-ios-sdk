@@ -29,3 +29,4 @@ Demo/.idea
 #Pods/
 .bundle
 vendor
+.DS_Store
