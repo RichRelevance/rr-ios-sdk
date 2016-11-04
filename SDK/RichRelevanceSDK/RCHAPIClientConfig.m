@@ -95,7 +95,7 @@ static const NSTimeInterval kRCHAPIClientConfigDefaultResourceTimeout = 60.0f;
     NSURL *URL = nil;
     if (self.endpoint != nil) {
         NSString *protocol = self.useHTTPS ? @"https" : @"http";
-        NSString *hostname = self.isProduction ? RCHEndpointDevelop : RCHEndpointService;
+        NSString *hostname = self.isProduction ? RCHEndpointService : RCHEndpointDevelop;
         NSString *URLString = [NSString stringWithFormat:@"%@://%@", protocol, hostname];
         URL = [NSURL URLWithString:URLString];
     }

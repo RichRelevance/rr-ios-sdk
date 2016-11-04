@@ -49,7 +49,7 @@
     // Create a configuration and use it to configure the default client.
     RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:apiKey
                                                                APIClientKey:apiClientKey
-                                                                   endpoint:RCHEndpointProduction
+                                                                   endpoint:RCHEndpointIntegration
                                                                    useHTTPS:YES];
     config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";
     config.userID = userID;
