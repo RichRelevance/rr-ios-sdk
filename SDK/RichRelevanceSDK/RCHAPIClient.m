@@ -319,13 +319,7 @@
 
     URLString = [URLString stringByAppendingFormat:@"?%@", queryString];
 
-    NSURL *baseURL = ([self isV2Path:path] ? self.clientConfig.baseURLv2 : self.clientConfig.baseURL);
-    return [NSURL URLWithString:URLString relativeToURL:baseURL];
-}
-
-- (BOOL)isV2Path:(NSString *)path
-{
-    return [path hasPrefix:kRCHAPIRequestFindSearchPath] || [path hasPrefix:kRCHAPIRequestFindAutocompletePath];
+    return [NSURL URLWithString:URLString relativeToURL:self.clientConfig.baseURL];
 }
 
 - (NSURLRequest *)OAuthURLRequestFromPath:(NSString *)path parameters:(NSDictionary *)parameters

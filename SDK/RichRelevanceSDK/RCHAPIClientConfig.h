@@ -113,13 +113,6 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 - (NSURL * __nullable)baseURL;
 
 /*!
- *  The baseURL for the new services.
- *
- *  @return The base URL for the new services.
- */
-- (NSURL * __nullable)baseURLv2;
-
-/*!
  *  Validates this configuration includes values for all required fields.
  *
  *  @return YES if valid, NO if not valid

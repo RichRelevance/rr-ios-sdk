@@ -18,9 +18,6 @@
 NSString *const RCHEndpointProduction = @"recs.richrelevance.com";
 NSString *const RCHEndpointIntegration = @"integration.richrelevance.com";
 
-NSString *const RCHEndpointService = @"service.richrelevance.com";
-NSString *const RCHEndpointDevelop = @"qa.richrelevance.com";
-
 NSString *const RCHDefaultChannel = @"iOS";
 
 static const NSTimeInterval kRCHAPIClientConfigDefaultRequestTimeout = 20.0f;
@@ -84,19 +81,6 @@ static const NSTimeInterval kRCHAPIClientConfigDefaultResourceTimeout = 60.0f;
     if (self.endpoint != nil) {
         NSString *protocol = self.useHTTPS ? @"https" : @"http";
         NSString *URLString = [NSString stringWithFormat:@"%@://%@", protocol, self.endpoint];
-        URL = [NSURL URLWithString:URLString];
-    }
-
-    return URL;
-}
-
-- (NSURL *)baseURLv2
-{
-    NSURL *URL = nil;
-    if (self.endpoint != nil) {
-        NSString *protocol = self.useHTTPS ? @"https" : @"http";
-        NSString *hostname = self.isProduction ? RCHEndpointService : RCHEndpointDevelop;
-        NSString *URLString = [NSString stringWithFormat:@"%@://%@", protocol, hostname];
         URL = [NSURL URLWithString:URLString];
     }
 
