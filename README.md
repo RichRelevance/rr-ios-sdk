@@ -116,6 +116,8 @@ All API requests are constructed using an implementation of the builder pattern.
  * ```RCHUserProfileBuilder```: "UserProfile" builder
  * ```RCHPersonalizeBuilder```: Builder for personalize calls
  * ```RCHGetProductsBuilder```: Builder for getProducts calls
+ * ```RCHAutocompleteBuilder```: Builder for autocomplete calls
+ * ```RCHSearchBuilder```: Builder for search calls
 
 
 Each builder has type-safe methods for setting relevant values and a “build” method that produces a map of key/value pairs to be sent as the final request. There are also helper methods for common use cases that create pre-configured builders (see next section).
