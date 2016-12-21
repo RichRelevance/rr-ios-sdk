@@ -28,10 +28,13 @@
 @class RCHRequestProduct;
 @class RCHPersonalizeBuilder;
 @class RCHGetProductsBuilder;
+@class RCHAutocompleteBuilder;
+@class RCHSearchBuilder;
 
 /*!
  *  The central launchpoint for all Rich Relevance SDK activity. 
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHSDK : NSObject
 
 ///-------------------------------
@@ -138,7 +141,7 @@
  *
  *  @return A pre-populated builder
  */
-+ (RCHGetProductsBuilder *)builderForGetProducts:(NSArray *)productIDs;
++ (RCHGetProductsBuilder *)builderForGetProducts:(NSArray<NSString *> *)productIDs;
 
 ///-------------------------------
 /// @name Tracking Builder Helpers
@@ -182,8 +185,30 @@
  *
  *  @return A pre-populated builder
  */
-+ (RCHUserPrefBuilder *)builderForTrackingPreferences:(NSArray *)preferences
++ (RCHUserPrefBuilder *)builderForTrackingPreferences:(NSArray<NSString *> *)preferences
                                            targetType:(RCHUserPrefFieldType)targetType
                                            actionType:(RCHUserPrefActionType)actionType;
 
+
+/*!
+ *  Produce a builder to retrieve autocomplete options.
+ *
+ *  @param query The text to be autocompleted
+ *
+ *  @return A pre-populated builder
+ */
++ (RCHAutocompleteBuilder *)builderForAutocompleteWithQuery:(NSString *)query;
+
+/*!
+ *  Produce a builder to search with the specified query
+ *
+ *  @param placement The placement to search
+ *  @param query The text to be searched
+ *
+ *  @return A pre-populated builder
+ */
++ (RCHSearchBuilder *)builderForSearchPlacement:(RCHRequestPlacement *)placement withQuery:(NSString *)query;
+
+
 @end
+NS_ASSUME_NONNULL_END

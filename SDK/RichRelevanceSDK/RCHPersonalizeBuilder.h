@@ -18,6 +18,7 @@
 /*!
  A request builder for the personalize endpoint. 
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHPersonalizeBuilder : RCHPlacementsBuilder
 
 ///-------------------------------
@@ -61,7 +62,7 @@
  *
  *  @param externalCategoryIDs An NSArray of NSString instances representing category IDs
  */
-- (instancetype)setExternalCategoryIDs:(NSArray *)externalCategoryIDs;
+- (instancetype)setExternalCategoryIDs:(NSArray<NSString *> *)externalCategoryIDs;
 
 /*!
  *  Set the category name.
@@ -82,6 +83,7 @@
  *
  *  @param attributes A list of NSString instances, pass a list containing a single value of * to retrieve all attributes.
  */
-- (instancetype)setCatalogFeedCustomAttributes:(NSArray *)attributes;
+- (instancetype)setCatalogFeedCustomAttributes:(NSArray<NSString *> *)attributes;
 
 @end
+NS_ASSUME_NONNULL_END

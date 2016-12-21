@@ -43,4 +43,14 @@
     cell.textLabel.textColor = [UIColor rch_primaryTextColor];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cellSelected = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if ([cellSelected.reuseIdentifier  isEqual: @"searchCell"]) {
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SearchDemo" bundle:nil];
+        [self presentViewController:[storyboard instantiateViewControllerWithIdentifier:@"tabBarController"] animated:YES completion:nil];
+    }
+}
+
 @end

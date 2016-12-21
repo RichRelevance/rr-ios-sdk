@@ -19,6 +19,9 @@
 #import "Expecta.h"
 #import "RCHAPIClientConfig.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+
 @interface RCHAPIClientConfigTest : XCTestCase
 
 @end
@@ -85,3 +88,6 @@
 }
 
 @end
+
+#pragma clang diagnostic pop
+

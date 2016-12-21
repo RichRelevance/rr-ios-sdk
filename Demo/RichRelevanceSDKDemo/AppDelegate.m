@@ -16,6 +16,7 @@
 #import "AppDelegate.h"
 #import "RCHAppearance.h"
 #import <RichRelevanceSDK/RichRelevanceSDK.h>
+#import "RCHStringConstants.h"
 
 @interface AppDelegate ()
 
@@ -34,16 +35,26 @@
 
 - (void)configureRRSDK
 {
-    // First create a configuration and use it to configure the default client.
+    [[NSUserDefaults standardUserDefaults] registerDefaults: @{kRCHUserDefaultKeyApiKey: @"199c81c05e473265"}];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: @{kRCHUserDefaultKeyApiClientKey: @"ff7665ca55280538"}];
+    [[NSUserDefaults standardUserDefaults] registerDefaults: @{kRCHUserDefaultKeyCurrentUser: @"RZTestUser"}];
 
-    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:@"showcaseparent"
-                                                               APIClientKey:@"bccfa17d092268c0"
+    // This is just for display purposes
+    [[NSUserDefaults standardUserDefaults] registerDefaults: @{kRCHUserDefaultKeyClientName: @"Guess"}];
+
+    NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiKey];
+    NSString *apiClientKey = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyApiClientKey];
+    NSString *userID = [[NSUserDefaults standardUserDefaults] objectForKey:kRCHUserDefaultKeyCurrentUser];
+
+    // Create a configuration and use it to configure the default client.
+    RCHAPIClientConfig *config = [[RCHAPIClientConfig alloc] initWithAPIKey:apiKey
+                                                               APIClientKey:apiClientKey
                                                                    endpoint:RCHEndpointProduction
                                                                    useHTTPS:YES];
     config.APIClientSecret = @"r5j50mlag06593401nd4kt734i";
-    config.userID = @"RZTestUser";
+    config.userID = userID;
     config.sessionID = [[NSUUID UUID] UUIDString];
-    ;
+    
     [[RCHSDK defaultClient] configure:config];
 
     // Set the log level to debug so we can observe the API traffic

@@ -1,0 +1,21 @@
+ [{
+  "id":"maxi dress",
+  "terms":"maxi dress",
+  "type":"TOPTRENDS",
+  "value":"221"
+  },{
+  "id":"maxi",
+  "terms":"maxi",
+  "type":"TOPTRENDS",
+  "value":"77"
+  },{
+  "id":"maxi skirt",
+  "terms":"maxi skirt",
+  "type":"TOPTRENDS",
+  "value":"48"
+  },{
+  "id":"maxi dresses",
+  "terms":"maxi dresses",
+  "type":"TOPTRENDS",
+  "value":"46"
+  }]

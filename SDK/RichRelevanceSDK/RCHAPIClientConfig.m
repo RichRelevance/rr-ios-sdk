@@ -18,6 +18,8 @@
 NSString *const RCHEndpointProduction = @"recs.richrelevance.com";
 NSString *const RCHEndpointIntegration = @"integration.richrelevance.com";
 
+NSString *const RCHDefaultChannel = @"iOS";
+
 static const NSTimeInterval kRCHAPIClientConfigDefaultRequestTimeout = 20.0f;
 static const NSTimeInterval kRCHAPIClientConfigDefaultResourceTimeout = 60.0f;
 
@@ -45,7 +47,8 @@ static const NSTimeInterval kRCHAPIClientConfigDefaultResourceTimeout = 60.0f;
 
         _APIKey = APIKey;
         _APIClientKey = APIClientKey;
-
+        _locale = [NSLocale currentLocale];
+        _channel = RCHDefaultChannel;
         if (![self isValid]) {
             return nil;
         }
@@ -65,6 +68,11 @@ static const NSTimeInterval kRCHAPIClientConfigDefaultResourceTimeout = 60.0f;
 - (BOOL)isValid
 {
     return (self.APIKey != nil && self.APIClientKey != nil && self.endpoint != nil);
+}
+
+- (BOOL)isProduction
+{
+    return [self.endpoint isEqualToString:RCHEndpointProduction];
 }
 
 - (NSURL *)baseURL

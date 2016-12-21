@@ -18,6 +18,7 @@
 /*!
  *  A request builder for the "recsUsingStrategy" endpoint.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHStrategyRecsBuilder : RCHRequestBuilder
 
 ///-------------------------------
@@ -69,7 +70,7 @@
  *
  *  @param attributes A list of NSString instances, pass a list containing a single value of * to retrieve all attributes.
  */
-- (instancetype)setCatalogFeedCustomAttributes:(NSArray *)attributes;
+- (instancetype)setCatalogFeedCustomAttributes:(NSArray<NSString *> *)attributes;
 
 /*!
  *  Used only if the request is part of an email campaign.
@@ -104,7 +105,7 @@
  *
  *  @param productIDs A list of product IDs for products that should not be recommended as part of this request/response, represented as instances of NSString.
  */
-- (instancetype)setExcludeProductsFromRecommendations:(NSArray *)productIDs;
+- (instancetype)setExcludeProductsFromRecommendations:(NSArray<NSString *> *)productIDs;
 
 /*!
  *  Region ID. Must be consistent with the ID used in the product region feed.
@@ -114,3 +115,4 @@
 - (instancetype)setRegionID:(NSString *)regionID;
 
 @end
+NS_ASSUME_NONNULL_END

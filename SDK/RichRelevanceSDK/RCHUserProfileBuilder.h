@@ -19,6 +19,7 @@
  *  Builder for User Profile requests. Note that this builder produces requests that only
  *  work with OAuth configuration present in the API Client and HTTPS (i.e. useHTTPS set to YES (the default)
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHUserProfileBuilder : RCHRequestBuilder
 
 ///-------------------------------
@@ -40,3 +41,4 @@
 - (instancetype)addFieldType:(RCHUserProfileFieldType)fieldType;
 
 @end
+NS_ASSUME_NONNULL_END

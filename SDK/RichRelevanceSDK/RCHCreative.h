@@ -18,9 +18,9 @@
 
 @interface RCHCreative : NSObject <RCHImportable>
 
-@property (copy, nonatomic) NSDictionary *rawValues;
-@property (copy, nonatomic) NSString *campaign;
-@property (copy, nonatomic) NSString *trackingURL;
+@property (copy, nonatomic, nullable) NSDictionary *rawValues;
+@property (copy, nonatomic, nullable) NSString *campaign;
+@property (copy, nonatomic, nullable) NSString *trackingURL;
 
 /*!
  *  Track a view of this creative using the default API client.

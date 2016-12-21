@@ -18,8 +18,8 @@
 
 @interface RCHCategory : NSObject <RCHImportable>
 
-@property (copy, nonatomic) NSString *categoryID;
-@property (copy, nonatomic) NSString *name;
+@property (copy, nonatomic, nullable) NSString *categoryID;
+@property (copy, nonatomic, nullable) NSString *name;
 @property (assign, nonatomic) BOOL hasChildren;
 
 @end

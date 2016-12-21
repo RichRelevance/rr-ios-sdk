@@ -23,6 +23,7 @@ NSString *const kRCHAPICommonParamUserID = @"userId";
 NSString *const kRCHAPICommonParamSessionID = @"sessionId";
 NSString *const kRCHAPICommonParamUserIDShort = @"u";
 NSString *const kRCHAPICommonParamSessionIDShort = @"s";
+NSString *const kRCHAPICommonParamRCS = @"rcs";
 
 #pragma mark - Request Info
 
@@ -32,6 +33,7 @@ NSString *const kRCHAPIBuilderParamRequestInfoPath = @"com.richrelevance.SDK.Req
 NSString *const kRCHAPIBuilderParamRequestInfoParserClass = @"com.richrelevance.SDK.ResponseParserClass";
 NSString *const kRCHAPIBuilderParamRequestInfoRequiresOAuth = @"com.richrelevance.SDK.RequiresOAuth";
 NSString *const kRCHAPIBuilderParamRequestInfoUserAndSessionStyle = @"com.richrelevance.SDK.UserAndSessionParamStyle";
+NSString *const kRCHAPIBuilderParamRequestInfoEmbedRCS = @"com.richrelevance.SDK.EmbedRCS";
 
 #pragma mark - Response
 
@@ -48,6 +50,8 @@ NSString *const kRCHAPIRequestUserPrefPath = @"rrserver/api/user/preference";
 NSString *const kRCHAPIRequestUserProfilePath = @"userProfile/api/v1/service/userProfile";
 NSString *const kRCHAPIRequestPersonalizePath = @"rrserver/api/personalize";
 NSString *const kRCHAPIRequestGetProductsPath = @"rrserver/api/rrPlatform/getProducts";
+NSString *const kRCHAPIRequestFindAutocompletePath = @"rrserver/api/find/v1/autocomplete";
+NSString *const kRCHAPIRequestFindSearchPath = @"rrserver/api/find/v1";
 
 #pragma mark - Recommendations
 
@@ -121,3 +125,43 @@ NSString *const kRCHAPIRequestParamPersonalizeEmailCampaignID = @"cpi";
 NSString *const kRCHAPIRequestParamPersonalizeExternalCategoryIDs = @"cis";
 NSString *const kRCHAPIRequestParamPersonalizeCategoryName = @"cn";
 NSString *const kRCHAPIRequestParamPersonalizeRecProductsCount = @"recProductsCount";
+
+#pragma mark - Find (Shared between find and autocomplete)
+
+NSString *const kRCHAPIRequestParamFindQuery = @"query";
+NSString *const kRCHAPIRequestParamFindLanguage = @"lang";
+NSString *const kRCHAPIRequestParamFindStart = @"start";
+NSString *const kRCHAPIRequestParamFindCount = @"rows";
+
+#pragma mark - Autocomplete
+
+NSString *const kRCHAPIResponseKeyAutocompleteTerms = @"terms";
+NSString *const kRCHAPIResponseKeyAutocompleteType = @"type";
+NSString *const kRCHAPIResponseKeyAutocompleteValue = @"value";
+
+#pragma mark - Search
+
+NSString *const kRCHAPIRequestParamSearchPlacement = @"placement";
+NSString *const kRCHAPIRequestParamSearchFilter = @"filter";
+NSString *const kRCHAPIRequestParamSearchFacet = @"facet";
+NSString *const kRCHAPIRequestParamSearchSort = @"sort";
+NSString *const kRCHAPIRequestParamSearchChannel = @"channelId";
+NSString *const kRCHAPIRequestParamSearchLog = @"log";
+NSString *const kRCHAPIRequestParamSearchRegion = @"region";
+NSString *const kRCHAPIRequestParamSearchReference = @"pref";
+
+NSString *const kRCHAPIRequestParamSearchAscending = @"ASC";
+NSString *const kRCHAPIRequestParamSearchDescending = @"DESC";
+NSString *const kRCHAPIRequestParamSearchSSL = @"ssl";
+
+NSString *const kRCHAPIResponseKeySearchProducts = @"docs";
+NSString *const kRCHAPIResponseKeySearchPlacements = @"placements";
+NSString *const kRCHAPIResponseKeySearchTrackingURL = @"searchTrackingUrl";
+NSString *const kRCHAPIResponseKeySearchNumFound = @"numFound";
+NSString *const kRCHAPIResponseKeySearchSpellChecked = @"spellchecked";
+NSString *const kRCHAPIResponseKeySearchLinks = @"links";
+NSString *const kRCHAPIResponseKeySearchFacets = @"facets";
+NSString *const kRCHAPIResponseKeySearchFacet = @"facet";
+NSString *const kRCHAPIResponseKeySearchValues = @"values";
+NSString *const kRCHAPIResponseKeySearchMessage = @"message";
+NSString *const kRCHAPIResponseKeySearchAddToCartParams = @"addtoCartParams";

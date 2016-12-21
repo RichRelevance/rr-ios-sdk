@@ -15,6 +15,7 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  *  The default Rich Relevance production endpoint.
  */
@@ -60,9 +61,20 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 @property (copy, nonatomic) NSString *sessionID;
 
 /*!
+ *  The Locale the client is in. This defaults to being configured with [NSLocale currentLocale].
+ *  This will use the `languageCode` property of the locale to submit along to supported endpoints.
+ */
+@property (copy, nonatomic) NSLocale *locale;
+
+/*!
  *  The Rich Relevance API endpoint. Default value is RCHEndpointProduction
  */
 @property (copy, readonly, nonatomic) NSString *endpoint;
+
+/*!
+ *  A channel is a description of the caller of this API. This defaults to 'iOS'.
+ */
+@property (copy, readonly, nonatomic) NSString *channel;
 
 /*!
  *  Whether or not to use HTTPS for all requests. Default value is YES.
@@ -94,11 +106,11 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 ///-------------------------------
 
 /*!
- *  Creates a full HTTP base URL for the configured endpoint.
+ *  Creates a full HTTP base URL for the default configured endpoint.
  *
  *  @return An HTTP base URL
  */
-- (NSURL *)baseURL;
+- (NSURL * __nullable)baseURL;
 
 /*!
  *  Validates this configuration includes values for all required fields.
@@ -123,3 +135,5 @@ OBJC_EXTERN NSString *const RCHEndpointIntegration;
 - (NSString *)protocolString;
 
 @end
+
+NS_ASSUME_NONNULL_END
