@@ -93,6 +93,37 @@ Basic SDK Usage (Objective-C):
     }];
 ```
 
+Search (Swift):
+
+```swift
+    func searchForProducts(searchTerm: String, searchFilter: RCHSearchFacet, currentPage: Int) {
+        let placement: RCHRequestPlacement = RCHRequestPlacement(pageType: .search, name: "find")
+        let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
+
+        searchBuilder.setPageStart(currentPage * 20)
+
+        searchBuilder.addFilter(from: searchFilter)
+        searchBuilder.addSortOrder("product_release_date", ascending: true) // Results will be sorted by product release date.
+
+        RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
+            guard let searchResult = responseObject as? RCHSearchResult else {
+                /*
+                 Handle error
+                 */
+                return
+            }
+            /*
+             Handle results
+             */
+        }) { (responseObject, error) in
+            /*
+             Handle error
+             */
+        }
+    }
+
+```
+
 Autocomplete (Swift):
 
 ```swift
