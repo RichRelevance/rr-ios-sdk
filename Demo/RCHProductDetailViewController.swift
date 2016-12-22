@@ -51,6 +51,8 @@ class RCHProductDetailViewController: UIViewController {
     @IBAction func addToCartSelected(_ sender: AnyObject) {
         let placement = RCHRequestPlacement(pageType: .addToCart, name: "prod1")
         let builder = RCHSDK.builderForRecs(with: placement)
+        builder.addParametersFromLastSearchResult()
+
         RCHSDK.defaultClient().sendRequest(builder.build(), success: { (result) in
             self.cartBarButton.image = UIImage(named:"icn-cart-item.pdf")
             self.addToCartButton.setTitle("Added to Cart", for: .normal)
