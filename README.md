@@ -53,9 +53,9 @@ The SDK is configured to produce both static and dynamic frameworks for iOS. The
  * Executes ```appledoc``` against public headers in order to create API documentation.
  * Packages all artifacts into a .zip and places that .zip in the ```build``` directory at the root of the project. 
 
-# Usage Example
+# Usage Examples
 
-The following is a brief example that demonstrates basic SDK usage:
+Basic SDK Usage (Objective-C):
 
 ```objc
     // First create a configuration and use it to configure the default client.
@@ -89,8 +89,83 @@ The following is a brief example that demonstrates basic SDK usage:
 
         [product trackProductView];
     } failure:^(id responseObject, NSError *error){
-        NSLog(@"Erorr encountered: %@", error);
+        NSLog(@"Error encountered: %@", error);
     }];
+```
+
+Search (Swift):
+
+```swift
+    func searchForProducts(searchTerm: String, searchFilter: RCHSearchFacet, currentPage: Int) {
+        let placement: RCHRequestPlacement = RCHRequestPlacement(pageType: .search, name: "find")
+        let searchBuilder: RCHSearchBuilder = RCHSDK.builder(forSearch: placement, withQuery: searchTerm)
+
+        searchBuilder.setPageStart(currentPage * 20)
+
+        searchBuilder.addFilter(from: searchFilter)
+        searchBuilder.addSortOrder("product_release_date", ascending: true) // Results will be sorted by product release date.
+
+        RCHSDK.defaultClient().sendRequest(searchBuilder.build(), success: { (responseObject) in
+            guard let searchResult = responseObject as? RCHSearchResult else {
+                /*
+                 Handle error
+                 */
+                return
+            }
+            /*
+             Handle results
+             */
+        }) { (responseObject, error) in
+            /*
+             Handle error
+             */
+        }
+    }
+
+```
+
+Autocomplete (Swift):
+
+```swift
+    func autocomplete(withQuery text: String) {
+        let autocompleteBuilder: RCHAutocompleteBuilder = RCHSDK.builderForAutocomplete(withQuery: text)
+
+        RCHSDK.defaultClient().sendRequest(autocompleteBuilder.build(), success: { (responseObject) in
+            guard let responseAutocompleteSuggestions = responseObject as? [RCHAutocompleteSuggestion] else {
+                /*
+                 Handle error
+                 */
+                return
+            }
+            /*
+             Handle suggestions
+             */
+        }) { (responseObject, error) in
+            /*
+             Handle error
+             */
+        }
+    }
+```
+
+Add to Cart (Swift):
+
+```swift
+    @IBAction func addToCartSelected(_ sender: AnyObject) {
+        let placement = RCHRequestPlacement(pageType: .addToCart, name: "prod1")
+        let builder = RCHSDK.builderForRecs(with: placement)
+        builder.addParametersFromLastSearchResult()
+
+        RCHSDK.defaultClient().sendRequest(builder.build(), success: { (result) in
+            /*
+             Handle success
+             */
+        }) { (responseObject, error) in
+            /*
+             Handle error
+             */
+        }
+    }
 ```
 
 # Architecture
@@ -116,6 +191,8 @@ All API requests are constructed using an implementation of the builder pattern.
  * ```RCHUserProfileBuilder```: "UserProfile" builder
  * ```RCHPersonalizeBuilder```: Builder for personalize calls
  * ```RCHGetProductsBuilder```: Builder for getProducts calls
+ * ```RCHAutocompleteBuilder```: Builder for autocomplete calls
+ * ```RCHSearchBuilder```: Builder for search calls
 
 
 Each builder has type-safe methods for setting relevant values and a “build” method that produces a map of key/value pairs to be sent as the final request. There are also helper methods for common use cases that create pre-configured builders (see next section).

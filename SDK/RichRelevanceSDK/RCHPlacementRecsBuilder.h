@@ -14,10 +14,12 @@
 //  limitations under the License.
 
 #import "RCHPlacementsBuilder.h"
+@class RCHSearchResult;
 
 /*!
  *  A request builder for the "recsForPlacements" endpoint.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHPlacementRecsBuilder : RCHPlacementsBuilder
 
 ///-------------------------------
@@ -47,14 +49,14 @@
  *
  *  @param brands A list of NSString instances that represent brand names.
  */
-- (instancetype)setFilterByIncludedBrands:(NSArray *)brands;
+- (instancetype)setFilterByIncludedBrands:(NSArray<NSString *> *)brands;
 
 /*!
  *  Filter by excluding results matching the supplied brand names.
  *
  *  @param brands A list of NSString instances that represent brand names.
  */
-- (instancetype)setFilterByExcludedBrands:(NSArray *)brands;
+- (instancetype)setFilterByExcludedBrands:(NSArray<NSString *> *)brands;
 
 /*!
  *  Filter by including items within the specified price range . The filter will match the sale price or the list price of a product
@@ -100,21 +102,21 @@
  *
  *  @param productIDs A list of product IDs for products that should not be recommended as part of this request/response, represented as instances of NSString.
  */
-- (instancetype)setExcludeProductsFromRecommendations:(NSArray *)productIDs;
+- (instancetype)setExcludeProductsFromRecommendations:(NSArray<NSString *> *)productIDs;
 
 /*!
  *  Refinement. Triggers a refinement filter rule configured in the {rr} dashboard. Rules eliminate a set of products from recommendations based on product attributes. For more information see: Supplement: Adding Refinements (RRO-2SIGSAR)
  *
  *  @param refinements An NSDictionary of key/value pairs that represent the refinements. Values can be of type NSString or NSNumber for single values, or, NSArray for multi-value attributes.
  */
-- (instancetype)setRefinements:(NSDictionary *)refinements;
+- (instancetype)setRefinements:(NSDictionary<NSString *, NSObject *> *)refinements;
 
 /*!
  *  A single, or list of, product IDs. Part of an order definition on the purchase complete page.
  *
  *  @param productIDs An NSArray of NSString instances representing product IDs.
  */
-- (instancetype)setProductIDs:(NSArray *)productIDs;
+- (instancetype)setProductIDs:(NSArray<NSString *> *)productIDs;
 
 /*!
  *  A product added to the cart. Compatible with Add To Cart placements.
@@ -170,7 +172,7 @@
  *
  *  @param productIDs A list of Product IDs as instances of NSString
  */
-- (instancetype)setAlreadyAddedRegistryProductIDs:(NSArray *)productIDs;
+- (instancetype)setAlreadyAddedRegistryProductIDs:(NSArray<NSString *> *)productIDs;
 
 /*!
  *  A prioritized list of strategy sets that you would want to be returned based on the campaign use case. If this is not provided, our recommendation engine will run King of the Hill (KOTH) to provide best recommendations given the information provided.
@@ -199,13 +201,26 @@
  *
  *  @param ranges An NSArray of RCHRange values representing price ranges.
  */
-- (instancetype)setPriceRanges:(NSArray *)ranges;
+- (instancetype)setPriceRanges:(NSArray<RCHRange *> *)ranges;
 
 /*!
  *  Search & Browse only. Filter types and values selected by the shopper. Needs configuration by the RichRelevance team before turned on.
  *
  *  @param filterAttributes An NSDictionary of key/value pairs that represent filter attributes. Values can be of type NSString or NSNumber for single values, or, NSArray for multi-value attributes.
  */
-- (instancetype)setFilterAttributes:(NSDictionary *)filterAttributes;
+- (instancetype)setFilterAttributes:(NSDictionary<NSString *, NSObject *> *)filterAttributes;
+
+/*!
+ *  Add to cart only. Specify parameters to add from a previous search result. This string should originate from RCHSearchResult.addToCartParameters
+ *
+ *  @param addToCartParams The addToCartParameters property of a RCHSearchResult.
+ */
+- (instancetype)addParametersFromSearchResult:(NSString *)addToCartParams;
+
+/*!
+ *  Add to cart only. Specify parameters to add from the last returned search result.
+ */
+- (instancetype)addParametersFromLastSearchResult;
 
 @end
+NS_ASSUME_NONNULL_END

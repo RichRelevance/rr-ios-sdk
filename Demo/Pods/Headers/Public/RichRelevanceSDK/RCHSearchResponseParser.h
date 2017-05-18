@@ -1,0 +1,1 @@
+../../../../../SDK/RichRelevanceSDK/RCHSearchResponseParser.h

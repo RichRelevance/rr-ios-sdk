@@ -129,4 +129,18 @@ NSArray *RCHQueryStringPairsFromKeyAndValue(NSString *key, id value)
     return RCHQueryStringFromParametersWithEncoding(parameters, encoding);
 }
 
++ (NSDictionary<NSString *, NSString *> *)keyValuesFromParameterString:(NSString *)string
+{
+    NSMutableDictionary *results = [NSMutableDictionary dictionary];
+    for (NSString *parameter in [string componentsSeparatedByString:@"&"]) {
+        NSArray<NSString *> *pair = [parameter componentsSeparatedByString:@"="];
+        if (pair.count == 2) {
+            NSString *key = pair[0];
+            NSString *value = pair[1];
+            results[key] = value;
+        }
+    }
+    return results;
+}
+
 @end

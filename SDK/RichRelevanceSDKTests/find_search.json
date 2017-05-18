@@ -1,0 +1,281 @@
+{
+    "request":{
+        "apiKey":"showcaseparent",
+        "placements":[
+                      "search_page.sort"
+                      ],
+        "sessionId":"s1234",
+        "userId":"u1234"
+    },
+    "placements":[
+                  {
+                  "searchTrackingUrl":"http://localhost:8101/rrserver/api/v1/service/track/search/showcaseparent?query=t&lang=en&user=u1234&session=s1234&channel=WEB&region=&numFound=1956&placement=search_page.sort&page=0&rcs=eF4FwbENgDAMBMCGill4yUls570BcyRgiYIOmJ-7Zb2_5zo2F6KosfReW3gEWCHLO3eK2NAUpOYJ1WmYVEeatWAdPpg_V-4RTg",
+                  "rcs":"eF4FwbENgDAMBMCGill4yUls570BcyRgiYIOmJ-7Zb2_5zo2F6KosfReW3gEWCHLO3eK2NAUpOYJ1WmYVEeatWAdPpg_V-4RTg",
+                  "links": {
+                  "directlink": [
+                                 {
+                                 "id": "direct-link-id",
+                                 "title": "direct-link-title",
+                                 "subtitle": "direct-link-subtitle",
+                                 "url": "direct-link-url"
+                                 }
+                                 ],
+                  "banner": [
+                             {
+                             "id": "banner-id",
+                             "title": "banner-title",
+                             "subtitle": "banner-subtitle",
+                             "url": "banner-url",
+                             "image_url": "image-ur"
+                             }
+                             ],
+                  "sponsored": [
+                                {
+                                "id": "sponsored-id",
+                                "title": "sponsored-title",
+                                "subtitle": "sponsored-subtitle",
+                                "url": "sponsored-url",
+                                "image_url": "sponsored-image-url"
+                                }
+                                ]
+                  },
+                  "docs":[
+                          {
+                          "clickUrl":"http://localhost:8101/rrserver/api/v1/service/track/click/showcaseparent?a=showcaseparent&vg=80015896-f4fe-44c5-41ab-6654e0877e89&pti=2&pa=sort&hpi=0&stn=PersonalizedProductSearchAndBrowse&stid=184&rti=2&sgs=&u=u1234&mvtId=0&mvtTs=1458177239699&uguid=8005b4f0-f4fe-44c5-c846-f553982b6b8f&channelId=WEB&s=s1234&pg=-1&page=0&query=t&lang=en&p=10308694&ind=0&ct=http://labs.richrelevance.com/storre/catalog/product/view/sku/10308694",
+                          "imageId":"http://labs.richrelevance.com/storre/media/catalog/product/t/-/t-gel-original-shampoo-8.5oz-1e2df9930cf89d1614debdbaa3feaf38.jpg",
+                          "linkId":"",
+                          "salePriceCents":797,
+                          "name":"T-Gel Original Shampoo, 8.5oz",
+                          "priceCents":798,
+                          "id":"10308694"
+                          },
+                          {
+                          "clickUrl":"http://localhost:8101/rrserver/api/v1/service/track/click/showcaseparent?a=showcaseparent&vg=80015896-f4fe-44c5-41ab-6654e0877e89&pti=2&pa=sort&hpi=0&stn=PersonalizedProductSearchAndBrowse&stid=184&rti=2&sgs=&u=u1234&mvtId=0&mvtTs=1458177239699&uguid=8005b4f0-f4fe-44c5-c846-f553982b6b8f&channelId=WEB&s=s1234&pg=-1&page=0&query=t&lang=en&p=10339306&ind=1&ct=http://labs.richrelevance.com/storre/catalog/product/view/sku/10339306",
+                          "imageId":"http://labs.richrelevance.com/storre/media/catalog/product/a/t/atampampt-2000-minutes-rechargeable-us-ampamp-international-prepaid-phone-card-c9152dba32526ce359e426e5bcad0903.jpg",
+                          "linkId":"",
+                          "salePriceCents":4488,
+                          "name":"AT&amp;T 2000-Minutes Rechargeable US &amp; International PrePaid Phone Card",
+                          "priceCents":6320,
+                          "id":"10339306"
+                          }
+                          ],
+                  "numFound":1956,
+                  "placement":"search_page.sort",
+                  "spellchecked":null,
+                  "facets":[
+                            {
+                            "values":[
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"871098905\"",
+                                      "count":842,
+                                      "value":"Apparel"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"1985805468\"",
+                                      "count":519,
+                                      "value":"Beauty"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"-1663097513\"",
+                                      "count":378,
+                                      "value":"Electronics"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"-1117549830\"",
+                                      "count":248,
+                                      "value":"Health & Beauty"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"1957535981\"",
+                                      "count":222,
+                                      "value":"Grocery"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"80900042\"",
+                                      "count":47,
+                                      "value":"UNNAV"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"954576494\"",
+                                      "count":40,
+                                      "value":"Seasonal"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"1004586665\"",
+                                      "count":39,
+                                      "value":"(1179,41,10292291,\"Health & Beauty.Health.FSA\",FSA,128877090512"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"-2137395588\"",
+                                      "count":29,
+                                      "value":"Health"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"953037029\"",
+                                      "count":28,
+                                      "value":"For the Home"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"1499434482\"",
+                                      "count":24,
+                                      "value":"Sports & Outdoors"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"2255103\"",
+                                      "count":22,
+                                      "value":"Home"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"89499253\"",
+                                      "count":18,
+                                      "value":"(24167,41,11086711,1045804,,1263547128137)"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"-310742527\"",
+                                      "count":17,
+                                      "value":"(25340,41,14878578,\"Toys.ARCHIVE SHELF/CAT.NEW TOYS ITEMS.LOADI"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"2062582\"",
+                                      "count":16,
+                                      "value":"Baby"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"2612981\"",
+                                      "count":14,
+                                      "value":"Toys"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"621596323\"",
+                                      "count":13,
+                                      "value":"(9206,41,10813377,\"Seasonal.College 2011.College Home.College S"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"-1355059059\"",
+                                      "count":13,
+                                      "value":"Sports & Fitness"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"557429256\"",
+                                      "count":12,
+                                      "value":"College Home"
+                                      },
+                                      {
+                                      "filter":"{!tag=categories_facet}categoryIds:\"68799779\"",
+                                      "count":11,
+                                      "value":"Gifts"
+                                      }
+                                      ],
+                            "facet":"categories_facet"
+                            },
+                            {
+                            "values":[
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Generic\"",
+                                      "count":126,
+                                      "value":"Generic"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Hanes\"",
+                                      "count":77,
+                                      "value":"Hanes"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"\"",
+                                      "count":72,
+                                      "value":""
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Fruit of the Loom\"",
+                                      "count":53,
+                                      "value":"Fruit of the Loom"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Miss Tina\"",
+                                      "count":43,
+                                      "value":"Miss Tina"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Dickies\"",
+                                      "count":38,
+                                      "value":"Dickies"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Toshiba\"",
+                                      "count":30,
+                                      "value":"Toshiba"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Faded Glory\"",
+                                      "count":29,
+                                      "value":"Faded Glory"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"LICENSE\"",
+                                      "count":29,
+                                      "value":"LICENSE"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"WWE\"",
+                                      "count":28,
+                                      "value":"WWE"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Neutrogena\"",
+                                      "count":26,
+                                      "value":"Neutrogena"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"As Seen On Tv\"",
+                                      "count":24,
+                                      "value":"As Seen On Tv"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Olay\"",
+                                      "count":24,
+                                      "value":"Olay"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Comfy Feet\"",
+                                      "count":23,
+                                      "value":"Comfy Feet"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Crystal Light\"",
+                                      "count":22,
+                                      "value":"Crystal Light"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"George\"",
+                                      "count":22,
+                                      "value":"George"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"HP\"",
+                                      "count":22,
+                                      "value":"HP"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Panasonic\"",
+                                      "count":20,
+                                      "value":"Panasonic"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"Danskin Now\"",
+                                      "count":19,
+                                      "value":"Danskin Now"
+                                      },
+                                      {
+                                      "filter":"{!tag=brand_facet}brand_facet:\"L'Oreal\"",
+                                      "count":18,
+                                      "value":"L'Oreal"
+                                      }
+                                      ],
+                            "facet":"brand_facet"
+                            }
+                            ]
+                  }
+                  ],
+    "message":"",
+    "status":"OK"
+}

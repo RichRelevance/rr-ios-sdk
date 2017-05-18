@@ -101,13 +101,23 @@ NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter = @":";
     return array;
 }
 
-- (instancetype)addValue:(id)value toArrayForhKey:(NSString *)key
+- (instancetype)addValue:(id)value toArrayForKey:(NSString *)key
 {
     if (value != nil) {
         NSArray *existing = [self arrayRepresentationOfArrayValueForKey:key];
         NSMutableArray *array = existing != nil ? [existing mutableCopy] : [NSMutableArray array];
         [array addObject:value];
         [self setArrayValue:array forKey:key];
+    }
+
+    return self;
+}
+
+- (instancetype)addValue:(id)value toMultipleArgumentArrayForKey:(NSString *)key
+{
+    if (value != nil) {
+        NSArray *array = [self valueForKey:key] ?: [NSArray array];
+        return [self setValue:[array arrayByAddingObject:value] forKey:key];
     }
 
     return self;
@@ -170,6 +180,12 @@ NSString *const kRCHRequestBuilderDefaultDictKeyValueDelimiter = @":";
 - (instancetype)setUserAndSessionParamStyle:(RCHAPIClientUserAndSessionParamStyle)style
 {
     self.requestInfo[kRCHAPIBuilderParamRequestInfoUserAndSessionStyle] = @(style);
+    return self;
+}
+
+- (instancetype)setEmbedRCSToken:(BOOL)embed
+{
+    self.requestInfo[kRCHAPIBuilderParamRequestInfoEmbedRCS] = @(embed);
     return self;
 }
 

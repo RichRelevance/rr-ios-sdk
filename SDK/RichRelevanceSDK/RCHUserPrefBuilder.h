@@ -18,6 +18,7 @@
 /*!
  *  A request builder for the user/preference API endpoint.
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface RCHUserPrefBuilder : RCHRequestBuilder
 
 ///-------------------------------
@@ -47,7 +48,7 @@
  *
  *  @param prefs An NSArray of NSString instances representing preferences
  */
-- (instancetype)setPreferences:(NSArray *)prefs;
+- (instancetype)setPreferences:(NSArray<NSString *> *)prefs;
 
 /*!
  *  The type of value being passed as a preference.
@@ -75,3 +76,4 @@
 - (instancetype)addFetchPreference:(RCHUserPrefFieldType)preference;
 
 @end
+NS_ASSUME_NONNULL_END

@@ -32,7 +32,6 @@
 		0172E5941B3B132100D09C7A /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5811B3B132100D09C7A /* SVProgressHUD.m */; };
 		0172E5B01B3B139A00D09C7A /* NSFetchRequest+RZCreationHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5981B3B139A00D09C7A /* NSFetchRequest+RZCreationHelpers.m */; };
 		0172E5B11B3B139A00D09C7A /* RZArrayCollectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E59A1B3B139A00D09C7A /* RZArrayCollectionList.m */; };
-		0172E5B21B3B139A00D09C7A /* RZBaseCollectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E59C1B3B139A00D09C7A /* RZBaseCollectionList.m */; };
 		0172E5B31B3B139A00D09C7A /* RZCollectionListCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E59F1B3B139A00D09C7A /* RZCollectionListCollectionViewDataSource.m */; };
 		0172E5B41B3B139A00D09C7A /* RZCollectionListNotificationWrappers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5A11B3B139A00D09C7A /* RZCollectionListNotificationWrappers.m */; };
 		0172E5B51B3B139A00D09C7A /* RZCollectionListTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5A41B3B139A00D09C7A /* RZCollectionListTableViewDataSource.m */; };
@@ -41,7 +40,6 @@
 		0172E5B81B3B139A00D09C7A /* RZFilteredCollectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5AA1B3B139A00D09C7A /* RZFilteredCollectionList.m */; };
 		0172E5B91B3B139A00D09C7A /* RZObserverCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5AC1B3B139A00D09C7A /* RZObserverCollection.m */; };
 		0172E5BA1B3B139A00D09C7A /* RZSortedCollectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E5AE1B3B139A00D09C7A /* RZSortedCollectionList.m */; };
-		35F1361552D631843E139395 /* libPods-RichRelevanceSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27073DEB03B2F39150C7CB2A /* libPods-RichRelevanceSDKDemo.a */; };
 		723895C51B38553D00ACFE58 /* RCHProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 723895C31B38553D00ACFE58 /* RCHProductCell.m */; };
 		723895C61B38553D00ACFE58 /* RCHProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 723895C41B38553D00ACFE58 /* RCHProductCell.xib */; };
 		723895C91B3860C300ACFE58 /* UIViewController+RCHExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 723895C81B3860C300ACFE58 /* UIViewController+RCHExtensions.m */; };
@@ -63,6 +61,17 @@
 		72E821C21AFBACC900E71DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E821C01AFBACC900E71DA4 /* Main.storyboard */; };
 		72E821C41AFBACC900E71DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E821C31AFBACC900E71DA4 /* Images.xcassets */; };
 		72E821C71AFBACC900E71DA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E821C51AFBACC900E71DA4 /* LaunchScreen.xib */; };
+		8EEA60E0555A0278EF0A17C5 /* libPods-RichRelevanceSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */; };
+		B82E620B1D9C5D12007EB3FF /* RCHCatalogCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E61F71D95FB16007EB3FF /* RCHCatalogCollectionViewController.swift */; };
+		B82E620D1D9C6971007EB3FF /* RCHProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E61F91D95FC85007EB3FF /* RCHProductCollectionViewCell.swift */; };
+		B82E62101D9C7D4D007EB3FF /* RCHProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */; };
+		B82E62111D9C7D78007EB3FF /* SearchDemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */; };
+		B82E62151D9C9664007EB3FF /* RCHUserManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */; };
+		B82E62271DA2E7AC007EB3FF /* RCHSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */; };
+		B82E622A1DA47449007EB3FF /* RCHProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62291DA47449007EB3FF /* RCHProductDetailViewController.swift */; };
+		B82E62321DA7274B007EB3FF /* RZBaseCollectionList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0172E59C1B3B139A00D09C7A /* RZBaseCollectionList.m */; };
+		B82E62341DA72832007EB3FF /* RCHAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62331DA72832007EB3FF /* RCHAccountViewController.swift */; };
+		B82E62391DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E62381DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -150,9 +159,6 @@
 		0172E5AD1B3B139A00D09C7A /* RZSortedCollectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZSortedCollectionList.h; sourceTree = "<group>"; };
 		0172E5AE1B3B139A00D09C7A /* RZSortedCollectionList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RZSortedCollectionList.m; sourceTree = "<group>"; };
 		0172E5AF1B3B139A00D09C7A /* RZCollectionList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RZCollectionList.h; sourceTree = "<group>"; };
-		06A373778916B83D5FE46B1C /* Pods-RichRelevanceSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
-		27073DEB03B2F39150C7CB2A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		546E8CBDFD00423B6FF2B45D /* Pods-RichRelevanceSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		723895C21B38553D00ACFE58 /* RCHProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHProductCell.h; sourceTree = "<group>"; };
 		723895C31B38553D00ACFE58 /* RCHProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHProductCell.m; sourceTree = "<group>"; };
 		723895C41B38553D00ACFE58 /* RCHProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCHProductCell.xib; sourceTree = "<group>"; };
@@ -190,6 +196,21 @@
 		72E821C11AFBACC900E71DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72E821C31AFBACC900E71DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		72E821C61AFBACC900E71DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		84D3417C4402EBA33BAF6EA1 /* Pods-RichRelevanceSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AF8909EC5A985504D4AE0B72 /* Pods-RichRelevanceSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichRelevanceSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SearchDemo.storyboard; path = RichRelevanceSDKDemo/SearchDemo.storyboard; sourceTree = "<group>"; };
+		B82E61F71D95FB16007EB3FF /* RCHCatalogCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCHCatalogCollectionViewController.swift; path = RichRelevanceSDKDemo/RCHCatalogCollectionViewController.swift; sourceTree = "<group>"; };
+		B82E61F91D95FC85007EB3FF /* RCHProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCHProductCollectionViewCell.swift; path = RichRelevanceSDKDemo/RCHProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RCHProductCollectionViewCell.xib; path = RichRelevanceSDKDemo/RCHProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		B82E620F1D9C7ACB007EB3FF /* RichRelevanceSDKDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RichRelevanceSDKDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		B82E62131D9C9664007EB3FF /* RCHUserManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCHUserManagementViewController.h; sourceTree = "<group>"; };
+		B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCHUserManagementViewController.m; sourceTree = "<group>"; };
+		B82E62241D9EF57D007EB3FF /* RCHStringConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCHStringConstants.h; sourceTree = "<group>"; };
+		B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHSearchViewController.swift; sourceTree = "<group>"; };
+		B82E62291DA47449007EB3FF /* RCHProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHProductDetailViewController.swift; sourceTree = "<group>"; };
+		B82E62331DA72832007EB3FF /* RCHAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHAccountViewController.swift; sourceTree = "<group>"; };
+		B82E62381DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCHSearchResultsCollectionReusableView.swift; sourceTree = "<group>"; };
+		EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RichRelevanceSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F1361552D631843E139395 /* libPods-RichRelevanceSDKDemo.a in Frameworks */,
+				8EEA60E0555A0278EF0A17C5 /* libPods-RichRelevanceSDKDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +241,7 @@
 				72E821BB1AFBACC900E71DA4 /* AppDelegate.m */,
 				015C4F321B739B6400AC95CB /* RCHAppearance.h */,
 				015C4F331B739B6400AC95CB /* RCHAppearance.m */,
+				B82E62241D9EF57D007EB3FF /* RCHStringConstants.h */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -339,23 +361,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		360BC5F049356DBAAF468CCE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				546E8CBDFD00423B6FF2B45D /* Pods-RichRelevanceSDKDemo.debug.xcconfig */,
-				06A373778916B83D5FE46B1C /* Pods-RichRelevanceSDKDemo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3E2C6E8E80C6B770495E4251 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				27073DEB03B2F39150C7CB2A /* libPods-RichRelevanceSDKDemo.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		723895C11B38551D00ACFE58 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +458,7 @@
 		72E5460E1B384A73004A9A01 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B82E62121D9C9646007EB3FF /* User Management */,
 				72E821BD1AFBACC900E71DA4 /* RCHRootViewController.h */,
 				72E821BE1AFBACC900E71DA4 /* RCHRootViewController.m */,
 				723895C11B38551D00ACFE58 /* Common */,
@@ -467,10 +473,11 @@
 		72E821AA1AFBACC800E71DA4 = {
 			isa = PBXGroup;
 			children = (
+				B82E61EF1D95FA44007EB3FF /* RichRelevanceSearchDemo */,
 				72E821B51AFBACC900E71DA4 /* RichRelevanceSDKDemo */,
 				72E821B41AFBACC900E71DA4 /* Products */,
-				3E2C6E8E80C6B770495E4251 /* Frameworks */,
-				360BC5F049356DBAAF468CCE /* Pods */,
+				AD68D720CB855E1B5FA4C105 /* Pods */,
+				F473393DB891475060A8AEB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -505,6 +512,96 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AD68D720CB855E1B5FA4C105 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84D3417C4402EBA33BAF6EA1 /* Pods-RichRelevanceSDKDemo.debug.xcconfig */,
+				AF8909EC5A985504D4AE0B72 /* Pods-RichRelevanceSDKDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B82E61EF1D95FA44007EB3FF /* RichRelevanceSearchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B82E620F1D9C7ACB007EB3FF /* RichRelevanceSDKDemo-Bridging-Header.h */,
+				B82E61F11D95FA86007EB3FF /* SearchDemo.storyboard */,
+				B82E61F01D95FA5C007EB3FF /* View Controllers */,
+			);
+			name = RichRelevanceSearchDemo;
+			sourceTree = "<group>";
+		};
+		B82E61F01D95FA5C007EB3FF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B82E622D1DA705DD007EB3FF /* Account */,
+				B82E62281DA4742F007EB3FF /* Product Detail */,
+				B82E62251DA2E790007EB3FF /* Search */,
+				B82E61F41D95FAE6007EB3FF /* Catalog */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B82E61F41D95FAE6007EB3FF /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				B82E61F71D95FB16007EB3FF /* RCHCatalogCollectionViewController.swift */,
+				B82E61F51D95FAF2007EB3FF /* Product Cell */,
+			);
+			name = Catalog;
+			sourceTree = "<group>";
+		};
+		B82E61F51D95FAF2007EB3FF /* Product Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B82E61F91D95FC85007EB3FF /* RCHProductCollectionViewCell.swift */,
+				B82E61FA1D95FC85007EB3FF /* RCHProductCollectionViewCell.xib */,
+			);
+			name = "Product Cell";
+			sourceTree = "<group>";
+		};
+		B82E62121D9C9646007EB3FF /* User Management */ = {
+			isa = PBXGroup;
+			children = (
+				B82E62131D9C9664007EB3FF /* RCHUserManagementViewController.h */,
+				B82E62141D9C9664007EB3FF /* RCHUserManagementViewController.m */,
+			);
+			name = "User Management";
+			sourceTree = "<group>";
+		};
+		B82E62251DA2E790007EB3FF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B82E62261DA2E7AC007EB3FF /* RCHSearchViewController.swift */,
+				B82E62381DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		B82E62281DA4742F007EB3FF /* Product Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B82E62291DA47449007EB3FF /* RCHProductDetailViewController.swift */,
+			);
+			name = "Product Detail";
+			sourceTree = "<group>";
+		};
+		B82E622D1DA705DD007EB3FF /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				B82E62331DA72832007EB3FF /* RCHAccountViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		F473393DB891475060A8AEB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE5DB0449CC145E7D7F05E6A /* libPods-RichRelevanceSDKDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,13 +609,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72E821D61AFBACC900E71DA4 /* Build configuration list for PBXNativeTarget "RichRelevanceSDKDemo" */;
 			buildPhases = (
-				B9D8BC782A13FA22AF48486D /* [CP] Check Pods Manifest.lock */,
+				15AEA245E1D0B28AAFCD8938 /* [CP] Check Pods Manifest.lock */,
 				72E821AF1AFBACC900E71DA4 /* Sources */,
 				72E821B01AFBACC900E71DA4 /* Frameworks */,
 				72E821B11AFBACC900E71DA4 /* Resources */,
 				0172E5C11B3B15B100D09C7A /* Embed Frameworks */,
-				08F1B4A4F04F191286B9DDE3 /* [CP] Embed Pods Frameworks */,
-				22A32EA5BF97D404BB591C9C /* [CP] Copy Pods Resources */,
+				3F44A73E31C6AFED4F84409B /* [CP] Embed Pods Frameworks */,
+				0A7F8324FE2E78125F4F7862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -540,6 +637,7 @@
 				TargetAttributes = {
 					72E821B21AFBACC900E71DA4 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -566,6 +664,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82E62111D9C7D78007EB3FF /* SearchDemo.storyboard in Resources */,
+				B82E62101D9C7D4D007EB3FF /* RCHProductCollectionViewCell.xib in Resources */,
 				72E821C21AFBACC900E71DA4 /* Main.storyboard in Resources */,
 				0172E5931B3B132100D09C7A /* SVProgressHUD.bundle in Resources */,
 				7295003F1B72906300C1F946 /* RCHProductCard.xib in Resources */,
@@ -580,22 +680,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08F1B4A4F04F191286B9DDE3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		22A32EA5BF97D404BB591C9C /* [CP] Copy Pods Resources */ = {
+		0A7F8324FE2E78125F4F7862 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -610,7 +695,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9D8BC782A13FA22AF48486D /* [CP] Check Pods Manifest.lock */ = {
+		15AEA245E1D0B28AAFCD8938 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,6 +710,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		3F44A73E31C6AFED4F84409B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RichRelevanceSDKDemo/Pods-RichRelevanceSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -632,7 +732,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0172E5B21B3B139A00D09C7A /* RZBaseCollectionList.m in Sources */,
+				B82E62321DA7274B007EB3FF /* RZBaseCollectionList.m in Sources */,
+				B82E620D1D9C6971007EB3FF /* RCHProductCollectionViewCell.swift in Sources */,
+				B82E620B1D9C5D12007EB3FF /* RCHCatalogCollectionViewController.swift in Sources */,
 				015C4F341B739B6400AC95CB /* RCHAppearance.m in Sources */,
 				015C4F391B73FE1300AC95CB /* RCHSwipePrefsViewController.m in Sources */,
 				0172E58C1B3B132100D09C7A /* UIImage+GIF.m in Sources */,
@@ -646,10 +748,12 @@
 				0172E5BA1B3B139A00D09C7A /* RZSortedCollectionList.m in Sources */,
 				0172E5B01B3B139A00D09C7A /* NSFetchRequest+RZCreationHelpers.m in Sources */,
 				72E821BC1AFBACC900E71DA4 /* AppDelegate.m in Sources */,
+				B82E62391DB599A3007EB3FF /* RCHSearchResultsCollectionReusableView.swift in Sources */,
 				7295003D1B72904800C1F946 /* RCHProductCard.m in Sources */,
 				723895C51B38553D00ACFE58 /* RCHProductCell.m in Sources */,
 				729500321B7286FF00C1F946 /* RCHSwipeProductsViewController.m in Sources */,
 				0172E58B1B3B132100D09C7A /* UIButton+WebCache.m in Sources */,
+				B82E62151D9C9664007EB3FF /* RCHUserManagementViewController.m in Sources */,
 				0172E5941B3B132100D09C7A /* SVProgressHUD.m in Sources */,
 				0172E5881B3B132100D09C7A /* SDWebImageDownloaderOperation.m in Sources */,
 				0172E5B81B3B139A00D09C7A /* RZFilteredCollectionList.m in Sources */,
@@ -660,9 +764,11 @@
 				72E546111B384ABC004A9A01 /* RCHPlacementRecsViewController.m in Sources */,
 				0172E58D1B3B132100D09C7A /* UIImage+MultiFormat.m in Sources */,
 				0172E5901B3B132100D09C7A /* UIImageView+WebCache.m in Sources */,
+				B82E622A1DA47449007EB3FF /* RCHProductDetailViewController.swift in Sources */,
 				723895C91B3860C300ACFE58 /* UIViewController+RCHExtensions.m in Sources */,
 				0172E5911B3B132100D09C7A /* UIView+WebCacheOperation.m in Sources */,
 				0172E5B41B3B139A00D09C7A /* RZCollectionListNotificationWrappers.m in Sources */,
+				B82E62341DA72832007EB3FF /* RCHAccountViewController.swift in Sources */,
 				0172E5B11B3B139A00D09C7A /* RZArrayCollectionList.m in Sources */,
 				723895D01B3863EF00ACFE58 /* RCHStrategyRecsViewController.m in Sources */,
 				72E821B91AFBACC900E71DA4 /* main.m in Sources */,
@@ -679,6 +785,7 @@
 				723895DA1B39A73C00ACFE58 /* RCHUserPrefsViewController.m in Sources */,
 				723895DE1B39D12D00ACFE58 /* RCHUserProfileViewController.m in Sources */,
 				0172E5841B3B132100D09C7A /* SDImageCache.m in Sources */,
+				B82E62271DA2E7AC007EB3FF /* RCHSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,7 +873,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: RichRelevance Inc.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: RichRelevance Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -788,29 +895,38 @@
 		};
 		72E821D71AFBACC900E71DA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 546E8CBDFD00423B6FF2B45D /* Pods-RichRelevanceSDKDemo.debug.xcconfig */;
+			baseConfigurationReference = 84D3417C4402EBA33BAF6EA1 /* Pods-RichRelevanceSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/build";
 				INFOPLIST_FILE = RichRelevanceSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b4bad975-4464-4e48-94a8-8a6cd730fede";
+				SWIFT_OBJC_BRIDGING_HEADER = "RichRelevanceSDKDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		72E821D81AFBACC900E71DA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06A373778916B83D5FE46B1C /* Pods-RichRelevanceSDKDemo.release.xcconfig */;
+			baseConfigurationReference = AF8909EC5A985504D4AE0B72 /* Pods-RichRelevanceSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: RichRelevance Inc.";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/build";
 				INFOPLIST_FILE = RichRelevanceSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b4bad975-4464-4e48-94a8-8a6cd730fede";
+				SWIFT_OBJC_BRIDGING_HEADER = "RichRelevanceSDKDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

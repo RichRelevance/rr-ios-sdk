@@ -15,6 +15,8 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 ///-------------------------------
 /// @name General
 ///-------------------------------
@@ -25,6 +27,7 @@ OBJC_EXTERN NSString *const kRCHAPICommonParamUserID;
 OBJC_EXTERN NSString *const kRCHAPICommonParamSessionID;
 OBJC_EXTERN NSString *const kRCHAPICommonParamUserIDShort;
 OBJC_EXTERN NSString *const kRCHAPICommonParamSessionIDShort;
+OBJC_EXTERN NSString *const kRCHAPICommonParamRCS;
 
 ///-------------------------------
 /// @name Request Info
@@ -45,7 +48,15 @@ typedef NS_ENUM(NSInteger, RCHAPIClientUserAndSessionParamStyle) {
     /*!
      *  Do not include user and session ID params
      */
-    RCHAPIClientUserAndSessionParamStyleNone
+    RCHAPIClientUserAndSessionParamStyleNone,
+    /*!
+     *  Append the API Key to the path
+     */
+    RCHAPIClientUserAndSessionParamStyleAPIKeyInPath,
+    /*!
+     *  Long style: ```userId=123&sessionId=456``` with the API Key appended to the path
+     */
+    RCHAPIClientUserAndSessionParamStyleLongWithAPIKeyInPath
 };
 
 OBJC_EXTERN NSString *const kRCHAPIBuilderParamRequestParameters;
@@ -54,6 +65,7 @@ OBJC_EXTERN NSString *const kRCHAPIBuilderParamRequestInfoPath;
 OBJC_EXTERN NSString *const kRCHAPIBuilderParamRequestInfoParserClass;
 OBJC_EXTERN NSString *const kRCHAPIBuilderParamRequestInfoRequiresOAuth;
 OBJC_EXTERN NSString *const kRCHAPIBuilderParamRequestInfoUserAndSessionStyle;
+OBJC_EXTERN NSString *const kRCHAPIBuilderParamRequestInfoEmbedRCS;
 
 ///-------------------------------
 /// @name Paths
@@ -65,6 +77,8 @@ OBJC_EXTERN NSString *const kRCHAPIRequestUserPrefPath;
 OBJC_EXTERN NSString *const kRCHAPIRequestUserProfilePath;
 OBJC_EXTERN NSString *const kRCHAPIRequestPersonalizePath;
 OBJC_EXTERN NSString *const kRCHAPIRequestGetProductsPath;
+OBJC_EXTERN NSString *const kRCHAPIRequestFindAutocompletePath;
+OBJC_EXTERN NSString *const kRCHAPIRequestFindSearchPath;
 
 ///-------------------------------
 /// @name Response
@@ -155,3 +169,48 @@ OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeEmailCampaignID;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeExternalCategoryIDs;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeCategoryName;
 OBJC_EXTERN NSString *const kRCHAPIRequestParamPersonalizeRecProductsCount;
+
+
+///-------------------------------
+/// @name Autocomplete
+///-------------------------------
+
+OBJC_EXTERN NSString *const kRCHAPIRequestParamFindQuery;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamFindLanguage;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamFindStart;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamFindCount;
+
+OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteTerms;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteType;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeyAutocompleteValue;
+
+///-------------------------------
+/// @name Search
+///-------------------------------
+
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchPlacement;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchFilter;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchFacet;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchSort;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchChannel;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchLog;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchRegion;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchReference;
+
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchAscending;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchDescending;
+OBJC_EXTERN NSString *const kRCHAPIRequestParamSearchSSL;
+
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchProducts;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchPlacements;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchTrackingURL;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchNumFound;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchSpellChecked;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchLinks;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchFacets;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchFacet;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchValues;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchMessage;
+OBJC_EXTERN NSString *const kRCHAPIResponseKeySearchAddToCartParams;
+
+NS_ASSUME_NONNULL_END

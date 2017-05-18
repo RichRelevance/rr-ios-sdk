@@ -38,6 +38,8 @@ FOUNDATION_EXPORT const unsigned char RichRelevanceSDKVersionString[];
 #import <RichRelevanceSDK/RCHUserProfileBuilder.h>
 #import <RichRelevanceSDK/RCHPersonalizeBuilder.h>
 #import <RichRelevanceSDK/RCHGetProductsBuilder.h>
+#import <RichRelevanceSDK/RCHAutocompleteBuilder.h>
+#import <RichRelevanceSDK/RCHSearchBuilder.h>
 
 // API
 
@@ -64,6 +66,11 @@ FOUNDATION_EXPORT const unsigned char RichRelevanceSDKVersionString[];
 #import <RichRelevanceSDK/RCHPersonalizedPlacement.h>
 #import <RichRelevanceSDK/RCHCreative.h>
 #import <RichRelevanceSDK/RCHGetProductsResult.h>
+#import <RichRelevanceSDK/RCHSearchResult.h>
+#import <RichRelevanceSDK/RCHSearchLink.h>
+#import <RichRelevanceSDK/RCHSearchProduct.h>
+#import <RichRelevanceSDK/RCHSearchFacet.h>
+#import <RichRelevanceSDK/RCHAutocompleteSuggestion.h>
 
 // RESPONSE PARSER
 

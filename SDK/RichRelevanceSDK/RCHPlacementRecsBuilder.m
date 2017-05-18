@@ -17,6 +17,9 @@
 #import "RCHLog.h"
 #import "RCHAPIConstants.h"
 #import "RCHRecsForPlacementsResponseParser.h"
+#import "RCHSearchResult.h"
+#import "RCHSearchResponseParser.h"
+#import "RCHWebUtils.h"
 
 @interface RCHPlacementRecsBuilder ()
 
@@ -136,10 +139,10 @@
 - (instancetype)addPurchasedProduct:(RCHRequestProduct *)product
 {
     if (product != nil) {
-        [self addValue:product.identifier toArrayForhKey:kRCHAPIRequestParamRecommendationsProductID];
-        [self addValue:product.quantity toArrayForhKey:kRCHAPIRequestParamRecommendationsItemQuantities];
-        [self addValue:product.priceCents toArrayForhKey:kRCHAPIRequestParamRecommendationsProductPricesCents];
-        [self addValue:product.priceDollars toArrayForhKey:kRCHAPIRequestParamRecommendationsProductPrices];
+        [self addValue:product.identifier toArrayForKey:kRCHAPIRequestParamRecommendationsProductID];
+        [self addValue:product.quantity toArrayForKey:kRCHAPIRequestParamRecommendationsItemQuantities];
+        [self addValue:product.priceCents toArrayForKey:kRCHAPIRequestParamRecommendationsProductPricesCents];
+        [self addValue:product.priceDollars toArrayForKey:kRCHAPIRequestParamRecommendationsProductPrices];
     }
     else {
         [RCHLog logError:@"Invalid parameter, nil  product passed to %@", NSStringFromSelector(_cmd)];
@@ -177,7 +180,7 @@
 {
     if (strategy != RCHStrategyDefault) {
         NSString *strategyString = [RCHEnumMappings stringFromStrategy:strategy];
-        [self addValue:strategyString toArrayForhKey:kRCHAPIRequestParamRecommendationsStrategySet];
+        [self addValue:strategyString toArrayForKey:kRCHAPIRequestParamRecommendationsStrategySet];
     }
 
     return self;
@@ -212,6 +215,33 @@
 {
     return [self setDictionaryValue:filterAttributes forKey:kRCHAPIRequestParamRecommendationsFilterAttributes flattenKeys:NO];
 }
+
+- (instancetype)addParametersFromSearchResult:(NSString *)addToCartParams;
+{
+    NSDictionary<NSString *, NSString *> *parameters = [RCHWebUtils keyValuesFromParameterString:addToCartParams];
+    [parameters enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSString * _Nonnull obj, BOOL * _Nonnull stop) {
+        if ([key isEqualToString:kRCHAPIRequestParamFindQuery]) {
+            // Swap query for searchTerm to adapt the old API to the new
+            [self setValue:obj forKey:kRCHAPIRequestParamRecommendationsSearchTerm];
+        }
+        else {
+            [self setValue:obj forKey:key];
+        }
+    }];
+    return self;
+}
+
+- (instancetype)addParametersFromLastSearchResult
+{
+    if ([RCHSearchResponseParser lastAddToCartParameters]) {
+        return [self addParametersFromSearchResult:[RCHSearchResponseParser lastAddToCartParameters]];
+    }
+    else {
+        [RCHLog logError:@"addParametersFromLastSearchResult called with no previous successful search result."];
+    }
+    return self;
+}
+
 
 #pragma mark - Build
 

@@ -140,7 +140,7 @@ static NSString *const kRCHRequestPlacementDelimiter = @".";
             }
         }
         
-        [self addValue:placementString toArrayForhKey:kRCHAPIRequestParamRecommendationsPlacements];
+        [self addValue:placementString toArrayForKey:kRCHAPIRequestParamRecommendationsPlacements];
     }
     else {
         [RCHLog logError:@"Invalid parameter, nil placement passed to %@", NSStringFromSelector(_cmd)];

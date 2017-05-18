@@ -21,6 +21,9 @@
 #import "RCHPlacementRecsBuilder.h"
 #import "RCHAPIConstants.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
+
 @interface RCHRequestBuilder (UnderTest)
 
 @property (strong, nonatomic) NSMutableDictionary *requestParams;
@@ -396,3 +399,5 @@
 }
 
 @end
+
+#pragma clang diagnostic pop

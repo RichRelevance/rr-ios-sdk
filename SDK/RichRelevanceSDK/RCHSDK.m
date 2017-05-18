@@ -22,6 +22,8 @@
 #import "RCHUserPrefBuilder.h"
 #import "RCHPersonalizeBuilder.h"
 #import "RCHGetProductsBuilder.h"
+#import "RCHAutocompleteBuilder.h"
+#import "RCHSearchBuilder.h"
 
 @interface RCHSDK ()
 
@@ -175,6 +177,26 @@
     [builder setPreferences:preferences];
     [builder setTargetType:targetType];
     [builder setActionType:actionType];
+
+    return builder;
+}
+
++ (RCHAutocompleteBuilder *)builderForAutocompleteWithQuery:(NSString *)query
+{
+    RCHAutocompleteBuilder *builder = [[RCHAutocompleteBuilder alloc] init];
+    [builder setLocale:self.defaultClient.clientConfig.locale];
+    [builder setQuery:query];
+
+    return builder;
+}
+
++ (RCHSearchBuilder *)builderForSearchPlacement:(RCHRequestPlacement *)placement withQuery:(NSString *)query
+{
+    RCHSearchBuilder *builder = [[RCHSearchBuilder alloc] init];
+    [builder setLocale:self.defaultClient.clientConfig.locale];
+    [builder setChannel:self.defaultClient.clientConfig.channel];
+    [builder setPlacement:placement];
+    [builder setQuery:query];
 
     return builder;
 }

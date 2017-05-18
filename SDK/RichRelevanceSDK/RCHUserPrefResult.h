@@ -18,11 +18,11 @@
 
 @interface RCHUserPrefResult : RCHAPIResult
 
-@property (copy, nonatomic) NSString *userID;
-@property (strong, nonatomic) RCHUserPreference *brand;
-@property (strong, nonatomic) RCHUserPreference *category;
-@property (strong, nonatomic) RCHUserPreference *product;
-@property (strong, nonatomic) RCHUserPreference *store;
-@property (strong, nonatomic) RCHUserPreference *skuSize;
+@property (copy, nonatomic, nullable) NSString *userID;
+@property (strong, nonatomic, nullable) RCHUserPreference *brand;
+@property (strong, nonatomic, nullable) RCHUserPreference *category;
+@property (strong, nonatomic, nullable) RCHUserPreference *product;
+@property (strong, nonatomic, nullable) RCHUserPreference *store;
+@property (strong, nonatomic, nullable) RCHUserPreference *skuSize;
 
 @end
