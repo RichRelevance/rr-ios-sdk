@@ -84,7 +84,7 @@ Basic SDK Usage (Objective-C):
     [[RCHSDK defaultClient] sendRequest:[builder build] success:^(id responseObject) {
 
         RCHPlacementsResult *result = responseObject;
-        RCHPlacement *placement = result.placements[0];
+        RCHRecommendedPlacement *placement = result.placements[0];
         product = placement.recommendedProducts[0];
 
         [product trackProductView];
