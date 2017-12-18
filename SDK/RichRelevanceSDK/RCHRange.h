@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (strong, nonatomic, nullable) NSNumber *max;
 
+// Unavailable
+- (instancetype)init NS_UNAVAILABLE;
+
 /*!
  *  Create a new range instance.
  *
@@ -39,8 +42,6 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return A new range instance
  */
-
-- (instancetype)init NS_UNAVAILABLE;
 
 - (instancetype)initWithMin:(nullable NSNumber *)min max:(nullable NSNumber *)max NS_DESIGNATED_INITIALIZER;
 

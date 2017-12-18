@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  The Language the query is performed in. 
  *
- *  @param text The string to obtain autocomplete suggestions for.
+ *  @param locale The string to obtain autocomplete suggestions for.
  */
 - (instancetype)setLocale:(NSLocale *)locale;
 

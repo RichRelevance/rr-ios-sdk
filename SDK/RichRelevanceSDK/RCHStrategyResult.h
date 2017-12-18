@@ -14,7 +14,7 @@
 //  limitations under the License.
 
 #import "RCHAPIResult.h"
-#import "RCHCOmmonINcludes.h"
+#import "RCHCommonIncludes.h"
 @class RCHRecommendedProduct;
 
 @interface RCHStrategyResult : RCHAPIResult

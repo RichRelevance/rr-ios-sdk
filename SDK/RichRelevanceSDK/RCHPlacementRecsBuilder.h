@@ -121,7 +121,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  A product added to the cart. Compatible with Add To Cart placements.
  *
- *  @param product A string with the product ID added to the cart.
+ *  @param productID A string with the product ID added to the cart.
  */
 - (instancetype)setAddedToCartProductID:(NSString *)productID;
 
@@ -178,7 +178,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  A prioritized list of strategy sets that you would want to be returned based on the campaign use case. If this is not provided, our recommendation engine will run King of the Hill (KOTH) to provide best recommendations given the information provided.
  *  Be sure to add strategy values in priority order.
  *
- *  @param strategySet An RCHStrategy value to be added to the request.
+ *  @param strategy An RCHStrategy value to be added to the request.
  */
 - (instancetype)addStrategy:(RCHStrategy)strategy;
 

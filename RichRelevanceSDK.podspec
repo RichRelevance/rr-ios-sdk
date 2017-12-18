@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 Pod::Spec.new do |s|
 s.name         = "RichRelevanceSDK"
-s.version      = "1.1.0"
+s.version      = "1.1.1"
 s.summary      = "A native Objective-C interface to the Rich Relevance API."
 
 s.description  = <<-DESC
@@ -15,7 +15,7 @@ DESC
 
 s.homepage     = "https://github.com/RichRelevance/rr-ios-sdk"
 s.license      = { :type => 'Apache 2.0', :file => 'LICENSE.txt' }
-s.author       = { "Nick Bonatsakis" => "nick.bonatsakis@raizlabs.com", "Chris Ahlering" => "cahlering@richrelevance.com", "Daniele Bernardi" => "dbernardi@richrelevance.com" }
+s.author       = { "Nick Bonatsakis" => "nick.bonatsakis@raizlabs.com", "Chris Ahlering" => "cahlering@richrelevance.com" }
 s.platform     = :ios, 8.3
 s.source       = { :git => "https://github.com/RichRelevance/rr-ios-sdk.git", :tag => s.version }
 s.requires_arc = true

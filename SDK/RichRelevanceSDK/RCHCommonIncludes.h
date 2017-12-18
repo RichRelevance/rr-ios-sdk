@@ -108,7 +108,7 @@ typedef NS_ENUM(NSInteger, RCHUserProfileFieldType) {
  *  @param pageType The page type enum value.
  *
  */
-+ (RCHPlacementPageType)pageTypeFromString:(NSString *)pageTypeString;
++ (RCHPlacementPageType)pageTypeFromString:(NSString *)pageType;
 
 /*!
  *  A mapping of string values to strategy enum values.
